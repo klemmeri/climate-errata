@@ -21,7 +21,31 @@
 <tr><th>Where reported</th><td>Via the ASOS wind preprint (<a href="https://doi.org/10.5281/zenodo.24357793">10.5281/zenodo.24357793</a>)<br><a href="https://doi.org/10.5281/zenodo.24357793">doi:10.5281/zenodo.24357793</a></td></tr>
 <tr><th>Date</th><td>2026-11-18</td></tr>
 </table>
-<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<h2>Summary</h2>
+<p>Zeng et al. (2019, <i>Nature Climate Change</i> 9:979) reported a global decline in land wind speeds ("stilling") that reversed around 2010. Two documented US equipment changes (see the <a href="/entries/asos-wind-sensors.html">ASOS wind sensors entry</a>) sit inside their station record. Removing only these steps erases most of the North American decline and about 30% of the global 1978–2010 decline. The post-2010 rise is not caused by the steps, though it is smaller over a longer window.</p>
+
+<h2>What we found</h2>
+<p>We replicated the paper's method (GSOD stations complete for 1978–2017, annual station means, one-break piecewise regression). The replication reproduces the published numbers closely: 1,257 stations, turning point 2010, −0.088 m/s per decade over 1978–2010.</p>
+<table class="data">
+<tr><th>Series</th><th>Turning point</th><th>Before</th><th>After</th></tr>
+<tr><td>North America, clean subset, raw</td><td>2012</td><td>−3.6 %/decade</td><td>+7.9 %/decade</td></tr>
+<tr><td>Same, both US steps removed</td><td>2012</td><td><b>+0.3 %/decade</b></td><td>+8.2 %/decade</td></tr>
+<tr><td>Global, raw</td><td>2010</td><td>−2.7 %/decade</td><td></td></tr>
+<tr><td>Global, US steps removed</td><td>2006</td><td><b>−1.9 %/decade</b></td><td></td></tr>
+</table>
+<ul>
+<li>A natural control supports the result: 41 US stations outside the NWS/FAA programme (mostly military) show −0.5% per decade for 1978–2009, against −4.6% for the NWS/FAA ASOS stations.</li>
+<li>Extended to 2025, the North American rise after the turning point is about +2% per decade rather than +8%: much of the published reversal slope comes from a short window starting at the trough years 2010–12.</li>
+<li>The paper's homogeneity checks (an automation flag and a single Pettitt test per station) cannot remove two staggered steps of 6–9%, and the automation flag misses the 2005–09 sensor swap at stations that were already automated.</li>
+<li>Monerie et al. (2026, <i>Climate Dynamics</i>) use HadISD. In a HadISD-based hemispheric design like theirs, removing the two steps cuts the North American 1980–2010 decline by about 64% and the Northern Hemisphere decline by about 24% (a lower bound). Their main conclusion, a hemispheric decline, survives.</li>
+</ul>
+
+<h2>What it does not show</h2>
+<p>Stilling outside North America is untouched by this analysis, and other networks may have their own equipment changes. The global decline remains, smaller.</p>
+
+<h2>Reproduce</h2>
+<p>Preprint (Sections 4.6–4.7), code and derived data: <a href="https://doi.org/10.5281/zenodo.24357793">doi:10.5281/zenodo.24357793</a>.</p>
+
 <section id="affected" data-entry="zeng-et-al-2019-ncc-monerie"></section><script src="/assets/affected.js" defer></script>
 <section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
 <div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>

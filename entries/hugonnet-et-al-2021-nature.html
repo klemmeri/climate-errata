@@ -21,7 +21,32 @@
 <tr><th>Where reported</th><td>Email to lead author; confirmed by the author; to be addressed in the forthcoming update<br><a href="https://doi.org/10.1038/s41586-021-03436-z">https://doi.org/10.1038/s41586-021-03436-z</a></td></tr>
 <tr><th>Date</th><td>2026-11-19</td></tr>
 </table>
-<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<h2>Summary</h2>
+<p>Hugonnet et al. (2021, <i>Nature</i> 592:726) found that global glacier mass loss accelerated over 2000–2019, by 48 ± 16 Gt per year per decade. The ± was meant to be a 95% interval but was formed by doubling a 68% interval from a regression with only two degrees of freedom. The correct 95% interval is about 1.64 times wider, <b>48 ± 26</b>. The acceleration is still significant. The author confirmed the issue.</p>
+
+<h2>What we found</h2>
+<ul>
+<li>The acceleration is a weighted least-squares slope through the four five-year global rates (2000–04 to 2015–19).</li>
+<li>The fitting routine (<code>wls_matrix</code> in the authors' pyddem package) returns a 68% interval by default: the slope's standard error times t<sub>0.84</sub> with n − 2 = 2 degrees of freedom (t = 1.31). The analysis script doubles it and reports it as the 95% value, giving 2.62 standard errors.</li>
+<li>A 95% t-interval with 2 degrees of freedom is 4.30 standard errors, so the published interval is too narrow by a factor of 1.64.</li>
+</ul>
+<table class="data">
+<tr><th>Quantity</th><th>Published</th><th>Corrected 95% interval</th></tr>
+<tr><td>Mass-loss acceleration (Gt/yr per decade)</td><td>48 ± 16</td><td><b>48 ± 26</b></td></tr>
+<tr><td>Excluding peripheral glaciers</td><td>62 ± 8</td><td>about 62 ± 13</td></tr>
+<tr><td>Thinning acceleration (m/yr per decade)</td><td>0.10 ± 0.02</td><td>about 0.10 ± 0.03</td></tr>
+</table>
+<p>The derived range for the glacier share of sea-level-rise acceleration uses the same error and widens accordingly.</p>
+
+<h2>What it does not change</h2>
+<p>The acceleration remains significant at the corrected 95% level. The author notes that conservative assumptions elsewhere in the analysis (temporal decorrelation, density conversion) likely offset the narrower interval.</p>
+
+<h2>Response</h2>
+<p>We wrote to the lead author on 19 November 2026. He confirmed that the published interval is understated and will address it in the forthcoming update of the dataset. This entry is listed with his agreement.</p>
+
+<h2>Reproduce</h2>
+<p>From the paper's Table 1 (rates −227 ± 25, −257 ± 22, −284 ± 23, −292 ± 24 Gt/yr) the published recipe gives about ±20 and a proper 95% interval about ±32, the same factor of 1.64. Code: <a href="https://github.com/rhugonnet/ww_tvol_study">rhugonnet/ww_tvol_study</a> (tables/ms_acce_slr_and_values.py) and pyddem (<code>fit_tools.wls_matrix</code>).</p>
+
 <section id="affected" data-entry="hugonnet-et-al-2021-nature"></section><script src="/assets/affected.js" defer></script>
 <section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
 <div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>

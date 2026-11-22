@@ -1,0 +1,26 @@
+<h2>Summary</h2>
+<p>xESMF is the standard Python regridder for climate and reanalysis data, and "conservative" is the method recommended for precipitation and fluxes. When the input has no cell-bound variables (the usual case for ERA5 from the Climate Data Store, NCEP R1/R2, MERRA-2 and JRA-55), xESMF infers bounds that run past ±90°. ESMF then computes wrong weights for the polar rows. A constant 280 K field regridded from ERA5 comes out as 293 K in the rows at ±89.5°.</p>
+
+<h2>What we found</h2>
+<p>Polar-row values after conservative regridding of a smooth test field, against exact spherical weights (correct value about 280 K):</p>
+<table class="data">
+<tr><th>Source → target</th><th>Polar row</th><th>Cap mean north of 80°N</th></tr>
+<tr><td>ERA5 0.25° → 1°</td><td>293 K (+15 K, about 5%)</td><td>+0.13 K</td></tr>
+<tr><td>ERA5 1° → 2.5°</td><td>314 K</td><td>+2.1 K</td></tr>
+<tr><td>MERRA-2 0.5° × 0.625° → 1°</td><td>333 K</td><td>+0.53 K</td></tr>
+<tr><td>JRA-55 1.25° → 2.5°</td><td>333 K</td><td>+3.3 K</td></tr>
+<tr><td>NCEP 2.5° → 1°</td><td><b>about 1,400 K</b></td><td>+13.2 K</td></tr>
+<tr><td>1° → NCEP 2.5° (pole-centred target)</td><td>140 K (halved)</td><td>−1.7 K</td></tr>
+</table>
+<ul>
+<li>The error multiplies the polar rows, so it affects absolute values, precipitation and anomalies alike. Global means are off by only 0.002–0.2 K.</li>
+<li>For ERA5 at 0.25°, the most common input, the error is about 5%: plausible enough to go unnoticed. The only signal is a generic warning, "Latitude is outside of [-90, 90]".</li>
+<li>Grids without pole points (−89.5 … 89.5) are not affected. xcdat already clips its own bounds to ±90°, so xcdat users are safe.</li>
+<li>Users had reported the symptom before (xESMF discussions #325 and #177); the cause and a fix had not been identified.</li>
+</ul>
+
+<h2>Response</h2>
+<p>Reported as xESMF #497 with a fix in <a href="https://github.com/pangeo-data/xESMF/pull/498">PR #498</a>, which clips inferred latitude bounds to [−90, 90] and adds a constant-field test. Merged 16 November 2026; not yet in a release.</p>
+
+<h2>What users can do</h2>
+<p>Until a release includes the fix: supply latitude bounds clipped to ±90° (errors fall to ≤ 0.01 K), or use <code>conservative_normed</code> (≤ 0.18 K). Check polar rows in existing regridded output from pole-centred grids.</p>

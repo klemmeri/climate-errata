@@ -1,0 +1,29 @@
+<h2>Summary</h2>
+<p>NCEI's COOP Hourly Precipitation Data (HPD v2) comes from Fischer &amp; Porter weighing gauges that were converted from punched-tape recorders to digital loggers, mostly in 2012. At each station's conversion, hourly maxima jump by about 9–10% relative to the co-located daily gauge, which shows no change. The step is not flagged in the dataset, and it is as large as the trends that sub-daily studies report.</p>
+
+<h2>What we found</h2>
+<ul>
+<li>The conversion date of each station can be read from HPD's own source flags. Of the stations converted, 123 switched in 2012; the digital share of station-hours rises from 7% (2007) to 89% (2013).</li>
+<li>Legacy values are mostly whole tenths of an inch; digital values are in hundredths.</li>
+<li>Step at the switch (±6 years, station fixed effects, against co-located GHCN-Daily totals at 114 stations):</li>
+</ul>
+<table class="data">
+<tr><th>Series</th><th>Step at conversion</th><th>p</th></tr>
+<tr><td>GHCN-Daily annual maximum day (independent gauge)</td><td>+0.3%</td><td>0.90</td></tr>
+<tr><td>HPD annual maximum hour ÷ GHCN max day, raw 0.01 in</td><td>+9.1%</td><td>0.014</td></tr>
+<tr><td>Same, with legacy-resolution emulation (cumulative 0.1 in)</td><td><b>+9.9%</b></td><td>0.008</td></tr>
+<tr><td>HPD maximum daily sum ÷ GHCN max day</td><td>+5.3%</td><td>0.006</td></tr>
+</table>
+<p>The preprint also reports the step in the 15-minute data and its effect on the frequency of heavy hours.</p>
+
+<h2>Who is affected</h2>
+<p>Any analysis that uses HPD hourly or 15-minute data across the conversion years: sub-daily trend and scaling studies, non-stationary intensity–duration–frequency work, and NOAA Atlas 15. How much a study is affected depends on how it handles resolution: coarsening each hour to 0.1 in can hide the step, while native or cumulative resolution keeps it.</p>
+
+<h2>Response</h2>
+<p>The NOAA Atlas 15 team was told on 17 November 2026; no reply yet. The preprint has been revised once at an author's request (version 3 corrects how one paper's data screening is described).</p>
+
+<h2>What users can do</h2>
+<p>Locate each station's conversion date from the source flags (provided with the preprint code) and test for, or adjust, a step at that date. Compare with co-located daily gauges.</p>
+
+<h2>Reproduce</h2>
+<p>Preprint and code: <a href="https://doi.org/10.5281/zenodo.24406978">doi:10.5281/zenodo.24406978</a> (version 3; all versions: <a href="https://doi.org/10.5281/zenodo.24327949">10.5281/zenodo.24327949</a>). Data: HPD v2 from NCEI (<a href="https://doi.org/10.25921/p7j8-2170">doi:10.25921/p7j8-2170</a>) and GHCN-Daily.</p>

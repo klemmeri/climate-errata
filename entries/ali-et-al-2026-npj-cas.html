@@ -21,7 +21,34 @@
 <tr><th>Where reported</th><td>Zenodo preprint + PubPeer</td></tr>
 <tr><th>Date</th><td>2026-11-11</td></tr>
 </table>
-<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<h2>Summary</h2>
+<p>Ali et al. (2026, <i>npj Climate and Atmospheric Science</i>) reported that North Atlantic tropical-cyclone rainfall intensity rises about 21% per degree of local dewpoint, three times the Clausius–Clapeyron rate, and a press release linked this to warming. Rebuilding their method for 2015–2024, we get 12.3% per K, well below their value. Within individual storms, after controlling for latitude, intensity and speed, the scaling is about 2% per K. We found no sign that warmer-than-usual seas give wetter storms.</p>
+
+<h2>What we found</h2>
+<p>172 storms, 3,006 six-hourly steps, 10 seasons (IMERG V07, ERA5, IBTrACS). 95% intervals from a storm bootstrap:</p>
+<table class="data">
+<tr><th>Test</th><th>%/K</th></tr>
+<tr><td>Paper's method, dewpoint under the heavy rain (paper: 21.3)</td><td><b>12.3</b> [9.2, 15.4]</td></tr>
+<tr><td>Same with 2-m temperature (paper: 19.6) / SST (paper: 15.7)</td><td>10.1 [7.6, 13.3] / 10.2 [7.8, 12.6]</td></tr>
+<tr><td>Dewpoint in the storm's environment (500–800 km)</td><td>9.0 [6.0, 11.3]</td></tr>
+<tr><td>Pooled regression with latitude, intensity and speed controls</td><td>7.3 [4.3, 10.5]</td></tr>
+<tr><td>Within storms, with controls</td><td><b>1.7</b> [−2.1, 5.3]</td></tr>
+<tr><td>Warmer-than-usual SST for place and season</td><td>0.7 [−7.6, 9.9]</td></tr>
+<tr><td>Trend in storm rain intensity</td><td>0.9 %/yr [−1.0, 2.7]</td></tr>
+</table>
+<ol>
+<li><b>The headline number did not reproduce.</b> Differences in method details (the storm-radius definition, sampling, and our shorter period) may explain part of the gap; the authors' code is not public, and we asked for the radius definition.</li>
+<li><b>The super-Clausius–Clapeyron scaling is a between-storm effect.</b> It disappears within storms once intensity and location are controlled.</li>
+<li><b>Where temperature is measured matters:</b> dewpoint under the heavy rain gives much higher scaling than the environmental dewpoint.</li>
+<li><b>No temporal signal:</b> the paper's scaling is cross-sectional ("apparent"), as the authors note; the data show no evidence that warming over time has made these storms wetter.</li>
+</ol>
+
+<h2>Response</h2>
+<p>The lead author was emailed on 11 November 2026 with the preprint and a question about the storm-radius definition. PubPeer comment posted 13 November 2026. No reply yet.</p>
+
+<h2>Reproduce</h2>
+<p>Preprint: <a href="https://doi.org/10.5281/zenodo.24144931">doi:10.5281/zenodo.24144931</a>. Paper: <a href="/doi.html?doi=10.1038/s41612-026-01363-2">doi:10.1038/s41612-026-01363-2</a>.</p>
+
 <section id="affected" data-entry="ali-et-al-2026-npj-cas"></section><script src="/assets/affected.js" defer></script>
 <section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
 <div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>

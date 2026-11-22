@@ -1,0 +1,29 @@
+<h2>Summary</h2>
+<p>MetPy, the standard Python meteorology library, computes vorticity, divergence and related quantities on latitude–longitude grids with a map-factor correction whose derivative is taken by differencing across grid points. Near the poles that difference is badly wrong. The error grows from a few percent at 80° to hundreds of percent within a degree or two of the pole. On grids that include the pole rows (ERA5, GFS), the pole row and its neighbour return finite values about 10<sup>4</sup> times the true field, not NaN.</p>
+
+<h2>What we found</h2>
+<p>Test case: an n = 2 spherical-harmonic streamfunction whose vorticity is known exactly. Maximum error as a percentage of the field maximum (MetPy 1.7.1):</p>
+<table class="data">
+<tr><th>Grid</th><th>70°</th><th>80°</th><th>85°</th><th>Near the pole</th></tr>
+<tr><td>2.5°</td><td>1.2%</td><td>12%</td><td>125%</td><td>—</td></tr>
+<tr><td>1°</td><td>0.19%</td><td>1.8%</td><td>16%</td><td>318% at 88°</td></tr>
+<tr><td>0.25°</td><td>0.01%</td><td>0.11%</td><td>0.94%</td><td>1,270% at 89.5°</td></tr>
+</table>
+<ul>
+<li>A standard second-order scheme with the exact tanφ/a term gives at most 0.3% at all these points.</li>
+<li>Cause: <code>vector_derivative</code> differentiates the parallel scale 1/cos φ across grid points; the derivatives of u and v themselves are fine.</li>
+<li>Affected: <code>vorticity</code>, <code>absolute_vorticity</code>, <code>divergence</code>, the deformation functions, <code>shear_vorticity</code>, <code>curvature_vorticity</code>, <code>q_vector</code>, <code>geospatial_laplacian</code> (79% at 87° on a 1° grid) and potential vorticity through <code>vorticity</code>. Scalar advection and gradients are not affected.</li>
+<li>MetPy's own tests compare against the same discrete approach, so they cannot catch it. A user on the Pangeo forum had reported an "explosion of derivatives near the North Pole" without finding the cause.</li>
+</ul>
+
+<h2>Who is affected</h2>
+<p>Polar work: Arctic cyclones, polar vortex and stratospheric warming studies, Antarctic analyses, and CMIP or reanalysis output on 1–2.5° grids. Pole-row spikes silently distort colour scales, zonal means and spectra. Equatorward of about 70° on fine grids the effect is small.</p>
+
+<h2>Suggested fix</h2>
+<p>Take the map-factor derivatives from the projection itself with a tiny offset (pyproj <code>get_factors</code> at ±10<sup>−4</sup>°) instead of differencing across grid points, and return NaN on pole rows. In a prototype the errors fall 15 to 50,000 times: 125% → 0.23% at 85° on a 2.5° grid, and 1,270% → 0.02% at 89.5° on a 0.25° grid.</p>
+
+<h2>Response</h2>
+<p>Reported as <a href="https://github.com/Unidata/MetPy/issues/4208">MetPy #4208</a> on 12 November 2026 with the test, the prototype fix and an offer of a pull request. Open.</p>
+
+<h2>What users can do</h2>
+<p>Mask results poleward of about 80° (85° on fine grids), drop the pole rows, or compute polar kinematics with a spherical-harmonic method.</p>

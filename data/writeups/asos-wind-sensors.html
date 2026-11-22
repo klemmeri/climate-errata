@@ -1,0 +1,28 @@
+<h2>Summary</h2>
+<p>Two documented equipment changes in the US Automated Surface Observing System (ASOS) lowered reported wind speeds at hundreds of airports. Together they account for most of the 1988–2010 decline in US station winds, the US part of "terrestrial stilling". With both steps removed, the US 1988–2010 trend changes from −7.4% to +0.6% per decade.</p>
+
+<h2>What we found</h2>
+<ol>
+<li><b>Cup to sonic anemometer, 2005–09.</b> NWS replaced the Belfort 2000 cup anemometer with the Vaisala 425NWS sonic sensor ("Ice Free Wind") at about 870 NWS/FAA sites, with install dates published by NWS. At the install month, reported mean wind drops by <b>0.43 kt</b> (stacked event study, 560 stations, 96% of them negative) or <b>0.44 kt</b> (two-way fixed effects, 818 stations), about <b>−6.5%</b>. Calm reports rise by 3.5 percentage points. The step lands exactly at month 0 and the series is flat before and after; placebo dates give small effects of the opposite sign.</li>
+<li><b>Human observer to ASOS, mostly 1992–99.</b> Commissioning dates were found from an independent fingerprint: cloud layers above 12,000 ft (beyond the ASOS ceilometer's range) stop being reported at commissioning. Where official remarks exist, the dates agree to within a month. Mean wind drops by <b>0.71 kt (−9.2%)</b> at 309 stations, and calms rise by 5.3 points.</li>
+</ol>
+<table class="data">
+<tr><th>US trend, 248 long-record stations</th><th>Raw</th><th>Both steps removed</th></tr>
+<tr><td>1988–2010</td><td>−7.4 %/decade</td><td><b>+0.6 %/decade</b></td></tr>
+<tr><td>1988–2025</td><td>−3.5 %/decade</td><td>+1.5 %/decade</td></tr>
+<tr><td>2010–2025</td><td>−0.5 %/decade</td><td>−0.5 %/decade</td></tr>
+</table>
+<p>The steps pass unchanged into ISD, GSOD and HadISD: GSOD and the station archive agree month by month. The HadISD breakpoint catalogue flags the sonic step at only 29% of affected stations, so break-based screening does not remove it. A later sensor change (Vaisala WMT-702, 2017–24) could not be tested because install dates are not published.</p>
+
+<h2>Why it matters</h2>
+<p>US stations are a large share of the global station network used for stilling studies. In a replication of the method of Zeng et al. (2019, <i>Nature Climate Change</i>), removing only these two US steps turns the North American pre-2010 decline from −3.6% to +0.3% per decade and reduces the global 1978–2010 decline from −2.7% to −1.9% per decade. In a HadISD-based hemispheric design the Northern Hemisphere 1980–2010 decline falls by about a quarter. See the <a href="/entries/zeng-et-al-2019-ncc-monerie.html">Zeng and Monerie entry</a>.</p>
+
+<h2>Caveats</h2>
+<ul>
+<li>Commissioning often came with a move of the anemometer on the airfield: still non-climatic, but not purely the sensor.</li>
+<li>Adjustments use network-mean steps; individual stations vary.</li>
+<li>The cause of the sonic step is not established (5-second processing and the sonic's low starting threshold are candidates).</li>
+</ul>
+
+<h2>Reproduce</h2>
+<p>Preprint, install dates, detected commissioning dates and all code: <a href="https://doi.org/10.5281/zenodo.24357793">doi:10.5281/zenodo.24357793</a>. Hourly data: Iowa Environmental Mesonet ASOS archive; GSOD and HadISD from NOAA NCEI and the Met Office.</p>

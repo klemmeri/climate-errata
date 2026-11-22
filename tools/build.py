@@ -90,6 +90,9 @@ for r in rows:
     else:
         scores = '<tr><th>Significance</th><td>Not scored (clean check or already-known issue)</td></tr>'
     fixrows = fix_rows(r.get("fix"))
+    wf = ROOT / "data/writeups" / f"{sid}.html"
+    writeup = (wf.read_text() if wf.exists() else
+               '<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>')
     page = f"""{HEAD.replace('%TITLE%', e(r['target']) + ' — Climate Errata').replace('%DESC%', e(summary[:150]))}
 <main><div class="wrap">
 <p class="meta"><a href="/">← Register</a></p>
@@ -105,7 +108,7 @@ for r in rows:
 <tr><th>Where reported</th><td>{doi_links(e(r['reported']))}{'<br>' + '<br>'.join(links) if links else ''}</td></tr>
 <tr><th>Date</th><td>{e(r['date'])}</td></tr>
 </table>
-<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+{writeup}
 <section id="affected" data-entry="{sid}"></section><script src="/assets/affected.js" defer></script>
 {GISCUS}
 </div></main>

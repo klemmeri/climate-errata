@@ -21,7 +21,43 @@
 <tr><th>Where reported</th><td>GitHub #41 + Zenodo preprint (<a href="https://doi.org/10.5281/zenodo.24015743">10.5281/zenodo.24015743</a>)<br><a href="https://github.com/mmhs013/pyMannKendall/issues/41">https://github.com/mmhs013/pyMannKendall/issues/41</a><br><a href="https://doi.org/10.5281/zenodo.24015743">doi:10.5281/zenodo.24015743</a></td></tr>
 <tr><th>Date</th><td>2026-11-06</td></tr>
 </table>
-<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<h2>Summary</h2>
+<p>The Yue–Wang modified Mann–Kendall trend test is meant to correct for autocorrelation. In pyMannKendall (<code>yue_wang_modification_test</code> with its default <code>lag=None</code>) and in R's modifiedmk (<code>mmky()</code>), it uses the sample autocorrelation at every lag with no screening. That shrinks the variance instead of correcting it: <b>about 47% of pure-noise series are declared to have a significant trend at the 5% level.</b></p>
+
+<h2>What we found</h2>
+<ul>
+<li>The variance is multiplied by F = 1 + 2Σ<sub>k=1</sub><sup>n−1</sup>(1 − k/n) r<sub>k</sub>, summed over all lags of the Sen-detrended series. For independent noise F averages about 1/3 before detrending and about 0.15 after, where the correct value is about 1.</li>
+<li>Rejection rates at the nominal 5% level, 10,000 simulations per case:</li>
+</ul>
+<table class="data">
+<tr><th>Series</th><th>Mann–Kendall</th><th>Yue–Wang default</th><th>Yue–Wang, AR(1) form</th></tr>
+<tr><td>White noise, n = 20</td><td>4.4%</td><td><b>42.7%</b></td><td>7.7%</td></tr>
+<tr><td>White noise, n = 100</td><td>5.3%</td><td><b>48.8%</b></td><td>6.0%</td></tr>
+<tr><td>White noise, n = 200</td><td>4.9%</td><td><b>47.8%</b></td><td>5.3%</td></tr>
+<tr><td>AR(1) φ = 0.3, n = 100</td><td>14.0%</td><td><b>48.6%</b></td><td>6.0%</td></tr>
+<tr><td>AR(1) φ = 0.9, n = 100</td><td>64.6%</td><td><b>58.7%</b></td><td>12.7%</td></tr>
+</table>
+<ul>
+<li>Larger samples do not help, and at p &lt; 0.001 a quarter of white-noise series are still "significant".</li>
+<li>The Sen slope itself is unaffected; only the variance, p-values and significance labels change.</li>
+<li>pyMannKendall's <code>lag=1</code> option keeps only the lag-1 term and behaves far better (6–7%).</li>
+</ul>
+
+<h2>Prior work</h2>
+<p>The problem is not wholly new: O'Brien et al. (2021, <i>Water Resources Research</i>) reported "unacceptably high" type I errors for the all-lags form, and Militino et al. (2020, <i>Remote Sensing</i>) found a mean type I error of 0.49. What is new here is the exact algebraic diagnosis, the defaults in the two most-used packages, and a rerun of a published study.</p>
+
+<h2>Why it matters</h2>
+<p>Both packages are widely used for hydrological and climate trend studies. In a rerun of a published German Bight sea-surface-temperature trend study, the share of grid cells with a significant decline fell from 55% to 23–25% under calibrated tests, and to 14–18% after field-significance control. The main offshore decline holds.</p>
+
+<h2>Response</h2>
+<p>Reported as <a href="https://github.com/mmhs013/pyMannKendall/issues/41">pyMannKendall #41</a> and <a href="https://github.com/patakamuri/modifiedmk/issues/4">modifiedmk #4</a> on 6 November 2026. The modifiedmk maintainer asked for a pull request, which adds a lag limit and documents the type I error (PR #5). No pyMannKendall response yet.</p>
+
+<h2>What users can do</h2>
+<p>Use <code>lag=1</code>, an AR(1)-based correction, or a block bootstrap instead of the all-lags default, and recheck significance in published results that used it.</p>
+
+<h2>Reproduce</h2>
+<p>Preprint: <a href="https://doi.org/10.5281/zenodo.24015743">doi:10.5281/zenodo.24015743</a>. Code: <a href="https://doi.org/10.5281/zenodo.23987225">doi:10.5281/zenodo.23987225</a>.</p>
+
 <section id="affected" data-entry="pymannkendall"></section><script src="/assets/affected.js" defer></script>
 <section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
 <div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>

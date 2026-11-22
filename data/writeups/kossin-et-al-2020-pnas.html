@@ -1,0 +1,21 @@
+<h2>Summary</h2>
+<p>Kossin et al. (2020, <i>PNAS</i>), cited in IPCC AR6, reported that the global share of tropical-cyclone fixes at major-hurricane intensity rose between 1979–1997 and 1998–2017. Their significance test allowed for clustering by assuming a variance three times the binomial value; the data show about 5.6 times. With the correct variance the 1979–2017 change is not significant (p ≈ 0.10). <b>The finding nevertheless holds</b>: extended to 2024 with the same satellite record, the trend is clearly significant.</p>
+
+<h2>What we found</h2>
+<ul>
+<li>Data: ADT-HURSAT, the record the paper used, in its 2025 release (1978–2024; 1,885 storms, 18,703 six-hourly fixes at hurricane strength).</li>
+<li><b>The paper's early-versus-late comparison, 1979–2017.</b> Global share 0.421 → 0.453. p = 0.022 under the paper's variance assumption; 0.044 with a storm bootstrap; <b>0.095 with a year bootstrap</b>, which captures the measured design effect of 5.6. Confidence intervals are about 37% wider than published.</li>
+<li><b>Annual trend tests</b> (Newey–West), 1979–2017: global +4.7% per decade, p = 0.006, but sensitive to start year (starting in 1982 or 1985 gives p ≈ 0.06).</li>
+<li><b>Extended to 2024:</b> global +4.9% per decade, p &lt; 0.001; excluding the North Atlantic +4.4%, p &lt; 0.001. Significant for start years through 1990. Robust to AR(1), ARMA and block-bootstrap persistence models.</li>
+<li><b>Mechanism:</b> the rise is in time spent at major intensity (hours per major hurricane +2.1 h per decade, p = 0.015), not in more hurricanes becoming major (+2.3% per decade, not significant).</li>
+<li>A table misprint: the late-period counts should read 8,700 / 3,242, not 9,275 / 2,842; the printed proportion is right.</li>
+</ul>
+
+<h2>Bottom line</h2>
+<p>The paper's conclusion is supported by the longer record. Its 2020 evidence was weaker than reported, and the trend is in the duration of major intensity rather than in the number of storms reaching it.</p>
+
+<h2>Response</h2>
+<p>Preprint posted 10 November 2026 and a PubPeer comment on 12 November 2026. No author response yet.</p>
+
+<h2>Reproduce</h2>
+<p>Preprint, code and results: <a href="https://doi.org/10.5281/zenodo.24096379">doi:10.5281/zenodo.24096379</a>. Data: ADT-HURSAT, NCEI (<a href="https://doi.org/10.25921/n6va-0b18">doi:10.25921/n6va-0b18</a>). Paper: <a href="/doi.html?doi=10.1073/pnas.1920849117">doi:10.1073/pnas.1920849117</a>.</p>

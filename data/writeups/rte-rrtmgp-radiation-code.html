@@ -1,0 +1,33 @@
+<h2>Summary</h2>
+<p>RTE+RRTMGP is the radiation code in CESM3 (CAM7), E3SM and ICON. We found six indexing and interpolation errors. The important one, issue #425, was in every release from v1.0 (2019) to v1.9.3. When a key absorbing gas is set to exactly zero, the gas-optics interpolation reads the absorption table one node short, so the "removed" gas keeps absorbing. A clear-sky test understates CO<sub>2</sub>'s radiative effect by 70–80%. The bug is fixed in release v1.10 (16 November 2026).</p>
+
+<h2>What we found</h2>
+<ul>
+<li><b>#425, zero key gas.</b> RRTMGP interpolates absorption between pairs of key species using a mixing fraction η. When the second gas of a pair is exactly zero (η = 1), the interpolation weight is computed from the wrong table node. This affects both the CPU and GPU kernels.
+ <ul>
+ <li>Longwave triggers: CO<sub>2</sub>, O<sub>3</sub>, CH<sub>4</sub> or N<sub>2</sub>O set to zero. Shortwave triggers: CO<sub>2</sub>, CH<sub>4</sub> or O<sub>2</sub> set to zero.</li>
+ <li>The radiative effect of removing a gas is understated. In a clear-sky test: CO<sub>2</sub> by 70%, CH<sub>4</sub> 31%, N<sub>2</sub>O 8%, O<sub>3</sub> 6%. On a tropical RCEMIP column: longwave CO<sub>2</sub> 82%, CH<sub>4</sub> 58%, N<sub>2</sub>O 17%, O<sub>3</sub> 46%; shortwave O<sub>2</sub> 57%, CO<sub>2</sub> 58%.</li>
+ <li>An underflowing value acts like a zero: the RCEMIP ozone profile triggers the bug below about 440 hPa (a small effect, OLR −0.27 W m<sup>−2</sup>). The fix changed the reference answers of the standard longwave RCE example.</li>
+ </ul></li>
+<li><b>Five smaller errors</b> (#424, #426, #427, #428, #429) in options that production climate runs of CAM7 and E3SM do not use. #424, #426 and #428 are fixed; #427 and #429 remain open and are low-impact.</li>
+</ul>
+
+<h2>Why it was not caught</h2>
+<p>The standard benchmark (RFMIP-IRF) never sets a gas to zero: its perturbations are pre-industrial levels and scaled CO<sub>2</sub>. So the trigger was never tested.</p>
+
+<h2>Who is affected</h2>
+<ul>
+<li>Exposed: greenhouse-effect attribution by removing gases; "no-CO<sub>2</sub>", "no-ozone" or "no trace gas" experiments in E3SMv2/v3, CAM7/CESM3 and ICON; idealized RCE, aquaplanet and LES setups that zero CH<sub>4</sub>, N<sub>2</sub>O, O<sub>3</sub> or O<sub>2</sub> (ICON's RCE scripts set O<sub>2</sub> = 0, and its default is <code>irad_o3 = 0</code>); emulators trained on zero-gas cases; forcing of a gas from zero.</li>
+<li>Not exposed: standard CMIP DECK and scenario runs, RFMIP comparisons, and 4×CO<sub>2</sub> forcing at present-day gas levels.</li>
+<li>We have not yet found a published paper confirmed to have run a gas-removal experiment with RRTMGP.</li>
+<li>E3SM's C++ port contains the same logic; whether it has been fixed was not checked.</li>
+</ul>
+
+<h2>Response</h2>
+<p>The developers fixed #424 and #428 on 11 November (PR #431), #426 on 15 November, and #425 on 16 November (PR #437, with an updated longwave RCE reference in rrtmgp-data #14). Release v1.10 ships the fixes.</p>
+
+<h2>What users can do</h2>
+<p>Upgrade to v1.10 or later, and check model tags that pin earlier versions. Rerun any experiment that set a key gas to zero.</p>
+
+<h2>Reproduce</h2>
+<p>Report with tests before and after each fix: <a href="https://doi.org/10.5281/zenodo.23486714">doi:10.5281/zenodo.23486714</a>. Issues: <a href="https://github.com/earth-system-radiation/rte-rrtmgp/issues/425">#425</a> and #424–#429.</p>

@@ -21,7 +21,41 @@
 <tr><th>Where reported</th><td>Email to NASA GMAO (M. Bosilovich, R. Reichle); confirmed by Reichle. MERRA-2 is frozen and will not be changed; MERRA-21C and SMAP L4_SM v6+ no longer use CPCU; to be noted in the MERRA-21C validation documentation</td></tr>
 <tr><th>Date</th><td>2026-11-20</td></tr>
 </table>
-<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<h2>Summary</h2>
+<p>MERRA-2 corrects the precipitation that reaches its land surface (PRECTOTCORR) towards the CPC Unified gauge analysis. Over Australia, CPC's gauge input collapsed in 2015–16, and its analysis became about 20% too dry. MERRA-2 PRECTOTCORR tracks CPC to within 1–4% in every year, so it inherits the step, and with it everything the land model computes from that rainfall: soil moisture, runoff and evaporation.</p>
+
+<h2>What we found</h2>
+<ul>
+<li>CPC's own gauge-count field shows Australia losing about 95% of its daily gauge reports in two steps, 2007–08 and 2015–16 (for example eastern Australia, about 590 → 90). The rain gauges still exist; their reports stopped reaching CPC's analysis.</li>
+<li>Against GPCP, which agrees with the Bureau of Meteorology's national totals to within a few percent, both CPC and MERRA-2 drop sharply in 2016:</li>
+</ul>
+<table class="data">
+<tr><th>Period (Australia, 115 cells of 2.5°)</th><th>CPC / GPCP</th><th>MERRA-2 / GPCP</th></tr>
+<tr><td>2000–06</td><td>0.965</td><td>0.959</td></tr>
+<tr><td>2007–14</td><td>1.057</td><td>1.051</td></tr>
+<tr><td>2016–25</td><td>0.805</td><td><b>0.825</b></td></tr>
+</table>
+<ul>
+<li>The step is about <b>−21.5%</b> nationally and largest in the interior (central cells roughly 240–300 → 110–150 mm per year, −40 to −60%). It is smallest on the south-east and south-west coasts.</li>
+<li>GPCP and GPCC do not show the step, and a gauge-independent reanalysis (NCEP R1) confirms that it sits in the CPC analysis.</li>
+</ul>
+
+<h2>Who is affected</h2>
+<p>Any use of MERRA-2 land hydrology or PRECTOTCORR over Australia across 2015–16: drought and soil-moisture trends, runoff, land-surface anomalies, and PRECTOTCORR used as "observed" rainfall. Users of the CPC Unified analysis itself over Australia are affected in the same way. Papers that use the affected data are listed below.</p>
+
+<h2>Response</h2>
+<p>We wrote to NASA GMAO (Michael Bosilovich and Rolf Reichle). Rolf Reichle confirmed the finding. MERRA-2 is a frozen system and will not be changed; GMAO's newer products, MERRA-21C and SMAP Level-4 soil moisture (v6 and later), no longer use CPC Unified over Australia. GMAO will note the issue in the MERRA-21C validation documentation.</p>
+
+<h2>What users can do</h2>
+<ul>
+<li>For Australian rainfall after 2015, use a product not tied to the CPC Unified analysis (for example GPCP, GPCC, or the Bureau of Meteorology's AGCD).</li>
+<li>For land hydrology, prefer MERRA-21C or SMAP L4 where they cover your period, or check MERRA-2 land variables against them.</li>
+<li>Treat any MERRA-2-based Australian trend that spans 2015–16 as suspect until checked.</li>
+</ul>
+
+<h2>Reproduce</h2>
+<p>MERRA-2 M2TMNXFLX v5.12.4 monthly PRECTOTCORR (GES DISC, Earthdata login), land points with FRLAND &gt; 0.5, aggregated to GPCP 2.5° cells over 44–10°S, 112–155°E; CPC Unified daily (NOAA PSL) with its gauge-count field; GPCP v2.3 monthly. Scripts are available on request.</p>
+
 <section id="affected" data-entry="nasa-merra-2-corrected-precipitation-over"></section><script src="/assets/affected.js" defer></script>
 <section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
 <div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>

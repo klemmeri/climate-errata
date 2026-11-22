@@ -48,6 +48,14 @@ def find_dois(r):
             out.append(d)
     return out
 
+def fix_rows(f):
+    if not f:
+        return ""
+    return (f'<tr><th>Fixed on</th><td>{e(f["date"])}</td></tr>'
+            f'<tr><th>Fixed in</th><td><a href="{e(f["fixed_in_url"])}">{e(f["fixed_in"])}</a></td></tr>'
+            f'<tr><th>Affected versions</th><td>{e(f["affected"])}</td></tr>'
+            f'<tr><th>Is the fix retroactive?</th><td>{e(f["scope"])}</td></tr>')
+
 def doi_links(text):
     return re.sub(r"10\.5281/zenodo\.(\d+)", r'<a href="https://doi.org/10.5281/zenodo.\1">10.5281/zenodo.\1</a>', text)
 
@@ -67,7 +75,7 @@ for r in rows:
     summary = r["found"]
     entries.append(dict(id=sid, title=r["target"], target=r["target"], type=TYPE[r["area"]], status=st,
                         status_label=label, significance=cls, reported=r["sd"], updated="2026-11-22",
-                        summary=summary, target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
+                        summary=summary, fixed=(r.get("fix") or {}).get("date", ""), target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
     links = []
     if r.get("link"):
         links.append(f'<a href="{e(r["link"])}">{e(r["link"])}</a>')
@@ -81,6 +89,7 @@ for r in rows:
                   f'Consequence {r["C"]} = {tot} of 6)<div class="meta" style="margin-top:4px">Basis: {e(r["basis"])}</div></td></tr>')
     else:
         scores = '<tr><th>Significance</th><td>Not scored (clean check or already-known issue)</td></tr>'
+    fixrows = fix_rows(r.get("fix"))
     page = f"""{HEAD.replace('%TITLE%', e(r['target']) + ' — Climate Errata').replace('%DESC%', e(summary[:150]))}
 <main><div class="wrap">
 <p class="meta"><a href="/">← Register</a></p>
@@ -92,6 +101,7 @@ for r in rows:
 <tr><th>Verdict</th><td>{e(r['verdict'])}</td></tr>
 {scores}
 <tr><th>Outcome</th><td>{e(r['outcome'] if r['outcome'] != 'n/a' else label)}</td></tr>
+{fixrows}
 <tr><th>Where reported</th><td>{doi_links(e(r['reported']))}{'<br>' + '<br>'.join(links) if links else ''}</td></tr>
 <tr><th>Date</th><td>{e(r['date'])}</td></tr>
 </table>
@@ -103,6 +113,7 @@ for r in rows:
     (ROOT / "entries" / f"{sid}.html").write_text(page)
 
 for c in CUSTOM:
+    c["fixed"] = (c.get("fix") or {}).get("date", "")
     c.setdefault("target_doi", "")
     c.setdefault("dois", [c["target_doi"]] if c["target_doi"] else [])
 entries += CUSTOM

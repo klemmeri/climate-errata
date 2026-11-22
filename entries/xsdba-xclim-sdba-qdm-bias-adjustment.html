@@ -10,13 +10,14 @@
 <main><div class="wrap">
 <p class="meta"><a href="/">← Register</a></p>
 <h1>xsdba / xclim.sdba QDM bias adjustment (Ouranos)</h1>
-<div class="meta"><span class="pill st-fixed">Fixed – not yet released</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
+<div class="meta"><span class="pill st-fixed">Fixed – released</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
 <h2>Finding</h2>
 <p>Ranks wrong when dry days tie, so adjusted precipitation blows up 4–9× for dry-biased models</p>
 <table class="facts">
 <tr><th>Verdict</th><td>Real error</td></tr>
 <tr><th>Significance</th><td><strong>Medium</strong> (Size 2 · Reach 1 · Consequence 1 = 4 of 6)<div class="meta" style="margin-top:4px">Basis: Adjusted precipitation 4-9x too large for dry-biased models (S); xclim/xsdba bias adjustment (R); Ouranos runs affected, not rerun (C)</div></td></tr>
-<tr><th>Outcome</th><td>Fixed – not yet released</td></tr>
+<tr><th>Outcome</th><td>Fixed – released</td></tr>
+<tr><th>Fixed on</th><td>2026-11-12</td></tr><tr><th>Fixed in</th><td><a href="https://github.com/Ouranosinc/xsdba/releases/tag/v0.8.0">v0.8.0 (16 Nov 2026; PR #329 merged 12 Nov 2026)</a></td></tr><tr><th>Affected versions</th><td>v0.7.0 and earlier (first affected version not checked)</td></tr><tr><th>Is the fix retroactive?</th><td>Forward only. Results computed with affected versions are not corrected; rerun with the fixed version or later.</td></tr>
 <tr><th>Where reported</th><td>GitHub #327</td></tr>
 <tr><th>Date</th><td>2026-11-06</td></tr>
 </table>

@@ -33,11 +33,11 @@ function render(){
     .sort((a,b)=>so==='sig'?(ord[b.significance]-ord[a.significance])||b.reported.localeCompare(a.reported):b.reported.localeCompare(a.reported)||(ord[b.significance]-ord[a.significance]));
   document.getElementById('list').innerHTML=rows.length?rows.map(e=>`<article class="entry">
     <h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3>
-    <div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span><span>Reported ${esc(e.reported)}</span></div>
+    <div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span><span>Reported ${esc(e.reported)}</span>${e.fixed?`<span>Fixed ${esc(e.fixed)}</span>`:''}</div>
     <p style="margin:8px 0 0">${esc(e.summary)}</p></article>`).join(''):'<p class="meta">No entries match.</p>';
 }
 function stats(){const c=f=>all.filter(f).length;
-  const items=[[all.length,'entries'],[c(e=>e.status==='fixed'),'fixed'],[c(e=>e.status==='acknowledged'),'confirmed or acknowledged'],[c(e=>e.significance==='High'),'High significance'],[c(e=>e.significance==='Medium'),'Medium'],[c(e=>e.significance==='Low'),'Low'],[c(e=>e.status==='clean'||e.status==='known'),'clean or already known']];
+  const items=[[all.length,'entries'],[c(e=>e.status==='fixed'&&!/not yet/i.test(e.status_label)),'fixed and released'],[c(e=>/not yet/i.test(e.status_label)),'fixed, not yet released'],[c(e=>e.status==='acknowledged'),'confirmed or acknowledged'],[c(e=>e.significance==='High'),'High significance'],[c(e=>e.significance==='Medium'),'Medium'],[c(e=>e.significance==='Low'),'Low'],[c(e=>e.status==='clean'||e.status==='known'),'clean or already known']];
   document.getElementById('stats').innerHTML=items.map(([v,l])=>`<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('');}
 fetch('/entries.json').then(r=>r.json()).then(d=>{all=d;stats();render();});
 ['q','type','status','sig','sort'].forEach(id=>document.getElementById(id).addEventListener('input',render));

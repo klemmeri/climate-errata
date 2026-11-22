@@ -119,3 +119,29 @@ for c in CUSTOM:
 entries += CUSTOM
 json.dump(entries, open(ROOT / "entries.json", "w"), indent=1, ensure_ascii=False)
 print(len(entries), "entries")
+
+
+# ---- Site updates page and feed (changes to the site itself, not errata) ----
+from email.utils import format_datetime as _fd
+from datetime import datetime as _dt, timezone as _tz
+UP = json.load(open(ROOT / "data/site_updates.json"))["updates"]
+items = "".join(
+    f'<article class="entry" id="u{i}"><h3>{e(u["title"])}</h3><div class="meta"><span>{e(u["date"])}</span></div>'
+    f'<p style="margin:8px 0 0">{e(u["text"])}</p></article>' for i, u in enumerate(UP))
+body = f"""<h1>Site updates</h1>
+<p class="lede">Changes to the Climate Errata website itself: new features, new pages and changes to how it works. Updates to the errata are in the <a href="/">register</a> and its <a href="/feed.xml">feed</a>.</p>
+<p class="meta" style="display:block"><a href="/site-updates.xml">RSS feed of site updates</a> · Suggestions for the site are welcome through <a href="/report.html?kind=comment">Write to us</a>.</p>
+{items}"""
+(ROOT / "updates.html").write_text(
+    HEAD.replace("%TITLE%", "Site updates — Climate Errata").replace("%DESC%", "Changes to the Climate Errata website itself.")
+    + "\n<main><div class=\"wrap\">\n" + body + "\n</div></main>\n" + FOOT)
+SITE = "https://climate-errata.netlify.app"
+rss = ['<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Climate Errata: site updates</title>'
+       f'<link>{SITE}/updates.html</link><description>Changes to the Climate Errata website itself</description><language>en</language>']
+for i, u in enumerate(UP):
+    d = _fd(_dt.fromisoformat(u["date"] + "T00:00:00+00:00").astimezone(_tz.utc))
+    rss.append(f'<item><title>{e(u["title"])}</title><link>{SITE}/updates.html#u{i}</link><guid isPermaLink="false">site:{e(u["date"])}:{e(u["title"])}</guid>'
+               f'<pubDate>{d}</pubDate><description>{e(u["text"])}</description></item>')
+rss.append("</channel></rss>\n")
+(ROOT / "site-updates.xml").write_text("".join(rss))
+print(len(UP), "site updates")

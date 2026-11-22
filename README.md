@@ -9,7 +9,7 @@ Independent, reproducible checks of climate papers, datasets and code.
 
 Content: CC BY 4.0. Code: MIT. See LICENSE.md.
 
-Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology.
+Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology, School of Meteorology, University of Oklahoma.
 
 ## Discussion, search and private reports (added 22 Nov 2026)
 - `doi.html?doi=10.xxxx/...` — a discussion page for any paper or dataset DOI. Metadata from Crossref, falling back to DataCite; register entries that mention the DOI; a giscus thread keyed to `doi:<doi>` (one shared thread per DOI).

@@ -96,6 +96,7 @@ for r in rows:
 <tr><th>Date</th><td>{e(r['date'])}</td></tr>
 </table>
 <p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<section id="affected" data-entry="{sid}"></section><script src="/assets/affected.js" defer></script>
 {GISCUS}
 </div></main>
 {FOOT}"""

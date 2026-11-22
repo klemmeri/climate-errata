@@ -1,0 +1,26 @@
+{
+ "_about": "Curated lists of papers that use the data affected by a register entry. A paper is listed only when its abstract (or the paper itself) shows it uses the affected data over the affected region and a period that spans the problem. Papers we are screening or have contacted stay off until their contact window has closed. Inclusion says nothing about whether the paper's conclusions change: the effect is not assessed. Candidates for review are refreshed weekly in data/affected_candidates.json (not shown on the site).",
+ "entries": {
+  "nasa-merra-2-corrected-precipitation-over": {
+   "criterion": "Uses MERRA-2 land hydrology (soil moisture, runoff, corrected precipitation) or CPC Unified precipitation over Australia, for a period that spans 2015–16.",
+   "reviewed": "2026-11-22",
+   "query": "(\"MERRA-2\" OR MERRA2 OR \"CPC Unified\" OR CPCU OR \"CPC gauge\") AND (Australia OR Australian) AND (precipitation OR rainfall OR drought OR \"soil moisture\")",
+   "years": "2017-2026",
+   "papers": [
+    {"doi": "10.5194/hess-29-397-2025", "authors": "Hirschi, Crezee, Stradiotti et al.", "year": 2025, "title": "Potential of long-term satellite observations and reanalysis products for characterising soil drying: trends and drought events", "venue": "Hydrology and Earth System Sciences", "uses": "MERRA-2 surface and root-zone soil moisture trends (global, includes Australia)", "period": "2000–2022"},
+    {"doi": "10.5194/hess-28-1999-2024", "authors": "Zheng, Coxon, Woods et al.", "year": 2024, "title": "Evaluation of reanalysis soil moisture products using cosmic ray neutron sensor observations across the globe", "venue": "Hydrology and Earth System Sciences", "uses": "MERRA-2 soil moisture evaluated against sensors that include the CosmOz Australia network", "period": "Sensor records, mostly 2010s (exact years not checked)"}
+   ]
+  },
+  "asos-wind-sensors": {
+   "criterion": "Uses US station wind speeds (ASOS through ISD, GSOD or HadISD) for a period that spans ASOS commissioning (1992–99) or the 2005–09 sonic anemometer swap.",
+   "reviewed": "2026-11-22",
+   "query": "(\"wind stilling\" OR \"terrestrial stilling\" OR \"atmospheric stilling\" OR \"near-surface wind speed\") AND (\"United States\" OR \"North America\" OR \"Northern Hemisphere\" OR global OR HadISD OR ASOS)",
+   "years": "2009-2026",
+   "papers": [
+    {"doi": "10.1029/2008jd011416", "authors": "Pryor, Barthelmie, Young et al.", "year": 2009, "title": "Wind speed trends over the contiguous United States", "venue": "Journal of Geophysical Research: Atmospheres", "uses": "Observed US station wind speed trends (two observational datasets)", "period": "Spans ASOS commissioning"},
+    {"doi": "10.1038/ngeo979", "authors": "Vautard, Cattiaux, Yiou et al.", "year": 2010, "title": "Northern Hemisphere atmospheric stilling partly attributed to an increase in surface roughness", "venue": "Nature Geoscience", "uses": "Northern Hemisphere station wind speeds, including North America", "period": "1979–2008"},
+    {"doi": "10.1175/jamc-d-20-0037.1", "authors": "Fan, Liu, Chappell et al.", "year": 2020, "title": "Evaluation of Global Reanalysis Land Surface Wind Speed Trends to Support Wind Energy Development Using In Situ Observations", "venue": "Journal of Applied Meteorology and Climatology", "uses": "1439 in situ stations worldwide as the reference for reanalysis wind trends (US share not checked)", "period": "1989–2018"}
+   ]
+  }
+ }
+}

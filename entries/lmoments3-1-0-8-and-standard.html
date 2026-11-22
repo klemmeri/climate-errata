@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>lmoments3 1.0.8 (Ouranos; L-moment engine behind xclim PWM fits) and standard_precip SPI — Climate Errata</title>
+<meta name="description" content="Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ&lt;0, so 77–85% of fitted 100-yr values are NaN or off by ~50">
+<link rel="stylesheet" href="/assets/style.css"></head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
+<nav class="site"><a href="/">Register</a><a href="/about.html">How it works</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
+
+<main><div class="wrap">
+<p class="meta"><a href="/">← Register</a></p>
+<h1>lmoments3 1.0.8 (Ouranos; L-moment engine behind xclim PWM fits) and standard_precip SPI</h1>
+<div class="meta"><span class="pill st-reported">Reported (open)</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
+<h2>Finding</h2>
+<p>Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ&lt;0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type=&#x27;wak&#x27; inherits it (half of months NaN, 78% &#x27;severe drought&#x27; vs 5%)</p>
+<table class="facts">
+<tr><th>Verdict</th><td>Real error</td></tr>
+<tr><th>Significance</th><td><strong>Medium</strong> (Size 2 · Reach 1 · Consequence 1 = 4 of 6)<div class="meta" style="margin-top:4px">Basis: Quantiles NaN or 10–60× wrong vs Hosking&#x27;s R lmom (S); Wakeby niche but reachable via xclim and standard_precip (R); errors gross enough to notice, risk in automated pipelines (C)</div></td></tr>
+<tr><th>Outcome</th><td>Open</td></tr>
+<tr><th>Where reported</th><td>GitHub lmoments3 #34; standard_precip #35<br><a href="https://github.com/Ouranosinc/lmoments3/issues/34">https://github.com/Ouranosinc/lmoments3/issues/34</a></td></tr>
+<tr><th>Date</th><td>2026-11-19</td></tr>
+</table>
+<p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>
+<section class="comments"><h2>Discussion</h2><p class="meta">Comments use GitHub Discussions (sign in with GitHub). Authors and developers are especially welcome to reply.</p>
+<script src="https://giscus.app/client.js" data-repo="klemmeri/climate-errata" data-repo-id="R_kgDOV30cyQ" data-category="Announcements" data-category-id="DIC_kwDOV30cyc4DLu90" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script></section>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated.</div></footer>
+</body></html>

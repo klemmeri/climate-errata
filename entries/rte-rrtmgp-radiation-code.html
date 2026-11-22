@@ -10,7 +10,7 @@
 <main><div class="wrap">
 <p class="meta"><a href="/">← Register</a></p>
 <h1>RTE+RRTMGP radiation code (CESM3, E3SM, ICON)</h1>
-<div class="meta"><span class="pill st-fixed">Fixed – released</span><span class="pill type">code</span><span class="pill sig">Significance: High</span></div>
+<div class="meta"><span class="pill st-fixed">Our write-up on Zenodo (latest version)</span><span class="pill type">code</span><span class="pill sig">Significance: High</span></div>
 <h2>Finding</h2>
 <p>6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%</p>
 <table class="facts">
@@ -18,7 +18,7 @@
 <tr><th>Significance</th><td><strong>High</strong> (Size 2 · Reach 2 · Consequence 1 = 5 of 6)<div class="meta" style="margin-top:4px">Basis: CO2-removal effect understated 70-80% (S); in CESM3/E3SM/ICON (R); fixed but no published run redone (C)</div></td></tr>
 <tr><th>Outcome</th><td>Fixed – released</td></tr>
 <tr><th>Fixed on</th><td>2026-11-16</td></tr><tr><th>Fixed in</th><td><a href="https://github.com/earth-system-radiation/rte-rrtmgp/releases/tag/v1.10">v1.10 (PR #437, merged 16 Nov 2026)</a></td></tr><tr><th>Affected versions</th><td>v1.0 to v1.9.3</td></tr><tr><th>Is the fix retroactive?</th><td>Forward only. Results computed with affected versions are not corrected; rerun with the fixed version or later. Climate model runs already made with affected versions (e.g. CESM3, E3SM, ICON) are not corrected unless rerun.</td></tr>
-<tr><th>Where reported</th><td>6 GitHub issues + Zenodo report (<a href="https://doi.org/10.5281/zenodo.23486714">10.5281/zenodo.23486714</a>)<br><a href="https://github.com/earth-system-radiation/rte-rrtmgp/issues/425">https://github.com/earth-system-radiation/rte-rrtmgp/issues/425</a><br><a href="https://doi.org/10.5281/zenodo.23486714">doi:10.5281/zenodo.23486714</a></td></tr>
+<tr><th>Where reported</th><td>6 GitHub issues + Zenodo report<br><a href="https://github.com/earth-system-radiation/rte-rrtmgp/issues/425">https://github.com/earth-system-radiation/rte-rrtmgp/issues/425</a><br>Our write-up on Zenodo (latest version): <a href="https://doi.org/10.5281/zenodo.23486713">doi:10.5281/zenodo.23486713</a></td></tr>
 <tr><th>Date</th><td>2026-10-19</td></tr>
 </table>
 <h2>Summary</h2>

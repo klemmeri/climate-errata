@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-22",
+   "title": "Entries link to our Zenodo preprints",
+   "text": "Entries backed by one of our Zenodo preprints now link to it on the entry page. The links use Zenodo's all-versions DOI, so they always open the latest version. Links were added for the modifiedmk, Ali et al. 2026 and Jin & Pu 2026 entries, and the hourly-precipitation entry now opens version 3 rather than version 2."
+  },
+  {
+   "date": "2026-11-22",
    "title": "New address: climateerrata.org",
    "text": "The site now lives at climateerrata.org. The old address, climate-errata.netlify.app, redirects there automatically, so existing links keep working."
   },

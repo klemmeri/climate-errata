@@ -82,7 +82,8 @@ for r in rows:
     if r.get("target_doi"):
         links.append(f'Discuss this DOI: <a href="/doi.html?doi={e(r["target_doi"])}">doi:{e(r["target_doi"])}</a>')
     if r.get("doi"):
-        links.append(f'<a href="https://doi.org/{e(r["doi"])}">doi:{e(r["doi"])}</a>')
+        label = "Our write-up on Zenodo (latest version)" if r["doi"].startswith("10.5281/zenodo.") else "DOI"
+        links.append(f'{label}: <a href="https://doi.org/{e(r["doi"])}">doi:{e(r["doi"])}</a>')
     scores = ""
     if tot is not None:
         scores = (f'<tr><th>Significance</th><td><strong>{cls}</strong> (Size {r["S"]} · Reach {r["R"]} · '

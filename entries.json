@@ -13,7 +13,7 @@
   "fixed": "2026-11-16",
   "target_doi": "",
   "dois": [
-   "10.5281/zenodo.23486714"
+   "10.5281/zenodo.23486713"
   ]
  },
  {
@@ -150,7 +150,7 @@
   "fixed": "",
   "target_doi": "",
   "dois": [
-   "10.5281/zenodo.24015743"
+   "10.5281/zenodo.24015742"
   ]
  },
  {
@@ -166,7 +166,9 @@
   "summary": "Same all-lags flaw since v1.1.0 (2018)",
   "fixed": "",
   "target_doi": "",
-  "dois": []
+  "dois": [
+   "10.5281/zenodo.24015742"
+  ]
  },
  {
   "id": "hamed-rao-test-default",
@@ -497,7 +499,7 @@
   "fixed": "",
   "target_doi": "",
   "dois": [
-   "10.5281/zenodo.24357793"
+   "10.5281/zenodo.24357792"
   ]
  },
  {
@@ -514,7 +516,7 @@
   "fixed": "",
   "target_doi": "",
   "dois": [
-   "10.5281/zenodo.24328556"
+   "10.5281/zenodo.24327949"
   ]
  },
  {
@@ -531,7 +533,7 @@
   "fixed": "",
   "target_doi": "",
   "dois": [
-   "10.5281/zenodo.24092540"
+   "10.5281/zenodo.24092539"
   ]
  },
  {
@@ -624,7 +626,9 @@
   "summary": "Headline 21%/K not reproduced (12%); within-storm ~2%/K",
   "fixed": "",
   "target_doi": "",
-  "dois": []
+  "dois": [
+   "10.5281/zenodo.24144930"
+  ]
  },
  {
   "id": "jin-pu-2026-npj-cas",
@@ -639,7 +643,9 @@
   "summary": "CIs too narrow; split search inflates false positives",
   "fixed": "",
   "target_doi": "",
-  "dois": []
+  "dois": [
+   "10.5281/zenodo.24046533"
+  ]
  },
  {
   "id": "zeng-et-al-2019-ncc-monerie",
@@ -655,7 +661,7 @@
   "fixed": "",
   "target_doi": "",
   "dois": [
-   "10.5281/zenodo.24357793"
+   "10.5281/zenodo.24357792"
   ]
  },
  {

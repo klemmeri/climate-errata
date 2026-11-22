@@ -11,7 +11,7 @@ from email.utils import format_datetime
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SITE = "https://climate-errata.netlify.app"
+SITE = "https://climateerrata.org"
 DS = json.load(open(ROOT / "data/datasets.json"))
 ENTRIES = {e["id"]: e for e in json.load(open(ROOT / "entries.json"))}
 try:

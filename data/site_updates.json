@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-22",
+   "title": "New address: climateerrata.org",
+   "text": "The site now lives at climateerrata.org. The old address, climate-errata.netlify.app, redirects there automatically, so existing links keep working."
+  },
+  {
+   "date": "2026-11-22",
    "title": "Full write-ups for the High-significance entries",
    "text": "The 11 entries rated High significance now have full write-ups: what was found, with the key numbers, who is affected, the responsible party's response, what users can do, and how to reproduce the result. The other entries will follow."
   },

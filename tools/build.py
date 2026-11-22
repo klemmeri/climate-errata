@@ -138,7 +138,7 @@ body = f"""<h1>Site updates</h1>
 (ROOT / "updates.html").write_text(
     HEAD.replace("%TITLE%", "Site updates — Climate Errata").replace("%DESC%", "Changes to the Climate Errata website itself.")
     + "\n<main><div class=\"wrap\">\n" + body + "\n</div></main>\n" + FOOT)
-SITE = "https://climate-errata.netlify.app"
+SITE = "https://climateerrata.org"
 rss = ['<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>Climate Errata: site updates</title>'
        f'<link>{SITE}/updates.html</link><description>Changes to the Climate Errata website itself</description><language>en</language>']
 for i, u in enumerate(UP):

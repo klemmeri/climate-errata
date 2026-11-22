@@ -8,7 +8,7 @@ import json, os, re, pathlib, urllib.request, datetime
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OWNER, NAME = os.environ.get("REPO", "klemmeri/climate-errata").split("/")
 TOKEN = os.environ["GITHUB_TOKEN"]
-SITE = "https://climate-errata.netlify.app"
+SITE = "https://climateerrata.org"
 
 Q = """query($owner:String!,$name:String!,$after:String){repository(owner:$owner,name:$name){
  discussions(first:50,after:$after,orderBy:{field:UPDATED_AT,direction:DESC}){pageInfo{hasNextPage endCursor}
@@ -27,7 +27,7 @@ def gql(variables):
 
 def clean(t, n=4000):
     t = re.sub(r"<!--.*?-->", " ", t or "", flags=re.S)
-    t = re.sub(r"https://climate-errata\.netlify\.app\S*", " ", t)
+    t = re.sub(r"https://(climate-errata\.netlify\.app|(www\.)?climateerrata\.org)\S*", " ", t)
     return re.sub(r"\s+", " ", t).strip()[:n]
 
 entries = {e["id"]: e["title"] for e in json.load(open(ROOT / "entries.json"))}

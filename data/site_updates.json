@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-22",
+   "title": "Fixes we propose; our reports on Zenodo",
+   "text": "The How it works page now explains the fixes we send with reports: patches and pull requests for software, affected areas and workarounds for datasets, and corrected analyses for papers. It also lists our two broader reports on Zenodo. The home page mentions the proposed fixes too."
+  },
+  {
+   "date": "2026-11-22",
    "title": "Entries link to our Zenodo preprints",
    "text": "Entries backed by one of our Zenodo preprints now link to it on the entry page. The links use Zenodo's all-versions DOI, so they always open the latest version. Links were added for the modifiedmk, Ali et al. 2026 and Jin & Pu 2026 entries, and the hourly-precipitation entry now opens version 3 rather than version 2."
   },

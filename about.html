@@ -12,6 +12,14 @@
 <p>Methods, statistics, data processing and code. Most entries come from reproducing a result with the published data and code, or from comparing a dataset with independent references and station records.</p>
 <h2>Contact first</h2>
 <p>Every finding is sent privately to the authors, data producers or developers before anything is posted. An entry appears here only after they reply or three weeks pass without a reply. Their response is recorded on the entry.</p>
+<h2 id="fixes">Fixes we propose</h2>
+<p>We don't just report problems. Where we can, we propose a fix and send it with the report:</p>
+<ul>
+<li><b>Software:</b> a patch or pull request, with a test that fails before the fix and passes after it.</li>
+<li><b>Datasets:</b> the cells, regions and periods affected, the likely cause (for example a change in the station network), and a workaround for users, such as masking the affected period or checking against another product.</li>
+<li><b>Papers:</b> a corrected analysis that shows how much the result changes, with the code to reproduce it.</li>
+</ul>
+<p>These are recommendations. The authors, data producers or developers decide whether and how to fix their work, and each entry records what they did. The "What users can do" part of an entry says how to avoid the problem in the meantime.</p>
 <h2>Statuses</h2>
 <ul>
 <li><span class="pill st-reported">Reported</span> sent to the responsible party; no resolution yet.</li>
@@ -23,6 +31,12 @@
 </ul>
 <h2>How the work is done</h2>
 <p>The analyses were carried out with an AI system (Claude, Anthropic) under the author's direction. The author checked the methods and results and is responsible for the content.</p>
+<h2 id="reports">Our reports on Zenodo</h2>
+<p>Write-ups of single findings are linked from their entries. Two broader reports cover the work as a whole:</p>
+<ul>
+<li><a href="https://doi.org/10.5281/zenodo.24121770">AI-Assisted Auditing of Climate Code and Statistical Methods: What Was Found, What Was Not, and Lessons for the Climate Community</a> (November 2026).</li>
+<li><a href="https://doi.org/10.5281/zenodo.23326847">When Statistical Assumptions Go Unexamined: Common Methods, Their Assumptions, and Eight Influential Atmospheric-Science Cases</a> (October 2026).</li>
+</ul>
 <h2>Significance</h2>
 <p>Each finding that claims a problem is scored 0–2 on three criteria. The class comes from the total (0–6): High 5–6, Medium 3–4, Low 0–2. Clean checks and already-known issues are not scored.</p>
 <table class="rubric">

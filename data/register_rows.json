@@ -70,7 +70,7 @@
   "target": "R SPEI package (spi/spei)",
   "found": "Zero-rain adjustment overwritten, so SPI returns −Inf (versions 1.8.0–1.8.1, 2022–26); 47+ papers used it",
   "verdict": "Real error",
-  "outcome": "Fixed – released",
+  "outcome": "Fixed – not yet released",
   "reported": "GitHub #87 + email",
   "date": "2026-11-04",
   "link": null,
@@ -82,10 +82,10 @@
   "sd": "2026-11-04",
   "fix": {
    "date": "2026-11-07",
-   "fixed_in": "commit e7c5641 (7 Nov 2026), included in GitHub tag v1.9.0 (8 Nov 2026); CRAN release not checked",
+   "fixed_in": "commit e7c5641 (7 Nov 2026), in GitHub tag v1.9.0 (8 Nov 2026); not yet on CRAN, which still serves 1.8.1 (published 2 Mar 2023; checked 22 Nov 2026)",
    "fixed_in_url": "https://github.com/sbegueria/SPEI/commit/e7c5641",
    "affected": "1.8.0 to 1.8.1 (regression introduced in commit 9bf1a20)",
-   "scope": "Forward only. Results computed with affected versions are not corrected; rerun with the fixed version or later. The fix also resolves earlier user reports #79 and #85."
+   "scope": "Fix not yet on CRAN. Most R users install from CRAN, whose 1.8.1 still has the bug; install v1.9.0 from GitHub or wait for the CRAN release. Forward only: results computed with affected versions are not corrected. The fix also resolves earlier user reports #79 and #85."
   }
  },
  {

@@ -52,7 +52,7 @@
   "target": "R SPEI package (spi/spei)",
   "type": "code",
   "status": "fixed",
-  "status_label": "Fixed – released",
+  "status_label": "Fixed – not yet released",
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",

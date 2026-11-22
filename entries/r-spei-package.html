@@ -10,14 +10,14 @@
 <main><div class="wrap">
 <p class="meta"><a href="/">← Register</a></p>
 <h1>R SPEI package (spi/spei)</h1>
-<div class="meta"><span class="pill st-fixed">Fixed – released</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
+<div class="meta"><span class="pill st-fixed">Fixed – not yet released</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
 <h2>Finding</h2>
 <p>Zero-rain adjustment overwritten, so SPI returns −Inf (versions 1.8.0–1.8.1, 2022–26); 47+ papers used it</p>
 <table class="facts">
 <tr><th>Verdict</th><td>Real error</td></tr>
 <tr><th>Significance</th><td><strong>Medium</strong> (Size 2 · Reach 1 · Consequence 1 = 4 of 6)<div class="meta" style="margin-top:4px">Basis: SPI returns -Inf (invalid output) (S); 47+ citing papers (R: tens); papers not rerun (C)</div></td></tr>
-<tr><th>Outcome</th><td>Fixed – released</td></tr>
-<tr><th>Fixed on</th><td>2026-11-07</td></tr><tr><th>Fixed in</th><td><a href="https://github.com/sbegueria/SPEI/commit/e7c5641">commit e7c5641 (7 Nov 2026), included in GitHub tag v1.9.0 (8 Nov 2026); CRAN release not checked</a></td></tr><tr><th>Affected versions</th><td>1.8.0 to 1.8.1 (regression introduced in commit 9bf1a20)</td></tr><tr><th>Is the fix retroactive?</th><td>Forward only. Results computed with affected versions are not corrected; rerun with the fixed version or later. The fix also resolves earlier user reports #79 and #85.</td></tr>
+<tr><th>Outcome</th><td>Fixed – not yet released</td></tr>
+<tr><th>Fixed on</th><td>2026-11-07</td></tr><tr><th>Fixed in</th><td><a href="https://github.com/sbegueria/SPEI/commit/e7c5641">commit e7c5641 (7 Nov 2026), in GitHub tag v1.9.0 (8 Nov 2026); not yet on CRAN, which still serves 1.8.1 (published 2 Mar 2023; checked 22 Nov 2026)</a></td></tr><tr><th>Affected versions</th><td>1.8.0 to 1.8.1 (regression introduced in commit 9bf1a20)</td></tr><tr><th>Is the fix retroactive?</th><td>Fix not yet on CRAN. Most R users install from CRAN, whose 1.8.1 still has the bug; install v1.9.0 from GitHub or wait for the CRAN release. Forward only: results computed with affected versions are not corrected. The fix also resolves earlier user reports #79 and #85.</td></tr>
 <tr><th>Where reported</th><td>GitHub #87 + email</td></tr>
 <tr><th>Date</th><td>2026-11-04</td></tr>
 </table>

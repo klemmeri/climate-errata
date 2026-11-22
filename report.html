@@ -19,6 +19,7 @@
     <option value="report">A suspected error in a paper, dataset or code (private)</option>
     <option value="comment">A comment or correction for the maintainer</option>
     <option value="response">I am an author or data producer responding to an entry</option>
+    <option value="legal">A takedown or legal request</option>
   </select>
   <label for="name">Your name</label>
   <input id="name" name="name" autocomplete="name" required>
@@ -45,10 +46,10 @@
   <label class="check"><input type="checkbox" name="may_post" value="yes"> You may post my question or comment publicly, without my name or email, if it would help others.</label>
   <label class="check"><input type="checkbox" name="credit" value="yes"> If this leads to a register entry, credit me by name.</label>
   <p style="margin-top:18px"><button type="submit">Send</button></p>
-  <p class="hint meta">Your email is used only to reply to you. It is never published or shared.</p>
+  <p class="hint meta">Your email is used only to reply to you. It is never published or shared. See the <a href="/policies.html#privacy">privacy policy</a>.</p>
 </form>
 </div></main>
-<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated.</div></footer>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated. · <a href="/policies.html">Policies and privacy</a> · <a href="/report.html">Write to us</a></div></footer>
 <script>
 const p=new URLSearchParams(location.search);
 if(p.get('doi'))document.getElementById('doi').value=p.get('doi');

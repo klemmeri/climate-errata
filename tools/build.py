@@ -36,6 +36,18 @@ def slug(s):
     s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
     return "-".join(s.split("-")[:6])
 
+DOI_RE = re.compile(r"10\.\d{4,9}/[^\s,;()\[\]<>\"']+")
+
+def find_dois(r):
+    """All DOIs mentioned in a row: the target's own DOI (optional 'target_doi'), our notes, links."""
+    text = " ".join(str(r.get(k) or "") for k in ("target_doi", "doi", "target", "found", "reported", "link", "verdict"))
+    out = []
+    for d in DOI_RE.findall(text):
+        d = d.rstrip(".").lower()
+        if d not in out:
+            out.append(d)
+    return out
+
 def doi_links(text):
     return re.sub(r"10\.5281/zenodo\.(\d+)", r'<a href="https://doi.org/10.5281/zenodo.\1">10.5281/zenodo.\1</a>', text)
 
@@ -55,10 +67,12 @@ for r in rows:
     summary = r["found"]
     entries.append(dict(id=sid, title=r["target"], target=r["target"], type=TYPE[r["area"]], status=st,
                         status_label=label, significance=cls, reported=r["sd"], updated="2026-11-22",
-                        summary=summary))
+                        summary=summary, target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
     links = []
     if r.get("link"):
         links.append(f'<a href="{e(r["link"])}">{e(r["link"])}</a>')
+    if r.get("target_doi"):
+        links.append(f'Discuss this DOI: <a href="/doi.html?doi={e(r["target_doi"])}">doi:{e(r["target_doi"])}</a>')
     if r.get("doi"):
         links.append(f'<a href="https://doi.org/{e(r["doi"])}">doi:{e(r["doi"])}</a>')
     scores = ""
@@ -87,6 +101,9 @@ for r in rows:
 {FOOT}"""
     (ROOT / "entries" / f"{sid}.html").write_text(page)
 
+for c in CUSTOM:
+    c.setdefault("target_doi", "")
+    c.setdefault("dois", [c["target_doi"]] if c["target_doi"] else [])
 entries += CUSTOM
 json.dump(entries, open(ROOT / "entries.json", "w"), indent=1, ensure_ascii=False)
 print(len(entries), "entries")

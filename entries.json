@@ -9,7 +9,11 @@
   "significance": "High",
   "reported": "2026-10-19",
   "updated": "2026-11-22",
-  "summary": "6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%"
+  "summary": "6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.23486714"
+  ]
  },
  {
   "id": "coare-air-sea-flux-algorithm",
@@ -21,7 +25,9 @@
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",
-  "summary": "Sign error in the COARE flux code"
+  "summary": "Sign error in the COARE flux code",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "climate-indices",
@@ -33,7 +39,9 @@
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",
-  "summary": "Zero-rain months counted twice in SPI"
+  "summary": "Zero-rain months counted twice in SPI",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "r-spei-package",
@@ -45,7 +53,9 @@
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",
-  "summary": "Zero-rain adjustment overwritten, so SPI returns −Inf (versions 1.8.0–1.8.1, 2022–26); 47+ papers used it"
+  "summary": "Zero-rain adjustment overwritten, so SPI returns −Inf (versions 1.8.0–1.8.1, 2022–26); 47+ papers used it",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "xclim-spi",
@@ -57,7 +67,9 @@
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",
-  "summary": "Default 3-parameter gamma fit collapses its location onto the sample minimum (SPI −8.21)"
+  "summary": "Default 3-parameter gamma fit collapses its location onto the sample minimum (SPI −8.21)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "martinvonk-spei",
@@ -69,7 +81,9 @@
   "significance": "Low",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "prob_zero=True counts zeros twice, biasing SPI high"
+  "summary": "prob_zero=True counts zeros twice, biasing SPI high",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "climdex-pcic-etccdi-indices",
@@ -81,7 +95,9 @@
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",
-  "summary": "WSDI/CSDI never got the Zhang et al. (2005) in-base bootstrap, leaving a spurious base-period step"
+  "summary": "WSDI/CSDI never got the Zhang et al. (2005) in-base bootstrap, leaving a spurious base-period step",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "cdo-etccdi-operators",
@@ -93,7 +109,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Same missing bootstrap; rx1daymon/rx5daymon return unaggregated data; other bugs"
+  "summary": "Same missing bootstrap; rx1daymon/rx5daymon return unaggregated data; other bugs",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "climpact",
@@ -105,7 +123,9 @@
   "significance": "Medium",
   "reported": "2026-11-04",
   "updated": "2026-11-22",
-  "summary": "Heatwave indices without bootstrap; SPI zeros double-counted; parameter typo"
+  "summary": "Heatwave indices without bootstrap; SPI zeros double-counted; parameter typo",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "pymannkendall",
@@ -117,7 +137,11 @@
   "significance": "High",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Yue–Wang test default rejects ~47% of pure-noise series at the 5% level"
+  "summary": "Yue–Wang test default rejects ~47% of pure-noise series at the 5% level",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.24015743"
+  ]
  },
  {
   "id": "modifiedmk-mmky",
@@ -129,7 +153,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Same all-lags flaw since v1.1.0 (2018)"
+  "summary": "Same all-lags flaw since v1.1.0 (2018)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "hamed-rao-test-default",
@@ -141,7 +167,9 @@
   "significance": "Medium",
   "reported": "2026-11-10",
   "updated": "2026-11-22",
-  "summary": "About 2× the nominal false-positive rate on white noise"
+  "summary": "About 2× the nominal false-positive rate on white noise",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "xsdba-xclim-sdba-qdm-bias-adjustment",
@@ -153,7 +181,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Ranks wrong when dry days tie, so adjusted precipitation blows up 4–9× for dry-biased models"
+  "summary": "Ranks wrong when dry days tie, so adjusted precipitation blows up 4–9× for dry-biased models",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "xclim-pet-and-heat-index",
@@ -165,7 +195,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Heat index recomputed each year halves warming-driven PET increases; bare Rothfusz heat index"
+  "summary": "Heat index recomputed each year halves warming-driven PET increases; bare Rothfusz heat index",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "pcmdi-metrics-package",
@@ -177,7 +209,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "rms_xyt redefined in the xCDAT port; always biased low"
+  "summary": "rms_xyt redefined in the xCDAT port; always biased low",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "climpred",
@@ -189,7 +223,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Uninitialized reference uses single-member skill, overstating the value of initialization; bootstrap false positives 68–73%"
+  "summary": "Uninitialized reference uses single-member skill, overstating the value of initialization; bootstrap false positives 68–73%",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "skyborn",
@@ -201,7 +237,9 @@
   "significance": "Low",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Model-uncertainty covariance keeps only the diagonal; 90% intervals cover the truth 67% of the time"
+  "summary": "Model-uncertainty covariance keeps only the diagonal; 90% intervals cover the truth 67% of the time",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "tcpypi",
@@ -213,7 +251,9 @@
   "significance": "Low",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Published fix never implemented; zero-CAPE outflow case"
+  "summary": "Published fix never implemented; zero-CAPE outflow case",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "rwwa",
@@ -225,7 +265,9 @@
   "significance": "Low",
   "reported": "2026-11-07",
   "updated": "2026-11-22",
-  "summary": "Bootstrap refits silently switch optimizer and often fail for shift-scale fits; core statistics hold"
+  "summary": "Bootstrap refits silently switch optimizer and often fail for shift-scale fits; core statistics hold",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "ncar-mmm-physics-kim-tofd-option",
@@ -237,7 +279,9 @@
   "significance": "Medium",
   "reported": "2026-11-10",
   "updated": "2026-11-22",
-  "summary": "Friction velocity 28–41% high; uninitialized variable"
+  "summary": "Friction velocity 28–41% high; uninitialized variable",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "metpy-vorticity-divergence",
@@ -249,7 +293,9 @@
   "significance": "High",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Map-factor error grows toward the poles (~10,000× at pole rows)"
+  "summary": "Map-factor error grows toward the poles (~10,000× at pole rows)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "wrf-python-updraft-helicity",
@@ -261,7 +307,9 @@
   "significance": "Medium",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Divides by the map factor instead of multiplying (bias 1/m²)"
+  "summary": "Divides by the map factor instead of multiplying (bias 1/m²)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "geocat-comp-seasonal-averages",
@@ -273,7 +321,9 @@
   "significance": "Medium",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Partial DJF seasons returned silently; winter trends biased up to ~35%"
+  "summary": "Partial DJF seasons returned silently; winter trends biased up to ~35%",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "geocat-comp-gradient",
@@ -285,7 +335,9 @@
   "significance": "Medium",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Outputs in reverse of documented order; official moisture-convergence example wrong"
+  "summary": "Outputs in reverse of documented order; official moisture-convergence example wrong",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "xcdat-seasonal-averages",
@@ -297,7 +349,9 @@
   "significance": "Medium",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Dropping incomplete seasons fails, or silently keeps partial DJF, for daily data"
+  "summary": "Dropping incomplete seasons fails, or silently keeps partial DJF, for daily data",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "xesmf-conservative-regridding",
@@ -309,7 +363,9 @@
   "significance": "High",
   "reported": "2026-11-15",
   "updated": "2026-11-22",
-  "summary": "Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)"
+  "summary": "Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "earthkit-meteo",
@@ -321,7 +377,9 @@
   "significance": "Medium",
   "reported": "2026-11-15",
   "updated": "2026-11-22",
-  "summary": "Default wet-bulb potential temperature up to ~1.2 K too low"
+  "summary": "Default wet-bulb potential temperature up to ~1.2 K too low",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "climada-er11-hurricane-wind-profile",
@@ -333,7 +391,9 @@
   "significance": "Medium",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "Missing −½fr term + translation counted twice; peak wind 3–8 m/s (6–21%) above track vmax"
+  "summary": "Missing −½fr term + translation counted twice; peak wind 3–8 m/s (6–21%) above track vmax",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "hydroeval-non-parametric-kge",
@@ -345,7 +405,9 @@
   "significance": "Medium",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "Tied values (zero flows) ranked by time order, biasing KGE_NP for intermittent rivers"
+  "summary": "Tied values (zero flows) ranked by time order, biasing KGE_NP for intermittent rivers",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "eofs-xeofs",
@@ -357,7 +419,9 @@
   "significance": "Not scored",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Known in-place bug (fix pending); patterns returned still weighted (doc gap)"
+  "summary": "Known in-place bug (fix pending); patterns returned still weighted (doc gap)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "global-warming-index-igcc-forcing-zelinka",
@@ -369,7 +433,9 @@
   "significance": "Not scored",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Minor window and check slips only"
+  "summary": "Minor window and check slips only",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "clean-checks-properscoring-pykrige-thermofeel-esmvalcore",
@@ -381,7 +447,9 @@
   "significance": "Not scored",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "No errors found (9 packages/workflows)"
+  "summary": "No errors found (9 packages/workflows)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "asos-wind-sensors",
@@ -393,7 +461,11 @@
   "significance": "High",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "US steps of −6.5% (sonic) and −9% (commissioning) remove most US 1988–2010 stilling; global 1978–2010 decline (Zeng method) −2.7 → −1.9 %/decade; NH (HadISD design) −24%"
+  "summary": "US steps of −6.5% (sonic) and −9% (commissioning) remove most US 1988–2010 stilling; global 1978–2010 decline (Zeng method) −2.7 → −1.9 %/decade; NH (HadISD design) −24%",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.24357793"
+  ]
  },
  {
   "id": "noaa-hourly-precipitation-dataset",
@@ -405,7 +477,11 @@
   "significance": "High",
   "reported": "2026-11-17",
   "updated": "2026-11-22",
-  "summary": "Step at the 2012 digital upgrade (~+9–10% in hourly maxima)"
+  "summary": "Step at the 2012 digital upgrade (~+9–10% in hourly maxima)",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.24328556"
+  ]
  },
  {
   "id": "icoads-r3-1-marine-observations",
@@ -417,7 +493,11 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "~295,000 position-error duplicates; some HadSST4 box-months rest on misplaced copies"
+  "summary": "~295,000 position-error duplicates; some HadSST4 box-months rest on misplaced copies",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.24092540"
+  ]
  },
  {
   "id": "ibtracs-tropical-cyclone-archive",
@@ -429,7 +509,9 @@
   "significance": "Medium",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "Provisional seasons run low with blank WMO winds; flag documentation out of date; otherwise clean"
+  "summary": "Provisional seasons run low with blank WMO winds; flag documentation out of date; otherwise clean",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "asos-dew-point-sensor-swap",
@@ -441,7 +523,9 @@
   "significance": "Not scored",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "Transient drift reset; no lasting step"
+  "summary": "Transient drift reset; no lasting step",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "noaa-oisst-v2-1",
@@ -453,7 +537,9 @@
   "significance": "Not scored",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "Excess recent warming inflates marine-heatwave trends 7–14%"
+  "summary": "Excess recent warming inflates marine-heatwave trends 7–14%",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "boers-2021-ncc-boulton-et-al",
@@ -465,7 +551,9 @@
   "significance": "Medium",
   "reported": "2026-11-06",
   "updated": "2026-11-22",
-  "summary": "Same surrogate test overstates significance; headlines largely survive"
+  "summary": "Same surrogate test overstates significance; headlines largely survive",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "kossin-et-al-2020-pnas",
@@ -477,7 +565,11 @@
   "significance": "High",
   "reported": "2026-11-10",
   "updated": "2026-11-22",
-  "summary": "Clustering understated; 1979–2017 change not significant (p = 0.10); trend holds through 2024"
+  "summary": "Clustering understated; 1979–2017 change not significant (p = 0.10); trend holds through 2024",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.24096379"
+  ]
  },
  {
   "id": "ali-et-al-2026-npj-cas",
@@ -489,7 +581,9 @@
   "significance": "High",
   "reported": "2026-11-11",
   "updated": "2026-11-22",
-  "summary": "Headline 21%/K not reproduced (12%); within-storm ~2%/K"
+  "summary": "Headline 21%/K not reproduced (12%); within-storm ~2%/K",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "jin-pu-2026-npj-cas",
@@ -501,7 +595,9 @@
   "significance": "Medium",
   "reported": "2026-11-07",
   "updated": "2026-11-22",
-  "summary": "CIs too narrow; split search inflates false positives"
+  "summary": "CIs too narrow; split search inflates false positives",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "zeng-et-al-2019-ncc-monerie",
@@ -513,7 +609,11 @@
   "significance": "High",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "ASOS sensor steps explain most of the North American decline and about 30% of the global 1978–2010 decline"
+  "summary": "ASOS sensor steps explain most of the North American decline and about 30% of the global 1978–2010 decline",
+  "target_doi": "",
+  "dois": [
+   "10.5281/zenodo.24357793"
+  ]
  },
  {
   "id": "clean-checks-mauritsen-2025-nerem-2018",
@@ -525,7 +625,9 @@
   "significance": "Not scored",
   "reported": "2026-11-18",
   "updated": "2026-11-22",
-  "summary": "Claims hold under independent tests (6 studies)"
+  "summary": "Claims hold under independent tests (6 studies)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "lmoments3-1-0-8-and-standard",
@@ -537,7 +639,9 @@
   "significance": "Medium",
   "reported": "2026-11-19",
   "updated": "2026-11-22",
-  "summary": "Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ<0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type='wak' inherits it (half of months NaN, 78% 'severe drought' vs 5%)"
+  "summary": "Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ<0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type='wak' inherits it (half of months NaN, 78% 'severe drought' vs 5%)",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "hugonnet-et-al-2021-nature",
@@ -549,7 +653,11 @@
   "significance": "High",
   "reported": "2026-11-19",
   "updated": "2026-11-22",
-  "summary": "The 95% interval on the mass-loss acceleration (48 ± 16 Gt/yr per decade) was formed by doubling a 1σ interval from a regression with ~2 degrees of freedom; the correct t-based 95% half-width is ~1.64× larger (about ±26). The acceleration remains significant at the corrected level; the author notes conservative assumptions elsewhere (temporal decorrelation, density conversion) likely offset the narrower interval."
+  "summary": "The 95% interval on the mass-loss acceleration (48 ± 16 Gt/yr per decade) was formed by doubling a 1σ interval from a regression with ~2 degrees of freedom; the correct t-based 95% half-width is ~1.64× larger (about ±26). The acceleration remains significant at the corrected level; the author notes conservative assumptions elsewhere (temporal decorrelation, density conversion) likely offset the narrower interval.",
+  "target_doi": "",
+  "dois": [
+   "10.1038/s41586-021-03436-z"
+  ]
  },
  {
   "id": "nasa-merra-2-corrected-precipitation-over",
@@ -561,7 +669,9 @@
   "significance": "High",
   "reported": "2026-11-20",
   "updated": "2026-11-22",
-  "summary": "About a 20% dry step from 2016 in PRECTOTCORR over Australia, inherited from the CPC Unified gauge analysis (CPCU) that MERRA-2 uses to correct land precipitation. CPCU's own gauge-count field shows Australia lost about 95% of its gauges in two steps (2007–08 and 2015–16, e.g. E Australia ~590 → 90). GPCP and GPCC do not show the step, and a gauge-independent reanalysis (NCEP R1) confirms it sits in CPCU."
+  "summary": "About a 20% dry step from 2016 in PRECTOTCORR over Australia, inherited from the CPC Unified gauge analysis (CPCU) that MERRA-2 uses to correct land precipitation. CPCU's own gauge-count field shows Australia lost about 95% of its gauges in two steps (2007–08 and 2015–16, e.g. E Australia ~590 → 90). GPCP and GPCC do not show the step, and a gauge-independent reanalysis (NCEP R1) confirms it sits in CPCU.",
+  "target_doi": "",
+  "dois": []
  },
  {
   "id": "pyextremes-gaps",
@@ -573,6 +683,8 @@
   "significance": "Medium",
   "reported": "2026-11-12",
   "updated": "2026-11-22",
-  "summary": "Gaps in a record made the peaks-over-threshold event rate too low and let partly observed blocks count as full blocks, so return values came out too low. Fixed by the developer in v2.7.0 (new observed_duration and min_block_count options)."
+  "summary": "Gaps in a record made the peaks-over-threshold event rate too low and let partly observed blocks count as full blocks, so return values came out too low. Fixed by the developer in v2.7.0 (new observed_duration and min_block_count options).",
+  "target_doi": "",
+  "dois": []
  }
 ]

@@ -48,3 +48,19 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 .disclose{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:8px;padding:12px 14px;font-size:15px;margin:0 0 8px}
 table.rubric{border-collapse:collapse;width:100%;font-size:15px;margin:8px 0 16px}
 table.rubric th,table.rubric td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+.policy{background:var(--warnbg);color:var(--fg);border-left:4px solid var(--warn);border-radius:8px;padding:10px 14px;font-size:15px;margin:10px 0 16px}
+.searchbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.searchbar input{flex:1;min-width:240px;font:inherit;font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
+button,.btn{font:inherit;font-size:15px;padding:9px 16px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer;text-decoration:none;display:inline-block}
+@media (prefers-color-scheme:dark){button,.btn{color:#0d1116}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:12px 0}
+.card h3{margin:0 0 4px;font-size:18px}
+.hit mark{background:var(--warnbg);color:inherit;padding:0 2px;border-radius:3px}
+.empty{color:var(--muted)}
+form.report label{display:block;font-weight:600;margin:14px 0 4px;font-size:15px}
+form.report input,form.report select,form.report textarea{width:100%;font:inherit;font-size:15.5px;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg)}
+form.report textarea{min-height:170px}
+form.report .hint{color:var(--muted);font-size:13.5px;margin-top:3px}
+form.report .check{display:flex;gap:8px;align-items:flex-start;font-weight:400}
+form.report .check input{width:auto;margin-top:6px}
+.hidden{display:none}

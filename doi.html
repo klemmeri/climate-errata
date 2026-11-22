@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Discuss a paper or dataset by DOI — Climate Errata</title>
+<meta name="description" content="Open a discussion thread for any climate paper or dataset by its DOI. Ask questions, compare notes with other researchers, or ask the maintainer.">
+<link rel="stylesheet" href="/assets/style.css"></head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
+<nav class="site"><a href="/">Register</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
+<main><div class="wrap">
+<h1>Discuss a paper or dataset</h1>
+<p class="lede">Enter the DOI of any paper or dataset. You get its discussion page: questions, notes from other users, and any register entry that mentions it. Every DOI has one shared thread, so everyone asking about the same work finds each other.</p>
+<form class="searchbar" id="f">
+  <input id="doi" type="text" placeholder="10.1038/s41586-021-03436-z  or  https://doi.org/…" aria-label="DOI" autocomplete="off" spellcheck="false">
+  <button type="submit">Open</button>
+</form>
+<div id="out" aria-live="polite"></div>
+<section class="comments hidden" id="thread"><h2>Discussion</h2>
+<p class="meta" style="display:block">Ask other readers, the authors or the maintainer. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html" id="mailalt">Write to us</a>.</p>
+<div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html" id="reportalt">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>
+<div id="giscus"></div>
+</section>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated.</div></footer>
+<script>
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function norm(s){
+  s=decodeURIComponent(String(s||'').trim()).replace(/^(https?:\/\/)?(dx\.)?doi\.org\//i,'').replace(/^doi:\s*/i,'').trim();
+  const m=s.match(/10\.\d{4,9}\/\S+/);return m?m[0].replace(/[.,;]+$/,'').toLowerCase():'';
+}
+async function meta(doi){
+  const enc=encodeURIComponent(doi);
+  try{const r=await fetch('https://api.crossref.org/works/'+enc);if(r.ok){const m=(await r.json()).message;
+    return {src:'Crossref',title:(m.title||[])[0],authors:(m.author||[]).map(a=>a.family||a.name).filter(Boolean),
+      venue:(m['container-title']||[])[0]||m.publisher,year:((m.issued||{})['date-parts']||[[]])[0][0],kind:m.type,
+      update:(m['updated-by']||[]).map(u=>u.type+' '+(u.DOI||'')).join('; ')};}}catch(e){}
+  try{const r=await fetch('https://api.datacite.org/dois/'+enc);if(r.ok){const a=(await r.json()).data.attributes;
+    return {src:'DataCite',title:(a.titles||[])[0]?.title,authors:(a.creators||[]).map(c=>c.familyName||c.name).filter(Boolean),
+      venue:a.publisher&&(a.publisher.name||a.publisher),year:a.publicationYear,kind:(a.types||{}).resourceTypeGeneral||(a.types||{}).resourceType,
+      version:a.version};}}catch(e){}
+  return null;
+}
+function authorText(a){if(!a||!a.length)return'';return a.length>3?a[0]+' et al.':a.join(', ');}
+function loadGiscus(doi){
+  const box=document.getElementById('giscus');box.innerHTML='';
+  const s=document.createElement('script');s.src='https://giscus.app/client.js';
+  const at={'data-repo':'klemmeri/climate-errata','data-repo-id':'R_kgDOV30cyQ','data-category':'Announcements','data-category-id':'DIC_kwDOV30cyc4DLu90',
+    'data-mapping':'specific','data-term':'doi:'+doi,'data-strict':'1','data-reactions-enabled':'1','data-emit-metadata':'0','data-input-position':'top',
+    'data-theme':'preferred_color_scheme','data-lang':'en','crossorigin':'anonymous'};
+  for(const k in at)s.setAttribute(k,at[k]);s.async=true;box.appendChild(s);
+  document.getElementById('thread').classList.remove('hidden');
+  const q='?doi='+encodeURIComponent(doi);
+  document.getElementById('mailalt').href='/report.html'+q;document.getElementById('reportalt').href='/report.html'+q+'&kind=report';
+}
+async function open_(raw,push){
+  const doi=norm(raw),out=document.getElementById('out');
+  if(!doi){out.innerHTML='<p class="empty">That does not look like a DOI. DOIs start with 10. followed by a slash, e.g. 10.1038/s41586-021-03436-z.</p>';return;}
+  document.getElementById('doi').value=doi;
+  if(push)history.replaceState(null,'','/doi.html?doi='+encodeURIComponent(doi));
+  out.innerHTML='<p class="meta">Looking up doi:'+esc(doi)+' …</p>';
+  const [m,entries]=await Promise.all([meta(doi),fetch('/entries.json').then(r=>r.json()).catch(()=>[])]);
+  const hits=entries.filter(e=>(e.dois||[]).includes(doi)||e.target_doi===doi);
+  let h='<div class="card">';
+  if(m&&m.title){
+    document.title=m.title+' — Climate Errata';
+    h+=`<h3>${esc(m.title)}</h3><div class="meta"><span>${esc(authorText(m.authors))}</span>${m.year?`<span>${esc(m.year)}</span>`:''}${m.venue?`<span>${esc(m.venue)}</span>`:''}${m.kind?`<span class="pill type">${esc(String(m.kind).replace(/-/g,' '))}</span>`:''}${m.version?`<span>version ${esc(m.version)}</span>`:''}</div>`;
+    if(m.update)h+=`<p class="note" style="margin-top:10px">The publisher records an update to this work: ${esc(m.update)}. Check it before commenting.</p>`;
+  }else{
+    h+=`<h3>doi:${esc(doi)}</h3><p class="meta">No record found at Crossref or DataCite. Check the DOI; the thread below still works.</p>`;
+  }
+  h+=`<p class="meta" style="margin-top:8px"><a href="https://doi.org/${esc(doi)}">https://doi.org/${esc(doi)}</a> · <a href="/search.html?q=${encodeURIComponent(doi)}">search the site for it</a></p></div>`;
+  if(hits.length){h+='<h2>In the register</h2>'+hits.map(e=>`<article class="entry"><h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3><div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span></div><p style="margin:8px 0 0">${esc(e.summary)}</p></article>`).join('');}
+  else h+='<p class="meta">No register entry mentions this DOI yet.</p>';
+  out.innerHTML=h;loadGiscus(doi);
+}
+document.getElementById('f').addEventListener('submit',ev=>{ev.preventDefault();open_(document.getElementById('doi').value,true);});
+const p=new URLSearchParams(location.search).get('doi');if(p)open_(p,false);
+</script>
+</body></html>

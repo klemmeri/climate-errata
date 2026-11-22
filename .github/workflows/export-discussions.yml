@@ -1,0 +1,34 @@
+name: Export discussions for site search
+on:
+  discussion:
+    types: [created, edited, deleted, answered, unanswered, category_changed]
+  discussion_comment:
+    types: [created, edited, deleted]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  discussions: read
+concurrency:
+  group: export-discussions
+  cancel-in-progress: false
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Export
+        run: python3 tools/export_discussions.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- discussions.json && git ls-files --error-unmatch discussions.json >/dev/null 2>&1; then echo "No change"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add discussions.json
+          git commit -m "Update discussion search index"
+          git pull --rebase origin main
+          git push

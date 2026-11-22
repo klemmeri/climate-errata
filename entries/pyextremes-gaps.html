@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>pyextremes: missing data biased return values low — Climate Errata</title>
+<meta name="description" content="Gaps in a record biased pyextremes return values low. Reported 12 Nov 2026; fixed in v2.7.0.">
+<link rel="stylesheet" href="/assets/style.css"></head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
+<nav class="site"><a href="/">Register</a><a href="/about.html">How it works</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
+<main><div class="wrap">
+<p class="meta"><a href="/">← Register</a></p>
+<h1>pyextremes: missing data biased return values low</h1>
+<div class="meta"><span class="pill st-fixed">Fixed and released (v2.7.0)</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
+
+<table class="facts">
+<tr><th>Target</th><td><a href="https://github.com/georgebv/pyextremes">georgebv/pyextremes</a>, the main Python library for extreme-value analysis (flood, coastal, rainfall and wind design levels). Checked at v2.6.1 / master 89d73c9.</td></tr>
+<tr><th>Responsible party</th><td>George Bocharov (maintainer)</td></tr>
+<tr><th>Reported</th><td>12 Nov 2026, <a href="https://github.com/georgebv/pyextremes/issues/123">issue #123</a></td></tr>
+<tr><th>Outcome</th><td>Fixed by pull requests <a href="https://github.com/georgebv/pyextremes/pull/124">#124</a>, <a href="https://github.com/georgebv/pyextremes/pull/125">#125</a> and <a href="https://github.com/georgebv/pyextremes/pull/126">#126</a>, merged 21 Nov 2026 and released in v2.7.0.</td></tr>
+</table>
+
+<h2>What was wrong</h2>
+<p>Real station records almost always have gaps. pyextremes handled them in ways that pushed estimated return values (for example the "100-year" level) too low, which is the non-conservative direction for design:</p>
+<ol>
+<li><strong>Peaks over threshold: the event rate used the calendar span, not the time actually observed.</strong> Missing stretches were counted as observed time, so the rate of extreme events was underestimated. The diagnostic plots used the same rate, so they did not reveal the problem.</li>
+<li><strong>Block maxima: partly observed blocks counted as full blocks.</strong> A year with two weeks of data contributed an "annual" maximum like any complete year. Only the last block could be screened.</li>
+<li><strong>Block maxima with <code>errors="coerce"</code>:</strong> empty blocks were filled with the mean of the other maxima, which narrowed the fitted spread and the confidence intervals.</li>
+</ol>
+
+<h2>Evidence (Monte Carlo, 100 simulations)</h2>
+<p>Synthetic daily data with a known answer: true 100-year level 10.51.</p>
+<table class="data">
+<tr><th>Case</th><th>Mean 100-yr level</th><th>Bias</th></tr>
+<tr><td>Peaks over threshold, full 60-year record</td><td>10.36</td><td>−0.14</td></tr>
+<tr><td>Same, 24 consecutive years missing (40%)</td><td>9.84</td><td><strong>−0.67</strong> (the reported "100-yr" value is about a 51-yr level)</td></tr>
+<tr><td>Block maxima, 14 of 60 years only ~5% observed</td><td>9.76</td><td><strong>−0.74</strong></td></tr>
+<tr><td>Block maxima, 15 empty years, <code>errors="ignore"</code></td><td>10.46</td><td>−0.04 (95% CI coverage 0.90)</td></tr>
+<tr><td>Same, <code>errors="coerce"</code></td><td>9.60</td><td><strong>−0.90</strong> (95% CI coverage 0.61)</td></tr>
+</table>
+
+<h2>The fix</h2>
+<ul>
+<li>New <code>observed_duration</code> option for peaks over threshold, so the event rate uses the time actually observed (#125).</li>
+<li>New <code>min_block_count</code> option for block maxima, applied to every block, so sparsely observed blocks can be excluded (#126).</li>
+<li>Documentation of gappy records in the user guide (#124).</li>
+</ul>
+<p>Users of earlier versions with gappy records should rerun their analyses with v2.7.0 or later and set these options.</p>
+
+<h2>Timeline</h2>
+<ol class="timeline">
+<li>12 Nov 2026: issue #123 filed with reproducer and suggested fixes.</li>
+<li>Pull requests #124–#126 opened; maintainer review 21 Nov; requested changes made the same day.</li>
+<li>21 Nov 2026: all three merged; v2.7.0 released; issue closed as completed.</li>
+</ol>
+
+<h2>Response from the developer</h2>
+<p class="note">George Bocharov reviewed the changes, requested improvements, merged all three pull requests and released them in v2.7.0, closing the issue with thanks.</p>
+
+<h2>Reproduce</h2>
+<p>The Monte Carlo scripts and reproducer are in the issue and pull requests linked above.</p>
+<section class="comments"><h2>Discussion</h2><p class="meta">Comments use GitHub Discussions (sign in with GitHub). Authors and developers are especially welcome to reply.</p>
+<script src="https://giscus.app/client.js" data-repo="klemmeri/climate-errata" data-repo-id="R_kgDOV30cyQ" data-category="Announcements" data-category-id="DIC_kwDOV30cyc4DLu90" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script></section>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated.</div></footer>
+</body></html>

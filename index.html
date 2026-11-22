@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Climate Errata — independent, reproducible checks of climate papers, datasets and code</title>
+<meta name="description" content="An independent register of errors and issues found in climate papers, datasets and code, with reproducible evidence and the responsible party's response.">
+<link rel="stylesheet" href="/assets/style.css"></head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
+<nav class="site"><a href="/">Register</a><a href="/about.html">How it works</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
+<main><div class="wrap">
+<h1>The register</h1>
+<p class="lede">Each entry describes a problem found in a published climate paper, dataset or piece of software, with the evidence to reproduce it and the response of the authors or developers. Nothing appears here until they have replied or three weeks have passed.</p>
+<div class="controls">
+  <input id="q" type="search" placeholder="Search entries" aria-label="Search entries">
+  <select id="type" aria-label="Type"><option value="">All types</option><option value="paper">Papers</option><option value="dataset">Datasets</option><option value="code">Code</option></select>
+  <select id="status" aria-label="Status"><option value="">All statuses</option><option value="reported">Reported</option><option value="acknowledged">Acknowledged</option><option value="disputed">Disputed</option><option value="fixed">Fixed</option></select>
+</div>
+<div id="list" aria-live="polite"></div>
+<p class="meta" style="margin-top:20px">Data: <a href="/entries.json">entries.json</a> (free to reuse under CC BY 4.0).</p>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated.</div></footer>
+<script>
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let all=[];
+function render(){
+  const q=document.getElementById('q').value.toLowerCase(), t=document.getElementById('type').value, s=document.getElementById('status').value;
+  const rows=all.filter(e=>(!t||e.type===t)&&(!s||e.status===s)&&(!q||(e.title+' '+e.target+' '+e.summary).toLowerCase().includes(q)));
+  document.getElementById('list').innerHTML=rows.length?rows.map(e=>`<article class="entry">
+    <h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3>
+    <div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span><span>Updated ${esc(e.updated)}</span></div>
+    <p style="margin:8px 0 0">${esc(e.summary)}</p></article>`).join(''):'<p class="meta">No entries match.</p>';
+}
+fetch('/entries.json').then(r=>r.json()).then(d=>{all=d.sort((a,b)=>b.updated.localeCompare(a.updated));render();});
+['q','type','status'].forEach(id=>document.getElementById(id).addEventListener('input',render));
+</script>
+</body></html>

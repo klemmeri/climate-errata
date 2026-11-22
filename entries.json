@@ -1,0 +1,14 @@
+[
+  {
+    "id": "pyextremes-gaps",
+    "title": "pyextremes: missing data biased return values low",
+    "target": "pyextremes (Python extreme-value analysis library), v2.6.1",
+    "type": "code",
+    "status": "fixed",
+    "status_label": "Fixed and released (v2.7.0)",
+    "significance": "Medium",
+    "reported": "2026-11-12",
+    "updated": "2026-11-22",
+    "summary": "Gaps in a record made the peaks-over-threshold event rate too low and let partly observed blocks count as full blocks, so return values came out too low. Fixed by the developer in v2.7.0 (new observed_duration and min_block_count options)."
+  }
+]

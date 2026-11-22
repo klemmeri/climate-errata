@@ -1,4 +1,17 @@
 {
- "generated": "",
- "discussions": []
+ "generated": "2026-11-22T19:26:30Z",
+ "discussions": [
+  {
+   "number": 1,
+   "title": "Welcome to Climate Errata",
+   "url": "https://github.com/klemmeri/climate-errata/discussions/1",
+   "category": "Announcements",
+   "author": "klemmeri",
+   "created": "2026-11-22T17:41:43Z",
+   "updated": "2026-11-22T17:41:43Z",
+   "answered": null,
+   "body": "## Welcome to Climate Errata Climate Errata is an independent register of errors and issues found in climate papers, datasets and code. Every entry is reproducible: it comes with the code and data needed to check it. **How it works** - Each finding is reported privately to the authors or developers first. Nothing is posted here until they have replied or three weeks have passed. - Each entry shows its status (reported, acknowledged, disputed, fixed or released) and records the responsible party's reply. - Each entry has its own discussion thread. Comments on methods, data and reproduction are welcome, and authors are invited to respond. **Ground rules** - Discuss methods and data, not people or motives. - Back claims with evidence or code wherever possible. - If we get something wrong, we correct it openly. Maintained by Mark L. Morrissey, Ph.D. (Professor Emeritus of Meteorology).",
+   "comments": []
+  }
+ ]
 }

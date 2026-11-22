@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="/assets/style.css"></head>
 <body>
 <header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
-<nav class="site"><a href="/">Register</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
+<nav class="site"><a href="/">Register</a><a href="/datasets/">Datasets</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
 <main><div class="wrap">
 <h1>Search</h1>
 <p class="lede">Search the register and the community discussions by keyword (dataset, author, variable, region) or by DOI.</p>
@@ -26,7 +26,7 @@ function terms(q){return fold(q).split(/\s+/).filter(Boolean);}
 function score(text,ts,titleText){const t=fold(text),ti=fold(titleText);let s=0;for(const w of ts){if(!t.includes(w))return 0;s+=1+(ti.includes(w)?3:0);}return s;}
 function mark(text,ts,max){let s=String(text??'');if(max&&s.length>max){const low=fold(s);let i=Math.min(...ts.map(w=>{const k=low.indexOf(w);return k<0?1e9:k;}));if(i===1e9)i=0;const st=Math.max(0,i-80);s=(st?'… ':'')+s.slice(st,st+max)+(st+max<s.length?' …':'');}
   let h=esc(s);for(const w of ts){if(w.length<2)continue;const re=new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','ig');h=h.replace(re,'<mark>$1</mark>');}return h;}
-let E=[],D=[],stamp='';
+let E=[],D=[],S=[],stamp='';
 function discPage(d){if(d.page)return d.page;return d.url;}
 function run(q,push){
   const ts=terms(q),res=document.getElementById('res'),hint=document.getElementById('doihint');
@@ -37,16 +37,18 @@ function run(q,push){
   const qs=doi?[doi]:ts;
   const eh=E.map(e=>{const txt=[e.title,e.target,e.summary,e.status_label,e.type,(e.dois||[]).join(' ')].join(' ');return [score(txt,qs,e.title),e];}).filter(x=>x[0]).sort((a,b)=>b[0]-a[0]);
   const dh=D.map(d=>{const txt=[d.title,d.doi,d.body,(d.comments||[]).map(c=>c.body).join(' ')].join(' ');return [score(txt,qs,d.title+' '+(d.doi||'')),d];}).filter(x=>x[0]).sort((a,b)=>b[0]-a[0]);
-  let h=`<h2>Register entries <span class="meta" style="display:inline">(${eh.length})</span></h2>`;
+  const sh=S.map(x=>[score([x.name,x.full_name,x.kind,x.producer,x.version,x.keywords.join(' '),(x.dois||[]).join(' ')].join(' '),qs,x.name+' '+x.keywords.join(' ')),x]).filter(x=>x[0]).sort((a,b)=>b[0]-a[0]);
+  let h=sh.length?`<h2>Datasets <span class="meta" style="display:inline">(${sh.length})</span></h2>`+sh.map(([,x])=>`<article class="entry hit"><h3><a href="${esc(x.url)}">${mark(x.name,qs)}</a></h3><div class="meta"><span class="pill type">${esc(x.kind)}</span><span>${esc(x.producer)}</span><span>${x.entries.length} entr${x.entries.length===1?'y':'ies'}</span><span>${x.threads} discussion${x.threads===1?'':'s'}</span></div><p style="margin:8px 0 0">${mark(x.full_name,qs)}</p></article>`).join(''):'';
+  h+=`<h2>Register entries <span class="meta" style="display:inline">(${eh.length})</span></h2>`;
   h+=eh.length?eh.map(([,e])=>`<article class="entry hit"><h3><a href="/entries/${esc(e.id)}.html">${mark(e.title,qs)}</a></h3><div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span><span>Reported ${esc(e.reported)}</span></div><p style="margin:8px 0 0">${mark(e.summary,qs)}</p></article>`).join(''):'<p class="empty">No register entries match.</p>';
   h+=`<h2>Discussions <span class="meta" style="display:inline">(${dh.length})</span></h2>`;
   h+=dh.length?dh.map(([,d])=>{const n=(d.comments||[]).length;const first=[d.body,...(d.comments||[]).map(c=>c.body)].find(t=>qs.every(w=>fold(t).includes(w)))||d.body||'';
     return `<article class="entry hit"><h3><a href="${esc(discPage(d))}">${mark(d.label||d.title,qs)}</a></h3><div class="meta"><span>${n} comment${n===1?'':'s'}</span><span>updated ${esc((d.updated||'').slice(0,10))}</span><a href="${esc(d.url)}">on GitHub</a></div><p style="margin:8px 0 0">${mark(first,qs,260)}</p></article>`;}).join(''):'<p class="empty">No discussions match.'+(doi?' Be the first: open the DOI page above.':'')+'</p>';
   res.innerHTML=h;
 }
-Promise.all([fetch('/entries.json').then(r=>r.json()).catch(()=>[]),fetch('/discussions.json').then(r=>r.json()).catch(()=>({discussions:[]}))]).then(([e,d])=>{
-  E=e;D=d.discussions||[];stamp=d.generated||'';
-  document.getElementById('stamp').textContent=`${E.length} register entries · ${D.length} discussion threads`+(stamp?` · discussion index updated ${stamp.slice(0,16).replace('T',' ')} UTC`:'');
+Promise.all([fetch('/entries.json').then(r=>r.json()).catch(()=>[]),fetch('/discussions.json').then(r=>r.json()).catch(()=>({discussions:[]})),fetch('/datasets/datasets.json').then(r=>r.json()).catch(()=>[])]).then(([e,d,s])=>{
+  E=e;D=d.discussions||[];S=s;stamp=d.generated||'';
+  document.getElementById('stamp').textContent=`${S.length} datasets · ${E.length} register entries · ${D.length} discussion threads`+(stamp?` · discussion index updated ${stamp.slice(0,16).replace('T',' ')} UTC`:'');
   const q=new URLSearchParams(location.search).get('q')||'';document.getElementById('q').value=q;run(q,false);
 });
 document.getElementById('f').addEventListener('submit',ev=>{ev.preventDefault();run(document.getElementById('q').value,true);});

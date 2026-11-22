@@ -23,12 +23,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
+      - name: Rebuild dataset pages and feeds
+        run: python3 tools/build_datasets.py
       - name: Commit if changed
         run: |
-          if git diff --quiet -- discussions.json && git ls-files --error-unmatch discussions.json >/dev/null 2>&1; then echo "No change"; exit 0; fi
+          if [ -z "$(git status --porcelain -- discussions.json datasets feed.xml)" ]; then echo "No change"; exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add discussions.json
-          git commit -m "Update discussion search index"
+          git add discussions.json datasets feed.xml
+          git commit -m "Update discussion index, dataset pages and feeds"
           git pull --rebase origin main
           git push

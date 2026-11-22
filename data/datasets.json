@@ -1,0 +1,487 @@
+{
+ "checked": "2026-11-22",
+ "datasets": [
+  {
+   "id": "era5",
+   "name": "ERA5",
+   "full_name": "ECMWF Reanalysis v5 (ERA5)",
+   "kind": "Reanalysis",
+   "variables": "Atmosphere, land and ocean-wave variables",
+   "producer": "ECMWF for the Copernicus Climate Change Service (C3S)",
+   "version": "ERA5 (with ERA5T near-real-time extension)",
+   "coverage": "Global; January 1940 to near present; hourly; 0.25° on the Climate Data Store",
+   "about": "The most widely used global reanalysis. Near-real-time data (ERA5T) can be revised if a production problem is found.",
+   "dois": [],
+   "links": [
+    [
+     "ERA5 data documentation",
+     "https://confluence.ecmwf.int/display/CKB/ERA5%3A+data+documentation"
+    ],
+    [
+     "Climate Data Store (ERA5 datasets)",
+     "https://cds.climate.copernicus.eu/datasets?q=era5"
+    ],
+    [
+     "ECMWF user forum",
+     "https://forum.ecmwf.int/"
+    ]
+   ],
+   "known_issues": "https://confluence.ecmwf.int/display/CKB/ERA5%3A+data+documentation#ERA5:datadocumentation-Knownissues",
+   "contact": "Copernicus user support: copernicus-support@ecmwf.int",
+   "keywords": [
+    "ERA5",
+    "ERA5T",
+    "ERA5-Land"
+   ],
+   "entries": []
+  },
+  {
+   "id": "merra-2",
+   "name": "MERRA-2",
+   "full_name": "Modern-Era Retrospective analysis for Research and Applications, Version 2",
+   "kind": "Reanalysis",
+   "variables": "Atmosphere, aerosols, land surface; corrected precipitation (PRECTOTCORR) forced by gauge analyses",
+   "producer": "NASA Global Modeling and Assimilation Office (GMAO); distributed by GES DISC",
+   "version": "MERRA-2 (GEOS 5.12.4)",
+   "coverage": "Global; 1980 to near present",
+   "about": "NASA's global reanalysis. Land precipitation seen by the land model (PRECTOTCORR) is corrected towards gauge-based analyses, so changes in those analyses can pass into MERRA-2.",
+   "dois": [],
+   "links": [
+    [
+     "MERRA-2 documentation",
+     "https://gmao.gsfc.nasa.gov/gmao-products/merra-2/documentation_merra-2/"
+    ],
+    [
+     "MERRA-2 at NASA Earthdata",
+     "https://www.earthdata.nasa.gov/data/projects/merra-2"
+    ],
+    [
+     "GMAO production status",
+     "https://gmao.gsfc.nasa.gov/gmao-products/status/"
+    ],
+    [
+     "MERRA-2 FAQ",
+     "https://gmao.gsfc.nasa.gov/gmao-products/merra-2/faq_merra-2/"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a public known-issues list for MERRA-2 (checked 22 Nov 2026). GMAO takes reports through its diagnostic feedback page.",
+   "contact": "GMAO diagnostic feedback: https://gmao.gsfc.nasa.gov/gmao-products/merra-2/diagnostic-feedback_merra-2/",
+   "keywords": [
+    "MERRA-2",
+    "MERRA2",
+    "PRECTOTCORR",
+    "MERRA-21C"
+   ],
+   "entries": [
+    "nasa-merra-2-corrected-precipitation-over"
+   ]
+  },
+  {
+   "id": "cpc-unified",
+   "name": "CPC Unified Gauge Analysis",
+   "full_name": "CPC Unified Gauge-Based Analysis of Global Daily Precipitation",
+   "kind": "Gridded gauge analysis",
+   "variables": "Daily precipitation and number of gauges per cell",
+   "producer": "NOAA Climate Prediction Center (CPC); distributed by NOAA PSL",
+   "version": "Retrospective version 1979–2005; real-time version 2006–present",
+   "coverage": "Global land; 1979 to present; daily; 0.5°",
+   "about": "Daily gauge analysis built by optimal interpolation. The retrospective period uses more than 30,000 gauges and the real-time version about 17,000. Quality varies with gauge density, and the files carry the gauge count for each cell. MERRA-2 uses it to correct the precipitation that reaches its land surface.",
+   "dois": [],
+   "links": [
+    [
+     "NOAA PSL dataset page",
+     "https://psl.noaa.gov/data/gridded/data.cpc.globalprecip.html"
+    ],
+    [
+     "Chen et al. (2008), the gauge analysis method",
+     "https://doi.org/10.1029/2007JD009132"
+    ],
+    [
+     "Climate Data Guide entry",
+     "https://climatedataguide.ucar.edu/climate-data/cpc-unified-gauge-based-analysis-global-daily-precipitation"
+    ]
+   ],
+   "known_issues": "https://psl.noaa.gov/data/notices/",
+   "known_issues_label": "NOAA PSL data notices (all PSL datasets)",
+   "contact": "NOAA CPC / PSL (see the dataset page)",
+   "keywords": [
+    "CPC Unified",
+    "CPCU",
+    "CPC gauge",
+    "CPC global daily",
+    "CPC-U"
+   ],
+   "entries": [
+    "nasa-merra-2-corrected-precipitation-over"
+   ]
+  },
+  {
+   "id": "gpcc",
+   "name": "GPCC Monthly",
+   "full_name": "GPCC Precipitation Analysis Monthly, Version 2025",
+   "kind": "Gridded gauge analysis",
+   "variables": "Monthly land precipitation and number of gauges per cell",
+   "producer": "Global Precipitation Climatology Centre (GPCC), Deutscher Wetterdienst",
+   "version": "Version 2025 (successor of Full Data Monthly V2022; now merged with the former Monitoring Product)",
+   "coverage": "Global land; 1891 to present; monthly; 0.25°, 0.5°, 1.0°, 2.5°",
+   "about": "The main global monthly gauge analysis. It is also the gauge input to GPCP and to the IMERG Final Run.",
+   "dois": [
+    "10.5676/dwd_gpcc/monthly_v2025_025",
+    "10.5676/dwd_gpcc/monthly_v2025_050"
+   ],
+   "links": [
+    [
+     "GPCC Monthly V2025 DOI and download page",
+     "https://opendata.dwd.de/climate_environment/GPCC/html/gpcc_precipitation_analysis_monthly_v2025_doi_download.html"
+    ],
+    [
+     "GPCC download gate (all products)",
+     "https://opendata.dwd.de/climate_environment/GPCC/html/download_gate.html"
+    ],
+    [
+     "GPCC home",
+     "https://gpcc.dwd.de"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a dedicated known-issues page for GPCC (checked 22 Nov 2026).",
+   "contact": "gpcc@dwd.de",
+   "keywords": [
+    "GPCC"
+   ],
+   "entries": []
+  },
+  {
+   "id": "gpcp",
+   "name": "GPCP Monthly",
+   "full_name": "Global Precipitation Climatology Project (GPCP) Monthly Climate Data Record, Version 2.3",
+   "kind": "Satellite–gauge merge",
+   "variables": "Monthly precipitation and error estimates",
+   "producer": "GPCP (University of Maryland / NASA GSFC) for the NOAA Climate Data Record program",
+   "version": "Version 2.3",
+   "coverage": "Global land and ocean; January 1979 to present; monthly; 2.5°",
+   "about": "Merges passive-microwave and infrared satellite estimates with GPCC gauge analyses over land.",
+   "dois": [
+    "10.7289/v56971m6"
+   ],
+   "links": [
+    [
+     "NCEI CDR page",
+     "https://www.ncei.noaa.gov/products/climate-data-records/precipitation-gpcp-monthly"
+    ],
+    [
+     "Dataset landing page (DOI)",
+     "https://doi.org/10.7289/V56971M6"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a known-issues page for GPCP v2.3 (checked 22 Nov 2026).",
+   "contact": "See the NCEI CDR page",
+   "keywords": [
+    "GPCP"
+   ],
+   "entries": []
+  },
+  {
+   "id": "imerg",
+   "name": "IMERG",
+   "full_name": "Integrated Multi-satellitE Retrievals for GPM (IMERG), Version 07",
+   "kind": "Satellite precipitation (gauge-adjusted Final Run)",
+   "variables": "Half-hourly and monthly precipitation",
+   "producer": "NASA Global Precipitation Measurement (GPM) mission; distributed by GES DISC",
+   "version": "V07 (current processing V07B)",
+   "coverage": "Global; TRMM and GPM eras; half-hourly; 0.1°",
+   "about": "The US multi-satellite precipitation product. The Final Run is adjusted to a monthly satellite–gauge combination that uses the GPCC gauge analysis.",
+   "dois": [],
+   "links": [
+    [
+     "IMERG Final Run (GPM)",
+     "https://gpm.nasa.gov/taxonomy/term/1417"
+    ],
+    [
+     "IMERG V07 release notes (PDF)",
+     "https://gpm.nasa.gov/sites/default/files/2024-02/IMERG_V07_ReleaseNotes_240221.pdf"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "The V07 release notes describe known problems and the V07B reprocessing; the GES DISC dataset pages also list data anomalies.",
+   "contact": "Earthdata Forum (earthdata-support@nasa.gov)",
+   "keywords": [
+    "IMERG"
+   ],
+   "entries": []
+  },
+  {
+   "id": "e-obs",
+   "name": "E-OBS",
+   "full_name": "E-OBS daily gridded observational dataset for Europe",
+   "kind": "Gridded station analysis",
+   "variables": "Daily temperature (mean, min, max), precipitation, pressure, humidity, wind, radiation",
+   "producer": "KNMI / ECA&D for the Copernicus Climate Change Service",
+   "version": "v34.0e (released 29 October 2026; covers 1950-01-01 to 2026-06-30)",
+   "coverage": "Europe; 1950 to present; daily; 0.1° and 0.25°; 20-member ensemble",
+   "about": "Gridded from ECA&D station series. Full versions come out twice a year with provisional monthly updates. Station coverage can change between versions, which can leave gaps or steps in recent years.",
+   "dois": [],
+   "links": [
+    [
+     "E-OBS data access (versions)",
+     "https://surfobs.climate.copernicus.eu/dataaccess/access_eobs.php"
+    ],
+    [
+     "Daily, monthly and full updates explained",
+     "https://surfobs.climate.copernicus.eu/userguidance/daily_vs_full_eobs.php"
+    ],
+    [
+     "Cornes et al. (2018), the ensemble version",
+     "https://doi.org/10.1029/2017JD028200"
+    ]
+   ],
+   "known_issues": "https://surfobs.climate.copernicus.eu/userguidance/known_issues_eobs.php",
+   "contact": "ECA&D team: eca@knmi.nl",
+   "keywords": [
+    "E-OBS",
+    "EOBS",
+    "ECA&D"
+   ],
+   "entries": []
+  },
+  {
+   "id": "icoads",
+   "name": "ICOADS",
+   "full_name": "International Comprehensive Ocean-Atmosphere Data Set, Release 3",
+   "kind": "Marine observation archive",
+   "variables": "Individual ship, buoy and platform reports: SST, air temperature, wind, pressure, humidity, cloud",
+   "producer": "NOAA NCEI, NCAR, NOC Southampton and partners",
+   "version": "R3.0.0 (1662–2014), R3.1.0 (with subsidiary records), near-real-time R3.0.2 (2015 onwards)",
+   "coverage": "Global oceans; 1662 to present; individual reports",
+   "about": "The archive of marine surface reports behind HadSST, ERSST and other SST and marine products.",
+   "dois": [
+    "10.5065/d6zs2tr3"
+   ],
+   "links": [
+    [
+     "NCAR RDA: ICOADS Release 3 (d548000)",
+     "https://rda.ucar.edu/datasets/d548000/"
+    ],
+    [
+     "RDA documentation",
+     "https://rda.ucar.edu/datasets/d548000/documentation"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a known-issues list for ICOADS Release 3 (checked 22 Nov 2026).",
+   "contact": "See the RDA dataset page",
+   "keywords": [
+    "ICOADS"
+   ],
+   "entries": [
+    "icoads-r3-1-marine-observations"
+   ]
+  },
+  {
+   "id": "hadsst4",
+   "name": "HadSST4",
+   "full_name": "Met Office Hadley Centre Sea-Surface Temperature dataset, HadSST.4.2.0.0",
+   "kind": "Gridded SST anomalies",
+   "variables": "Monthly SST anomalies with a 200-member bias ensemble and uncertainty estimates",
+   "producer": "Met Office Hadley Centre",
+   "version": "HadSST.4.2.0.0",
+   "coverage": "Global oceans; January 1850 to present; monthly; 5°",
+   "about": "In situ SST anomalies with bias adjustments, used in HadCRUT5. Inputs are ICOADS 3.0.0 (1850–2014) and 3.0.1 (2015–2021), then Met Office GTS ship data and iQuam moored-buoy data.",
+   "dois": [],
+   "links": [
+    [
+     "HadSST4 home",
+     "https://www.metoffice.gov.uk/hadobs/hadsst4/"
+    ],
+    [
+     "Product user guide (PDF)",
+     "https://www.metoffice.gov.uk/hadobs/hadsst4/documentation/HadSST.4.2.0.0_product_user_guide.pdf"
+    ],
+    [
+     "Previous versions",
+     "https://www.metoffice.gov.uk/hadobs/hadsst4/previous_versions.html"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a known-issues page for HadSST4 (checked 22 Nov 2026).",
+   "contact": "https://www.metoffice.gov.uk/hadobs/hadsst4/contact.html",
+   "keywords": [
+    "HadSST",
+    "HadSST4",
+    "HadSST.4"
+   ],
+   "entries": []
+  },
+  {
+   "id": "oisst",
+   "name": "OISST v2.1",
+   "full_name": "NOAA 0.25° Daily Optimum Interpolation Sea Surface Temperature (OISST), Version 2.1",
+   "kind": "SST analysis",
+   "variables": "Daily SST, anomalies, error estimate, sea-ice concentration",
+   "producer": "NOAA National Centers for Environmental Information (NCEI)",
+   "version": "v2.1 (released March 2020)",
+   "coverage": "Global oceans; September 1981 to present; daily; 0.25°",
+   "about": "Blends satellite (AVHRR) and in situ SST. Widely used for marine heatwave studies.",
+   "dois": [
+    "10.25921/re9p-pt57"
+   ],
+   "links": [
+    [
+     "NCEI CDR page",
+     "https://www.ncei.noaa.gov/products/climate-data-records/sea-surface-temperature-optimum-interpolation"
+    ],
+    [
+     "Dataset landing page (DOI)",
+     "https://doi.org/10.25921/RE9P-PT57"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a known-issues page for OISST v2.1 (checked 22 Nov 2026).",
+   "contact": "oisst-help@noaa.gov",
+   "keywords": [
+    "OISST"
+   ],
+   "entries": [
+    "noaa-oisst-v2-1"
+   ]
+  },
+  {
+   "id": "ibtracs",
+   "name": "IBTrACS",
+   "full_name": "International Best Track Archive for Climate Stewardship, Version 4 (v04r01)",
+   "kind": "Tropical cyclone best tracks",
+   "variables": "Storm position, intensity and size from all warning agencies",
+   "producer": "NOAA National Centers for Environmental Information (NCEI)",
+   "version": "v04r01",
+   "coverage": "Global; 1840s to present; generally 3-hourly",
+   "about": "Combines best tracks from the warning agencies worldwide. Recent storms are provisional and can change.",
+   "dois": [
+    "10.25921/82ty-9e16"
+   ],
+   "links": [
+    [
+     "Technical documentation (PDF, April 2025)",
+     "https://www.ncei.noaa.gov/sites/default/files/2025-04/IBTrACS_version4r01_Technical_Details.pdf"
+    ],
+    [
+     "Dataset landing page (DOI)",
+     "https://doi.org/10.25921/82ty-9e16"
+    ],
+    [
+     "IBTrACS Q&A forum",
+     "https://groups.google.com/forum/#!forum/ibtracs-qa"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "Caveats are in the technical documentation; bug fixes are recorded in the v04r01 change log on the NCEI page.",
+   "contact": "IBTrACS.Team@noaa.gov",
+   "keywords": [
+    "IBTrACS"
+   ],
+   "entries": [
+    "ibtracs-tropical-cyclone-archive"
+   ]
+  },
+  {
+   "id": "hpd",
+   "name": "COOP Hourly Precipitation (HPD)",
+   "full_name": "NOAA Cooperative Observer Program (COOP) Precipitation Data – Hourly, Version 2 (C-HPD)",
+   "kind": "Station network",
+   "variables": "Hourly and 15-minute precipitation",
+   "producer": "NOAA National Centers for Environmental Information (NCEI)",
+   "version": "Version 2",
+   "coverage": "United States and territories; about 2,000 stations; 1940 to present",
+   "about": "Fischer & Porter gauges of the COOP network. Between 2004 and 2013 the stations were upgraded from paper punch tape to electronic data loggers.",
+   "dois": [
+    "10.25921/p7j8-2170"
+   ],
+   "links": [
+    [
+     "Dataset landing page (DOI)",
+     "https://doi.org/10.25921/p7j8-2170"
+    ],
+    [
+     "Dataset description (PDF)",
+     "https://www.ncei.noaa.gov/data/coop-hourly-precipitation/v2/doc/COOP-HPD-description.pdf"
+    ],
+    [
+     "Lawrimore et al. (2020), processing and QC",
+     "https://doi.org/10.1175/JHM-D-19-0300.1"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "We did not find a known-issues page for HPD v2 (checked 22 Nov 2026).",
+   "contact": "See the NCEI landing page",
+   "keywords": [
+    "HPD",
+    "C-HPD",
+    "COOP hourly"
+   ],
+   "entries": [
+    "noaa-hourly-precipitation-dataset"
+   ]
+  },
+  {
+   "id": "asos",
+   "name": "ASOS",
+   "full_name": "Automated Surface Observing System",
+   "kind": "Station network",
+   "variables": "Wind, temperature, dew point, pressure, precipitation, visibility, sky condition",
+   "producer": "NWS, FAA and Department of Defense; archived by NOAA NCEI",
+   "version": "Operational network (sensor changes over time)",
+   "coverage": "United States; about 950 mostly airport stations; 1990s to present",
+   "about": "The main US automated airport network, used in station climate records such as HadISD. Sensor replacements show up as steps in long series.",
+   "dois": [],
+   "links": [
+    [
+     "NWS ASOS program",
+     "https://www.weather.gov/asos/"
+    ]
+   ],
+   "known_issues": "",
+   "known_issues_note": "There is no single known-issues list for ASOS climate series; sensor-change dates come from NWS and station metadata.",
+   "contact": "See the NWS ASOS program page",
+   "keywords": [
+    "ASOS"
+   ],
+   "entries": [
+    "asos-wind-sensors",
+    "asos-dew-point-sensor-swap",
+    "zeng-et-al-2019-ncc-monerie"
+   ]
+  },
+  {
+   "id": "ghcn-cams",
+   "name": "GHCN-CAMS",
+   "full_name": "CPC GHCN-CAMS Gridded 2 m Temperature (Land)",
+   "kind": "Gridded station analysis",
+   "variables": "Monthly land surface air temperature",
+   "producer": "NOAA Climate Prediction Center (CPC); distributed by NOAA PSL",
+   "version": "Operational (updated monthly)",
+   "coverage": "Global land; 1948 to present; monthly; 0.5°",
+   "about": "Combines GHCN and CAMS station data with lapse-rate topographic adjustment, so it can be updated in near real time.",
+   "dois": [],
+   "links": [
+    [
+     "NOAA PSL dataset page",
+     "https://psl.noaa.gov/data/gridded/data.ghcncams.html"
+    ],
+    [
+     "Fan and van den Dool (2008)",
+     "https://doi.org/10.1029/2007JD008470"
+    ]
+   ],
+   "known_issues": "https://psl.noaa.gov/data/notices/",
+   "known_issues_label": "NOAA PSL data notices (all PSL datasets)",
+   "contact": "NOAA CPC / PSL (see the dataset page)",
+   "keywords": [
+    "GHCN-CAMS",
+    "GHCN_CAMS",
+    "GHCN CAMS"
+   ],
+   "entries": []
+  }
+ ]
+}

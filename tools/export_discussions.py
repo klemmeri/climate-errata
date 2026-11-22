@@ -31,6 +31,7 @@ def clean(t, n=4000):
     return re.sub(r"\s+", " ", t).strip()[:n]
 
 entries = {e["id"]: e["title"] for e in json.load(open(ROOT / "entries.json"))}
+datasets = {d["id"]: d["name"] for d in json.load(open(ROOT / "data/datasets.json"))["datasets"]}
 items, after = [], None
 while True:
     d = gql({"owner": OWNER, "name": NAME, "after": after})
@@ -41,6 +42,7 @@ while True:
                "answered": n["isAnswered"], "body": clean(n["body"])}
         m = re.match(r"^doi:(10\.\S+)$", title, re.I)
         p = re.match(r"^/?(entries/([a-z0-9-]+)\.html)$", title)
+        q = re.match(r"^/?(datasets/([a-z0-9-]+)\.html)$", title)
         if m:
             rec["doi"] = m.group(1).lower()
             rec["page"] = f"/doi.html?doi={rec['doi']}"
@@ -48,6 +50,9 @@ while True:
         elif p:
             rec["page"] = "/" + p.group(1)
             rec["label"] = "Discussion: " + entries.get(p.group(2), p.group(2))
+        elif q:
+            rec["page"] = "/" + q.group(1)
+            rec["label"] = "Questions about " + datasets.get(q.group(2), q.group(2))
         comments = []
         for c in n["comments"]["nodes"]:
             comments.append({"author": (c["author"] or {}).get("login"), "created": c["createdAt"],

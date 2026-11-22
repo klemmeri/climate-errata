@@ -1,0 +1,272 @@
+[
+ {
+  "id": "era5",
+  "name": "ERA5",
+  "full_name": "ECMWF Reanalysis v5 (ERA5)",
+  "kind": "Reanalysis",
+  "producer": "ECMWF for the Copernicus Climate Change Service (C3S)",
+  "version": "ERA5 (with ERA5T near-real-time extension)",
+  "coverage": "Global; January 1940 to near present; hourly; 0.25° on the Climate Data Store",
+  "keywords": [
+   "ERA5",
+   "ERA5T",
+   "ERA5-Land"
+  ],
+  "dois": [],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/era5.html"
+ },
+ {
+  "id": "merra-2",
+  "name": "MERRA-2",
+  "full_name": "Modern-Era Retrospective analysis for Research and Applications, Version 2",
+  "kind": "Reanalysis",
+  "producer": "NASA Global Modeling and Assimilation Office (GMAO); distributed by GES DISC",
+  "version": "MERRA-2 (GEOS 5.12.4)",
+  "coverage": "Global; 1980 to near present",
+  "keywords": [
+   "MERRA-2",
+   "MERRA2",
+   "PRECTOTCORR",
+   "MERRA-21C"
+  ],
+  "dois": [],
+  "entries": [
+   "nasa-merra-2-corrected-precipitation-over"
+  ],
+  "threads": 0,
+  "url": "/datasets/merra-2.html"
+ },
+ {
+  "id": "cpc-unified",
+  "name": "CPC Unified Gauge Analysis",
+  "full_name": "CPC Unified Gauge-Based Analysis of Global Daily Precipitation",
+  "kind": "Gridded gauge analysis",
+  "producer": "NOAA Climate Prediction Center (CPC); distributed by NOAA PSL",
+  "version": "Retrospective version 1979–2005; real-time version 2006–present",
+  "coverage": "Global land; 1979 to present; daily; 0.5°",
+  "keywords": [
+   "CPC Unified",
+   "CPCU",
+   "CPC gauge",
+   "CPC global daily",
+   "CPC-U"
+  ],
+  "dois": [],
+  "entries": [
+   "nasa-merra-2-corrected-precipitation-over"
+  ],
+  "threads": 0,
+  "url": "/datasets/cpc-unified.html"
+ },
+ {
+  "id": "gpcc",
+  "name": "GPCC Monthly",
+  "full_name": "GPCC Precipitation Analysis Monthly, Version 2025",
+  "kind": "Gridded gauge analysis",
+  "producer": "Global Precipitation Climatology Centre (GPCC), Deutscher Wetterdienst",
+  "version": "Version 2025 (successor of Full Data Monthly V2022; now merged with the former Monitoring Product)",
+  "coverage": "Global land; 1891 to present; monthly; 0.25°, 0.5°, 1.0°, 2.5°",
+  "keywords": [
+   "GPCC"
+  ],
+  "dois": [
+   "10.5676/dwd_gpcc/monthly_v2025_025",
+   "10.5676/dwd_gpcc/monthly_v2025_050"
+  ],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/gpcc.html"
+ },
+ {
+  "id": "gpcp",
+  "name": "GPCP Monthly",
+  "full_name": "Global Precipitation Climatology Project (GPCP) Monthly Climate Data Record, Version 2.3",
+  "kind": "Satellite–gauge merge",
+  "producer": "GPCP (University of Maryland / NASA GSFC) for the NOAA Climate Data Record program",
+  "version": "Version 2.3",
+  "coverage": "Global land and ocean; January 1979 to present; monthly; 2.5°",
+  "keywords": [
+   "GPCP"
+  ],
+  "dois": [
+   "10.7289/v56971m6"
+  ],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/gpcp.html"
+ },
+ {
+  "id": "imerg",
+  "name": "IMERG",
+  "full_name": "Integrated Multi-satellitE Retrievals for GPM (IMERG), Version 07",
+  "kind": "Satellite precipitation (gauge-adjusted Final Run)",
+  "producer": "NASA Global Precipitation Measurement (GPM) mission; distributed by GES DISC",
+  "version": "V07 (current processing V07B)",
+  "coverage": "Global; TRMM and GPM eras; half-hourly; 0.1°",
+  "keywords": [
+   "IMERG"
+  ],
+  "dois": [],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/imerg.html"
+ },
+ {
+  "id": "e-obs",
+  "name": "E-OBS",
+  "full_name": "E-OBS daily gridded observational dataset for Europe",
+  "kind": "Gridded station analysis",
+  "producer": "KNMI / ECA&D for the Copernicus Climate Change Service",
+  "version": "v34.0e (released 29 October 2026; covers 1950-01-01 to 2026-06-30)",
+  "coverage": "Europe; 1950 to present; daily; 0.1° and 0.25°; 20-member ensemble",
+  "keywords": [
+   "E-OBS",
+   "EOBS",
+   "ECA&D"
+  ],
+  "dois": [],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/e-obs.html"
+ },
+ {
+  "id": "icoads",
+  "name": "ICOADS",
+  "full_name": "International Comprehensive Ocean-Atmosphere Data Set, Release 3",
+  "kind": "Marine observation archive",
+  "producer": "NOAA NCEI, NCAR, NOC Southampton and partners",
+  "version": "R3.0.0 (1662–2014), R3.1.0 (with subsidiary records), near-real-time R3.0.2 (2015 onwards)",
+  "coverage": "Global oceans; 1662 to present; individual reports",
+  "keywords": [
+   "ICOADS"
+  ],
+  "dois": [
+   "10.5065/d6zs2tr3"
+  ],
+  "entries": [
+   "icoads-r3-1-marine-observations"
+  ],
+  "threads": 0,
+  "url": "/datasets/icoads.html"
+ },
+ {
+  "id": "hadsst4",
+  "name": "HadSST4",
+  "full_name": "Met Office Hadley Centre Sea-Surface Temperature dataset, HadSST.4.2.0.0",
+  "kind": "Gridded SST anomalies",
+  "producer": "Met Office Hadley Centre",
+  "version": "HadSST.4.2.0.0",
+  "coverage": "Global oceans; January 1850 to present; monthly; 5°",
+  "keywords": [
+   "HadSST",
+   "HadSST4",
+   "HadSST.4"
+  ],
+  "dois": [],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/hadsst4.html"
+ },
+ {
+  "id": "oisst",
+  "name": "OISST v2.1",
+  "full_name": "NOAA 0.25° Daily Optimum Interpolation Sea Surface Temperature (OISST), Version 2.1",
+  "kind": "SST analysis",
+  "producer": "NOAA National Centers for Environmental Information (NCEI)",
+  "version": "v2.1 (released March 2020)",
+  "coverage": "Global oceans; September 1981 to present; daily; 0.25°",
+  "keywords": [
+   "OISST"
+  ],
+  "dois": [
+   "10.25921/re9p-pt57"
+  ],
+  "entries": [
+   "noaa-oisst-v2-1"
+  ],
+  "threads": 0,
+  "url": "/datasets/oisst.html"
+ },
+ {
+  "id": "ibtracs",
+  "name": "IBTrACS",
+  "full_name": "International Best Track Archive for Climate Stewardship, Version 4 (v04r01)",
+  "kind": "Tropical cyclone best tracks",
+  "producer": "NOAA National Centers for Environmental Information (NCEI)",
+  "version": "v04r01",
+  "coverage": "Global; 1840s to present; generally 3-hourly",
+  "keywords": [
+   "IBTrACS"
+  ],
+  "dois": [
+   "10.25921/82ty-9e16"
+  ],
+  "entries": [
+   "ibtracs-tropical-cyclone-archive"
+  ],
+  "threads": 0,
+  "url": "/datasets/ibtracs.html"
+ },
+ {
+  "id": "hpd",
+  "name": "COOP Hourly Precipitation (HPD)",
+  "full_name": "NOAA Cooperative Observer Program (COOP) Precipitation Data – Hourly, Version 2 (C-HPD)",
+  "kind": "Station network",
+  "producer": "NOAA National Centers for Environmental Information (NCEI)",
+  "version": "Version 2",
+  "coverage": "United States and territories; about 2,000 stations; 1940 to present",
+  "keywords": [
+   "HPD",
+   "C-HPD",
+   "COOP hourly"
+  ],
+  "dois": [
+   "10.25921/p7j8-2170"
+  ],
+  "entries": [
+   "noaa-hourly-precipitation-dataset"
+  ],
+  "threads": 0,
+  "url": "/datasets/hpd.html"
+ },
+ {
+  "id": "asos",
+  "name": "ASOS",
+  "full_name": "Automated Surface Observing System",
+  "kind": "Station network",
+  "producer": "NWS, FAA and Department of Defense; archived by NOAA NCEI",
+  "version": "Operational network (sensor changes over time)",
+  "coverage": "United States; about 950 mostly airport stations; 1990s to present",
+  "keywords": [
+   "ASOS"
+  ],
+  "dois": [],
+  "entries": [
+   "asos-wind-sensors",
+   "asos-dew-point-sensor-swap",
+   "zeng-et-al-2019-ncc-monerie"
+  ],
+  "threads": 0,
+  "url": "/datasets/asos.html"
+ },
+ {
+  "id": "ghcn-cams",
+  "name": "GHCN-CAMS",
+  "full_name": "CPC GHCN-CAMS Gridded 2 m Temperature (Land)",
+  "kind": "Gridded station analysis",
+  "producer": "NOAA Climate Prediction Center (CPC); distributed by NOAA PSL",
+  "version": "Operational (updated monthly)",
+  "coverage": "Global land; 1948 to present; monthly; 0.5°",
+  "keywords": [
+   "GHCN-CAMS",
+   "GHCN_CAMS",
+   "GHCN CAMS"
+  ],
+  "dois": [],
+  "entries": [],
+  "threads": 0,
+  "url": "/datasets/ghcn-cams.html"
+ }
+]

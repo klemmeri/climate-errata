@@ -207,11 +207,11 @@ body = f"""<h1>What we checked</h1>
 <table class="facts">{HDR}{_row(SIDE["mainstream"], papers, "mainstream")}{_row(SIDE["questioning"], papers, "questioning")}</table>
 {plis}
 <h2 id="datasets">Datasets</h2>
-<p>Observing and gridded datasets checked since our audits began in {e(CK["other_since"])}.</p>
+<p>Observing and gridded datasets checked since our audits began in {e(CK["other_since"])}. These checks were not a random sample: we went looking where errors are most likely, such as instrument changes and sudden changes in the number of reporting stations. The share with errors therefore says nothing about how often datasets in general contain errors.</p>
 <table class="facts">{HDR}{_row("Datasets", DS)}</table>
 {_section(DS, "Datasets")}
 <h2 id="code">Code</h2>
-<p>Climate software checked since our audits began in {e(CK["other_since"])}. A line may cover several related packages checked together.</p>
+<p>Climate software checked since our audits began in {e(CK["other_since"])}. A line may cover several related packages checked together. These checks were not a random sample either: we chose the most widely used packages and the parts of them most likely to go wrong, such as statistical defaults, edge cases and recently changed code. The share with errors therefore says nothing about how often climate software in general contains errors.</p>
 <table class="facts">{HDR}{_row("Code", CO)}</table>
 {_section(CO, "Code")}"""
 (ROOT / "checked.html").write_text(

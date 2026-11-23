@@ -183,6 +183,15 @@
    "note": "Reproduced from HadCRUT5, Law Dome and Mauna Loa (slope 1.06 °C per 100 ppm, intercept −0.54 °C, 2023 estimate 1.50 °C). A perfect-model test with a two-layer energy-balance model driven by AR6 forcings, across climate sensitivities of 2.1–4.9 °C and aerosol forcing of −0.4 to −1.7 W/m², recovered the true human-induced warming to within about ±0.07 °C except at the weakest aerosol forcing (+0.08 to +0.15 °C too high), and the stated uncertainty mostly covered the truth. Minor: the stated uncertainty does not include the choice of temperature dataset (Berkeley Earth gives 1.57 °C, HadCRUT5 1.50 °C), and the code link given in the paper no longer resolves."
   },
   {
+   "cite": "Terhaar et al. 2025, Nature",
+   "topic": "Record jump in global sea surface temperature in 2023–2024: return period from AR(1) synthetic series and from 270 climate-model runs",
+   "doi": "10.1038/s41586-025-08674-z",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-23",
+   "note": "Read the full Methods. The obvious selection risks are addressed: the end-of-series trend estimate is checked against model runs that contain such jumps (bias 1 ± 18%), the choice of starting month is tested (margins change by under 0.01 °C), and the return period is recomputed with a second SST dataset (ESA CCI/OSTIA: 543 years vs 512) and with AR(2) and MA(1) models (484 and 498 years). The model-based estimate uses an exact binomial interval. The jump threshold equals the observed margin, which is the usual way to frame such a question. Not rerun."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 13

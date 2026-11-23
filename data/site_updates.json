@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-23",
+   "title": "Correction: Hugonnet et al. 2021 rescored Medium; verdicts shown on the register; confidentiality of checks clarified",
+   "text": "The Hugonnet et al. (2021) glacier entry was scored High with Consequence 2. Under our rubric, Consequence 2 requires a published headline to change; here the interval widens but the acceleration remains significant, so Consequence is 1 and the entry is Medium (Size 1, Reach 2, Consequence 1). The register list now shows each entry's verdict (for example, \"Real error; claim survives\") next to its status. The <a href=\"/check.html#confidential\">Ask for a check</a> page now states that the analysis runs on an AI service in the cloud, so files sent for a check are processed there. The MERRA-2 Australia entry now links its year-by-year totals as a CSV file instead of offering scripts on request. These changes follow an outside review of the site."
+  },
+  {
+   "date": "2026-11-23",
    "title": "Correction: climdex.pcic entry relabelled \"Reported\"",
    "text": "The climdex.pcic WSDI/CSDI entry was labelled \"Confirmed\". The developers have not yet confirmed the finding or merged the proposed fix (pull request #46), so the outcome now reads \"Reported\". The finding itself is unchanged."
   },

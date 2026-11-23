@@ -830,8 +830,8 @@
   "doi": null,
   "S": 1,
   "R": 2,
-  "C": 2,
-  "basis": "Interval half-width +10 Gt/yr per decade ≈ 21% of the 48 signal, significance holds (S); Nature 2021, 1000+ citations, used in IPCC AR6 (R); author confirmed the published interval is understated (C)",
+  "C": 1,
+  "basis": "Interval half-width +10 Gt/yr per decade ≈ 21% of the 48 signal, significance holds (S); Nature 2021, 1000+ citations, used in IPCC AR6 (R); author confirmed the published interval is understated, but the headline (significant acceleration) does not change, so C = 1 under the rubric (C)",
   "sd": "2026-11-19"
  },
  {

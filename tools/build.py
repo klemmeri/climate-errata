@@ -76,7 +76,7 @@ for r in rows:
     summary = r["found"]
     entries.append(dict(id=sid, title=r["target"], target=r["target"], type=TYPE[r["area"]], status=st,
                         status_label=label, significance=cls, reported=r["sd"], updated="2026-11-22",
-                        summary=summary, about=ABOUT.get(str(r["row"]), ""), fixed=(r.get("fix") or {}).get("date", ""), target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
+                        summary=summary, verdict=r.get("verdict", ""), about=ABOUT.get(str(r["row"]), ""), fixed=(r.get("fix") or {}).get("date", ""), target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
     links = []
     if r.get("link"):
         links.append(f'<a href="{e(r["link"])}">{e(r["link"])}</a>')

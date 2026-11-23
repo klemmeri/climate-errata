@@ -36,6 +36,7 @@ function render(){
     <h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3>
     <div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: ${esc(e.significance)}</a><span>Reported ${esc(e.reported)}</span>${e.fixed?`<span>Fixed ${esc(e.fixed)}</span>`:''}</div>
     ${e.about?`<p class="about" style="margin:8px 0 0;color:#555">${esc(e.about)}</p>`:''}
+    ${e.verdict?`<p style="margin:6px 0 0"><strong>Verdict:</strong> ${esc(e.verdict)}</p>`:''}
     <p style="margin:6px 0 0"><strong>Finding:</strong> ${esc(e.summary)}</p></article>`).join(''):'<p class="meta">No entries match.</p>';
 }
 function stats(){const c=f=>all.filter(f).length;

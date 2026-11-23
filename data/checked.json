@@ -394,6 +394,12 @@
    "note": ""
   },
   {
+   "cite": "ecRad 1.7.1 (ECMWF)",
+   "topic": "Atmospheric radiation scheme (ECMWF IFS, ICON NWP physics)",
+   "outcome": "clean",
+   "note": "Reproduces ECMWF's reference output exactly. Tested with gases set to zero, solver consistency, cloud and sun-angle limits, and doubled vertical resolution."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

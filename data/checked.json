@@ -165,6 +165,15 @@
    "note": "Already challenged in print: Li, Razavi, Maier, Hrachowitz et al. 2026, Journal of Hydrology X 30, 100215 (doi:10.1016/j.hydroa.2026.100215) — event thresholds taken from modelled rather than observed flows, a ±2-day hit window, no testing beyond 10-year events, high false-alarm and miss rates, and a single global benchmark. We did not repeat that work."
   },
   {
+   "cite": "McKitrick & Christy 2020, Earth and Space Science",
+   "topic": "Pervasive warming bias in CMIP6 tropospheric layers (38 models vs satellites, radiosondes and reanalyses, 1979–2014)",
+   "doi": "10.1029/2020EA001281",
+   "side": "questioning",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Trend comparisons use a heteroskedasticity- and autocorrelation-robust (Vogelsang–Franses type) test, so the significance claims allow for serial correlation in both model and observed series. The finding that CMIP6 historical runs warm the troposphere faster than observed over 1979–2014 agrees with mainstream assessments. The observational comparison series share inputs, so 'every target observational analog' is not a set of independent tests, and the step from trend differences to lower climate sensitivity also depends on how far the observed sea-surface warming pattern differs from the models'. Not rerun."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 12

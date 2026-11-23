@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-23",
+   "title": "Confidential checks for authors and reproduction statements",
+   "text": "Authors can now ask for a free, confidential check of the statistics and data handling in their own paper, preprint or manuscript. Nothing about a check is posted unless the author asks. When we reproduce a result, we offer the authors a short independent reproduction statement they can cite. See <a href=\"/check.html\">Ask for a check</a>."
+  },
+  {
+   "date": "2026-11-23",
    "title": "Lighter-check label and fewer, informational messages to authors",
    "text": "\"What we checked\" now distinguishes papers whose methods we reviewed without rerunning anything (\"Method reviewed, not rerun\") from those we reproduced or tested. Notes on papers whose authors we have not contacted now describe only what we did and the outcome. Messages to authors are now sent only for findings we have tested ourselves and rate Medium or High; they are for information, ask for no reply, and say that the analysis was AI-assisted and checked by the editor."
   },

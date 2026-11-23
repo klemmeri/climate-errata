@@ -412,6 +412,12 @@
    "note": "Ran the 17 priority test cases: variances stayed positive, correlations within bounds, no NaNs. Where the model reports its column-water spurious source (5 of the 17 cases) it is at round-off level, and clipping of negative water is negligible in all cases. Results change at long time steps (20 minutes), but that is already documented in print (Wan et al. 2021, GMD; Santos et al. 2021, JAMES), and the climate models run CLUBB in 5-minute substeps."
   },
   {
+   "cite": "MOM6 equations of state and freezing point (main, 20 Nov 2026)",
+   "topic": "Ocean model (GFDL, NCAR CESM3) seawater density options",
+   "outcome": "clean",
+   "note": "All eight density options compared with TEOS-10 (GSW) or EOS-80 over temperature, salinity and pressure up to 6000 dbar: differences are the published fitting errors of each formula, the TEOS-10 option matches exactly, and the density derivatives agree with finite differences everywhere. Freezing points agree with TEOS-10. The developers' own documented known bugs (old WRIGHT option, a GSW second-derivative issue) were not counted."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

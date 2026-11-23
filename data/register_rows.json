@@ -128,7 +128,7 @@
   "target": "climdex.pcic ETCCDI indices (feeds HadEX3, CMIP6 index sets)",
   "found": "WSDI/CSDI never got the Zhang et al. (2005) in-base bootstrap, leaving a spurious base-period step",
   "verdict": "Real error",
-  "outcome": "Confirmed",
+  "outcome": "Reported",
   "reported": "Email + PR #46",
   "date": "2026-11-04",
   "link": null,
@@ -136,7 +136,7 @@
   "S": 1,
   "R": 2,
   "C": 1,
-  "basis": "Spurious base-period step in WSDI/CSDI (S, local to base period); feeds HadEX3 and CMIP6 ETCCDI indices (R); confirmed, not rerun (C)",
+  "basis": "Spurious base-period step in WSDI/CSDI (S, local to base period); feeds HadEX3 and CMIP6 ETCCDI indices (R); fix proposed (PR #46), not yet merged (C)",
   "sd": "2026-11-04"
  },
  {

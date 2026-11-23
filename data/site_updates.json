@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-23",
+   "title": "Correction: climdex.pcic entry relabelled \"Reported\"",
+   "text": "The climdex.pcic WSDI/CSDI entry was labelled \"Confirmed\". The developers have not yet confirmed the finding or merged the proposed fix (pull request #46), so the outcome now reads \"Reported\". The finding itself is unchanged."
+  },
+  {
+   "date": "2026-11-23",
    "title": "Confidential checks for authors and reproduction statements",
    "text": "Authors can now ask for a free, confidential check of the statistics and data handling in their own paper, preprint or manuscript. Nothing about a check is posted unless the author asks. When we reproduce a result, we offer the authors a short independent reproduction statement they can cite. See <a href=\"/check.html\">Ask for a check</a>."
   },

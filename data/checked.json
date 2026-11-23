@@ -12,6 +12,15 @@
    "note": "Reproduced from the authors' code and figure data, including the bound on the pre-1900 maximum."
   },
   {
+   "cite": "Cai et al. 2024, Nature Geoscience",
+   "topic": "Summer warming on the Mongolian Plateau, 1986–2004, boosted by internal variability",
+   "doi": "10.1038/s41561-024-01377-6",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Warming rate (about 3.6 times the Northern Hemisphere land average) reproduced in two CRUTEM5 versions; unchanged with unadjusted station data and a stable station network."
+  },
+  {
    "cite": "Haslinger et al. 2025, Nature",
    "topic": "Increasing hourly heavy rainfall in Austria and flood changes",
    "doi": "10.1038/s41586-025-08647-2",

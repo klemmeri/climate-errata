@@ -418,6 +418,12 @@
    "note": "All eight density options compared with TEOS-10 (GSW) or EOS-80 over temperature, salinity and pressure up to 6000 dbar: differences are the published fitting errors of each formula, the TEOS-10 option matches exactly, and the density derivatives agree with finite differences everywhere. Freezing points agree with TEOS-10. The developers' own documented known bugs (old WRIGHT option, a GSW second-derivative issue) were not counted."
   },
   {
+   "cite": "CVMix KPP (fce4221, May 2026)",
+   "topic": "Ocean boundary-layer mixing (MOM6, CESM, E3SM MPAS-Ocean)",
+   "outcome": "reviewed",
+   "note": "Read the core K-profile code against Large, McWilliams & Doney (1994): stability functions, their coefficients and continuity, velocity scales including the pure-convection limit, the shape-function coefficients and the unresolved-shear term all match. Code reviewed and key formulas recomputed, not run in a model."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

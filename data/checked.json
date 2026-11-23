@@ -400,6 +400,12 @@
    "note": "Reproduces ECMWF's reference output exactly. Tested with gases set to zero, solver consistency, cloud and sun-angle limits, and doubled vertical resolution."
   },
   {
+   "cite": "Icepack (CICE Consortium), main branch 5 Nov 2026",
+   "topic": "Sea-ice column physics (used by CICE, E3SM and UFS)",
+   "outcome": "clean",
+   "note": "Five-year runs with a seasonal cycle and energy and mass checks switched on: both thermodynamics schemes, three melt-pond schemes, heavy snow, rain on ice, very cold air and summers warm enough to melt all the ice. No conservation failures. The older thermodynamics scheme stops in some melt seasons unless its documented shortwave option is turned on; the documentation already says this."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

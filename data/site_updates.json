@@ -4,7 +4,7 @@
   {
    "date": "2026-11-23",
    "title": "RTE+RRTMGP summary clarified",
-   "text": "The one-line summary of the RTE+RRTMGP entry now says that the 70–80% understatement applies to runs that set a gas to zero (such as CO2-removal experiments), not to runs with normal gas amounts. The finding is unchanged; the earlier wording could be read as claiming more."
+   "text": "The one-line summary of the RTE+RRTMGP entry now says that the 70–80% understatement applies when a key gas is zero or near zero (such as CO2-removal experiments or configurations that switch a gas off), rather than reading as a general understatement of CO2 effects. The finding is unchanged."
   },
   {
    "date": "2026-11-23",

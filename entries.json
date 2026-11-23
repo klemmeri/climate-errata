@@ -9,7 +9,7 @@
   "significance": "High",
   "reported": "2026-10-19",
   "updated": "2026-11-22",
-  "summary": "6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%",
+  "summary": "6 interpolation/indexing bugs, all now fixed; the worst (#425, in every release since v1.0) lets a gas that is set to zero keep absorbing, so runs that remove a gas (for example CO2-removal experiments) understate its effect by 70–80%. Runs with normal gas amounts are not affected by #425.",
   "verdict": "Real error",
   "about": "RTE+RRTMGP is the radiative-transfer code that computes how sunlight and infrared radiation are absorbed and emitted by gases, clouds and aerosols. It is the radiation scheme in several major climate models, including CESM3, E3SM and ICON.",
   "fixed": "2026-11-16",

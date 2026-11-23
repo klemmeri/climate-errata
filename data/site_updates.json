@@ -3,6 +3,16 @@
  "updates": [
   {
    "date": "2026-11-23",
+   "title": "RTE+RRTMGP summary clarified",
+   "text": "The one-line summary of the RTE+RRTMGP entry now says that the 70–80% understatement applies to runs that set a gas to zero (such as CO2-removal experiments), not to runs with normal gas amounts. The finding is unchanged; the earlier wording could be read as claiming more."
+  },
+  {
+   "date": "2026-11-23",
+   "title": "Checks for authors: unpublished manuscripts paused",
+   "text": "Because the analysis runs on an AI service in the cloud, and we cannot yet tell authors exactly how files sent there are stored and for how long, <a href=\"/check.html\">Ask for a check</a> now covers published papers and public preprints only. Unpublished and embargoed manuscripts are not accepted for now."
+  },
+  {
+   "date": "2026-11-23",
    "title": "Correction: Hugonnet et al. 2021 rescored Medium; verdicts shown on the register; confidentiality of checks clarified",
    "text": "The Hugonnet et al. (2021) glacier entry was scored High with Consequence 2. Under our rubric, Consequence 2 requires a published headline to change; here the interval widens but the acceleration remains significant, so Consequence is 1 and the entry is Medium (Size 1, Reach 2, Consequence 1). The register list now shows each entry's verdict (for example, \"Real error; claim survives\") next to its status. The <a href=\"/check.html#confidential\">Ask for a check</a> page now states that the analysis runs on an AI service in the cloud, so files sent for a check are processed there. The MERRA-2 Australia entry now links its year-by-year totals as a CSV file instead of offering scripts on request. These changes follow an outside review of the site."
   },

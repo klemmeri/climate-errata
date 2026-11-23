@@ -3,7 +3,7 @@
   "row": 2,
   "area": "Code",
   "target": "RTE+RRTMGP radiation code (CESM3, E3SM, ICON)",
-  "found": "6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%",
+  "found": "6 interpolation/indexing bugs, all now fixed; the worst (#425, in every release since v1.0) lets a gas that is set to zero keep absorbing, so runs that remove a gas (for example CO2-removal experiments) understate its effect by 70–80%. Runs with normal gas amounts are not affected by #425.",
   "verdict": "Real error",
   "outcome": "Fixed – released",
   "reported": "6 GitHub issues + Zenodo report",

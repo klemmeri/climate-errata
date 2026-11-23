@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>RTE+RRTMGP radiation code (CESM3, E3SM, ICON) — Climate Errata</title>
-<meta name="description" content="6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%">
+<meta name="description" content="6 interpolation/indexing bugs, all now fixed; the worst (#425, in every release since v1.0) lets a gas that is set to zero keep absorbing, so runs tha">
 <link rel="stylesheet" href="/assets/style.css"><script data-goatcounter="https://climateerrata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
 <body>
 <header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
@@ -14,7 +14,7 @@
 <h2>What it is</h2>
 <p>RTE+RRTMGP is the radiative-transfer code that computes how sunlight and infrared radiation are absorbed and emitted by gases, clouds and aerosols. It is the radiation scheme in several major climate models, including CESM3, E3SM and ICON.</p>
 <h2>Finding</h2>
-<p>6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%</p>
+<p>6 interpolation/indexing bugs, all now fixed; the worst (#425, in every release since v1.0) lets a gas that is set to zero keep absorbing, so runs that remove a gas (for example CO2-removal experiments) understate its effect by 70–80%. Runs with normal gas amounts are not affected by #425.</p>
 <table class="facts">
 <tr><th>Verdict</th><td>Real error</td></tr>
 <tr><th>Significance</th><td><strong>High</strong> (Size 2 · Reach 2 · Consequence 1 = 5 of 6)<div class="meta" style="margin-top:4px">Basis: CO2-removal effect understated 70-80% (S); in CESM3/E3SM/ICON (R); fixed but no published run redone (C)</div></td></tr>

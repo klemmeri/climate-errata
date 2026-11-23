@@ -424,6 +424,12 @@
    "note": "Read the core K-profile code against Large, McWilliams & Doney (1994): stability functions, their coefficients and continuity, velocity scales including the pure-convection limit, the shape-function coefficients and the unresolved-shear term all match. Code reviewed and key formulas recomputed, not run in a model."
   },
   {
+   "cite": "YSU boundary-layer scheme, NCAR MMM-physics (d524bc9, 18 Nov 2026)",
+   "topic": "Planetary boundary layer mixing (WRF, MPAS)",
+   "outcome": "clean",
+   "note": "Ran the scheme on 180 test columns (time steps 30–900 s, surface heat flux −50 to 400 W/m², evaporation, winds 0.5–15 m/s): potential temperature and water vapour are conserved to round-off, matching the surface fluxes. The heat tendency is returned as temperature and converted back correctly in the MPAS wrapper."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

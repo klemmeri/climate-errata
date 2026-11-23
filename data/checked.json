@@ -120,6 +120,15 @@
    "note": "Already challenged in a published comment, with the authors' reply."
   },
   {
+   "cite": "England et al. 2025, Nature",
+   "topic": "Drivers of the extreme North Atlantic marine heatwave of 2023 (weak winds, shoaling mixed layers)",
+   "doi": "10.1038/s41586-025-08903-5",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "The main result is a model heat budget (ACCESS-OM2), not rerun here. Minor: the observed summer mixed-layer shoaling trend (−0.58 m per decade, IAPv3) is fitted by ordinary least squares and called significant without allowing for autocorrelation; the paper itself notes that products disagree on the long-term trend."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 11

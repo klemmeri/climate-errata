@@ -201,6 +201,15 @@
    "note": "Method reviewed; data not rerun. Multi-month drought pulses can raise lag-1 autocorrelation in a moving window without any change in recovery rate. In an idealised simulation with a fixed recovery rate this reproduced part of the reported pattern (the intensity effect) but not the duration or frequency-by-intensity effects, and the authors' second method, which accounts for rainfall forcing, supports their conclusion. Not material on current evidence."
   },
   {
+   "cite": "Cunningham et al. 2025, Science",
+   "topic": "Trends in socially and economically disastrous wildfires, 1980–2023 (top 200 by loss as share of GDP, plus events with ≥10 deaths)",
+   "doi": "10.1126/science.adr5127",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Method reviewed (preprint, EcoEvoRxiv v2); data not public (NatCatSERVICE, EM-DAT login), so not rerun. Losses are normalised by national GDP and the count trend is fitted with a count regression on year. The main caveats are stated by the authors: possible reporting bias in the early record, growing exposure (wildland–urban interface) not modelled as a covariate, and a climate link that rests on fire-weather conditions at the time of the events rather than a formal attribution."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

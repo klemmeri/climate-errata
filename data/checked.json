@@ -246,6 +246,15 @@
    "note": "Method reviewed (ERA5 daily SST; per-calendar-day normal fits with mean and variance linked to low-passed global air temperature; quantile-mapped counterfactual); not rerun. The headline counts and intensities follow from that construction. Minor: averaging the observed-minus-counterfactual difference over observed heatwave days weights toward regions and seasons that warmed most, so a larger value than the global mean SST rise is expected even without any change in variability; in an idealised pure-mean-shift test this weighting alone raised the figure by about 20%."
   },
   {
+   "cite": "Chen et al. 2024, Science",
+   "topic": "Indian Ocean basin-wide (IOBW) SST index and annual and seasonal dengue incidence, 1990–2019",
+   "doi": "10.1126/science.adj4427",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Method reviewed (free full text); dengue data not rerun. The IOBW index was selected as the best of 30 climate indices against 30 annual values per hemisphere, with multiple-comparison control reported (Bonferroni-adjusted P = 0.08 in the Northern Hemisphere and < 0.05 in the Southern). The paper states that no out-of-sample validation was done and that claims about predictive ability would be premature without it, so the 'predict' in the title describes in-sample association. Spring IOBW warming is known to follow the preceding winter's El Niño, which bears on reading it as a distinct driver."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

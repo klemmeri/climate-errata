@@ -219,6 +219,15 @@
    "note": "Method reviewed; not rerun. The observational line (five storms above 86 m/s since 2013) rests on best-track intensities in the western North Pacific that come from satellite estimates without aircraft reconnaissance, whose homogeneity over time is uncertain; the paper acknowledges this and notes that an earlier homogenised analysis found no trend in the upper quantiles to 2009. The potential-intensity detection uses ERA5 with a Mann–Kendall test and a CMIP6 historical-versus-control comparison. The model projections are presented as illustrative. No material error found."
   },
   {
+   "cite": "Connolly, Connolly, Soon et al. 2019, Geosciences",
+   "topic": "Northern Hemisphere snow-cover trends 1967–2018: CMIP5 models versus the Rutgers (NOAA CDR) record",
+   "doi": "10.3390/geosciences9030135",
+   "side": "questioning",
+   "outcome": "inprint",
+   "checked": "2026-11-23",
+   "note": "The paper's contrast between models (declines in every season) and observations (increases in autumn and winter) rests on a single dataset, the NOAA/Rutgers CDR. Our recomputation from the Rutgers monthly series reproduces the positive autumn trend (Northern Hemisphere September–November about +30,000 km² per year, 1967–2016, carried by October and November). The paper notes but sets aside Brown & Derksen (2013). Multi-dataset analyses since then find that the CDR is the outlier in the onset season: Mudryk et al. 2020 (The Cryosphere, doi 10.5194/tc-14-2495-2020) find negative trends in all months over 1981–2018 from six products, and a 2025 Science Advances study (doi 10.1126/sciadv.adv7926) traces the inconsistent onset-season CDR trends and finds decreases in all months but January after correction. The spring and summer comparisons are not affected."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

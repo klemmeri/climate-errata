@@ -156,6 +156,15 @@
    "note": "Main analysis uses one satellite (GOES-16) over 2017–2020, so there is no sensor change inside it. We tested whether ranking the 2017–2020 events against a 2000–2020 baseline that contains those same drought seasons could create the reported shift toward conducive fire weather; in a no-trend simulation the effect is under one percentage point and of the wrong sign. Minor: the paired Wilcoxon test treats the 1,095 events as independent, although most come on consecutive nights within the same fires."
   },
   {
+   "cite": "Nearing et al. 2024, Nature",
+   "topic": "Global prediction of extreme floods in ungauged watersheds (Google flood forecasting vs GloFAS)",
+   "doi": "10.1038/s41586-024-07145-1",
+   "side": "mainstream",
+   "outcome": "inprint",
+   "checked": "2026-11-23",
+   "note": "Already challenged in print: Li, Razavi, Maier, Hrachowitz et al. 2026, Journal of Hydrology X 30, 100215 (doi:10.1016/j.hydroa.2026.100215) — event thresholds taken from modelled rather than observed flows, a ±2-day hit window, no testing beyond 10-year events, high false-alarm and miss rates, and a single global benchmark. We did not repeat that work."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 12

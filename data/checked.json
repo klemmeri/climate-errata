@@ -1,20 +1,279 @@
 {
- "_about": "Papers checked in the systematic screening that began on 22 Nov 2026 (method on about.html#selection). Rendered to checked.html by tools/build.py. Outcomes: clean = no error found; nomaterial = no material error found; inprint = already corrected or challenged in print by others; withauthors = finding sent to the authors (count only until they reply or three weeks pass; then add the paper by name, outcome 'flagged', with a link to its register entry); inprogress = check not finished. side: mainstream or questioning (papers questioning mainstream climate findings).",
+ "_about": "Papers checked in the systematic screening that began on 22 Nov 2026 (method on about.html#selection). Rendered to checked.html by tools/build.py. Outcomes: clean = no error found; nomaterial = no material error found; inprint = already corrected or challenged in print by others; withauthors = finding sent to the authors (count only until they reply or three weeks pass; then add the paper by name, outcome 'flagged', with a link to its register entry); inprogress = check not finished. side: mainstream or questioning (papers questioning mainstream climate findings). 'datasets' and 'code' lists work the same way (no side); flagged datasets and code that are public come automatically from the register (register_rows.json areas 'Observing data' and 'Code' with a 'Real…' verdict, plus custom entries).",
  "since": "2026-11-22",
  "papers": [
-  {"cite": "Henley et al. 2024, Nature", "topic": "Coral Sea ocean heat highest in four centuries (Great Barrier Reef)", "doi": "10.1038/s41586-024-07672-x", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Reproduced from the authors' code and figure data, including the bound on the pre-1900 maximum."},
-  {"cite": "Haslinger et al. 2025, Nature", "topic": "Increasing hourly heavy rainfall in Austria and flood changes", "doi": "10.1038/s41586-025-08647-2", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Tested for rain-gauge sensor changes with the authors' station data; the increase stands."},
-  {"cite": "Bevacqua et al. 2025, Nature Climate Change", "topic": "A year above 1.5 °C and the Paris Agreement limit", "doi": "10.1038/s41558-025-02246-9", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Idealized experiment reproduced, including with year-to-year persistence."},
-  {"cite": "Byrne et al. 2024, Nature", "topic": "Carbon emissions from the 2023 Canadian wildfires", "doi": "10.1038/s41586-024-07878-z", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Warmest/driest and fossil-emission comparisons checked against independent datasets."},
-  {"cite": "Bevacqua et al. 2024, Nature Geoscience", "topic": "Direct and lagged effects of the 2022 European drought", "doi": "10.1038/s41561-024-01559-2", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Design reviewed; no testable error."},
-  {"cite": "Vicente-Serrano et al. 2025, Nature", "topic": "Mediterranean precipitation: high variability, not trend", "doi": "10.1038/s41586-024-08576-6", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Regional trends, significance tests and the effect of homogenization reproduced from the authors' data."},
-  {"cite": "Wang et al. 2024, Science", "topic": "Anthropogenic influence on river-flow seasonality", "doi": "10.1126/science.adi9501", "side": "mainstream", "outcome": "nomaterial", "checked": "2026-11-22", "note": "Alaska stations agree with the paper."},
-  {"cite": "Gottlieb & Mankin 2024, Nature", "topic": "Human influence on Northern Hemisphere snow loss", "doi": "10.1038/s41586-023-06794-y", "side": "mainstream", "outcome": "nomaterial", "checked": "2026-11-22", "note": ""},
-  {"cite": "Kannenberg et al. 2024, Nature Geoscience", "topic": "Soil moisture and dryland carbon and water fluxes", "doi": "10.1038/s41561-023-01351-8", "side": "mainstream", "outcome": "nomaterial", "checked": "2026-11-22", "note": "Method reviewed; flux data not rerun (login required)."},
-  {"cite": "Esper, Torbenson & Büntgen 2024, Nature", "topic": "2023 summer warmth unparalleled over 2,000 years", "doi": "10.1038/s41586-024-07512-y", "side": "mainstream", "outcome": "inprint", "checked": "2026-11-22", "note": "A slip in Table 1 had already been corrected by the authors (May 2025)."},
-  {"cite": "Zhou, Leung & Lu 2024, Nature Geoscience", "topic": "Steady threefold Arctic amplification", "doi": "10.1038/s41561-024-01441-1", "side": "mainstream", "outcome": "inprint", "checked": "2026-11-22", "note": "Already challenged in a published comment, with the authors' reply."},
-  {"side": "mainstream", "outcome": "withauthors", "count": 9},
-  {"side": "mainstream", "outcome": "inprogress", "count": 2},
-  {"side": "questioning", "outcome": "withauthors", "count": 3}
+  {
+   "cite": "Henley et al. 2024, Nature",
+   "topic": "Coral Sea ocean heat highest in four centuries (Great Barrier Reef)",
+   "doi": "10.1038/s41586-024-07672-x",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Reproduced from the authors' code and figure data, including the bound on the pre-1900 maximum."
+  },
+  {
+   "cite": "Haslinger et al. 2025, Nature",
+   "topic": "Increasing hourly heavy rainfall in Austria and flood changes",
+   "doi": "10.1038/s41586-025-08647-2",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Tested for rain-gauge sensor changes with the authors' station data; the increase stands."
+  },
+  {
+   "cite": "Bevacqua et al. 2025, Nature Climate Change",
+   "topic": "A year above 1.5 °C and the Paris Agreement limit",
+   "doi": "10.1038/s41558-025-02246-9",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Idealized experiment reproduced, including with year-to-year persistence."
+  },
+  {
+   "cite": "Byrne et al. 2024, Nature",
+   "topic": "Carbon emissions from the 2023 Canadian wildfires",
+   "doi": "10.1038/s41586-024-07878-z",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Warmest/driest and fossil-emission comparisons checked against independent datasets."
+  },
+  {
+   "cite": "Bevacqua et al. 2024, Nature Geoscience",
+   "topic": "Direct and lagged effects of the 2022 European drought",
+   "doi": "10.1038/s41561-024-01559-2",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Design reviewed; no testable error."
+  },
+  {
+   "cite": "Vicente-Serrano et al. 2025, Nature",
+   "topic": "Mediterranean precipitation: high variability, not trend",
+   "doi": "10.1038/s41586-024-08576-6",
+   "side": "mainstream",
+   "outcome": "clean",
+   "checked": "2026-11-22",
+   "note": "Regional trends, significance tests and the effect of homogenization reproduced from the authors' data."
+  },
+  {
+   "cite": "Wang et al. 2024, Science",
+   "topic": "Anthropogenic influence on river-flow seasonality",
+   "doi": "10.1126/science.adi9501",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-22",
+   "note": "Alaska stations agree with the paper."
+  },
+  {
+   "cite": "Gottlieb & Mankin 2024, Nature",
+   "topic": "Human influence on Northern Hemisphere snow loss",
+   "doi": "10.1038/s41586-023-06794-y",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-22",
+   "note": ""
+  },
+  {
+   "cite": "Kannenberg et al. 2024, Nature Geoscience",
+   "topic": "Soil moisture and dryland carbon and water fluxes",
+   "doi": "10.1038/s41561-023-01351-8",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-22",
+   "note": "Method reviewed; flux data not rerun (login required)."
+  },
+  {
+   "cite": "Esper, Torbenson & Büntgen 2024, Nature",
+   "topic": "2023 summer warmth unparalleled over 2,000 years",
+   "doi": "10.1038/s41586-024-07512-y",
+   "side": "mainstream",
+   "outcome": "inprint",
+   "checked": "2026-11-22",
+   "note": "A slip in Table 1 had already been corrected by the authors (May 2025)."
+  },
+  {
+   "cite": "Zhou, Leung & Lu 2024, Nature Geoscience",
+   "topic": "Steady threefold Arctic amplification",
+   "doi": "10.1038/s41561-024-01441-1",
+   "side": "mainstream",
+   "outcome": "inprint",
+   "checked": "2026-11-22",
+   "note": "Already challenged in a published comment, with the authors' reply."
+  },
+  {
+   "side": "mainstream",
+   "outcome": "withauthors",
+   "count": 9
+  },
+  {
+   "side": "mainstream",
+   "outcome": "inprogress",
+   "count": 2
+  },
+  {
+   "side": "questioning",
+   "outcome": "withauthors",
+   "count": 3
+  }
+ ],
+ "other_since": "early November 2026",
+ "datasets": [
+  {
+   "cite": "ASOS dew-point sensor swap (DTS1, 2002–06)",
+   "topic": "US airport humidity records",
+   "outcome": "clean",
+   "note": "Transient drift that reset; no lasting step."
+  },
+  {
+   "cite": "TAO/TRITON tropical Pacific buoys",
+   "topic": "Sea-surface temperature and winds",
+   "outcome": "clean",
+   "note": "Clean in the real-time era; the drop in coverage is documented by PMEL."
+  },
+  {
+   "cite": "NOAA OISST v2.1 vs TAO buoys",
+   "topic": "Sea-surface temperature around 2007",
+   "outcome": "nomaterial",
+   "note": "A shift of about 0.05 °C, below our threshold; part of it is on the buoy side."
+  },
+  {
+   "cite": "NOAA OISST v2.1",
+   "topic": "Recent warming that inflates marine-heatwave trends",
+   "outcome": "inprint",
+   "note": "Already known and discussed in the literature."
+  },
+  {
+   "cite": "CRUTEM5",
+   "topic": "China station temperatures, 2020",
+   "outcome": "inprint",
+   "note": "A step in an older version (5.0.2.0) is already fixed in the current one."
+  },
+  {
+   "cite": "E-OBS",
+   "topic": "Few stations over Algeria and Tunisia",
+   "outcome": "inprint",
+   "note": "A known limitation, documented by the producers."
+  },
+  {
+   "outcome": "withauthors",
+   "count": 6
+  },
+  {
+   "outcome": "inprogress",
+   "count": 2
+  }
+ ],
+ "code": [
+  {
+   "cite": "properscoring, xskillscore",
+   "topic": "Forecast verification scores",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "scores (Bureau of Meteorology), pysteps",
+   "topic": "Fractions Skill Score",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "PyKrige",
+   "topic": "Kriging",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "thermofeel (ECMWF)",
+   "topic": "UTCI, WBGT, globe temperature and other heat-stress indices",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "psychrolib, MetPy, pythermalcomfort, thermal_comfort",
+   "topic": "Wet-bulb temperature",
+   "outcome": "clean",
+   "note": "Agree within their documented methods; pythermalcomfort and thermal_comfort could mention that their Stull formula is for sea level."
+  },
+  {
+   "cite": "pyet, refet, PyETo, R SPEI (PET)",
+   "topic": "FAO-56 reference evapotranspiration",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "ESMValCore",
+   "topic": "Climate-model evaluation preprocessing",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "MBC",
+   "topic": "Multivariate bias correction",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "GEFF and xclim fire weather",
+   "topic": "Canadian Fire Weather Index",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "dlnm",
+   "topic": "Heat–mortality workflow",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "NCAR MMM-physics pull requests #23 and #24",
+   "topic": "Hail reflectivity and UDM microphysics (WRF/MPAS)",
+   "outcome": "clean",
+   "note": ""
+  },
+  {
+   "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
+   "topic": "Warming attribution and climate-sensitivity tables",
+   "outcome": "nomaterial",
+   "note": "Minor slips only."
+  },
+  {
+   "cite": "Hector / BRICK (DOECLIM ocean)",
+   "topic": "Simple climate models",
+   "outcome": "nomaterial",
+   "note": "Two compensating slips; historical ocean heat content within about 1%."
+  },
+  {
+   "cite": "FACTS",
+   "topic": "IPCC AR6 sea-level projection code",
+   "outcome": "nomaterial",
+   "note": "AR6 totals unaffected."
+  },
+  {
+   "cite": "WeatherBench 2",
+   "topic": "Weather-model benchmarking",
+   "outcome": "nomaterial",
+   "note": ""
+  },
+  {
+   "cite": "eofs / xeofs",
+   "topic": "EOF analysis",
+   "outcome": "inprint",
+   "note": "Known bug with a fix pending; a documentation gap."
+  },
+  {
+   "cite": "marineHeatWaves, xmhw",
+   "topic": "Marine-heatwave detection",
+   "outcome": "inprint",
+   "note": "The bugs found were already reported by others."
+  },
+  {
+   "outcome": "withauthors",
+   "count": 2
+  },
+  {
+   "outcome": "inprogress",
+   "count": 2
+  }
  ]
 }

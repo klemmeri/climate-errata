@@ -154,41 +154,67 @@ rss.append("</channel></rss>\n")
 print(len(UP), "site updates")
 
 
-# ---- Papers we checked (tally by side and outcome) ----
+# ---- What we checked (papers by side; datasets; code) ----
 CK = json.load(open(ROOT / "data/checked.json"))
-OUT = {"clean": "No error found", "nomaterial": "No material error found", "inprint": "Already corrected or challenged in print",
+OUT = {"clean": "No error found", "nomaterial": "No material error found", "inprint": "Already known, corrected or challenged in print",
        "flagged": "Error found (see register)", "withauthors": "Finding sent to the authors", "inprogress": "Check not finished"}
 SIDE = {"mainstream": "Mainstream findings", "questioning": "Papers questioning mainstream findings"}
-def _n(side, outs):
-    return sum(p.get("count", 1) for p in CK["papers"] if p["side"] == side and p["outcome"] in outs)
-trows = ""
+def _cnt(items, outs, side=None):
+    return sum(p.get("count", 1) for p in items if p["outcome"] in outs and (side is None or p.get("side") == side))
+def _li(p):
+    link = f'<a href="https://doi.org/{e(p["doi"])}">{e(p["cite"])}</a>' if p.get("doi") else (f'<a href="{e(p["entry"])}">{e(p["cite"])}</a>' if p.get("entry") else e(p["cite"]))
+    return (f'<li>{link}: {e(p["topic"])}. <strong>{OUT[p["outcome"]]}</strong>'
+            f'{(". " + e(p["note"])) if p.get("note") else ""}</li>')
+HDR = '<tr><th></th><th>Checked</th><th>No error / no material error</th><th>Already known or in print</th><th>Error found or sent to authors</th><th>Not finished</th></tr>'
+def _row(label, items, side=None):
+    return (f'<tr><th>{label}</th><td>{_cnt(items, ["clean","nomaterial","inprint","flagged","withauthors"], side)}</td>'
+            f'<td>{_cnt(items, ["clean","nomaterial"], side)}</td><td>{_cnt(items, ["inprint"], side)}</td>'
+            f'<td>{_cnt(items, ["flagged","withauthors"], side)}</td><td>{_cnt(items, ["inprogress"], side)}</td></tr>')
+# flagged datasets and code that are public: from the register
+def _flagged(area, ctype):
+    out = []
+    for ent, r in zip(entries[:len(rows)], rows):
+        if r["area"] == area and str(r.get("verdict", "")).startswith("Real"):
+            out.append({"cite": ent["title"], "topic": ent["status_label"], "outcome": "flagged", "entry": f"/entries/{ent['id']}.html"})
+    for c in CUSTOM:
+        if c.get("type") == ctype:
+            out.append({"cite": c["title"], "topic": c.get("status_label", c.get("status", "")), "outcome": "flagged", "entry": f"/entries/{c['id']}.html"})
+    return out
+DS = _flagged("Observing data", "dataset") + CK["datasets"]
+CO = _flagged("Code", "code") + CK["code"]
+papers = CK["papers"]
+def _section(items, title):
+    named = [p for p in items if "cite" in p]
+    s = ""
+    fl = [p for p in named if p["outcome"] == "flagged"]
+    ok = [p for p in named if p["outcome"] != "flagged"]
+    if ok:
+        s += f"<h3>{title}: no error, no material error, or already known</h3><ul>" + "".join(_li(p) for p in ok) + "</ul>"
+    if fl:
+        s += f"<h3>{title}: errors found (register entries, with current status)</h3><ul>" + "".join(
+            f'<li><a href="{e(p["entry"])}">{e(p["cite"])}</a> &mdash; {e(p["topic"])}</li>' for p in fl) + "</ul>"
+    return s
+plis = ""
 for sd in SIDE:
-    done = _n(sd, ["clean", "nomaterial", "inprint", "flagged", "withauthors"])
-    trows += (f'<tr><th>{SIDE[sd]}</th><td>{done}</td><td>{_n(sd, ["clean", "nomaterial"])}</td><td>{_n(sd, ["inprint"])}</td>'
-              f'<td>{_n(sd, ["flagged", "withauthors"])}</td><td>{_n(sd, ["inprogress"])}</td></tr>')
-named = [p for p in CK["papers"] if "cite" in p]
-lis = ""
-for sd in SIDE:
-    ps = [p for p in named if p["side"] == sd]
-    if not ps:
-        continue
-    lis += f"<h3>{SIDE[sd]}</h3><ul>"
-    for p in ps:
-        link = f'<a href="https://doi.org/{e(p["doi"])}">{e(p["cite"])}</a>' if p.get("doi") else e(p["cite"])
-        extra = (' &mdash; <a href="' + e(p["entry"]) + '">register entry</a>') if p.get("entry") else ""
-        lis += (f'<li>{link}: {e(p["topic"])}. <strong>{OUT[p["outcome"]]}</strong>'
-                f'{(". " + e(p["note"])) if p.get("note") else ""}{extra}</li>')
-    lis += "</ul>"
-body = f"""<h1>Papers we checked</h1>
-<p class="lede">Every paper taken up in our systematic screening since 22 November 2026, with the outcome, whether or not we found an error. Papers are chosen by the criteria on the <a href="/about.html#selection">How it works</a> page, and papers questioning mainstream climate findings are tested with the same methods and standards as the rest.</p>
-<table class="facts">
-<tr><th></th><th>Checked</th><th>No error / no material error</th><th>Already in print</th><th>Error found or sent to authors</th><th>Not finished</th></tr>
-{trows}
-</table>
-<p class="meta" style="display:block">When we find a possible error, the authors hear about it first. Until they reply or three weeks pass, such papers are counted here but not named; then they are added by name with a link to their register entry. The numbers are small, so the proportions say little yet.</p>
-<h2>Papers by name</h2>
-{lis}"""
+    ps = [p for p in papers if "cite" in p and p.get("side") == sd]
+    if ps:
+        plis += f"<h3>{SIDE[sd]}</h3><ul>" + "".join(_li(p) for p in ps) + "</ul>"
+body = f"""<h1>What we checked</h1>
+<p class="lede">Every paper, dataset and piece of code we have checked, with the outcome, whether or not we found an error. What we choose to check, and why, is explained on the <a href="/about.html#selection">How it works</a> page.</p>
+<p class="meta" style="display:block">When we find a possible error, the authors, data producers or developers hear about it first. Until they reply or three weeks pass, such items are counted here but not named; then they are added by name with a link to their register entry. <a href="#papers">Papers</a> · <a href="#datasets">Datasets</a> · <a href="#code">Code</a></p>
+<h2 id="papers">Papers</h2>
+<p>Papers taken up in our systematic screening since 22 November 2026. Papers questioning mainstream climate findings are tested with the same methods and standards as the rest. The numbers are small, so the proportions say little yet.</p>
+<table class="facts">{HDR}{_row(SIDE["mainstream"], papers, "mainstream")}{_row(SIDE["questioning"], papers, "questioning")}</table>
+{plis}
+<h2 id="datasets">Datasets</h2>
+<p>Observing and gridded datasets checked since our audits began in {e(CK["other_since"])}.</p>
+<table class="facts">{HDR}{_row("Datasets", DS)}</table>
+{_section(DS, "Datasets")}
+<h2 id="code">Code</h2>
+<p>Climate software checked since our audits began in {e(CK["other_since"])}. A line may cover several related packages checked together.</p>
+<table class="facts">{HDR}{_row("Code", CO)}</table>
+{_section(CO, "Code")}"""
 (ROOT / "checked.html").write_text(
-    HEAD.replace("%TITLE%", "Papers we checked — Climate Errata").replace("%DESC%", "Every paper checked, with the outcome, including those with no error.")
+    HEAD.replace("%TITLE%", "What we checked — Climate Errata").replace("%DESC%", "Every paper, dataset and piece of code checked, with the outcome, including those with no error.")
     + "\n<main><div class=\"wrap\">\n" + body + "\n</div></main>\n" + FOOT)
-print(len(named), "named checked papers")
+print(len(DS), "datasets,", len(CO), "code lines on checked.html")

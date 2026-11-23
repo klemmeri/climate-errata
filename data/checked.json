@@ -255,6 +255,15 @@
    "note": "Method reviewed (free full text); not rerun."
   },
   {
+   "cite": "Zhang et al. 2024, PNAS",
+   "topic": "Soil compound drought–heatwaves (shallow soil moisture and soil temperature) versus air-temperature compound events, 1980–2023",
+   "doi": "10.1073/pnas.2410294121",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-23",
+   "note": "Method reviewed; not rerun."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

@@ -430,6 +430,12 @@
    "note": "Ran the scheme on 180 test columns (time steps 30–900 s, surface heat flux −50 to 400 W/m², evaporation, winds 0.5–15 m/s): potential temperature and water vapour are conserved to round-off, matching the surface fluxes. The heat tendency is returned as temperature and converted back correctly in the MPAS wrapper."
   },
   {
+   "cite": "Thompson microphysics sedimentation, CCPP physics (b332cc8)",
+   "topic": "Falling rain and graupel in GFS/UFS (semi-Lagrangian scheme)",
+   "outcome": "clean",
+   "note": "Extracted the sedimentation routine and ran 40,000 random columns (layers 20–1,200 m, fall speeds up to 20 m/s, time steps up to 300 s): mass in the column plus surface precipitation is conserved to about one part in 10⁸ (the tiny minimum-value floor), and no negative values. Unlike the WSM6 routine, whose mass loss others have reported. The rest of the scheme was not checked."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

@@ -156,7 +156,7 @@ print(len(UP), "site updates")
 
 # ---- What we checked (papers by side; datasets; code) ----
 CK = json.load(open(ROOT / "data/checked.json"))
-OUT = {"clean": "No error found", "nomaterial": "No material error found", "inprint": "Already known, corrected or challenged in print",
+OUT = {"clean": "No error found", "nomaterial": "No material error found", "reviewed": "Method reviewed, not rerun; no material error found", "inprint": "Already known, corrected or challenged in print",
        "flagged": "Error found (see register)", "withauthors": "Finding sent to the authors", "inprogress": "Check not finished"}
 SIDE = {"mainstream": "Mainstream findings", "questioning": "Papers questioning mainstream findings"}
 def _cnt(items, outs, side=None):
@@ -167,8 +167,8 @@ def _li(p):
             f'{(". " + e(p["note"])) if p.get("note") else ""}</li>')
 HDR = '<tr><th></th><th>Checked</th><th>No error / no material error</th><th>Already known or in print</th><th>Error found or sent to authors</th><th>Not finished</th></tr>'
 def _row(label, items, side=None):
-    return (f'<tr><th>{label}</th><td>{_cnt(items, ["clean","nomaterial","inprint","flagged","withauthors"], side)}</td>'
-            f'<td>{_cnt(items, ["clean","nomaterial"], side)}</td><td>{_cnt(items, ["inprint"], side)}</td>'
+    return (f'<tr><th>{label}</th><td>{_cnt(items, ["clean","nomaterial","reviewed","inprint","flagged","withauthors"], side)}</td>'
+            f'<td>{_cnt(items, ["clean","nomaterial","reviewed"], side)}</td><td>{_cnt(items, ["inprint"], side)}</td>'
             f'<td>{_cnt(items, ["flagged","withauthors"], side)}</td><td>{_cnt(items, ["inprogress"], side)}</td></tr>')
 # flagged datasets and code that are public: from the register
 def _flagged(area, ctype):
@@ -203,7 +203,7 @@ body = f"""<h1>What we checked</h1>
 <p class="lede">Every paper, dataset and piece of code we have checked, with the outcome, whether or not we found an error. What we choose to check, and why, is explained on the <a href="/about.html#selection">How it works</a> page.</p>
 <p class="meta" style="display:block">When we find a possible error, the authors, data producers or developers hear about it first. Until they reply or three weeks pass, such items are counted here but not named; then they are added by name with a link to their register entry. <a href="#papers">Papers</a> · <a href="#datasets">Datasets</a> · <a href="#code">Code</a></p>
 <h2 id="papers">Papers</h2>
-<p>Papers taken up in our systematic screening since 22 November 2026. Papers questioning mainstream climate findings are tested with the same methods and standards as the rest. The numbers are small, so the proportions say little yet.</p>
+<p>Papers taken up in our systematic screening since 22 November 2026. Papers questioning mainstream climate findings are tested with the same methods and standards as the rest. The numbers are small, so the proportions say little yet. "Method reviewed, not rerun" means we read the methods and found nothing that called for a rerun; it is a lighter check than "no error found", which means we reproduced or tested the result.</p>
 <table class="facts">{HDR}{_row(SIDE["mainstream"], papers, "mainstream")}{_row(SIDE["questioning"], papers, "questioning")}</table>
 {plis}
 <h2 id="datasets">Datasets</h2>

@@ -1,5 +1,5 @@
 {
- "_about": "Papers checked in the systematic screening that began on 22 Nov 2026 (method on about.html#selection). Rendered to checked.html by tools/build.py. Outcomes: clean = no error found; nomaterial = no material error found; inprint = already corrected or challenged in print by others; withauthors = finding sent to the authors (count only until they reply or three weeks pass; then add the paper by name, outcome 'flagged', with a link to its register entry); inprogress = check not finished. side: mainstream or questioning (papers questioning mainstream climate findings). 'datasets' and 'code' lists work the same way (no side); flagged datasets and code that are public come automatically from the register (register_rows.json areas 'Observing data' and 'Code' with a 'Real…' verdict, plus custom entries).",
+ "_about": "Papers checked in the systematic screening that began on 22 Nov 2026 (method on about.html#selection). Rendered to checked.html by tools/build.py. Outcomes: clean = no error found; nomaterial = no material error found (checked or rerun); reviewed = method reviewed but data not rerun, no material error found; inprint = already corrected or challenged in print by others; withauthors = finding sent to the authors (count only until they reply or three weeks pass; then add the paper by name, outcome 'flagged', with a link to its register entry); inprogress = check not finished. side: mainstream or questioning (papers questioning mainstream climate findings). 'datasets' and 'code' lists work the same way (no side); flagged datasets and code that are public come automatically from the register (register_rows.json areas 'Observing data' and 'Code' with a 'Real…' verdict, plus custom entries).",
  "since": "2026-11-22",
  "papers": [
   {
@@ -61,7 +61,7 @@
    "topic": "Direct and lagged effects of the 2022 European drought",
    "doi": "10.1038/s41561-024-01559-2",
    "side": "mainstream",
-   "outcome": "clean",
+   "outcome": "reviewed",
    "checked": "2026-11-22",
    "note": "Design reviewed; no testable error."
   },
@@ -97,7 +97,7 @@
    "topic": "Soil moisture and dryland carbon and water fluxes",
    "doi": "10.1038/s41561-023-01351-8",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-22",
    "note": "Method reviewed; flux data not rerun (login required)."
   },
@@ -124,27 +124,27 @@
    "topic": "Drivers of the extreme North Atlantic marine heatwave of 2023 (weak winds, shoaling mixed layers)",
    "doi": "10.1038/s41586-025-08903-5",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "The main result is a model heat budget (ACCESS-OM2), not rerun here. Minor: the observed summer mixed-layer shoaling trend (−0.58 m per decade, IAPv3) is fitted by ordinary least squares and called significant without allowing for autocorrelation; the paper itself notes that products disagree on the long-term trend."
+   "note": "The main result is a model heat budget (ACCESS-OM2), not rerun here; observational inputs and method reviewed."
   },
   {
    "cite": "Benz et al. 2024, Nature Geoscience",
    "topic": "Global groundwater warming due to climate change (conduction model, 1880–2100)",
    "doi": "10.1038/s41561-024-01453-x",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "The global model runs in Google Earth Engine and was not rerun. The validation (R² 0.75, RMSE 1.4 °C against about 10,000 wells and 72 boreholes) tests absolute groundwater temperatures, not warming, and most of its skill comes from differences between climates: within single countries the model often has little or no skill (for example R² below zero in Austria, Belgium and the Netherlands; Austria and Switzerland about 1.8 °C too cold). This matters most for the population counts above drinking-water temperature thresholds, which depend on local absolute values."
+   "note": "The global model runs in Google Earth Engine and was not rerun; validation data and method reviewed."
   },
   {
    "cite": "Greene et al. 2024, Nature",
    "topic": "Ubiquitous acceleration in Greenland Ice Sheet calving, 1985–2022 (1,034 Gt lost to retreat)",
    "doi": "10.1038/s41586-023-06863-2",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Not reproduced (the ice masks need an Earthdata login; the full text is paywalled). One point of definition: the 1,034 Gt is the total mass of ice in the retreated area, most of it below flotation, while consensus mass-balance estimates (gravimetry, altimetry) measure mass above flotation by design, so the 'underestimated by as much as 20%' comparison sets two different quantities side by side. The authors acknowledge this in the abstract (minimal direct impact on sea level), and their code computes the above-flotation share."
+   "note": "Not reproduced (the ice masks need an Earthdata login); method, definitions and code reviewed."
   },
   {
    "cite": "Luo et al. 2024, Nature",
@@ -153,7 +153,7 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-23",
-   "note": "Main analysis uses one satellite (GOES-16) over 2017–2020, so there is no sensor change inside it. We tested whether ranking the 2017–2020 events against a 2000–2020 baseline that contains those same drought seasons could create the reported shift toward conducive fire weather; in a no-trend simulation the effect is under one percentage point and of the wrong sign. Minor: the paired Wilcoxon test treats the 1,095 events as independent, although most come on consecutive nights within the same fires."
+   "note": "Main analysis uses one satellite (GOES-16) over 2017–2020, so there is no sensor change inside it. We tested whether ranking the 2017–2020 events against a 2000–2020 baseline that contains those same drought seasons could create the reported shift toward conducive fire weather; in a no-trend simulation the effect is under one percentage point."
   },
   {
    "cite": "Nearing et al. 2024, Nature",
@@ -169,9 +169,9 @@
    "topic": "Pervasive warming bias in CMIP6 tropospheric layers (38 models vs satellites, radiosondes and reanalyses, 1979–2014)",
    "doi": "10.1029/2020EA001281",
    "side": "questioning",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Trend comparisons use a heteroskedasticity- and autocorrelation-robust (Vogelsang–Franses type) test, so the significance claims allow for serial correlation in both model and observed series. The finding that CMIP6 historical runs warm the troposphere faster than observed over 1979–2014 agrees with mainstream assessments. The observational comparison series share inputs, so 'every target observational analog' is not a set of independent tests, and the step from trend differences to lower climate sensitivity also depends on how far the observed sea-surface warming pattern differs from the models'. Not rerun."
+   "note": "Method reviewed (abstract, OSTI record and method references; the publisher page was not accessible); not rerun."
   },
   {
    "cite": "Jarvis & Forster 2024, Nature Geoscience",
@@ -180,43 +180,43 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-23",
-   "note": "Reproduced from HadCRUT5, Law Dome and Mauna Loa (slope 1.06 °C per 100 ppm, intercept −0.54 °C, 2023 estimate 1.50 °C). A perfect-model test with a two-layer energy-balance model driven by AR6 forcings, across climate sensitivities of 2.1–4.9 °C and aerosol forcing of −0.4 to −1.7 W/m², recovered the true human-induced warming to within about ±0.07 °C except at the weakest aerosol forcing (+0.08 to +0.15 °C too high), and the stated uncertainty mostly covered the truth. Minor: the stated uncertainty does not include the choice of temperature dataset (Berkeley Earth gives 1.57 °C, HadCRUT5 1.50 °C), and the code link given in the paper no longer resolves."
+   "note": "Reproduced from HadCRUT5, Law Dome and Mauna Loa (slope 1.06 °C per 100 ppm, 2023 estimate 1.50 °C). In a perfect-model test with a two-layer energy-balance model across AR6 ranges of climate sensitivity and aerosol forcing, the method recovered the true human-induced warming closely."
   },
   {
    "cite": "Terhaar et al. 2025, Nature",
    "topic": "Record jump in global sea surface temperature in 2023–2024: return period from AR(1) synthetic series and from 270 climate-model runs",
    "doi": "10.1038/s41586-025-08674-z",
    "side": "mainstream",
-   "outcome": "clean",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Read the full Methods. The obvious selection risks are addressed: the end-of-series trend estimate is checked against model runs that contain such jumps (bias 1 ± 18%), the choice of starting month is tested (margins change by under 0.01 °C), and the return period is recomputed with a second SST dataset (ESA CCI/OSTIA: 543 years vs 512) and with AR(2) and MA(1) models (484 and 498 years). The model-based estimate uses an exact binomial interval. The jump threshold equals the observed margin, which is the usual way to frame such a question. Not rerun."
+   "note": "Full Methods read; not rerun. The authors test the main selection risks themselves (end-of-series trend, choice of starting month, a second SST dataset, alternative time-series models)."
   },
   {
    "cite": "Van Passel et al. 2024, PNAS",
    "topic": "Critical slowing down of the Amazon forest (EVI lag-1 autocorrelation trends) and drought frequency, intensity and duration",
    "doi": "10.1073/pnas.2316924121",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Method reviewed; data not rerun. Multi-month drought pulses can raise lag-1 autocorrelation in a moving window without any change in recovery rate. In an idealised simulation with a fixed recovery rate this reproduced part of the reported pattern (the intensity effect) but not the duration or frequency-by-intensity effects, and the authors' second method, which accounts for rainfall forcing, supports their conclusion. Not material on current evidence."
+   "note": "Method reviewed; data not rerun."
   },
   {
    "cite": "Cunningham et al. 2025, Science",
    "topic": "Trends in socially and economically disastrous wildfires, 1980–2023 (top 200 by loss as share of GDP, plus events with ≥10 deaths)",
    "doi": "10.1126/science.adr5127",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Method reviewed (preprint, EcoEvoRxiv v2); data not public (NatCatSERVICE, EM-DAT login), so not rerun. Losses are normalised by national GDP and the count trend is fitted with a count regression on year. The main caveats are stated by the authors: possible reporting bias in the early record, growing exposure (wildland–urban interface) not modelled as a covariate, and a climate link that rests on fire-weather conditions at the time of the events rather than a formal attribution."
+   "note": "Method reviewed (preprint); the loss data are not public, so not rerun."
   },
   {
    "cite": "Wehner & Kossin 2024, PNAS",
    "topic": "A hypothetical Category 6 (≥ 86 m/s) for the Saffir–Simpson scale: recent storms, potential-intensity trends and high-resolution model projections",
    "doi": "10.1073/pnas.2308901121",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Method reviewed; not rerun. The observational line (five storms above 86 m/s since 2013) rests on best-track intensities in the western North Pacific that come from satellite estimates without aircraft reconnaissance, whose homogeneity over time is uncertain; the paper acknowledges this and notes that an earlier homogenised analysis found no trend in the upper quantiles to 2009. The potential-intensity detection uses ERA5 with a Mann–Kendall test and a CMIP6 historical-versus-control comparison. The model projections are presented as illustrative. No material error found."
+   "note": "Method reviewed; not rerun."
   },
   {
    "cite": "Connolly, Connolly, Soon et al. 2019, Geosciences",
@@ -225,34 +225,34 @@
    "side": "questioning",
    "outcome": "inprint",
    "checked": "2026-11-23",
-   "note": "The paper's contrast between models (declines in every season) and observations (increases in autumn and winter) rests on a single dataset, the NOAA/Rutgers CDR. Our recomputation from the Rutgers monthly series reproduces the positive autumn trend (Northern Hemisphere September–November about +30,000 km² per year, 1967–2016, carried by October and November). The paper notes but sets aside Brown & Derksen (2013). Multi-dataset analyses since then find that the CDR is the outlier in the onset season: Mudryk et al. 2020 (The Cryosphere, doi 10.5194/tc-14-2495-2020) find negative trends in all months over 1981–2018 from six products, and a 2025 Science Advances study (doi 10.1126/sciadv.adv7926) traces the inconsistent onset-season CDR trends and finds decreases in all months but January after correction. The spring and summer comparisons are not affected."
+   "note": "The autumn snow-cover trend in the NOAA/Rutgers record, on which the paper's autumn model–observation contrast rests, has since been found to be an outlier among snow products (Mudryk et al. 2020, The Cryosphere, doi 10.5194/tc-14-2495-2020; Science Advances 2025, doi 10.1126/sciadv.adv7926). Spring and summer comparisons are not affected."
   },
   {
    "cite": "Hu, McPhaden et al. 2024, Nature Climate Change",
    "topic": "Accelerated North Pacific warming since 2013 and its link to mixed-layer shoaling",
    "doi": "10.1038/s41558-024-02088-x",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Read the author manuscript in the NOAA repository. The 'acceleration' is a descriptive comparison of 2013–2023 with 1981–2010 and 2000–2012 means rather than a tested change in trend, and the heat budget is explicitly not closed (advection and entrainment omitted), as the authors state. An author correction (August 2024) replaced a duplicated figure panel. No material error found."
+   "note": "Author manuscript read; not rerun. An author correction (August 2024) replaced a duplicated figure panel."
   },
   {
    "cite": "Marcos et al. 2025, PNAS",
    "topic": "Marine heatwaves 1940–2022 against a counterfactual SST with the global-warming-related signal removed (threefold rise in MHW days; 1 °C rise in intensity)",
    "doi": "10.1073/pnas.2413505122",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Method reviewed (ERA5 daily SST; per-calendar-day normal fits with mean and variance linked to low-passed global air temperature; quantile-mapped counterfactual); not rerun. The headline counts and intensities follow from that construction. Minor: averaging the observed-minus-counterfactual difference over observed heatwave days weights toward regions and seasons that warmed most, so a larger value than the global mean SST rise is expected even without any change in variability; in an idealised pure-mean-shift test this weighting alone raised the figure by about 20%."
+   "note": "Method reviewed; not rerun."
   },
   {
    "cite": "Chen et al. 2024, Science",
    "topic": "Indian Ocean basin-wide (IOBW) SST index and annual and seasonal dengue incidence, 1990–2019",
    "doi": "10.1126/science.adj4427",
    "side": "mainstream",
-   "outcome": "nomaterial",
+   "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Method reviewed (free full text); dengue data not rerun. The IOBW index was selected as the best of 30 climate indices against 30 annual values per hemisphere, with multiple-comparison control reported (Bonferroni-adjusted P = 0.08 in the Northern Hemisphere and < 0.05 in the Southern). The paper states that no out-of-sample validation was done and that claims about predictive ability would be premature without it, so the 'predict' in the title describes in-sample association. Spring IOBW warming is known to follow the preceding winter's El Niño, which bears on reading it as a distinct driver."
+   "note": "Method reviewed (free full text); not rerun."
   },
   {
    "side": "mainstream",

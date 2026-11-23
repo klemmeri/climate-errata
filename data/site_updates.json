@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-23",
+   "title": "Lighter-check label and fewer, informational messages to authors",
+   "text": "\"What we checked\" now distinguishes papers whose methods we reviewed without rerunning anything (\"Method reviewed, not rerun\") from those we reproduced or tested. Notes on papers whose authors we have not contacted now describe only what we did and the outcome. Messages to authors are now sent only for findings we have tested ourselves and rate Medium or High; they are for information, ask for no reply, and say that the analysis was AI-assisted and checked by the editor."
+  },
+  {
+   "date": "2026-11-23",
    "title": "Clearer rules on author replies and on what an entry claims",
    "text": "First messages to authors and producers now say that a finding may be recorded here. Their replies are published, quoted or summarised only with their explicit permission; without it, an entry gives only our own assessment and says that they were contacted. A new section of the Policies page, \"What an entry claims\", says that every entry is our own assessment, links to its method and code, and that High findings are also written up for a formal, citable outlet."
   },

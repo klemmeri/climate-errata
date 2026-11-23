@@ -228,6 +228,15 @@
    "note": "The paper's contrast between models (declines in every season) and observations (increases in autumn and winter) rests on a single dataset, the NOAA/Rutgers CDR. Our recomputation from the Rutgers monthly series reproduces the positive autumn trend (Northern Hemisphere September–November about +30,000 km² per year, 1967–2016, carried by October and November). The paper notes but sets aside Brown & Derksen (2013). Multi-dataset analyses since then find that the CDR is the outlier in the onset season: Mudryk et al. 2020 (The Cryosphere, doi 10.5194/tc-14-2495-2020) find negative trends in all months over 1981–2018 from six products, and a 2025 Science Advances study (doi 10.1126/sciadv.adv7926) traces the inconsistent onset-season CDR trends and finds decreases in all months but January after correction. The spring and summer comparisons are not affected."
   },
   {
+   "cite": "Hu, McPhaden et al. 2024, Nature Climate Change",
+   "topic": "Accelerated North Pacific warming since 2013 and its link to mixed-layer shoaling",
+   "doi": "10.1038/s41558-024-02088-x",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Read the author manuscript in the NOAA repository. The 'acceleration' is a descriptive comparison of 2013–2023 with 1981–2010 and 2000–2012 means rather than a tested change in trend, and the heat budget is explicitly not closed (advection and entrainment omitted), as the authors state. An author correction (August 2024) replaced a duplicated figure panel. No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

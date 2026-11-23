@@ -210,6 +210,15 @@
    "note": "Method reviewed (preprint, EcoEvoRxiv v2); data not public (NatCatSERVICE, EM-DAT login), so not rerun. Losses are normalised by national GDP and the count trend is fitted with a count regression on year. The main caveats are stated by the authors: possible reporting bias in the early record, growing exposure (wildland–urban interface) not modelled as a covariate, and a climate link that rests on fire-weather conditions at the time of the events rather than a formal attribution."
   },
   {
+   "cite": "Wehner & Kossin 2024, PNAS",
+   "topic": "A hypothetical Category 6 (≥ 86 m/s) for the Saffir–Simpson scale: recent storms, potential-intensity trends and high-resolution model projections",
+   "doi": "10.1073/pnas.2308901121",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Method reviewed; not rerun. The observational line (five storms above 86 m/s since 2013) rests on best-track intensities in the western North Pacific that come from satellite estimates without aircraft reconnaissance, whose homogeneity over time is uncertain; the paper acknowledges this and notes that an earlier homogenised analysis found no trend in the upper quantiles to 2009. The potential-intensity detection uses ERA5 with a Mann–Kendall test and a CMIP6 historical-versus-control comparison. The model projections are presented as illustrative. No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

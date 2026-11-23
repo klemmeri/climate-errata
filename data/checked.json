@@ -174,6 +174,15 @@
    "note": "Trend comparisons use a heteroskedasticity- and autocorrelation-robust (Vogelsang–Franses type) test, so the significance claims allow for serial correlation in both model and observed series. The finding that CMIP6 historical runs warm the troposphere faster than observed over 1979–2014 agrees with mainstream assessments. The observational comparison series share inputs, so 'every target observational analog' is not a set of independent tests, and the step from trend differences to lower climate sensitivity also depends on how far the observed sea-surface warming pattern differs from the models'. Not rerun."
   },
   {
+   "cite": "Jarvis & Forster 2024, Nature Geoscience",
+   "topic": "Human-induced warming estimated from the linear relationship between global temperature and atmospheric CO2 (1.49 ± 0.11 °C in 2023, pre-1700 baseline)",
+   "doi": "10.1038/s41561-024-01580-5",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Reproduced from HadCRUT5, Law Dome and Mauna Loa (slope 1.06 °C per 100 ppm, intercept −0.54 °C, 2023 estimate 1.50 °C). A perfect-model test with a two-layer energy-balance model driven by AR6 forcings, across climate sensitivities of 2.1–4.9 °C and aerosol forcing of −0.4 to −1.7 W/m², recovered the true human-induced warming to within about ±0.07 °C except at the weakest aerosol forcing (+0.08 to +0.15 °C too high), and the stated uncertainty mostly covered the truth. Minor: the stated uncertainty does not include the choice of temperature dataset (Berkeley Earth gives 1.57 °C, HadCRUT5 1.50 °C), and the code link given in the paper no longer resolves."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 13

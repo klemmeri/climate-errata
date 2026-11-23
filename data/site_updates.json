@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-22",
+   "title": "Each entry now starts with what the dataset, paper or code is",
+   "text": "Every entry page now opens with a short \"What it is\" description of the dataset, paper or software concerned, before the finding, and the register shows the same description on each card. Also fixed: on ten entry pages that link to our Zenodo write-ups, the status label at the top wrongly read \"Our write-up on Zenodo (latest version)\" instead of the entry's status."
+  },
+  {
+   "date": "2026-11-22",
    "title": "Fixes we propose; our reports on Zenodo",
    "text": "The How it works page now explains the fixes we send with reports: patches and pull requests for software, affected areas and workarounds for datasets, and corrected analyses for papers. It also lists our two broader reports on Zenodo. The home page mentions the proposed fixes too."
   },

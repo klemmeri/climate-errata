@@ -10,6 +10,7 @@
   "reported": "2026-10-19",
   "updated": "2026-11-22",
   "summary": "6 interpolation/indexing bugs; worst (#425, in every release since v1.0) lets a zeroed gas keep absorbing, understating CO2-removal effects 70–80%",
+  "about": "RTE+RRTMGP is the radiative-transfer code that computes how sunlight and infrared radiation are absorbed and emitted by gases, clouds and aerosols. It is the radiation scheme in several major climate models, including CESM3, E3SM and ICON.",
   "fixed": "2026-11-16",
   "target_doi": "",
   "dois": [
@@ -27,6 +28,7 @@
   "reported": "2026-11-04",
   "updated": "2026-11-22",
   "summary": "Sign error in the COARE flux code",
+  "about": "The COARE algorithm calculates the exchange of heat, moisture and momentum between the ocean surface and the atmosphere (air–sea fluxes). Versions of it are used in the coupling code of climate models such as CESM (CMEPS), E3SM and NorESM.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -42,6 +44,7 @@
   "reported": "2026-11-04",
   "updated": "2026-11-22",
   "summary": "Zero-rain months counted twice in SPI",
+  "about": "climate_indices is a Python package that computes drought indices such as the Standardized Precipitation Index (SPI), which expresses rainfall over a period as a number of standard deviations from normal.",
   "fixed": "2026-11-05",
   "target_doi": "",
   "dois": []
@@ -57,6 +60,7 @@
   "reported": "2026-11-04",
   "updated": "2026-11-22",
   "summary": "Zero-rain adjustment overwritten, so SPI returns −Inf (versions 1.8.0–1.8.1, 2022–26); 47+ papers used it",
+  "about": "SPEI is the R package, written by the index's developers, that computes the Standardized Precipitation Index (SPI) and the Standardized Precipitation-Evapotranspiration Index (SPEI), two of the most widely used drought indices.",
   "fixed": "2026-11-07",
   "target_doi": "",
   "dois": []
@@ -72,6 +76,7 @@
   "reported": "2026-11-04",
   "updated": "2026-11-22",
   "summary": "Default 3-parameter gamma fit collapses its location onto the sample minimum (SPI −8.21)",
+  "about": "xclim is a Python library from Ouranos (Montreal) for computing climate indices from model and observational data. Its SPI function converts rainfall totals into a standardized drought index.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -87,6 +92,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "prob_zero=True counts zeros twice, biasing SPI high",
+  "about": "martinvonk/SPEI is a Python package for computing standardized drought indices (SPI, SPEI) from rainfall and evaporation series.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -102,6 +108,7 @@
   "reported": "2026-11-04",
   "updated": "2026-11-22",
   "summary": "WSDI/CSDI never got the Zhang et al. (2005) in-base bootstrap, leaving a spurious base-period step",
+  "about": "climdex.pcic is the R package from the Pacific Climate Impacts Consortium that computes the 27 ETCCDI climate-extremes indices (hot days, warm spells, heavy rain and so on). Its output feeds the HadEX3 global extremes dataset and CMIP6 index sets.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -117,6 +124,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Same missing bootstrap; rx1daymon/rx5daymon return unaggregated data; other bugs",
+  "about": "CDO (Climate Data Operators) is a widely used command-line toolkit for processing climate model and gridded data. Its etccdi operators compute the standard ETCCDI climate-extremes indices.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -132,6 +140,7 @@
   "reported": "2026-11-04",
   "updated": "2026-11-22",
   "summary": "Heatwave indices without bootstrap; SPI zeros double-counted; parameter typo",
+  "about": "ClimPACT is the World Meteorological Organization's software for computing climate indices (extremes, heatwaves, drought) from station data, used by national weather services.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -147,6 +156,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Yue–Wang test default rejects ~47% of pure-noise series at the 5% level",
+  "about": "pyMannKendall is a Python package for the Mann–Kendall trend test and its variants, which test whether a time series has a monotonic trend, including versions that correct for autocorrelation.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -164,6 +174,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Same all-lags flaw since v1.1.0 (2018)",
+  "about": "modifiedmk is an R package of Mann–Kendall trend tests modified for serially correlated data. Its mmky() function implements the Yue–Wang variance correction.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -181,6 +192,7 @@
   "reported": "2026-11-10",
   "updated": "2026-11-22",
   "summary": "About 2× the nominal false-positive rate on white noise",
+  "about": "The Hamed–Rao test is a version of the Mann–Kendall trend test that inflates the test's variance to allow for autocorrelation. It is implemented in pyMannKendall and modifiedmk.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -196,6 +208,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Ranks wrong when dry days tie, so adjusted precipitation blows up 4–9× for dry-biased models",
+  "about": "xsdba (formerly xclim.sdba) is Ouranos's Python library for statistical bias adjustment of climate model output. Quantile Delta Mapping (QDM) corrects a model's distribution against observations while preserving its projected changes.",
   "fixed": "2026-11-12",
   "target_doi": "",
   "dois": []
@@ -211,6 +224,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Heat index recomputed each year halves warming-driven PET increases; bare Rothfusz heat index",
+  "about": "xclim's potential evapotranspiration (PET) functions estimate how much water the atmosphere could take up; the Thornthwaite method uses temperature only. Its heat index combines temperature and humidity into an apparent temperature.",
   "fixed": "2026-11-12",
   "target_doi": "",
   "dois": []
@@ -226,6 +240,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "rms_xyt redefined in the xCDAT port; always biased low",
+  "about": "The PCMDI Metrics Package (PMP), from Lawrence Livermore National Laboratory, is the standard software for benchmarking CMIP climate models against observations.",
   "fixed": "2026-11-11",
   "target_doi": "",
   "dois": []
@@ -241,6 +256,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Uninitialized reference uses single-member skill, overstating the value of initialization; bootstrap false positives 68–73%",
+  "about": "climpred is a Python package for verifying initialized decadal and seasonal climate predictions, including comparing them with uninitialized (free-running) model simulations.",
   "fixed": "2026-11-09",
   "target_doi": "",
   "dois": []
@@ -256,6 +272,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Model-uncertainty covariance keeps only the diagonal; 90% intervals cover the truth 67% of the time",
+  "about": "Skyborn is a Python package for optimal fingerprinting, the regression method used to detect and attribute climate change to particular causes (greenhouse gases, aerosols, natural factors).",
   "fixed": "2026-11-08",
   "target_doi": "",
   "dois": []
@@ -271,6 +288,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Published fix never implemented; zero-CAPE outflow case",
+  "about": "tcpyPI is the Python implementation of the potential-intensity algorithm (Bister and Emanuel), which estimates the maximum intensity a hurricane could reach given ocean and atmospheric conditions.",
   "fixed": "2026-11-18",
   "target_doi": "",
   "dois": []
@@ -286,6 +304,7 @@
   "reported": "2026-11-07",
   "updated": "2026-11-22",
   "summary": "Bootstrap refits silently switch optimizer and often fail for shift-scale fits; core statistics hold",
+  "about": "rwwa is World Weather Attribution's R code for extreme-event attribution: it fits extreme-value distributions that shift with global warming and estimates how much climate change altered an event's likelihood.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -301,6 +320,7 @@
   "reported": "2026-11-10",
   "updated": "2026-11-22",
   "summary": "Friction velocity 28–41% high; uninitialized variable",
+  "about": "MMM-physics is NCAR's shared library of physics schemes for the WRF and MPAS weather models. The KIM TOFD option represents turbulent orographic form drag (the drag of small-scale terrain on the wind).",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -316,6 +336,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "Map-factor error grows toward the poles (~10,000× at pole rows)",
+  "about": "MetPy is a widely used Python library for meteorological calculations. Its vorticity and divergence functions compute rotation and spreading of the wind from gridded data.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -331,6 +352,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "Divides by the map factor instead of multiplying (bias 1/m²)",
+  "about": "wrf-python is NCAR's Python library for post-processing WRF model output. Updraft helicity is a diagnostic used to identify rotating thunderstorms (supercells).",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -346,6 +368,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "Partial DJF seasons returned silently; winter trends biased up to ~35%",
+  "about": "GeoCAT-comp is NCAR's Python library of geoscience computations (the successor to NCL functions). Its seasonal-average routines compute DJF, MAM, JJA and SON means.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -361,6 +384,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "Outputs in reverse of documented order; official moisture-convergence example wrong",
+  "about": "GeoCAT-comp's gradient() function computes spatial derivatives of gridded fields, used for example in moisture-convergence calculations.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -376,6 +400,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "Dropping incomplete seasons fails, or silently keeps partial DJF, for daily data",
+  "about": "xCDAT (Xarray Climate Data Analysis Tools) is a Python library, developed with DOE support, for common climate-data operations such as temporal and seasonal averaging.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -391,6 +416,7 @@
   "reported": "2026-11-15",
   "updated": "2026-11-22",
   "summary": "Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)",
+  "about": "xESMF is a Python package for regridding (interpolating) climate data between grids. Conservative regridding is meant to preserve totals such as rainfall or energy.",
   "fixed": "2026-11-16",
   "target_doi": "",
   "dois": []
@@ -406,6 +432,7 @@
   "reported": "2026-11-15",
   "updated": "2026-11-22",
   "summary": "Default wet-bulb potential temperature up to ~1.2 K too low",
+  "about": "earthkit-meteo is ECMWF's Python library of meteorological calculations, including humidity and wet-bulb temperature functions.",
   "fixed": "2026-11-18",
   "target_doi": "",
   "dois": []
@@ -421,6 +448,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "Missing −½fr term + translation counted twice; peak wind 3–8 m/s (6–21%) above track vmax",
+  "about": "CLIMADA is ETH Zurich's open-source platform for climate risk assessment. Its tropical-cyclone module models the wind field around a storm track (here the Emanuel–Rotunno 2011 profile).",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -436,6 +464,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "Tied values (zero flows) ranked by time order, biasing KGE_NP for intermittent rivers",
+  "about": "hydroeval is a Python package of goodness-of-fit scores for hydrological models. The non-parametric Kling–Gupta efficiency (KGE_NP) compares simulated and observed river flows using ranks.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -451,6 +480,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "Known in-place bug (fix pending); patterns returned still weighted (doc gap)",
+  "about": "eofs and xeofs are Python packages for Empirical Orthogonal Function (EOF) analysis, which finds the dominant spatial patterns of variability in climate data.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -466,6 +496,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Minor window and check slips only",
+  "about": "Three widely used reference products: the Global Warming Index (human-induced warming to date), the radiative-forcing series of the Indicators of Global Climate Change (IGCC), and Mark Zelinka's tables of climate sensitivity and feedbacks for CMIP models.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -481,6 +512,7 @@
   "reported": "2026-11-12",
   "updated": "2026-11-22",
   "summary": "No errors found (9 packages/workflows)",
+  "about": "A group of climate and statistics packages and workflows we checked and found to be correct: forecast scoring (properscoring, xskillscore), kriging (PyKrige), thermal-comfort indices (thermofeel), model evaluation (ESMValCore), multivariate bias correction (MBC), PET in R SPEI, fire-weather indices (GEFF, xclim) and a heat–mortality workflow (dlnm).",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -496,6 +528,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "US steps of −6.5% (sonic) and −9% (commissioning) remove most US 1988–2010 stilling; global 1978–2010 decline (Zeng method) −2.7 → −1.9 %/decade; NH (HadISD design) −24%",
+  "about": "The Automated Surface Observing System (ASOS) is the network of about 900 automated weather stations at US airports. Its wind sensors were changed from cup anemometers to sonic sensors in 2005–09; ASOS wind data feed global wind-trend studies through HadISD and ISD.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -513,6 +546,7 @@
   "reported": "2026-11-17",
   "updated": "2026-11-22",
   "summary": "Step at the 2012 digital upgrade (~+9–10% in hourly maxima)",
+  "about": "NOAA's Hourly Precipitation Data (HPD) is the US archive of hourly rain-gauge totals from about 2,000 stations, used to study short-duration extreme rainfall and design storms (for example NOAA Atlas 14/15).",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -530,6 +564,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "~295,000 position-error duplicates; some HadSST4 box-months rest on misplaced copies",
+  "about": "ICOADS (International Comprehensive Ocean-Atmosphere Data Set) is the main archive of ship, buoy and other marine surface observations since the 1600s. It underlies sea-surface-temperature datasets such as HadSST4 and ERSST.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -547,6 +582,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "Provisional seasons run low with blank WMO winds; flag documentation out of date; otherwise clean",
+  "about": "IBTrACS (International Best Track Archive for Climate Stewardship) is NOAA's global archive of tropical-cyclone tracks and intensities, combining the records of the world's forecast agencies.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -562,6 +598,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "Transient drift reset; no lasting step",
+  "about": "The ASOS humidity sensor (DTS1) replaced the earlier chilled-mirror dew-point sensors at US airport weather stations in 2002–06.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -577,6 +614,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "Excess recent warming inflates marine-heatwave trends 7–14%",
+  "about": "NOAA's Optimum Interpolation Sea Surface Temperature (OISST) v2.1 is a daily, 0.25° global map of sea-surface temperature blending satellite, ship and buoy data. It is the standard dataset for marine-heatwave studies.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -592,6 +630,7 @@
   "reported": "2026-11-06",
   "updated": "2026-11-22",
   "summary": "Same surrogate test overstates significance; headlines largely survive",
+  "about": "Boers (2021, Nature Climate Change) reported early-warning signals that the Atlantic overturning circulation (AMOC) is losing stability; Boulton et al. (2022, Nature Climate Change) reported the same for the Amazon rainforest. Both use rising variance and autocorrelation tested against surrogate data.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -607,6 +646,7 @@
   "reported": "2026-11-10",
   "updated": "2026-11-22",
   "summary": "Clustering understated; 1979–2017 change not significant (p = 0.10); trend holds through 2024",
+  "about": "Kossin et al. (2020, PNAS) reported that the global share of hurricanes reaching major intensity (Category 3+) rose over 1979–2017. The result is cited in the IPCC Sixth Assessment Report.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -624,6 +664,7 @@
   "reported": "2026-11-11",
   "updated": "2026-11-22",
   "summary": "Headline 21%/K not reproduced (12%); within-storm ~2%/K",
+  "about": "Ali et al. (2026, npj Climate and Atmospheric Science) estimated how hurricane rainfall increases with sea-surface temperature, reporting about 21% more rain per degree of warming.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -641,6 +682,7 @@
   "reported": "2026-11-07",
   "updated": "2026-11-22",
   "summary": "CIs too narrow; split search inflates false positives",
+  "about": "Jin and Pu (2026, npj Climate and Atmospheric Science) tested whether the rate of global warming has accelerated, using change-point searches on global temperature records.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -658,6 +700,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "ASOS sensor steps explain most of the North American decline and about 30% of the global 1978–2010 decline",
+  "about": "Zeng et al. (2019, Nature Climate Change) reported that the long decline in global land wind speeds ('stilling') reversed after about 2010; Monerie et al. (2026, Climate Dynamics) studied the same wind trends. Both rely on station wind records, including US airport (ASOS) data.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -675,6 +718,7 @@
   "reported": "2026-11-18",
   "updated": "2026-11-22",
   "summary": "Claims hold under independent tests (6 studies)",
+  "about": "Six widely cited studies we tested independently and found to hold: Earth's energy imbalance doubling (Mauritsen 2025), sea-level acceleration (Nerem 2018), coastal extremes (Dangendorf 2026), drought (Xu 2026), hourly rainfall extremes (Guerreiro 2018) and the IGCC 2025 marine-heatwave indicator.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -690,6 +734,7 @@
   "reported": "2026-11-19",
   "updated": "2026-11-22",
   "summary": "Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ<0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type='wak' inherits it (half of months NaN, 78% 'severe drought' vs 5%)",
+  "about": "lmoments3 is the Python library (maintained by Ouranos) that fits extreme-value distributions by L-moments; it is the engine behind xclim's distribution fits. standard_precip is a Python package for computing the Standardized Precipitation Index.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -705,6 +750,7 @@
   "reported": "2026-11-19",
   "updated": "2026-11-22",
   "summary": "The 95% interval on the mass-loss acceleration (48 ± 16 Gt/yr per decade) was formed by doubling a 1σ interval from a regression with ~2 degrees of freedom; the correct t-based 95% half-width is ~1.64× larger (about ±26). The acceleration remains significant at the corrected level; the author notes conservative assumptions elsewhere (temporal decorrelation, density conversion) likely offset the narrower interval.",
+  "about": "Hugonnet et al. (2021, Nature) mapped thinning of nearly all of the world's ~220,000 glaciers from satellite elevation data and reported that glacier mass loss accelerated over 2000–2019.",
   "fixed": "",
   "target_doi": "",
   "dois": [
@@ -722,6 +768,7 @@
   "reported": "2026-11-20",
   "updated": "2026-11-22",
   "summary": "About a 20% dry step from 2016 in PRECTOTCORR over Australia, inherited from the CPC Unified gauge analysis (CPCU) that MERRA-2 uses to correct land precipitation. CPCU's own gauge-count field shows Australia lost about 95% of its gauges in two steps (2007–08 and 2015–16, e.g. E Australia ~590 → 90). GPCP and GPCC do not show the step, and a gauge-independent reanalysis (NCEP R1) confirms it sits in CPCU.",
+  "about": "MERRA-2 is NASA's global atmospheric reanalysis. Its corrected precipitation (PRECTOTCORR), which drives the land surface, is adjusted toward NOAA's CPC Unified daily gauge analysis over land.",
   "fixed": "",
   "target_doi": "",
   "dois": []
@@ -745,6 +792,7 @@
    "scope": "Forward only. Results computed with affected versions are not corrected; rerun with the fixed version or later. Use the new observed_duration and min_block_count options on gappy records."
   },
   "fixed": "2026-11-22",
+  "about": "pyextremes is a Python library for extreme-value analysis, used to estimate return levels (for example the 100-year flood or rainfall) from block maxima or peaks over a threshold.",
   "target_doi": "",
   "dois": []
  }

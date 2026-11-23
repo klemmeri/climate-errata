@@ -8,6 +8,7 @@ import json, re, html, pathlib
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 rows = json.load(open(ROOT / "data/register_rows.json"))
 CUSTOM = json.load(open(ROOT / "data/custom_entries.json"))
+ABOUT = json.load(open(ROOT / "data/about.json"))
 
 TYPE = {"Code": "code", "Observing data": "dataset", "Paper": "paper"}
 
@@ -75,15 +76,15 @@ for r in rows:
     summary = r["found"]
     entries.append(dict(id=sid, title=r["target"], target=r["target"], type=TYPE[r["area"]], status=st,
                         status_label=label, significance=cls, reported=r["sd"], updated="2026-11-22",
-                        summary=summary, fixed=(r.get("fix") or {}).get("date", ""), target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
+                        summary=summary, about=ABOUT.get(str(r["row"]), ""), fixed=(r.get("fix") or {}).get("date", ""), target_doi=(r.get("target_doi") or "").lower(), dois=find_dois(r)))
     links = []
     if r.get("link"):
         links.append(f'<a href="{e(r["link"])}">{e(r["link"])}</a>')
     if r.get("target_doi"):
         links.append(f'Discuss this DOI: <a href="/doi.html?doi={e(r["target_doi"])}">doi:{e(r["target_doi"])}</a>')
     if r.get("doi"):
-        label = "Our write-up on Zenodo (latest version)" if r["doi"].startswith("10.5281/zenodo.") else "DOI"
-        links.append(f'{label}: <a href="https://doi.org/{e(r["doi"])}">doi:{e(r["doi"])}</a>')
+        dlabel = "Our write-up on Zenodo (latest version)" if r["doi"].startswith("10.5281/zenodo.") else "DOI"
+        links.append(f'{dlabel}: <a href="https://doi.org/{e(r["doi"])}">doi:{e(r["doi"])}</a>')
     scores = ""
     if tot is not None:
         scores = (f'<tr><th>Significance</th><td><strong>{cls}</strong> (Size {r["S"]} · Reach {r["R"]} · '
@@ -99,6 +100,7 @@ for r in rows:
 <p class="meta"><a href="/">← Register</a></p>
 <h1>{e(r['target'])}</h1>
 <div class="meta"><span class="pill st-{st}">{e(label)}</span><span class="pill type">{TYPE[r['area']]}</span><span class="pill sig">Significance: {cls}</span></div>
+{('<h2>What it is</h2>' + chr(10) + '<p>' + e(ABOUT[str(r["row"])]) + '</p>') if str(r["row"]) in ABOUT else ''}
 <h2>Finding</h2>
 <p>{e(r['found'])}</p>
 <table class="facts">
@@ -118,6 +120,7 @@ for r in rows:
 
 for c in CUSTOM:
     c["fixed"] = (c.get("fix") or {}).get("date", "")
+    c.setdefault("about", ABOUT.get(c["id"], ""))
     c.setdefault("target_doi", "")
     c.setdefault("dois", [c["target_doi"]] if c["target_doi"] else [])
 entries += CUSTOM

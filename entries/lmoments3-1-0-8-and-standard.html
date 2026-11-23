@@ -11,6 +11,8 @@
 <p class="meta"><a href="/">← Register</a></p>
 <h1>lmoments3 1.0.8 (Ouranos; L-moment engine behind xclim PWM fits) and standard_precip SPI</h1>
 <div class="meta"><span class="pill st-reported">Reported (open)</span><span class="pill type">code</span><span class="pill sig">Significance: Medium</span></div>
+<h2>What it is</h2>
+<p>lmoments3 is the Python library (maintained by Ouranos) that fits extreme-value distributions by L-moments; it is the engine behind xclim&#x27;s distribution fits. standard_precip is a Python package for computing the Standardized Precipitation Index.</p>
 <h2>Finding</h2>
 <p>Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ&lt;0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type=&#x27;wak&#x27; inherits it (half of months NaN, 78% &#x27;severe drought&#x27; vs 5%)</p>
 <table class="facts">

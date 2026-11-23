@@ -54,7 +54,7 @@ def threads_for(ds):
 def entry_card(x):
     return (f'<article class="entry"><h3><a href="/entries/{e(x["id"])}.html">{e(x["title"])}</a></h3>'
             f'<div class="meta"><span class="pill st-{e(x["status"])}">{e(x["status_label"])}</span>'
-            f'<span class="pill type">{e(x["type"])}</span><span class="pill sig">Significance: {e(x["significance"])}</span>'
+            f'<span class="pill type">{e(x["type"])}</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: {e(x["significance"])}</a>'
             f'<span>Reported {e(x["reported"])}</span></div><p style="margin:8px 0 0">{e(x["summary"])}</p></article>')
 
 

@@ -99,7 +99,7 @@ for r in rows:
 <main><div class="wrap">
 <p class="meta"><a href="/">← Register</a></p>
 <h1>{e(r['target'])}</h1>
-<div class="meta"><span class="pill st-{st}">{e(label)}</span><span class="pill type">{TYPE[r['area']]}</span><span class="pill sig">Significance: {cls}</span></div>
+<div class="meta"><span class="pill st-{st}">{e(label)}</span><span class="pill type">{TYPE[r['area']]}</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: {cls}</a></div>
 {('<h2>What it is</h2>' + chr(10) + '<p>' + e(ABOUT[str(r["row"])]) + '</p>') if str(r["row"]) in ABOUT else ''}
 <h2>Finding</h2>
 <p>{e(r['found'])}</p>

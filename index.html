@@ -19,6 +19,7 @@
   <select id="sig" aria-label="Significance"><option value="">All significance</option><option>High</option><option>Medium</option><option>Low</option><option>Not scored</option></select>
   <select id="sort" aria-label="Sort"><option value="date">Newest first</option><option value="sig">Most significant first</option></select>
 </div>
+<p class="meta" style="margin:4px 0 14px">Significance (High, Medium, Low) is scored on the size of the effect, how widely the affected paper, dataset or code is used, and whether a published result changes. <a href="/about.html#significance">How we score it</a>.</p>
 <div id="list" aria-live="polite"></div>
 <p class="meta" style="margin-top:20px">Data: <a href="/entries.json">entries.json</a> (free to reuse under CC BY 4.0).</p>
 </div></main>
@@ -33,7 +34,7 @@ function render(){
     .sort((a,b)=>so==='sig'?(ord[b.significance]-ord[a.significance])||b.reported.localeCompare(a.reported):b.reported.localeCompare(a.reported)||(ord[b.significance]-ord[a.significance]));
   document.getElementById('list').innerHTML=rows.length?rows.map(e=>`<article class="entry">
     <h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3>
-    <div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span><span>Reported ${esc(e.reported)}</span>${e.fixed?`<span>Fixed ${esc(e.fixed)}</span>`:''}</div>
+    <div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: ${esc(e.significance)}</a><span>Reported ${esc(e.reported)}</span>${e.fixed?`<span>Fixed ${esc(e.fixed)}</span>`:''}</div>
     ${e.about?`<p class="about" style="margin:8px 0 0;color:#555">${esc(e.about)}</p>`:''}
     <p style="margin:6px 0 0"><strong>Finding:</strong> ${esc(e.summary)}</p></article>`).join(''):'<p class="meta">No entries match.</p>';
 }

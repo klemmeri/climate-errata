@@ -64,3 +64,4 @@ form.report .hint{color:var(--muted);font-size:13.5px;margin-top:3px}
 form.report .check{display:flex;gap:8px;align-items:flex-start;font-weight:400}
 form.report .check input{width:auto;margin-top:6px}
 .hidden{display:none}
+a.pill.sig{color:var(--fg);text-decoration:none}a.pill.sig:hover{text-decoration:underline}

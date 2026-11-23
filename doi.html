@@ -68,7 +68,7 @@ async function open_(raw,push){
     h+=`<h3>doi:${esc(doi)}</h3><p class="meta">No record found at Crossref or DataCite. Check the DOI; the thread below still works.</p>`;
   }
   h+=`<p class="meta" style="margin-top:8px"><a href="https://doi.org/${esc(doi)}">https://doi.org/${esc(doi)}</a> · <a href="/search.html?q=${encodeURIComponent(doi)}">search the site for it</a></p></div>`;
-  if(hits.length){h+='<h2>In the register</h2>'+hits.map(e=>`<article class="entry"><h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3><div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><span class="pill sig">Significance: ${esc(e.significance)}</span></div><p style="margin:8px 0 0">${esc(e.summary)}</p></article>`).join('');}
+  if(hits.length){h+='<h2>In the register</h2>'+hits.map(e=>`<article class="entry"><h3><a href="/entries/${esc(e.id)}.html">${esc(e.title)}</a></h3><div class="meta"><span class="pill st-${esc(e.status)}">${esc(e.status_label)}</span><span class="pill type">${esc(e.type)}</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: ${esc(e.significance)}</a></div><p style="margin:8px 0 0">${esc(e.summary)}</p></article>`).join('');}
   else h+='<p class="meta">No register entry mentions this DOI yet.</p>';
   out.innerHTML=h;loadGiscus(doi);
 }

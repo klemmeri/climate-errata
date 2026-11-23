@@ -192,6 +192,15 @@
    "note": "Read the full Methods. The obvious selection risks are addressed: the end-of-series trend estimate is checked against model runs that contain such jumps (bias 1 ± 18%), the choice of starting month is tested (margins change by under 0.01 °C), and the return period is recomputed with a second SST dataset (ESA CCI/OSTIA: 543 years vs 512) and with AR(2) and MA(1) models (484 and 498 years). The model-based estimate uses an exact binomial interval. The jump threshold equals the observed margin, which is the usual way to frame such a question. Not rerun."
   },
   {
+   "cite": "Van Passel et al. 2024, PNAS",
+   "topic": "Critical slowing down of the Amazon forest (EVI lag-1 autocorrelation trends) and drought frequency, intensity and duration",
+   "doi": "10.1073/pnas.2316924121",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Method reviewed; data not rerun. Multi-month drought pulses can raise lag-1 autocorrelation in a moving window without any change in recovery rate. In an idealised simulation with a fixed recovery rate this reproduced part of the reported pattern (the intensity effect) but not the duration or frequency-by-intensity effects, and the authors' second method, which accounts for rainfall forcing, supports their conclusion. Not material on current evidence."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 13

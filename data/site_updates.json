@@ -2,6 +2,11 @@
  "_about": "Changes to the Climate Errata website itself (not errata). Newest first. Rendered to updates.html and site-updates.xml by tools/build.py.",
  "updates": [
   {
+   "date": "2026-11-23",
+   "title": "Clearer rules on author replies and on what an entry claims",
+   "text": "First messages to authors and producers now say that a finding may be recorded here. Their replies are published, quoted or summarised only with their explicit permission; without it, an entry gives only our own assessment and says that they were contacted. A new section of the Policies page, \"What an entry claims\", says that every entry is our own assessment, links to its method and code, and that High findings are also written up for a formal, citable outlet."
+  },
+  {
    "date": "2026-11-22",
    "title": "Significance labels now link to how they are scored",
    "text": "Every \"Significance: High / Medium / Low\" label in the register, search results, dataset pages and entry pages now links to the scoring rubric on the About page (size of the effect, reach of the affected paper, dataset or code, and consequence for published results). The register also has a one-line explanation under its filters."

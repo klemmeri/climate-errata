@@ -21,6 +21,15 @@
    "note": "Warming rate (about 3.6 times the Northern Hemisphere land average) reproduced in two CRUTEM5 versions; unchanged with unadjusted station data and a stable station network."
   },
   {
+   "cite": "Wang et al. 2025, Science",
+   "topic": "Canadian forests more conducive to high-severity fires in recent decades",
+   "doi": "10.1126/science.ado1006",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-22",
+   "note": "Trend tests and false-discovery-rate control checked; the ERA5 fire-weather inputs were not recomputed."
+  },
+  {
    "cite": "Haslinger et al. 2025, Nature",
    "topic": "Increasing hourly heavy rainfall in Austria and flood changes",
    "doi": "10.1038/s41586-025-08647-2",

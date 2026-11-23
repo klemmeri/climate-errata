@@ -152,3 +152,43 @@ for i, u in enumerate(UP):
 rss.append("</channel></rss>\n")
 (ROOT / "site-updates.xml").write_text("".join(rss))
 print(len(UP), "site updates")
+
+
+# ---- Papers we checked (tally by side and outcome) ----
+CK = json.load(open(ROOT / "data/checked.json"))
+OUT = {"clean": "No error found", "nomaterial": "No material error found", "inprint": "Already corrected or challenged in print",
+       "flagged": "Error found (see register)", "withauthors": "Finding sent to the authors", "inprogress": "Check not finished"}
+SIDE = {"mainstream": "Mainstream findings", "questioning": "Papers questioning mainstream findings"}
+def _n(side, outs):
+    return sum(p.get("count", 1) for p in CK["papers"] if p["side"] == side and p["outcome"] in outs)
+trows = ""
+for sd in SIDE:
+    done = _n(sd, ["clean", "nomaterial", "inprint", "flagged", "withauthors"])
+    trows += (f'<tr><th>{SIDE[sd]}</th><td>{done}</td><td>{_n(sd, ["clean", "nomaterial"])}</td><td>{_n(sd, ["inprint"])}</td>'
+              f'<td>{_n(sd, ["flagged", "withauthors"])}</td><td>{_n(sd, ["inprogress"])}</td></tr>')
+named = [p for p in CK["papers"] if "cite" in p]
+lis = ""
+for sd in SIDE:
+    ps = [p for p in named if p["side"] == sd]
+    if not ps:
+        continue
+    lis += f"<h3>{SIDE[sd]}</h3><ul>"
+    for p in ps:
+        link = f'<a href="https://doi.org/{e(p["doi"])}">{e(p["cite"])}</a>' if p.get("doi") else e(p["cite"])
+        extra = (' &mdash; <a href="' + e(p["entry"]) + '">register entry</a>') if p.get("entry") else ""
+        lis += (f'<li>{link}: {e(p["topic"])}. <strong>{OUT[p["outcome"]]}</strong>'
+                f'{(". " + e(p["note"])) if p.get("note") else ""}{extra}</li>')
+    lis += "</ul>"
+body = f"""<h1>Papers we checked</h1>
+<p class="lede">Every paper taken up in our systematic screening since 22 November 2026, with the outcome, whether or not we found an error. Papers are chosen by the criteria on the <a href="/about.html#selection">How it works</a> page, and papers questioning mainstream climate findings are tested with the same methods and standards as the rest.</p>
+<table class="facts">
+<tr><th></th><th>Checked</th><th>No error / no material error</th><th>Already in print</th><th>Error found or sent to authors</th><th>Not finished</th></tr>
+{trows}
+</table>
+<p class="meta" style="display:block">When we find a possible error, the authors hear about it first. Until they reply or three weeks pass, such papers are counted here but not named; then they are added by name with a link to their register entry. The numbers are small, so the proportions say little yet.</p>
+<h2>Papers by name</h2>
+{lis}"""
+(ROOT / "checked.html").write_text(
+    HEAD.replace("%TITLE%", "Papers we checked — Climate Errata").replace("%DESC%", "Every paper checked, with the outcome, including those with no error.")
+    + "\n<main><div class=\"wrap\">\n" + body + "\n</div></main>\n" + FOOT)
+print(len(named), "named checked papers")

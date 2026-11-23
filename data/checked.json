@@ -1,0 +1,20 @@
+{
+ "_about": "Papers checked in the systematic screening that began on 22 Nov 2026 (method on about.html#selection). Rendered to checked.html by tools/build.py. Outcomes: clean = no error found; nomaterial = no material error found; inprint = already corrected or challenged in print by others; withauthors = finding sent to the authors (count only until they reply or three weeks pass; then add the paper by name, outcome 'flagged', with a link to its register entry); inprogress = check not finished. side: mainstream or questioning (papers questioning mainstream climate findings).",
+ "since": "2026-11-22",
+ "papers": [
+  {"cite": "Henley et al. 2024, Nature", "topic": "Coral Sea ocean heat highest in four centuries (Great Barrier Reef)", "doi": "10.1038/s41586-024-07672-x", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Reproduced from the authors' code and figure data, including the bound on the pre-1900 maximum."},
+  {"cite": "Haslinger et al. 2025, Nature", "topic": "Increasing hourly heavy rainfall in Austria and flood changes", "doi": "10.1038/s41586-025-08647-2", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Tested for rain-gauge sensor changes with the authors' station data; the increase stands."},
+  {"cite": "Bevacqua et al. 2025, Nature Climate Change", "topic": "A year above 1.5 °C and the Paris Agreement limit", "doi": "10.1038/s41558-025-02246-9", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Idealized experiment reproduced, including with year-to-year persistence."},
+  {"cite": "Byrne et al. 2024, Nature", "topic": "Carbon emissions from the 2023 Canadian wildfires", "doi": "10.1038/s41586-024-07878-z", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Warmest/driest and fossil-emission comparisons checked against independent datasets."},
+  {"cite": "Bevacqua et al. 2024, Nature Geoscience", "topic": "Direct and lagged effects of the 2022 European drought", "doi": "10.1038/s41561-024-01559-2", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Design reviewed; no testable error."},
+  {"cite": "Vicente-Serrano et al. 2025, Nature", "topic": "Mediterranean precipitation: high variability, not trend", "doi": "10.1038/s41586-024-08576-6", "side": "mainstream", "outcome": "clean", "checked": "2026-11-22", "note": "Regional trends, significance tests and the effect of homogenization reproduced from the authors' data."},
+  {"cite": "Wang et al. 2024, Science", "topic": "Anthropogenic influence on river-flow seasonality", "doi": "10.1126/science.adi9501", "side": "mainstream", "outcome": "nomaterial", "checked": "2026-11-22", "note": "Alaska stations agree with the paper."},
+  {"cite": "Gottlieb & Mankin 2024, Nature", "topic": "Human influence on Northern Hemisphere snow loss", "doi": "10.1038/s41586-023-06794-y", "side": "mainstream", "outcome": "nomaterial", "checked": "2026-11-22", "note": ""},
+  {"cite": "Kannenberg et al. 2024, Nature Geoscience", "topic": "Soil moisture and dryland carbon and water fluxes", "doi": "10.1038/s41561-023-01351-8", "side": "mainstream", "outcome": "nomaterial", "checked": "2026-11-22", "note": "Method reviewed; flux data not rerun (login required)."},
+  {"cite": "Esper, Torbenson & Büntgen 2024, Nature", "topic": "2023 summer warmth unparalleled over 2,000 years", "doi": "10.1038/s41586-024-07512-y", "side": "mainstream", "outcome": "inprint", "checked": "2026-11-22", "note": "A slip in Table 1 had already been corrected by the authors (May 2025)."},
+  {"cite": "Zhou, Leung & Lu 2024, Nature Geoscience", "topic": "Steady threefold Arctic amplification", "doi": "10.1038/s41561-024-01441-1", "side": "mainstream", "outcome": "inprint", "checked": "2026-11-22", "note": "Already challenged in a published comment, with the authors' reply."},
+  {"side": "mainstream", "outcome": "withauthors", "count": 9},
+  {"side": "mainstream", "outcome": "inprogress", "count": 2},
+  {"side": "questioning", "outcome": "withauthors", "count": 3}
+ ]
+}

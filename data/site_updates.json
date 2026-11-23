@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-22",
+   "title": "New page: Papers we checked",
+   "text": "A new page lists every paper taken up in our systematic screening since 22 November 2026, with the outcome, including the many with no error, and a tally for papers supporting and questioning mainstream climate findings. Papers whose possible errors are still with the authors are counted but not named until the authors reply or three weeks pass."
+  },
+  {
+   "date": "2026-11-22",
    "title": "What we select for review, and where from",
    "text": "The How it works page now explains how papers, datasets and code are chosen: most-cited recent papers in five major journals, widely cited papers that question mainstream findings (tested the same way), widely used datasets and open-source climate software. Substack, blogs, news, social media and non-peer-reviewed preprints are out of scope."
   },

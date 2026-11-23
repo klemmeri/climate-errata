@@ -147,6 +147,15 @@
    "note": "Not reproduced (the ice masks need an Earthdata login; the full text is paywalled). One point of definition: the 1,034 Gt is the total mass of ice in the retreated area, most of it below flotation, while consensus mass-balance estimates (gravimetry, altimetry) measure mass above flotation by design, so the 'underestimated by as much as 20%' comparison sets two different quantities side by side. The authors acknowledge this in the abstract (minimal direct impact on sea level), and their code computes the above-flotation share."
   },
   {
+   "cite": "Luo et al. 2024, Nature",
+   "topic": "Drought triggers and sustains overnight fires in North America (GOES, 2017–2020)",
+   "doi": "10.1038/s41586-024-07028-5",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Main analysis uses one satellite (GOES-16) over 2017–2020, so there is no sensor change inside it. We tested whether ranking the 2017–2020 events against a 2000–2020 baseline that contains those same drought seasons could create the reported shift toward conducive fire weather; in a no-trend simulation the effect is under one percentage point and of the wrong sign. Minor: the paired Wilcoxon test treats the 1,095 events as independent, although most come on consecutive nights within the same fires."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 11

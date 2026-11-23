@@ -244,7 +244,10 @@
     "EOBS",
     "ECA&D"
    ],
-   "entries": []
+   "entries": [
+    "e-obs-v34-0e-precipitation-northern",
+    "e-obs-v34-0e-precipitation-greece"
+   ]
   },
   {
    "id": "icoads",

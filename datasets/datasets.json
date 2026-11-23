@@ -127,7 +127,10 @@
    "ECA&D"
   ],
   "dois": [],
-  "entries": [],
+  "entries": [
+   "e-obs-v34-0e-precipitation-northern",
+   "e-obs-v34-0e-precipitation-greece"
+  ],
   "threads": 0,
   "url": "/datasets/e-obs.html"
  },

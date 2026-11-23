@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-OBS v34.0e precipitation, northern Morocco from February 2006 — Climate Errata</title>
+<meta name="description" content="Every Moroccan precipitation station in E-OBS within 34–39°N, 10–3.5°W stops on 7 February 2006 (Tangier airport, Al Hoceima, Taza and Rabat-Salé); af">
+<link rel="stylesheet" href="/assets/style.css"></head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">Climate Errata</a><span class="tag">Independent, reproducible checks of climate papers, datasets and code</span>
+<nav class="site"><a href="/">Register</a><a href="/checked.html">What we checked</a><a href="/datasets/">Datasets</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="/policies.html">Policies</a><a href="/updates.html">Updates</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></nav></div></header>
+
+<main><div class="wrap">
+<p class="meta"><a href="/">← Register</a></p>
+<h1>E-OBS v34.0e precipitation, northern Morocco from February 2006</h1>
+<div class="meta"><span class="pill st-acknowledged">Acknowledged</span><span class="pill type">dataset</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: Medium</a></div>
+
+<h2>Finding</h2>
+<p>Every Moroccan precipitation station in E-OBS within 34–39°N, 10–3.5°W stops on 7 February 2006 (Tangier airport, Al Hoceima, Taza and Rabat-Salé); afterwards the only station on the African side is Ceuta, and the Moroccan grid cells are filled from distant stations. From then on those cells change character while the Iberian cells do not: their October–March maximum daily rainfall (box mean) averages 33 mm in the 2000s, 48 mm in the 2010s and 55 mm in the 2020s (Iberian cells 23, 27, 29 mm), and their E-OBS ensemble spread on wet days rises from 5.3–6.1 mm before 2005 to 6.9–8.0 mm, while Iberia&#x27;s falls. The Moroccan cells carry about half of the rainfall-extremes trend over the box used by World Weather Attribution Report No. 83. Whether rainfall over northern Morocco really changed cannot be told from E-OBS after 2006.</p>
+<table class="facts">
+<tr><th>Verdict</th><td>Real issue (station support ends)</td></tr>
+<tr><th>Significance</th><td><strong>Medium</strong> (Size 2 · Reach 1 · Consequence 1 = 4 of 6)<div class="meta" style="margin-top:4px">Basis: Maximum-rainfall level in the affected cells up by about half after the station loss, and about half the box trend (S2); E-OBS is a main European dataset but the issue is regional, at the domain edge (R1); it feeds a published attribution trend, not rerun by its authors (C1)</div></td></tr>
+<tr><th>Outcome</th><td>Acknowledged</td></tr>
+
+<tr><th>Where reported</th><td>Email to the authors of World Weather Attribution Report No. 83 (9 Nov 2026) and to ECA&amp;D/KNMI (21 Nov 2026). ECA&amp;D/KNMI replied on 23 Nov 2026 that the issue will be added to the E-OBS Known Issues page.</td></tr>
+<tr><th>Date</th><td>2026-11-23</td></tr>
+</table>
+<h2>Summary</h2>
+<p>E-OBS has no Moroccan precipitation stations after 7 February 2006. From then on, its grid cells over northern Morocco are filled from distant stations, mostly in Iberia, with Ceuta the only station on the African side of the Strait. In those cells the level of extreme daily rainfall jumps and the E-OBS ensemble spread widens, while the neighbouring Iberian cells show neither. E-OBS's Known Issues page warns in general terms that station density is low in Northern Africa and changes over time. This entry gives the date the Moroccan input stops and what it does to the grid.</p>
+
+<h2>What we found</h2>
+<ul>
+<li><b>Stations.</b> E-OBS v34.0e's own station list (stations_info_rr_v34.0e.txt) has four to five Moroccan stations active in 34–39°N, 10–3.5°W through 2005: Tangier airport, Al Hoceima, Taza and Rabat-Salé. All of them stop on 7 February 2006. All 21 Moroccan precipitation stations in E-OBS end between 2005 and 2009. Over the same years the Spanish stations in the box rose from 50 (2001) to 127 (2011).</li>
+<li><b>Level of extreme rainfall.</b> October–March maximum of the area-mean daily precipitation, decadal means (mm):</li>
+</ul>
+<table class="data">
+<tr><th></th><th>1950s</th><th>60s</th><th>70s</th><th>80s</th><th>90s</th><th>2000s</th><th>2010s</th><th>2020s</th></tr>
+<tr><td>Moroccan cells (south of 35.9°N)</td><td>26</td><td>30</td><td>29</td><td>19</td><td>23</td><td>33</td><td><b>48</b></td><td><b>55</b></td></tr>
+<tr><td>Iberian cells</td><td>22</td><td>26</td><td>25</td><td>24</td><td>25</td><td>23</td><td>27</td><td>29</td></tr>
+</table>
+<ul>
+<li><b>Ensemble spread.</b> On wet days (≥1 mm, October–March), the E-OBS spread over the Moroccan cells rises from 5.3–6.1 mm (1950–2004) to 6.9–8.0 mm in every five-year period since 2005, while over Iberia it falls from 4.6–5.7 to 3.7–4.2 mm as the Spanish network grows. E-OBS's own uncertainty estimate therefore marks the post-2006 Moroccan cells as less well constrained. (Spread relative to the mean does not rise, because the mean rose too.)</li>
+<li><b>Effect on a trend.</b> Fitting a model of the kind used by World Weather Attribution (a GEV distribution that shifts with global temperature and the NAO) to E-OBS over the box, the Moroccan cells carry about half the trend: about +64% for 1.3 °C of warming with them and +33% without them. The full box covers SW Iberia and northern Morocco.</li>
+</ul>
+
+<h2>What this does not show</h2>
+<p>It does not show that rainfall over northern Morocco did not change. Fitting only the seasons up to 2005 gives an inconclusive answer (+46%, with a 95% interval of −46% to +158%). What can be said is that after February 2006 E-OBS has no Moroccan observations there, and that the step in its values comes at the same time as the loss of input.</p>
+
+<h2>Who is affected</h2>
+<p>Studies of rainfall extremes or trends over northern Morocco, the Strait of Gibraltar and the south-western Mediterranean that use E-OBS across 2006. The issue came to light while checking World Weather Attribution Scientific Report No. 83 (Mediterranean storms, January–February 2026), whose southern region includes these cells; its authors were told on 9 November 2026.</p>
+
+<h2>Response</h2>
+<p>Reported to ECA&amp;D/KNMI, the E-OBS producers, on 21 November 2026. On 23 November ECA&amp;D agreed that changes in network density strongly affect the interpolated precipitation in Northern Africa. They said there is no prospect of more Moroccan data soon, and that the issue will be added to the E-OBS Known Issues page.</p>
+
+<h2>What users can do</h2>
+<p>Treat E-OBS precipitation over northern Morocco after February 2006 as an extrapolation from distant stations. Check the ensemble spread, compare with ERA5, CPC Unified or GPCP, and avoid trends that span 2006 in these cells.</p>
+
+<h2>Reproduce</h2>
+<p>E-OBS v34.0e precipitation ensemble mean and spread (0.25°) and the v34.0e station list, from the ECA&amp;D E-OBS download pages; NOAA global temperature; Hurrell DJF NAO index (NCAR Climate Data Guide). One Python script (numpy, pandas, xarray, scipy) reproduces every number here; available on request.</p>
+
+<section id="affected" data-entry="e-obs-v34-0e-precipitation-northern"></section><script src="/assets/affected.js" defer></script>
+<section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
+<div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>
+
+<script src="https://giscus.app/client.js" data-repo="klemmeri/climate-errata" data-repo-id="R_kgDOV30cyQ" data-category="Announcements" data-category-id="DIC_kwDOV30cyc4DLu90" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script></section>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology, School of Meteorology, University of Oklahoma. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated. · <a href="/policies.html">Policies and privacy</a> · <a href="/updates.html">Site updates</a> · <a href="/report.html">Write to us</a></div></footer>
+</body></html>

@@ -1,0 +1,32 @@
+<h2>Summary</h2>
+<p>E-OBS has no Moroccan precipitation stations after 7 February 2006. From then on, its grid cells over northern Morocco are filled from distant stations, mostly in Iberia, with Ceuta the only station on the African side of the Strait. In those cells the level of extreme daily rainfall jumps and the E-OBS ensemble spread widens, while the neighbouring Iberian cells show neither. E-OBS's Known Issues page warns in general terms that station density is low in Northern Africa and changes over time. This entry gives the date the Moroccan input stops and what it does to the grid.</p>
+
+<h2>What we found</h2>
+<ul>
+<li><b>Stations.</b> E-OBS v34.0e's own station list (stations_info_rr_v34.0e.txt) has four to five Moroccan stations active in 34–39°N, 10–3.5°W through 2005: Tangier airport, Al Hoceima, Taza and Rabat-Salé. All of them stop on 7 February 2006. All 21 Moroccan precipitation stations in E-OBS end between 2005 and 2009. Over the same years the Spanish stations in the box rose from 50 (2001) to 127 (2011).</li>
+<li><b>Level of extreme rainfall.</b> October–March maximum of the area-mean daily precipitation, decadal means (mm):</li>
+</ul>
+<table class="data">
+<tr><th></th><th>1950s</th><th>60s</th><th>70s</th><th>80s</th><th>90s</th><th>2000s</th><th>2010s</th><th>2020s</th></tr>
+<tr><td>Moroccan cells (south of 35.9°N)</td><td>26</td><td>30</td><td>29</td><td>19</td><td>23</td><td>33</td><td><b>48</b></td><td><b>55</b></td></tr>
+<tr><td>Iberian cells</td><td>22</td><td>26</td><td>25</td><td>24</td><td>25</td><td>23</td><td>27</td><td>29</td></tr>
+</table>
+<ul>
+<li><b>Ensemble spread.</b> On wet days (≥1 mm, October–March), the E-OBS spread over the Moroccan cells rises from 5.3–6.1 mm (1950–2004) to 6.9–8.0 mm in every five-year period since 2005, while over Iberia it falls from 4.6–5.7 to 3.7–4.2 mm as the Spanish network grows. E-OBS's own uncertainty estimate therefore marks the post-2006 Moroccan cells as less well constrained. (Spread relative to the mean does not rise, because the mean rose too.)</li>
+<li><b>Effect on a trend.</b> Fitting a model of the kind used by World Weather Attribution (a GEV distribution that shifts with global temperature and the NAO) to E-OBS over the box, the Moroccan cells carry about half the trend: about +64% for 1.3 °C of warming with them and +33% without them. The full box covers SW Iberia and northern Morocco.</li>
+</ul>
+
+<h2>What this does not show</h2>
+<p>It does not show that rainfall over northern Morocco did not change. Fitting only the seasons up to 2005 gives an inconclusive answer (+46%, with a 95% interval of −46% to +158%). What can be said is that after February 2006 E-OBS has no Moroccan observations there, and that the step in its values comes at the same time as the loss of input.</p>
+
+<h2>Who is affected</h2>
+<p>Studies of rainfall extremes or trends over northern Morocco, the Strait of Gibraltar and the south-western Mediterranean that use E-OBS across 2006. The issue came to light while checking World Weather Attribution Scientific Report No. 83 (Mediterranean storms, January–February 2026), whose southern region includes these cells; its authors were told on 9 November 2026.</p>
+
+<h2>Response</h2>
+<p>Reported to ECA&amp;D/KNMI, the E-OBS producers, on 21 November 2026. On 23 November ECA&amp;D agreed that changes in network density strongly affect the interpolated precipitation in Northern Africa. They said there is no prospect of more Moroccan data soon, and that the issue will be added to the E-OBS Known Issues page.</p>
+
+<h2>What users can do</h2>
+<p>Treat E-OBS precipitation over northern Morocco after February 2006 as an extrapolation from distant stations. Check the ensemble spread, compare with ERA5, CPC Unified or GPCP, and avoid trends that span 2006 in these cells.</p>
+
+<h2>Reproduce</h2>
+<p>E-OBS v34.0e precipitation ensemble mean and spread (0.25°) and the v34.0e station list, from the ECA&amp;D E-OBS download pages; NOAA global temperature; Hurrell DJF NAO index (NCAR Climate Data Guide). One Python script (numpy, pandas, xarray, scipy) reproduces every number here; available on request.</p>

@@ -138,6 +138,15 @@
    "note": "The global model runs in Google Earth Engine and was not rerun. The validation (R² 0.75, RMSE 1.4 °C against about 10,000 wells and 72 boreholes) tests absolute groundwater temperatures, not warming, and most of its skill comes from differences between climates: within single countries the model often has little or no skill (for example R² below zero in Austria, Belgium and the Netherlands; Austria and Switzerland about 1.8 °C too cold). This matters most for the population counts above drinking-water temperature thresholds, which depend on local absolute values."
   },
   {
+   "cite": "Greene et al. 2024, Nature",
+   "topic": "Ubiquitous acceleration in Greenland Ice Sheet calving, 1985–2022 (1,034 Gt lost to retreat)",
+   "doi": "10.1038/s41586-023-06863-2",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Not reproduced (the ice masks need an Earthdata login; the full text is paywalled). One point of definition: the 1,034 Gt is the total mass of ice in the retreated area, most of it below flotation, while consensus mass-balance estimates (gravimetry, altimetry) measure mass above flotation by design, so the 'underestimated by as much as 20%' comparison sets two different quantities side by side. The authors acknowledge this in the abstract (minimal direct impact on sea level), and their code computes the above-flotation share."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 11

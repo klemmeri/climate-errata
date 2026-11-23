@@ -237,6 +237,15 @@
    "note": "Read the author manuscript in the NOAA repository. The 'acceleration' is a descriptive comparison of 2013–2023 with 1981–2010 and 2000–2012 means rather than a tested change in trend, and the heat budget is explicitly not closed (advection and entrainment omitted), as the authors state. An author correction (August 2024) replaced a duplicated figure panel. No material error found."
   },
   {
+   "cite": "Marcos et al. 2025, PNAS",
+   "topic": "Marine heatwaves 1940–2022 against a counterfactual SST with the global-warming-related signal removed (threefold rise in MHW days; 1 °C rise in intensity)",
+   "doi": "10.1073/pnas.2413505122",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-23",
+   "note": "Method reviewed (ERA5 daily SST; per-calendar-day normal fits with mean and variance linked to low-passed global air temperature; quantile-mapped counterfactual); not rerun. The headline counts and intensities follow from that construction. Minor: averaging the observed-minus-counterfactual difference over observed heatwave days weights toward regions and seasons that warmed most, so a larger value than the global mean SST rise is expected even without any change in variability; in an idealised pure-mean-shift test this weighting alone raised the figure by about 20%."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 14

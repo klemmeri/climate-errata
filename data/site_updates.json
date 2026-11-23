@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-22",
+   "title": "What we select for review, and where from",
+   "text": "The How it works page now explains how papers, datasets and code are chosen: most-cited recent papers in five major journals, widely cited papers that question mainstream findings (tested the same way), widely used datasets and open-source climate software. Substack, blogs, news, social media and non-peer-reviewed preprints are out of scope."
+  },
+  {
+   "date": "2026-11-22",
    "title": "Each entry now starts with what the dataset, paper or code is",
    "text": "Every entry page now opens with a short \"What it is\" description of the dataset, paper or software concerned, before the finding, and the register shows the same description on each card. Also fixed: on ten entry pages that link to our Zenodo write-ups, the status label at the top wrongly read \"Our write-up on Zenodo (latest version)\" instead of the entry's status."
   },

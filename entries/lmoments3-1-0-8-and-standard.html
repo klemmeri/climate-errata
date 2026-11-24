@@ -19,8 +19,8 @@
 <tr><th>Verdict</th><td>Real error</td></tr>
 <tr><th>Significance</th><td><strong>Medium</strong> (Size 2 · Reach 1 · Consequence 1 = 4 of 6)<div class="meta" style="margin-top:4px">Basis: Quantiles NaN or 10–60× wrong vs Hosking&#x27;s R lmom (S); Wakeby niche but reachable via xclim and standard_precip (R); errors gross enough to notice, risk in automated pipelines (C)</div></td></tr>
 <tr><th>Outcome</th><td>Open</td></tr>
-
-<tr><th>Where reported</th><td>GitHub lmoments3 #34; standard_precip #35<br><a href="https://github.com/Ouranosinc/lmoments3/issues/34">https://github.com/Ouranosinc/lmoments3/issues/34</a></td></tr>
+<tr><th>Fixed on</th><td>2026-11-24</td></tr><tr><th>Fixed in</th><td><a href="https://github.com/e-baumer/standard_precip/releases/tag/v2.0.1">standard_precip v2.0.1 (24 Nov 2026; PR #37). lmoments3 itself is not yet fixed (#34 open).</a></td></tr><tr><th>Affected versions</th><td>standard_precip v2.0.0 and earlier with dist_type=&#x27;wak&#x27; (first affected version not checked); lmoments3 1.0.8 and earlier</td></tr><tr><th>Is the fix retroactive?</th><td>Forward only. standard_precip now computes the Wakeby CDF itself (checked against Hosking&#x27;s R lmom to about 1e-13), so every &#x27;wak&#x27; index changes; rerun with 2.0.1 or later. Direct users of lmoments3.distr.wak are still affected.</td></tr>
+<tr><th>Where reported</th><td>GitHub lmoments3 #34 (open); standard_precip #35 (fixed by the maintainer in 2.0.1, 24 Nov 2026)<br><a href="https://github.com/Ouranosinc/lmoments3/issues/34">https://github.com/Ouranosinc/lmoments3/issues/34</a></td></tr>
 <tr><th>Date</th><td>2026-11-19</td></tr>
 </table>
 <p class="meta">A fuller write-up, with the evidence and reproduction code, will be added to this page. Questions and corrections are welcome below.</p>

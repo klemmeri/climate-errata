@@ -807,7 +807,7 @@
   "found": "Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ<0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type='wak' inherits it (half of months NaN, 78% 'severe drought' vs 5%)",
   "verdict": "Real error",
   "outcome": "Open",
-  "reported": "GitHub lmoments3 #34; standard_precip #35",
+  "reported": "GitHub lmoments3 #34 (open); standard_precip #35 (fixed by the maintainer in 2.0.1, 24 Nov 2026)",
   "date": "2026-11-19",
   "link": "https://github.com/Ouranosinc/lmoments3/issues/34",
   "doi": null,
@@ -815,7 +815,14 @@
   "R": 1,
   "C": 1,
   "basis": "Quantiles NaN or 10–60× wrong vs Hosking's R lmom (S); Wakeby niche but reachable via xclim and standard_precip (R); errors gross enough to notice, risk in automated pipelines (C)",
-  "sd": "2026-11-19"
+  "sd": "2026-11-19",
+  "fix": {
+   "date": "2026-11-24",
+   "fixed_in": "standard_precip v2.0.1 (24 Nov 2026; PR #37). lmoments3 itself is not yet fixed (#34 open).",
+   "fixed_in_url": "https://github.com/e-baumer/standard_precip/releases/tag/v2.0.1",
+   "affected": "standard_precip v2.0.0 and earlier with dist_type='wak' (first affected version not checked); lmoments3 1.0.8 and earlier",
+   "scope": "Forward only. standard_precip now computes the Wakeby CDF itself (checked against Hosking's R lmom to about 1e-13), so every 'wak' index changes; rerun with 2.0.1 or later. Direct users of lmoments3.distr.wak are still affected."
+  }
  },
  {
   "row": 83,

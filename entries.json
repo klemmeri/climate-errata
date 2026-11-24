@@ -780,7 +780,7 @@
   "summary": "Wakeby distribution: quantile/CDF/PDF use the scale-dependent γ unscaled and reject valid δ<0, so 77–85% of fitted 100-yr values are NaN or off by ~50×; standard_precip SPI with dist_type='wak' inherits it (half of months NaN, 78% 'severe drought' vs 5%)",
   "verdict": "Real error",
   "about": "lmoments3 is the Python library (maintained by Ouranos) that fits extreme-value distributions by L-moments; it is the engine behind xclim's distribution fits. standard_precip is a Python package for computing the Standardized Precipitation Index.",
-  "fixed": "",
+  "fixed": "2026-11-24",
   "target_doi": "",
   "dois": []
  },

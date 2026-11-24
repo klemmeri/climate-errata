@@ -436,6 +436,12 @@
    "note": "Extracted the sedimentation routine and ran 40,000 random columns (layers 20–1,200 m, fall speeds up to 20 m/s, time steps up to 300 s): mass in the column plus surface precipitation is conserved to about one part in 10⁸ (the tiny minimum-value floor), and no negative values. Unlike the WSM6 routine, whose mass loss others have reported. The rest of the scheme was not checked."
   },
   {
+   "cite": "Noah-MP land model: snow and soil freezing and melting, soil water budget, canopy radiation (NCAR/noahmp 5a32aaf, 18 Nov 2026; CCPP copy b332cc8)",
+   "topic": "Land surface model (UFS/GFS, WRF, MPAS, HRLDAS)",
+   "outcome": "nomaterial",
+   "note": "Ran the freezing and melting routine on 400,000 random snow and soil states, and the full model for a year at Bondville, Illinois, plus a colder, snowier version of the same year (4,500 steps with layered snow and a spring melt). Energy in the phase-change step is conserved to round-off, and the water balance error is at most 0.002 mm per step. The supercooled soil-water solver agrees with an exact solution to 0.0006 m³/m³. The canopy radiation scheme gave no negative absorption over 4,608 sun, leaf-area and albedo combinations per option. The 2-m temperature issue Noah-MP shares with the GFS surface layer has been sent to the developers."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

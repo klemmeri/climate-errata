@@ -448,6 +448,12 @@
    "note": "Ran 6,000 column steps (surface heat flux −40 to 400 W/m², winds 0.5–15 m/s, with and without the mass-flux plumes) and checked the heat, moisture and momentum budgets. Two errors in the CCPP and WRF/MPAS copies: (1) when negative cloud water from the plume transport is removed, its latent heat is counted twice, creating heat (mean 25 W/m², up to about 900 W/m² in single steps of our cloudy test columns); (2) the surface air density uses T + 0.608q instead of T(1 + 0.608q), so surface heat, moisture and momentum fluxes enter about 1% too strongly in humid air. Both were already fixed in the upstream code by its developers (October and November 2026, versions 6.1.0–6.1.1); the copies in CCPP and MMM-physics have not yet been updated (a WRF update is pending). With the first error corrected and the scheme's deliberate dissipative heating left out, the liquid-water potential temperature budget closes to 0.02 W/m²."
   },
   {
+   "cite": "GFDL fast saturation adjustment, fv_sat_adj (CCPP physics b332cc8)",
+   "topic": "Condensation, freezing and melting inside the FV3 dynamical core (GFS/UFS with GFDL microphysics)",
+   "outcome": "clean",
+   "note": "Ran the adjustment on 20,000 random grid boxes (190–315 K, 150–1,050 hPa, 50–130% relative humidity, all six water species, some small negative values from transport), hydrostatic and non-hydrostatic, intermediate and last steps, with and without the condensate-loading build option. Total water and moist internal energy (with temperature-dependent latent heats) are conserved to round-off in every case; temperature changes up to 8.5 K. Negative cloud ice that cannot be filled from snow is passed on to graupel, which is the routine's documented filling order, not a loss."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

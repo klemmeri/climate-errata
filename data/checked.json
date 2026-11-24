@@ -454,6 +454,12 @@
    "note": "Ran the adjustment on 20,000 random grid boxes (190–315 K, 150–1,050 hPa, 50–130% relative humidity, all six water species, some small negative values from transport), hydrostatic and non-hydrostatic, intermediate and last steps, with and without the condensate-loading build option. Total water and moist internal energy (with temperature-dependent latent heats) are conserved to round-off in every case; temperature changes up to 8.5 K. Negative cloud ice that cannot be filled from snow is passed on to graupel, which is the routine's documented filling order, not a loss."
   },
   {
+   "cite": "GFDL cloud microphysics v3 and its coupling to FV3 in the UFS (CCPP physics b332cc8; FV3 dev/emc 0492f16)",
+   "topic": "Cloud microphysics in the UFS suites FV3_GFS_v16_gfdlmpv3 and FV3_HAFS_v1_gfdlmpv3_tedmf",
+   "outcome": "inprint",
+   "note": "Ran 2,000 random cloudy columns. Inside the scheme, water is conserved to 10⁻¹⁴ kg/m² and its own dry-energy check passes at 10⁻¹³. But in the physics-suite path the scheme returns humidities relative to the new (dry + vapour) air mass, and the UFS driver multiplies them by the old layer mass, so water species gain or lose mass in proportion to the vapour that condensed or evaporated (up to 0.02–0.03 kg/m² per step in our deliberately supersaturated test columns). The older 2019 version scales its tendencies correctly. This was already found by others: a fix (rescaling by the new/old layer mass) and a second fix for rain falling with the ice heat capacity are in an open pull request to ufs-community/ccpp-physics (#413, October 2026)."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

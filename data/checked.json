@@ -460,6 +460,12 @@
    "note": "Ran 2,000 random cloudy columns. Inside the scheme, water is conserved to 10⁻¹⁴ kg/m² and its own dry-energy check passes at 10⁻¹³. But in the physics-suite path the scheme returns humidities relative to the new (dry + vapour) air mass, and the UFS driver multiplies them by the old layer mass, so water species gain or lose mass in proportion to the vapour that condensed or evaporated (up to 0.02–0.03 kg/m² per step in our deliberately supersaturated test columns). The older 2019 version scales its tendencies correctly. This was already found by others: a fix (rescaling by the new/old layer mass) and a second fix for rain falling with the ice heat capacity are in an open pull request to ufs-community/ccpp-physics (#413, October 2026)."
   },
   {
+   "cite": "Zhang–McFarlane deep convection, CAM CCPP version (ESCOMP/atmospheric_physics 0e23c43, 20 Nov 2026): zm_convr, zm_conv_evap, zm_conv_convtran",
+   "topic": "Deep convection in CESM (CAM) and E3SM",
+   "outcome": "clean",
+   "note": "Ran 600 random soundings (tropical ocean, tropical land and cold continental; 264 convecting, rain up to 68 mm/day, surface snow up to 16 mm/day). Water and energy balance to round-off in each step, using CAM's own convention: the convective core balances surface precipitation plus detrained liquid, and the rain-evaporation step balances evaporation and the heat of fusion carried by surface snow. Convective tracer transport conserves tracer mass to 10⁻¹⁷ of the column, for tracers defined on moist or dry air. The momentum transport routine was not tested."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

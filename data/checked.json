@@ -508,6 +508,12 @@
    "note": "The bugs found were already reported by others."
   },
   {
+   "cite": "NOAA GHCN-Monthly v4 production source, including the Pairwise Homogenization Algorithm (NCEI release of 17 Mar 2025)",
+   "topic": "Station temperature homogenization behind NOAAGlobalTemp and GISTEMP",
+   "outcome": "reviewed",
+   "note": "Read the break detection (SNHT statistic and its critical-value tables), model selection (BIC/AIC, t and F tests with their tables), the Tukey-hinge median of pairwise adjustment estimates, the sort routine, how adjustments are applied segment by segment, and the z-score and spatial-corroboration quality control. All match Menne & Williams (2009) and the published QC. Two known design choices: SNHT critical values are held at the n = 250 value for longer series, and the tests do not allow for autocorrelation; the algorithm relies on confirmation across many station pairs instead. Code reviewed, not built or run; neighbour selection and changepoint merging were not read in detail."
+  },
+  {
    "outcome": "withauthors",
    "count": 4
   },

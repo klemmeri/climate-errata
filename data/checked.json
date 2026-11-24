@@ -514,6 +514,12 @@
    "note": "Read the break detection (SNHT statistic and its critical-value tables), model selection (BIC/AIC, t and F tests with their tables), the Tukey-hinge median of pairwise adjustment estimates, the sort routine, how adjustments are applied segment by segment, and the z-score and spatial-corroboration quality control. All match Menne & Williams (2009) and the published QC. Two known design choices: SNHT critical values are held at the n = 250 value for longer series, and the tests do not allow for autocorrelation; the algorithm relies on confirmation across many station pairs instead. Code reviewed, not built or run; neighbour selection and changepoint merging were not read in detail."
   },
   {
+   "cite": "ILAMB 2.7 (rubisco-sfa/ILAMB, commit 8e58622) and ilamb3 (commit 8f720a2)",
+   "topic": "Land-model benchmarking scores",
+   "outcome": "nomaterial",
+   "note": "Read the bias, RMSE, seasonal-cycle, spatial-distribution and interannual-variability scores and the weighting of the overall score; they match Collier et al. (2018). One latent inconsistency: for site (point) data, ILAMB 2.7 builds its interannual-variability score from anomalies about the time mean only, so the seasonal cycle is counted as interannual variability, whereas the gridded path removes the annual cycle first. The score is off by default (skip_iav = True) and no shipped configuration turns it on for site data; ilamb3 has no interannual-variability score. Code reviewed, not run."
+  },
+  {
    "outcome": "withauthors",
    "count": 4
   },

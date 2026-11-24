@@ -64,6 +64,16 @@ e = html.escape
 HEAD = open(ROOT / "tools/head.html").read()
 FOOT = open(ROOT / "tools/foot.html").read()
 GISCUS = open(ROOT / "tools/giscus.html").read()
+from urllib.parse import quote as _q
+def respond_box(target):
+    url = "/report.html?kind=response&entry=" + _q(target, safe="")
+    return ('<section class="respond" id="respond"><h2>Authors and producers: respond or object</h2>'
+            '<p>If you are an author, data producer or developer of this work and you disagree with this finding, '
+            'or think we have misread something, <a href="' + url + '">send us your response</a>. '
+            'We review every response promptly. If it shows our finding is wrong, we correct or withdraw the entry openly '
+            '(see <a href="/policies.html#corrections">Corrections</a>). If you would like your response shown on this page, '
+            'it is published unedited, with or without your name as you prefer, and never without your permission. '
+            'You can also reply publicly in the discussion below.</p></section>')
 
 entries, seen = [], set()
 for r in rows:
@@ -113,6 +123,7 @@ for r in rows:
 </table>
 {writeup}
 <section id="affected" data-entry="{sid}"></section><script src="/assets/affected.js" defer></script>
+{respond_box(r["target"])}
 {GISCUS}
 </div></main>
 {FOOT}"""

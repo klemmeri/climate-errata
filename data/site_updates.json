@@ -3,6 +3,11 @@
  "updates": [
   {
    "date": "2026-11-24",
+   "title": "A place on every entry for authors to respond or object",
+   "text": "Every entry now has a short section for the authors, data producers or developers of the work. They can send a response or an objection through Write to us. We review every response promptly; if it shows our finding is wrong, we correct or withdraw the entry openly. A response is shown on the entry, unedited, only if its author wants it there. The Policies page was also updated: an objection does not by itself remove a tested finding, entries never allege misconduct or speculate about motives, and a reported error in an entry is marked as under review until it is resolved."
+  },
+  {
+   "date": "2026-11-24",
    "title": "Boers / Boulton entry relabelled \"Reported\"",
    "text": "The entry on the surrogate significance test in Boers (2021) and Boulton et al. (2022) previously had the outcome \"Acknowledged\", based on private correspondence. Under our policy that replies are described only with permission, it now reads \"Reported\" (emails to the authors, November 2026). The finding itself is unchanged."
   },

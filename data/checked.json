@@ -442,6 +442,12 @@
    "note": "Ran the freezing and melting routine on 400,000 random snow and soil states, and the full model for a year at Bondville, Illinois, plus a colder, snowier version of the same year (4,500 steps with layered snow and a spring melt). Energy in the phase-change step is conserved to round-off, and the water balance error is at most 0.002 mm per step. The supercooled soil-water solver agrees with an exact solution to 0.0006 m³/m³. The canopy radiation scheme gave no negative absorption over 4,608 sun, leaf-area and albedo combinations per option. The 2-m temperature issue Noah-MP shares with the GFS surface layer has been sent to the developers."
   },
   {
+   "cite": "MYNN-EDMF boundary-layer scheme (CCPP physics b332cc8; NCAR MMM-physics d524bc9 for WRF and MPAS; upstream NCAR/MYNN-EDMF 9a35d5d)",
+   "topic": "Planetary boundary layer and shallow-cumulus mixing (HRRR, RRFS, WRF, MPAS)",
+   "outcome": "inprint",
+   "note": "Ran 6,000 column steps (surface heat flux −40 to 400 W/m², winds 0.5–15 m/s, with and without the mass-flux plumes) and checked the heat, moisture and momentum budgets. Two errors in the CCPP and WRF/MPAS copies: (1) when negative cloud water from the plume transport is removed, its latent heat is counted twice, creating heat (mean 25 W/m², up to about 900 W/m² in single steps of our cloudy test columns); (2) the surface air density uses T + 0.608q instead of T(1 + 0.608q), so surface heat, moisture and momentum fluxes enter about 1% too strongly in humid air. Both were already fixed in the upstream code by its developers (October and November 2026, versions 6.1.0–6.1.1); the copies in CCPP and MMM-physics have not yet been updated (a WRF update is pending). With the first error corrected and the scheme's deliberate dissipative heating left out, the liquid-water potential temperature budget closes to 0.02 W/m²."
+  },
+  {
    "cite": "Global Warming Index, IGCC forcing, Zelinka ECS tables",
    "topic": "Warming attribution and climate-sensitivity tables",
    "outcome": "nomaterial",

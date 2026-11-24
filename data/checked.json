@@ -520,6 +520,12 @@
    "note": "Read the bias, RMSE, seasonal-cycle, spatial-distribution and interannual-variability scores and the weighting of the overall score; they match Collier et al. (2018). One latent inconsistency: for site (point) data, ILAMB 2.7 builds its interannual-variability score from anomalies about the time mean only, so the seasonal cycle is counted as interannual variability, whereas the gridded path removes the annual cycle first. The score is off by default (skip_iav = True) and no shipped configuration turns it on for site data; ilamb3 has no interannual-variability score. Code reviewed, not run."
   },
   {
+   "cite": "xMIP (cmip6_preprocessing), commit cb8262b",
+   "topic": "CMIP6 preprocessing and control-run drift removal",
+   "outcome": "nomaterial",
+   "note": "Read the drift removal (linear trend in the parent control run from the branch point, aligned by the CMIP6 branch-time metadata) and the longitude, grid and vertex fixes. A synthetic control run with a known drift, branched into historical and scenario runs, was detrended exactly. With NumPy 2.5 the drift-removal step stops with a TypeError (a date-index type, fixable in one line), which gives no wrong results. Longitude 0 is relabelled 360, which the package handles."
+  },
+  {
    "outcome": "withauthors",
    "count": 4
   },

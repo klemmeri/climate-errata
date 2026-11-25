@@ -273,6 +273,15 @@
    "note": "Method reviewed (InSAR vertical land motion, AR6 geocentric projections without VLM to avoid double counting, bathtub inundation below MHW with defences); not rerun."
   },
   {
+   "cite": "Schöngart et al. 2025, Nature Climate Change",
+   "topic": "Contributions of high-income groups to warming and to heat and drought extremes",
+   "doi": "10.1038/s41558-025-02325-x",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-24",
+   "note": "Checked with the authors' Zenodo data (14860538): extra 1-in-100 heat events attributed to the top 10% and top 1% are 69% and 22% of the total, close to their 65% and 20% shares of attributed warming; the metric counts additional events, so it does not have the near-zero-baseline problem of probability ratios."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 17

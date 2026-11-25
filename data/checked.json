@@ -354,6 +354,24 @@
    "note": "Recomputed from the archived city table (GitHub, 3,276 cities): the urban heat island's reduction in cold-related mortality is 4.6× its increase in heat-related mortality (paper: more than fourfold). The ratio follows from the standard temperature–mortality curves, in which moderate cold carries most attributable deaths. No material error found."
   },
   {
+   "cite": "Price et al. 2025, Nature",
+   "topic": "Probabilistic weather forecasting with machine learning (GenCast)",
+   "doi": "10.1038/s41586-024-08252-9",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-25",
+   "note": "Read the methods (arXiv v2): significance is tested with a stationary block bootstrap with automatic block length, so serial correlation between forecast dates is handled; each system is verified against its own analysis, and the look-ahead difference is stated. Forecast archives (WeatherBench 2) were not reachable from our workspace, so nothing was rerun."
+  },
+  {
+   "cite": "Allen et al. 2025, Nature",
+   "topic": "End-to-end data-driven weather prediction (Aardvark Weather)",
+   "doi": "10.1038/s41586-025-08897-0",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-25",
+   "note": "Read the paper and the released code (GitHub aardvark-weather-public): training (to 2017), test (2018) and validation (2019) years are kept separate in the data loaders; station forecasts are tested on held-out years at stations seen in training, as the paper states. Gridded forecasts, including HRES and GFS, are verified against ERA5. Nothing was rerun."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 22

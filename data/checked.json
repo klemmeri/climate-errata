@@ -309,6 +309,15 @@
    "note": "The paper has no placebo test, so we ran one with IMERG V07 (2001–2020 mean) and 1,487 GHS-SMOD urban centres: 59.7% of cities are wetter than their outer rural ring (paper: 63%), against 46.1% for the same discs moved away from any city. The urban excess holds for inland (56% vs 45%) and coastal (68% vs 51%) cities separately. No material error found."
   },
   {
+   "cite": "Qin et al. 2025, Nature",
+   "topic": "Impact of Amazonian deforestation on precipitation reverses between seasons (WRF 2000 vs 2020 forest cover, 2001–2022)",
+   "doi": "10.1038/s41586-024-08570-y",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "The paper's error bars are the standard error across spatially correlated grid cells, and there is no ensemble to measure chaotic model noise. Using the authors' figshare output we reproduced every buffer mean exactly (e.g. wet season +5.76 mm/month at 0 km, −0.28 at 60 km; dry season −1.55 at 40 km), then recomputed the uncertainty from the 22 independent yearly run pairs, which include the model's chaotic noise. The year-based errors are similar to or smaller than the published ones, and the sign of each effect is stable across years (e.g. the 60 km wet-season decrease: p = 0.008, 17 of 22 years negative). No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 20

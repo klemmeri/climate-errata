@@ -667,6 +667,12 @@
    "note": "Tested with a self-consistent synthetic test (true specific attenuation, path attenuation, ΦDP and measured reflectivity all generated together). The routine puts a ΦDP-pre-corrected reflectivity into the ZPHI integral where the method requires the measured one, so attenuation is put in the wrong places along the ray. Corrected reflectivity in echoes above 35 dBZ is too low by 0.4 dB on average at C band (5.5 dB path attenuation) and 1.2 dB on average, 3.2 dB at most, at X band (10 dB path attenuation); the one-line fix brings both within about 0.1 dB. The error had already been reported in Py-ART issue #883 (2019); we added the quantification, a verified fix and a second, smaller indexing error to that issue on 25 Nov 2026."
   },
   {
+   "cite": "Py-ART 2.3.0 (ARM-DOE/pyart), beam geometry and grid_from_radars",
+   "topic": "Radar gate locations and gridding",
+   "outcome": "clean",
+   "note": "Gate heights and ground ranges from antenna_to_cartesian match the Doviak–Zrnić 4/3-earth formulas exactly (0.5–20° elevation, 10–250 km). Gridding a known linear field from a 10-elevation volume with the Barnes, Barnes2, Cressman and nearest-neighbour weightings gives mean errors under 0.05 units; the larger local errors come from the gaps between elevation angles, a limitation of the method, not a coding error."
+  },
+  {
    "outcome": "withauthors",
    "count": 5
   },

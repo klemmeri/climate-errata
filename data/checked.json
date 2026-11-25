@@ -282,6 +282,15 @@
    "note": "Checked with the authors' Zenodo data (14860538): extra 1-in-100 heat events attributed to the top 10% and top 1% are 69% and 22% of the total, close to their 65% and 20% shares of attributed warming; the metric counts additional events, so it does not have the near-zero-baseline problem of probability ratios."
   },
   {
+   "cite": "Waidelich et al. 2024, Nature Climate Change",
+   "topic": "Climate damage projections beyond annual temperature (10% of GDP at +3 °C)",
+   "doi": "10.1038/s41558-024-01990-8",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "Reran the main regression (the Kotz et al. 2022 specification) from the authors' Zenodo files. The regional GDP panel contains implausible growth values (Uzbekistan 1996–99 at +37% to +61% per year in log terms; tenfold jumps in some Kenyan, Spanish and Malaysian regions), but dropping Uzbekistan or all |Δlog GDP| > 0.5 changes the temperature effect by under 0.1 percentage points. No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 17
@@ -335,7 +344,12 @@
    "outcome": "inprint",
    "note": "A known limitation, documented by the producers."
   },
-  {"cite": "HadSST.4.2.0.0", "topic": "1970–99 grid boxes resting on misplaced duplicate ICOADS ship reports", "outcome": "nomaterial", "note": "About 200 sparse high-latitude box-months (one or two observations) rest mostly on misplaced duplicate reports, with single-box anomalies up to +7–8 °C; regional and global means and trends change by 0.024 K or less. The underlying ICOADS problem is on the register. Reported to the producer 10 Nov 2026."},
+  {
+   "cite": "HadSST.4.2.0.0",
+   "topic": "1970–99 grid boxes resting on misplaced duplicate ICOADS ship reports",
+   "outcome": "nomaterial",
+   "note": "About 200 sparse high-latitude box-months (one or two observations) rest mostly on misplaced duplicate reports, with single-box anomalies up to +7–8 °C; regional and global means and trends change by 0.024 K or less. The underlying ICOADS problem is on the register. Reported to the producer 10 Nov 2026."
+  },
   {
    "outcome": "withauthors",
    "count": 3

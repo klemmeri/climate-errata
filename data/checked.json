@@ -335,9 +335,10 @@
    "outcome": "inprint",
    "note": "A known limitation, documented by the producers."
   },
+  {"cite": "HadSST.4.2.0.0", "topic": "1970–99 grid boxes resting on misplaced duplicate ICOADS ship reports", "outcome": "nomaterial", "note": "About 200 sparse high-latitude box-months (one or two observations) rest mostly on misplaced duplicate reports, with single-box anomalies up to +7–8 °C; regional and global means and trends change by 0.024 K or less. The underlying ICOADS problem is on the register. Reported to the producer 10 Nov 2026."},
   {
    "outcome": "withauthors",
-   "count": 4
+   "count": 3
   },
   {
    "outcome": "inprogress",

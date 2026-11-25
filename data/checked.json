@@ -655,6 +655,12 @@
    "note": "Ran ydrunpctl/eca_tx90p and the etccdi_tx90p operator on a synthetic 60-year AR(1) series with a 1961–1990 base. The eca_* operators have no bootstrap, so the in-base exceedance rate is biased low (9.9% vs 10.6% out of base), the known Zhang et al. (2005) effect; this is documented, and CDO's etccdi_* operators apply the bootstrap, giving 10.6% in base vs 10.6% out of base. ydrunpctl percentiles agree with exact percentiles to within about 0.15 K (0.7 K at the ends of the year). No error found."
   },
   {
+   "cite": "MetPy 1.7.1 (Unidata), CAPE/CIN family",
+   "topic": "CIN, LFC/EL choice, mixed-layer and most-unstable parcels, downdraft CAPE",
+   "outcome": "nomaterial",
+   "note": "Read cape_cin, lfc, el, mixed_parcel and downdraft_cape and ran 500 random soundings with capping inversions and mid-level stable layers. CAPE and CIN follow the documented definitions (net area LFC to EL; net area below the LFC, set to zero if positive). One issue: lfc() and el() compute the LCL from the parcel's virtual temperature when called from cape_cin, placing it 13–44 hPa too high. This is already reported, with a fix, in MetPy PR #4067 (May 2026). With that fix, CAPE changed in 52 of 473 soundings by at most 79 J/kg (median 4 J/kg), CIN by at most 12 J/kg. Earlier checks (12 Nov) found surface-based CAPE and the LCL correct."
+  },
+  {
    "outcome": "withauthors",
    "count": 4
   },

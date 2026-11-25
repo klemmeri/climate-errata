@@ -673,6 +673,12 @@
    "note": "Gate heights and ground ranges from antenna_to_cartesian match the Doviak–Zrnić 4/3-earth formulas exactly (0.5–20° elevation, 10–250 km). Gridding a known linear field from a 10-elevation volume with the Barnes, Barnes2, Cressman and nearest-neighbour weightings gives mean errors under 0.05 units; the larger local errors come from the gaps between elevation angles, a limitation of the method, not a coding error."
   },
   {
+   "cite": "Py-ART 2.3.0 and wradlib 2.9.8, KDP retrievals",
+   "topic": "Specific differential phase from ΦDP",
+   "outcome": "nomaterial",
+   "note": "Synthetic ΦDP from known KDP (three rain cells per ray, noise 0–3°). The wradlib regression and Lanczos derivatives, wradlib's phidp_kdp_vulpiani, and Py-ART's kdp_vulpiani and kdp_maesaka recover the KDP integral to within 0.3% without noise. Under noise the methods with physical thresholds overestimate it (+5% to +16%), as their constraints imply. Py-ART's kdp_schneebeli overestimates narrow cells by about 11% even without noise, which appears to be a property of its constrained filter. One small bug: wradlib's 'finite_difference_vulpiani' derivative divides by the window length instead of the gate separation (factor (n−1)/n); it is only used internally as a first guess."
+  },
+  {
    "outcome": "withauthors",
    "count": 5
   },

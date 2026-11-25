@@ -300,6 +300,15 @@
    "note": "Refitted the main Poisson fixed-effects model on the shareable part of the data (Zenodo; mostly Brazil) and added future temperatures as a placebo: the lead terms are near zero (−0.016 against +0.76 for the lagged response at 20–21 °C). One robustness model (4th-order polynomial) repeats the lag-1 term instead of lags 2 and 3; this affects only that check. No material error found."
   },
   {
+   "cite": "Sui et al. 2024, PNAS",
+   "topic": "Global scale assessment of urban precipitation anomalies (over 60% of cities wetter than their surroundings)",
+   "doi": "10.1073/pnas.2311496121",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "The paper has no placebo test, so we ran one with IMERG V07 (2001–2020 mean) and 1,487 GHS-SMOD urban centres: 59.7% of cities are wetter than their outer rural ring (paper: 63%), against 46.1% for the same discs moved away from any city. The urban excess holds for inland (56% vs 45%) and coastal (68% vs 51%) cities separately. No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 18

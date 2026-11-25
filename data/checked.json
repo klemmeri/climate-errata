@@ -372,6 +372,15 @@
    "note": "Read the paper and the released code (GitHub aardvark-weather-public): training (to 2017), test (2018) and validation (2019) years are kept separate in the data loaders; station forecasts are tested on held-out years at stations seen in training, as the paper states. Gridded forecasts, including HRES and GFS, are verified against ERA5. Nothing was rerun."
   },
   {
+   "cite": "Zeng et al. 2019, Nature Climate Change",
+   "topic": "A reversal in global terrestrial stilling and its implications for wind energy production",
+   "doi": "10.1038/s41558-019-0622-6",
+   "side": "mainstream",
+   "outcome": "inprint",
+   "checked": "2026-11-25",
+   "note": "Part of the post-2013 wind-speed increase in the station data was later traced to an undocumented change in how calm periods were encoded, which over-estimated average wind speeds in much of Asia and Europe (Dunn, Azorin-Molina, Menne, Zeng et al. 2022, Environ. Res. Commun. 4, 061003, doi:10.1088/2515-7620/ac770a). Instrument changes in the US network are the subject of our separate ASOS note (Zenodo 10.5281/zenodo.24357793)."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 22

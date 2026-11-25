@@ -661,6 +661,12 @@
    "note": "Read cape_cin, lfc, el, mixed_parcel and downdraft_cape and ran 500 random soundings with capping inversions and mid-level stable layers. CAPE and CIN follow the documented definitions (net area LFC to EL; net area below the LFC, set to zero if positive). One issue: lfc() and el() compute the LCL from the parcel's virtual temperature when called from cape_cin, placing it 13–44 hPa too high. This is already reported, with a fix, in MetPy PR #4067 (May 2026). With that fix, CAPE changed in 52 of 473 soundings by at most 79 J/kg (median 4 J/kg), CIN by at most 12 J/kg. Earlier checks (12 Nov) found surface-based CAPE and the LCL correct."
   },
   {
+   "cite": "Py-ART 2.3.0 (ARM-DOE/pyart), calculate_attenuation_zphi",
+   "topic": "ZPHI rain attenuation correction",
+   "outcome": "inprint",
+   "note": "Tested with a self-consistent synthetic test (true specific attenuation, path attenuation, ΦDP and measured reflectivity all generated together). The routine puts a ΦDP-pre-corrected reflectivity into the ZPHI integral where the method requires the measured one, so attenuation is put in the wrong places along the ray. Corrected reflectivity in echoes above 35 dBZ is too low by 0.4 dB on average at C band (5.5 dB path attenuation) and 1.2 dB on average, 3.2 dB at most, at X band (10 dB path attenuation); the one-line fix brings both within about 0.1 dB. The error had already been reported in Py-ART issue #883 (2019); we added the quantification, a verified fix and a second, smaller indexing error to that issue on 25 Nov 2026."
+  },
+  {
    "outcome": "withauthors",
    "count": 5
   },

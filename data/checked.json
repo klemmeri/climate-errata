@@ -649,6 +649,12 @@
    "note": "Read the drift removal (linear trend in the parent control run from the branch point, aligned by the CMIP6 branch-time metadata) and the longitude, grid and vertex fixes. A synthetic control run with a known drift, branched into historical and scenario runs, was detrended exactly. With NumPy 2.5 the drift-removal step stops with a TypeError (a date-index type, fixable in one line), which gives no wrong results. Longitude 0 is relabelled 360, which the package handles."
   },
   {
+   "cite": "CDO 2.4.0 (Climate Data Operators, MPI-M)",
+   "topic": "ETCCDI percentile indices (TX90p etc.)",
+   "outcome": "clean",
+   "note": "Ran ydrunpctl/eca_tx90p and the etccdi_tx90p operator on a synthetic 60-year AR(1) series with a 1961–1990 base. The eca_* operators have no bootstrap, so the in-base exceedance rate is biased low (9.9% vs 10.6% out of base), the known Zhang et al. (2005) effect; this is documented, and CDO's etccdi_* operators apply the bootstrap, giving 10.6% in base vs 10.6% out of base. ydrunpctl percentiles agree with exact percentiles to within about 0.15 K (0.7 K at the ends of the year). No error found."
+  },
+  {
    "outcome": "withauthors",
    "count": 4
   },

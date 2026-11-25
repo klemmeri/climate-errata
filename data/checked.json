@@ -291,6 +291,15 @@
    "note": "Reran the main regression (the Kotz et al. 2022 specification) from the authors' Zenodo files. The regional GDP panel contains implausible growth values (Uzbekistan 1996–99 at +37% to +61% per year in log terms; tenfold jumps in some Kenyan, Spanish and Malaysian regions), but dropping Uzbekistan or all |Δlog GDP| > 0.5 changes the temperature effect by under 0.1 percentage points. No material error found."
   },
   {
+   "cite": "Childs et al. 2025, PNAS",
+   "topic": "Climate warming is expanding dengue burden in the Americas and Asia (18% of cases attributed to past warming)",
+   "doi": "10.1073/pnas.2512350122",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "Refitted the main Poisson fixed-effects model on the shareable part of the data (Zenodo; mostly Brazil) and added future temperatures as a placebo: the lead terms are near zero (−0.016 against +0.76 for the lagged response at 20–21 °C). One robustness model (4th-order polynomial) repeats the lag-1 term instead of lags 2 and 3; this affects only that check. No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 18

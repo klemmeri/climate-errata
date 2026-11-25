@@ -318,6 +318,42 @@
    "note": "The paper's error bars are the standard error across spatially correlated grid cells, and there is no ensemble to measure chaotic model noise. Using the authors' figshare output we reproduced every buffer mean exactly (e.g. wet season +5.76 mm/month at 0 km, −0.28 at 60 km; dry season −1.55 at 40 km), then recomputed the uncertainty from the 22 independent yearly run pairs, which include the model's chaotic noise. The year-based errors are similar to or smaller than the published ones, and the sign of each effect is stable across years (e.g. the 60 km wet-season decrease: p = 0.008, 17 of 22 years negative). No material error found."
   },
   {
+   "cite": "Pan et al. 2024, Nature",
+   "topic": "The enduring world forest carbon sink (3.6 / 3.6 / 3.5 Pg C per year by decade)",
+   "doi": "10.1038/s41586-024-07602-x",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "Recomputed the 1990s-to-2010s biome changes and their uncertainties from Table 1 and the USDA data archive (RDS-2023-0051), treating decades as independent as the paper's own trend test does. The global sink result is unaffected. No material error found."
+  },
+  {
+   "cite": "Wu et al. 2025, Nature Climate Change",
+   "topic": "Decreasing dynamic predictability of global agricultural drought with warming climate",
+   "doi": "10.1038/s41558-025-02289-y",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "Read the Supplementary Information and the archived figure code (Zenodo 12737359) and simulated the significance test applied to sliding-window skill (Mann–Kendall with trend-free pre-whitening, ensemble-agreement rule). The model inputs are not archived, so the headline could not be rerun. No material error found."
+  },
+  {
+   "cite": "Chai et al. 2025, Nature Climate Change",
+   "topic": "Constrained Earth system models show a stronger reduction in future Northern Hemisphere snowmelt water",
+   "doi": "10.1038/s41558-025-02308-y",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "Checked the hierarchical emergent-constraint code against Bowman et al. (2018) and recomputed from the archived fields (GitHub): models' historical SWE is 1.55× the observations, and the constrained future is 1.34× lower than the raw ensemble, consistent with the paper. No material error found."
+  },
+  {
+   "cite": "Wang et al. 2025, Nature Climate Change",
+   "topic": "Dual impact of global urban overheating on mortality (cold benefit more than fourfold the heat cost)",
+   "doi": "10.1038/s41558-025-02303-3",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-25",
+   "note": "Recomputed from the archived city table (GitHub, 3,276 cities): the urban heat island's reduction in cold-related mortality is 4.6× its increase in heat-related mortality (paper: more than fourfold). The ratio follows from the standard temperature–mortality curves, in which moderate cold carries most attributable deaths. No material error found."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 22

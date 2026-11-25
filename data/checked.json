@@ -342,7 +342,7 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-25",
-   "note": "Checked the hierarchical emergent-constraint code against Bowman et al. (2018) and recomputed from the archived fields (GitHub): models' historical SWE is 1.55× the observations, and the constrained future is 1.34× lower than the raw ensemble, consistent with the paper. No material error found."
+   "note": "Checked the hierarchical emergent-constraint code against Bowman et al. (2018) and recomputed from the archived fields (GitHub): models' historical SWE is 1.55× the observations, and the raw future ensemble is 1.34× the constrained value, consistent with the paper. No material error found."
   },
   {
    "cite": "Wang et al. 2025, Nature Climate Change",

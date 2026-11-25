@@ -264,9 +264,18 @@
    "note": "Method reviewed; not rerun."
   },
   {
+   "cite": "Ohenhen et al. 2024, Nature",
+   "topic": "Coastal subsidence and inundation of 32 US cities by 2050",
+   "doi": "10.1038/s41586-024-07038-3",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-24",
+   "note": "Method reviewed (InSAR vertical land motion, AR6 geocentric projections without VLM to avoid double counting, bathtub inundation below MHW with defences); not rerun."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
-   "count": 14
+   "count": 17
   },
   {
    "side": "mainstream",

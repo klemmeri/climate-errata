@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = "https://climateerrata.org"
-SKIP = {"report-thanks.html"}
+SKIP = {"report-thanks.html", "google8b07c37c4908ddfe.html"}
 TODAY = datetime.date.today().isoformat()
 
 

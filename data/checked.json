@@ -691,7 +691,19 @@
    "cite": "TempestExtremes (ClimateGlobalChange/tempestextremes, commit cafb070)",
    "topic": "Cyclone detection and tracking (DetectNodes, StitchNodes)",
    "outcome": "nomaterial",
-   "note": "Synthetic sea-level-pressure lows at known positions: all positions were found within 0.4° (including across the dateline and the prime meridian and up to 88°N and 84°S), all tracks were complete, and the minimum-duration and maximum-gap settings behave exactly at their limits. Two traps for users, not errors in results we could find: StitchNodes assumes the standard calendar unless --caltype is given, so noleap model output with gaps given in hours splits storms that cross 28 February in years divisible by 4 (the workflows we checked give gaps as step counts, which are unaffected); and with packed (quantized) pressure, equal-valued neighbouring minima are kept as duplicate detections unless --mergeequal is set, though the stitched tracks were unaffected."
+   "note": "Synthetic sea-level-pressure lows at known positions: all positions were found within 0.4° (including across the dateline and the prime meridian and up to 88°N and 84°S), all tracks were complete, and the minimum-duration and maximum-gap settings behave exactly at their limits. Two traps for users, not errors in results we could find: StitchNodes assumes the standard calendar unless --caltype is given, so noleap model output with gaps given in hours splits storms that cross 28 February in years divisible by 4 (the workflows we checked give gaps as step counts, which are unaffected); and with packed (quantized) pressure, equal-valued neighboring minima are kept as duplicate detections unless --mergeequal is set, though the stitched tracks were unaffected."
+  },
+  {
+   "cite": "atlite (PyPSA/atlite, commit 936ef28), bundled wind-turbine power curves",
+   "topic": "Wind power curves used by PyPSA-Eur",
+   "outcome": "clean",
+   "note": "We tested all 27 bundled power curves against the Betz limit (no turbine can extract more than 16/27 of the wind's kinetic energy). Every curve is physically possible: for each turbine, the smallest rotor that could deliver the tabulated power is smaller than the real rotor (for example the Vestas V164 needs at least 134 m against its real 164 m). The highest implied power coefficient was 0.55 (Siemens SWT-3.6-107), below the limit. This contrasts with the Open Energy Platform curves in windpowerlib, three of which exceed the limit (see the register)."
+  },
+  {
+   "cite": "pvlib-python 0.16.1, bundled CEC module and inverter databases",
+   "topic": "Solar PV module and inverter parameters",
+   "outcome": "nomaterial",
+   "note": "We checked the bundled CEC module and inverter parameter tables for physically impossible or inconsistent values. Inverters: clean. Modules: a few bookkeeping oddities that do not affect modeled output, such as half-cut-cell modules listing 120 or 144 cells in series (the CEC model does not use this field) and some tiny negative short-circuit temperature coefficients. No error that would change a simulation materially."
   },
   {
    "outcome": "withauthors",

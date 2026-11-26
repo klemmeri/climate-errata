@@ -229,3 +229,25 @@ body = f"""<h1>What we checked</h1>
     HEAD.replace("%TITLE%", "What we checked — Climate Errata").replace("%DESC%", "Every paper, dataset and piece of code checked, with the outcome, including those with no error.")
     + "\n<main><div class=\"wrap\">\n" + body + "\n</div></main>\n" + FOOT)
 print(len(DS), "datasets,", len(CO), "code lines on checked.html")
+
+# ---------------------------------------------------------------- one-line activity summary (home page)
+def _activity_line():
+    import json as _j
+    reg = _j.loads((ROOT / "data" / "register_rows.json").read_text())
+    ck = _j.loads((ROOT / "data" / "checked.json").read_text())
+    n = lambda xs: sum(int(x.get("count", 1)) for x in xs)
+    checks = n(ck["papers"]) + n(ck["datasets"]) + n(ck["code"]) + len(reg)
+    fixed = sum(1 for r in reg if str(r.get("outcome", "")).startswith(("Fixed", "Resolved")))
+    return (f'<!--ACTIVITY--><p class="note activity">Since November 2026 we have recorded {checks} checks of papers, '
+            f'datasets and code (<a href="/checked.html">what we checked</a>). {len(reg)} problems are on the register, '
+            f'{fixed} of them since fixed by the developers or producers.</p><!--/ACTIVITY-->')
+
+import re as _re
+_idx = ROOT / "index.html"
+_t = _idx.read_text()
+_line = _activity_line()
+if "<!--ACTIVITY-->" in _t:
+    _t = _re.sub(r"<!--ACTIVITY-->.*?<!--/ACTIVITY-->", lambda m: _line, _t, flags=_re.S)
+else:
+    _t = _t.replace('<div class="stats" id="stats"></div>', _line + '\n<div class="stats" id="stats"></div>', 1)
+_idx.write_text(_t)

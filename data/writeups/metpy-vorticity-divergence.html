@@ -17,7 +17,7 @@
 </ul>
 
 <h2>Who is affected</h2>
-<p>Polar work: Arctic cyclones, polar vortex and stratospheric warming studies, Antarctic analyses, and CMIP or reanalysis output on 1–2.5° grids. Pole-row spikes silently distort colour scales, zonal means and spectra. Equatorward of about 70° on fine grids the effect is small.</p>
+<p>Polar work: Arctic cyclones, polar vortex and stratospheric warming studies, Antarctic analyses, and CMIP or reanalysis output on 1–2.5° grids. Pole-row spikes silently distort color scales, zonal means and spectra. Equatorward of about 70° on fine grids the effect is small.</p>
 
 <h2>Suggested fix</h2>
 <p>Take the map-factor derivatives from the projection itself with a tiny offset (pyproj <code>get_factors</code> at ±10<sup>−4</sup>°) instead of differencing across grid points, and return NaN on pole rows. In a prototype the errors fall 15 to 50,000 times: 125% → 0.23% at 85° on a 2.5° grid, and 1,270% → 0.02% at 89.5° on a 0.25° grid.</p>

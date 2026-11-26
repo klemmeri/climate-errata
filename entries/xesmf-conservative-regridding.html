@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>xESMF conservative regridding — Climate Errata</title>
-<meta name="description" content="Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)">
+<meta name="description" content="Polar rows corrupted for pole-centered grids (ERA5, MERRA-2, JRA-55)">
 <link rel="stylesheet" href="/assets/style.css"><script data-goatcounter="https://climateerrata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
 <body>
 <header class="site"><div class="banner"><div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="M7 27 L13 22 L18 25 L24 15 L29 18 L34 10" fill="none" stroke="#7cc4ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 31 L34 31" stroke="currentColor" stroke-opacity=".35" stroke-width="1.6"/><circle cx="24" cy="15" r="5.2" fill="none" stroke="#f4c26b" stroke-width="2.4"/><path d="M27.8 18.8 L31.5 22.5" stroke="#f4c26b" stroke-width="2.6" stroke-linecap="round"/></svg><span class="bt"><span class="bn">Climate Errata</span><span class="tag">Independent, reproducible checks of weather, climate and environmental papers, datasets and code</span></span></a></div></div>
@@ -14,7 +14,7 @@
 <h2>What it is</h2>
 <p>xESMF is a Python package for regridding (interpolating) climate data between grids. Conservative regridding is meant to preserve totals such as rainfall or energy.</p>
 <h2>Finding</h2>
-<p>Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)</p>
+<p>Polar rows corrupted for pole-centered grids (ERA5, MERRA-2, JRA-55)</p>
 <table class="facts">
 <tr><th>Verdict</th><td>Real error</td></tr>
 <tr><th>Significance</th><td><strong>High</strong> (Size 2 · Reach 2 · Consequence 1 = 5 of 6)<div class="meta" style="margin-top:4px">Basis: Polar-row values 5-19% high (S, local); dominant Python regridder (R); fixed, no rerun (C); reconciled: S2, NCEP 2.5 deg case gives ~1,400 K (invalid)</div></td></tr>
@@ -35,7 +35,7 @@
 <tr><td>MERRA-2 0.5° × 0.625° → 1°</td><td>333 K</td><td>+0.53 K</td></tr>
 <tr><td>JRA-55 1.25° → 2.5°</td><td>333 K</td><td>+3.3 K</td></tr>
 <tr><td>NCEP 2.5° → 1°</td><td><b>about 1,400 K</b></td><td>+13.2 K</td></tr>
-<tr><td>1° → NCEP 2.5° (pole-centred target)</td><td>140 K (halved)</td><td>−1.7 K</td></tr>
+<tr><td>1° → NCEP 2.5° (pole-centered target)</td><td>140 K (halved)</td><td>−1.7 K</td></tr>
 </table>
 <ul>
 <li>The error multiplies the polar rows, so it affects absolute values, precipitation and anomalies alike. Global means are off by only 0.002–0.2 K.</li>
@@ -48,7 +48,7 @@
 <p>Reported as xESMF #497 with a fix in <a href="https://github.com/pangeo-data/xESMF/pull/498">PR #498</a>, which clips inferred latitude bounds to [−90, 90] and adds a constant-field test. Merged 16 November 2026; not yet in a release.</p>
 
 <h2>What users can do</h2>
-<p>Until a release includes the fix: supply latitude bounds clipped to ±90° (errors fall to ≤ 0.01 K), or use <code>conservative_normed</code> (≤ 0.18 K). Check polar rows in existing regridded output from pole-centred grids.</p>
+<p>Until a release includes the fix: supply latitude bounds clipped to ±90° (errors fall to ≤ 0.01 K), or use <code>conservative_normed</code> (≤ 0.18 K). Check polar rows in existing regridded output from pole-centered grids.</p>
 
 <section id="affected" data-entry="xesmf-conservative-regridding"></section><script src="/assets/affected.js" defer></script>
 <section class="respond" id="respond"><h2>Authors and producers: respond or object</h2><p>If you are an author, data producer or developer of this work and you disagree with this finding, or think we have misread something, <a href="/report.html?kind=response&entry=xESMF%20conservative%20regridding">send us your response</a>. We review every response promptly. If it shows our finding is wrong, we correct or withdraw the entry openly (see <a href="/policies.html#corrections">Corrections</a>). If you would like your response shown on this page, it is published unedited, with or without your name as you prefer, and never without your permission. You can also reply publicly in the discussion below.</p></section>

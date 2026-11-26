@@ -440,7 +440,7 @@
   "significance": "High",
   "reported": "2026-11-15",
   "updated": "2026-11-22",
-  "summary": "Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)",
+  "summary": "Polar rows corrupted for pole-centered grids (ERA5, MERRA-2, JRA-55)",
   "verdict": "Real error",
   "about": "xESMF is a Python package for regridding (interpolating) climate data between grids. Conservative regridding is meant to preserve totals such as rainfall or energy.",
   "fixed": "2026-11-16",

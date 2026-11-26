@@ -1,10 +1,10 @@
 # Licences
 
 **Written content** (entries, notes and figures under `entries/` and the site pages) is licensed under the
-[Creative Commons Attribution 4.0 International licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+[Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 You may reuse it with credit to "Climate Errata (Mark L. Morrissey)" and a link to the entry.
 
-**Code** (scripts under `code/` and the site's own code) is licensed under the MIT licence:
+**Code** (scripts under `code/` and the site's own code) is licensed under the MIT license:
 
 MIT License
 

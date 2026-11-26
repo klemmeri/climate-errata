@@ -8,7 +8,7 @@
   },
   {
    "date": "2026-11-24",
-   "title": "Boers / Boulton entry relabelled \"Reported\"",
+   "title": "Boers / Boulton entry relabeled \"Reported\"",
    "text": "The entry on the surrogate significance test in Boers (2021) and Boulton et al. (2022) previously had the outcome \"Acknowledged\", based on private correspondence. Under our policy that replies are described only with permission, it now reads \"Reported\" (emails to the authors, November 2026). The finding itself is unchanged."
   },
   {
@@ -28,8 +28,8 @@
   },
   {
    "date": "2026-11-23",
-   "title": "Correction: climdex.pcic entry relabelled \"Reported\"",
-   "text": "The climdex.pcic WSDI/CSDI entry was labelled \"Confirmed\". The developers have not yet confirmed the finding or merged the proposed fix (pull request #46), so the outcome now reads \"Reported\". The finding itself is unchanged."
+   "title": "Correction: climdex.pcic entry relabeled \"Reported\"",
+   "text": "The climdex.pcic WSDI/CSDI entry was labeled \"Confirmed\". The developers have not yet confirmed the finding or merged the proposed fix (pull request #46), so the outcome now reads \"Reported\". The finding itself is unchanged."
   },
   {
    "date": "2026-11-23",
@@ -44,7 +44,7 @@
   {
    "date": "2026-11-23",
    "title": "Clearer rules on author replies and on what an entry claims",
-   "text": "First messages to authors and producers now say that a finding may be recorded here. Their replies are published, quoted or summarised only with their explicit permission; without it, an entry gives only our own assessment and says that they were contacted. A new section of the Policies page, \"What an entry claims\", says that every entry is our own assessment, links to its method and code, and that High findings are also written up for a formal, citable outlet."
+   "text": "First messages to authors and producers now say that a finding may be recorded here. Their replies are published, quoted or summarized only with their explicit permission; without it, an entry gives only our own assessment and says that they were contacted. A new section of the Policies page, \"What an entry claims\", says that every entry is our own assessment, links to its method and code, and that High findings are also written up for a formal, citable outlet."
   },
   {
    "date": "2026-11-22",

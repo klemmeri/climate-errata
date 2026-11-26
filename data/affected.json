@@ -7,7 +7,7 @@
    "query": "(\"MERRA-2\" OR MERRA2 OR \"CPC Unified\" OR CPCU OR \"CPC gauge\") AND (Australia OR Australian) AND (precipitation OR rainfall OR drought OR \"soil moisture\")",
    "years": "2017-2026",
    "papers": [
-    {"doi": "10.5194/hess-29-397-2025", "authors": "Hirschi, Crezee, Stradiotti et al.", "year": 2025, "title": "Potential of long-term satellite observations and reanalysis products for characterising soil drying: trends and drought events", "venue": "Hydrology and Earth System Sciences", "uses": "MERRA-2 surface and root-zone soil moisture trends (global, includes Australia)", "period": "2000–2022"},
+    {"doi": "10.5194/hess-29-397-2025", "authors": "Hirschi, Crezee, Stradiotti et al.", "year": 2025, "title": "Potential of long-term satellite observations and reanalysis products for characterizing soil drying: trends and drought events", "venue": "Hydrology and Earth System Sciences", "uses": "MERRA-2 surface and root-zone soil moisture trends (global, includes Australia)", "period": "2000–2022"},
     {"doi": "10.5194/hess-28-1999-2024", "authors": "Zheng, Coxon, Woods et al.", "year": 2024, "title": "Evaluation of reanalysis soil moisture products using cosmic ray neutron sensor observations across the globe", "venue": "Hydrology and Earth System Sciences", "uses": "MERRA-2 soil moisture evaluated against sensors that include the CosmOz Australia network", "period": "Sensor records, mostly 2010s (exact years not checked)"}
    ]
   },

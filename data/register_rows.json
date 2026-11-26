@@ -491,7 +491,7 @@
   "row": 28,
   "area": "Code",
   "target": "xESMF conservative regridding",
-  "found": "Polar rows corrupted for pole-centred grids (ERA5, MERRA-2, JRA-55)",
+  "found": "Polar rows corrupted for pole-centered grids (ERA5, MERRA-2, JRA-55)",
   "verdict": "Real error",
   "outcome": "Fixed – not yet released",
   "reported": "GitHub #497 + PR #498",

@@ -162,7 +162,7 @@
    "side": "mainstream",
    "outcome": "inprint",
    "checked": "2026-11-23",
-   "note": "Already challenged in print: Li, Razavi, Maier, Hrachowitz et al. 2026, Journal of Hydrology X 30, 100215 (doi:10.1016/j.hydroa.2026.100215) — event thresholds taken from modelled rather than observed flows, a ±2-day hit window, no testing beyond 10-year events, high false-alarm and miss rates, and a single global benchmark. We did not repeat that work."
+   "note": "Already challenged in print: Li, Razavi, Maier, Hrachowitz et al. 2026, Journal of Hydrology X 30, 100215 (doi:10.1016/j.hydroa.2026.100215) — event thresholds taken from modeled rather than observed flows, a ±2-day hit window, no testing beyond 10-year events, high false-alarm and miss rates, and a single global benchmark. We did not repeat that work."
   },
   {
    "cite": "McKitrick & Christy 2020, Earth and Space Science",
@@ -270,7 +270,7 @@
    "side": "mainstream",
    "outcome": "reviewed",
    "checked": "2026-11-24",
-   "note": "Method reviewed (InSAR vertical land motion, AR6 geocentric projections without VLM to avoid double counting, bathtub inundation below MHW with defences); not rerun."
+   "note": "Method reviewed (InSAR vertical land motion, AR6 geocentric projections without VLM to avoid double counting, bathtub inundation below MHW with defenses); not rerun."
   },
   {
    "cite": "Schöngart et al. 2025, Nature Climate Change",
@@ -306,7 +306,7 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-25",
-   "note": "The paper has no placebo test, so we ran one with IMERG V07 (2001–2020 mean) and 1,487 GHS-SMOD urban centres: 59.7% of cities are wetter than their outer rural ring (paper: 63%), against 46.1% for the same discs moved away from any city. The urban excess holds for inland (56% vs 45%) and coastal (68% vs 51%) cities separately. No material error found."
+   "note": "The paper has no placebo test, so we ran one with IMERG V07 (2001–2020 mean) and 1,487 GHS-SMOD urban centers: 59.7% of cities are wetter than their outer rural ring (paper: 63%), against 46.1% for the same discs moved away from any city. The urban excess holds for inland (56% vs 45%) and coastal (68% vs 51%) cities separately. No material error found."
   },
   {
    "cite": "Qin et al. 2025, Nature",
@@ -655,7 +655,7 @@
    "cite": "xMIP (cmip6_preprocessing), commit cb8262b",
    "topic": "CMIP6 preprocessing and control-run drift removal",
    "outcome": "nomaterial",
-   "note": "Read the drift removal (linear trend in the parent control run from the branch point, aligned by the CMIP6 branch-time metadata) and the longitude, grid and vertex fixes. A synthetic control run with a known drift, branched into historical and scenario runs, was detrended exactly. With NumPy 2.5 the drift-removal step stops with a TypeError (a date-index type, fixable in one line), which gives no wrong results. Longitude 0 is relabelled 360, which the package handles."
+   "note": "Read the drift removal (linear trend in the parent control run from the branch point, aligned by the CMIP6 branch-time metadata) and the longitude, grid and vertex fixes. A synthetic control run with a known drift, branched into historical and scenario runs, was detrended exactly. With NumPy 2.5 the drift-removal step stops with a TypeError (a date-index type, fixable in one line), which gives no wrong results. Longitude 0 is relabeled 360, which the package handles."
   },
   {
    "cite": "CDO 2.4.0 (Climate Data Operators, MPI-M)",

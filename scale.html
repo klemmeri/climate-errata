@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why scale matters — Climate Errata</title>
+<meta name="description" content="Why a rain gauge and a grid box should not agree: what changing the spatial scale (support) does to averages, rainy-day counts and extremes, and how to compare like with like.">
+<link rel="stylesheet" href="/assets/style.css"><script data-goatcounter="https://climateerrata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body>
+<header class="site"><div class="banner"><div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="M7 27 L13 22 L18 25 L24 15 L29 18 L34 10" fill="none" stroke="#7cc4ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 31 L34 31" stroke="currentColor" stroke-opacity=".35" stroke-width="1.6"/><circle cx="24" cy="15" r="5.2" fill="none" stroke="#f4c26b" stroke-width="2.4"/><path d="M27.8 18.8 L31.5 22.5" stroke="#f4c26b" stroke-width="2.6" stroke-linecap="round"/></svg><span class="bt"><span class="bn">Climate Errata</span><span class="tag">Independent, reproducible checks of weather, climate and environmental papers, datasets and code</span></span></a></div></div>
+<nav class="site"><div class="wrap"><a href="/">Register</a><a href="/checked.html">What we checked</a><a href="/datasets/">Datasets</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="/policies.html">Policies</a><a href="/updates.html">Updates</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></div></nav></header>
+<main><div class="wrap">
+<h1>Why scale matters: points, grid boxes and what changes between them</h1>
+<p class="lede">A rain gauge measures a point. A satellite pixel, a gridded dataset or a climate model gives an average over an area. These are different quantities, and many of the problems we find come from treating them as the same.</p>
+
+<h2 id="why">Why this page</h2>
+<p>Most problems we find are specific to one paper, dataset or piece of code. Those go on the register, and minor ones are not posted at all. Scale mismatch is different: it turns up again and again across many fields and authors. Usually it isn't one person's mistake but common practice that is rarely taught. Rather than flag it paper by paper, we explain it once here and link to this page when it bears on a check.</p>
+
+<h2 id="example">One rainfall, four answers</h2>
+<p>The figure shows the same simulated rainfall, 6,000 days of it, seen at a single gauge and as the average over boxes 10 to 100 km across.</p>
+<figure><img src="/assets/scale_fig.svg" alt="Three panels. Average daily rain stays at 4.0 mm at all box sizes. Days with rain rise from 40% at the gauge to 86% for a 100 km box. The heaviest 1% of days falls from 40 mm at the gauge to 28 mm for a 100 km box." style="width:100%;max-width:900px"></figure>
+<ul>
+<li><strong>The long-term average does not change.</strong> Averaging over an area keeps the mean.</li>
+<li><strong>Rainy days become far more common.</strong> If it rains anywhere in the box, the box average is above zero. A 100 km box is &ldquo;wet&rdquo; on 86% of days, the gauge on only 40%.</li>
+<li><strong>Extremes become weaker.</strong> Heavy rain rarely covers a whole box, so the heaviest 1% of days falls from 40 mm at the gauge to 28 mm for the 100 km box, about 30% lower.</li>
+</ul>
+<p>None of these differences is an error in either the gauge or the grid. They are what averaging over an area does. The error comes when one is compared with the other as if they measured the same thing.</p>
+
+<h2 id="where">Where this goes wrong in practice</h2>
+<ul>
+<li><strong>Checking models or satellites against gauges.</strong> A perfect model will still show &ldquo;too much drizzle&rdquo; and &ldquo;too-weak extremes&rdquo; against gauges. Part of the apparent model error is just the difference in scale.</li>
+<li><strong>Ranking datasets.</strong> Datasets with finer grids look better against gauges partly because their boxes are closer to a point, not only because they are more accurate.</li>
+<li><strong>Extremes and thresholds.</strong> Return levels, counts of days above a threshold and scaling of extremes with temperature all depend on the scale of the data. Results at one scale do not carry over to another.</li>
+<li><strong>Dry spells and wet-day counts.</strong> These change strongly with box size, as the middle panel shows.</li>
+<li><strong>Trends from changing networks.</strong> When the number of gauges behind a gridded value changes over time, the effective scale of that value changes too. That can create trends in variability and extremes that are not in the climate.</li>
+<li><strong>Combining datasets.</strong> Merging or comparing products with different grids mixes different quantities unless they are first put on a common scale.</li>
+</ul>
+
+<h2 id="what">What to do about it</h2>
+<ul>
+<li><strong>Compare like with like.</strong> Put both datasets on the same scale before comparing them, or compare a gauge with a model only after accounting for the difference.</li>
+<li><strong>State the scale.</strong> Say what area each number represents, especially for extremes, wet-day frequency and dry spells.</li>
+<li><strong>Use a change-of-support method</strong> when moving between scales. These methods, developed in geostatistics, predict how the distribution of a variable changes from a point to an area and back.</li>
+</ul>
+
+<h2 id="more">Further reading</h2>
+<ul>
+<li>Morrissey, M. L. (2026). <em>Change of Support in the Atmospheric Sciences from First Principles: The Discrete Gaussian Model, Why It Outperforms Common Practice, and Worked Examples.</em> Zenodo. <a href="https://doi.org/10.5281/zenodo.24092206">doi:10.5281/zenodo.24092206</a></li>
+</ul>
+
+<h2 id="method">How the figure was made</h2>
+<p>Daily rain was simulated on a 256 km &times; 256 km domain at 2 km resolution: a spatially correlated Gaussian field (correlation length about 25 km) plus a day-to-day regional component, 60% of points dry on average and wet amounts following a gamma distribution. The &ldquo;gauge&rdquo; is the centre point; each box is the average over a square of the given size around it. The simulation is illustrative: real numbers depend on the climate and the rain type, but the direction of every change is general. <a href="/data_files/scale_explainer_sim.py">Code</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology, School of Meteorology, University of Oklahoma. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated. · <a href="/policies.html">Policies and privacy</a> · <a href="/updates.html">Site updates</a> · <a href="/report.html">Write to us</a></div></footer>
+</body></html>

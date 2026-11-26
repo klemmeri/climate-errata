@@ -381,6 +381,15 @@
    "note": "Part of the post-2013 wind-speed increase in the station data was later traced to an undocumented change in how calm periods were encoded, which over-estimated average wind speeds in much of Asia and Europe (Dunn, Azorin-Molina, Menne, Zeng et al. 2022, Environ. Res. Commun. 4, 061003, doi:10.1088/2515-7620/ac770a). Instrument changes in the US network are the subject of our separate ASOS note (Zenodo 10.5281/zenodo.24357793)."
   },
   {
+   "cite": "Skrable, Chabot & French 2022, Health Physics",
+   "topic": "Fossil and non-fossil components of atmospheric CO2 from its 14C specific activity (1750–2018)",
+   "doi": "10.1097/HP.0000000000001485",
+   "side": "questioning",
+   "outcome": "inprint",
+   "checked": "2026-11-25",
+   "note": "Already addressed in print: Schwartz, Keeling, Meijer & Turnbull (2022), Health Physics 122:717–719, doi 10.1097/HP.0000000000001577, and further letters in the same issue. Not rerun."
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
    "count": 22

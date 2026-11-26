@@ -390,9 +390,25 @@
    "note": "Already addressed in print: Schwartz, Keeling, Meijer & Turnbull (2022), Health Physics 122:717–719, doi 10.1097/HP.0000000000001577, and further letters in the same issue. Not rerun."
   },
   {
+   "cite": "Koutsoyiannis et al. 2023, Sci",
+   "topic": "Temperature–CO2 causality (“Hens and Eggs”)",
+   "side": "questioning",
+   "outcome": "flagged",
+   "checked": "2026-11-22",
+   "entry": "/entries/koutsoyiannis-et-al-2023-sci.html"
+  },
+  {
+   "cite": "Liu et al. 2026, Nat Commun",
+   "topic": "Intense tropical-cyclone season length",
+   "side": "mainstream",
+   "outcome": "flagged",
+   "checked": "2026-11-12",
+   "entry": "/entries/liu-et-al-2026-nat-commun.html"
+  },
+  {
    "side": "mainstream",
    "outcome": "withauthors",
-   "count": 24
+   "count": 23
   },
   {
    "side": "mainstream",
@@ -402,7 +418,7 @@
   {
    "side": "questioning",
    "outcome": "withauthors",
-   "count": 5
+   "count": 4
   }
  ],
  "other_since": "early November 2026",

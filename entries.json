@@ -855,6 +855,44 @@
   "dois": []
  },
  {
+  "id": "koutsoyiannis-et-al-2023-sci",
+  "title": "Koutsoyiannis et al. 2023, Sci (temperature–CO2 causality, “Hens and Eggs”)",
+  "target": "Koutsoyiannis et al. 2023, Sci (temperature–CO2 causality, “Hens and Eggs”)",
+  "type": "paper",
+  "status": "disputed",
+  "status_label": "Disputed",
+  "significance": "High",
+  "reported": "2026-11-22",
+  "updated": "2026-11-22",
+  "summary": "The paper's impulse-response causality test, applied to 12-month differences of temperature and ln CO2, reports “temperature leads CO2” in a synthetic world where CO2 causes all of the long-term warming by construction (100% of runs; 95–100% with 1-, 5- and 10-year differences), and gives the same answer in a world where temperature drives CO2. Differencing removes the slow, emissions-driven part of CO2, so the test sees only the well-known interannual response of the CO2 growth rate to temperature. It cannot tell the two causal directions apart, so the paper's conclusion of a unidirectional link from temperature to CO2 does not follow from it. The opposite result in CMIP6 is expected by construction, because those runs prescribe CO2 concentrations.",
+  "verdict": "Method weakness (test cannot detect CO2 → temperature)",
+  "about": "",
+  "fixed": "",
+  "target_doi": "",
+  "dois": [
+   "10.3390/sci5030035"
+  ]
+ },
+ {
+  "id": "liu-et-al-2026-nat-commun",
+  "title": "Liu et al. 2026, Nat Commun (intense tropical-cyclone season length)",
+  "target": "Liu et al. 2026, Nat Commun (intense tropical-cyclone season length)",
+  "type": "paper",
+  "status": "acknowledged",
+  "status_label": "Acknowledged",
+  "significance": "High",
+  "reported": "2026-11-12",
+  "updated": "2026-11-22",
+  "summary": "The intense-TC season length (span between the 1.5th and 98.5th percentiles of occurrence dates in 3-year windows) grows with the number of storms in the window even when their timing does not change, and intense-TC counts rose in every basin over 1980–2023. The paper's own lengths correlate 0.50–0.88 with the window count. Drawing dates from each basin's fixed 1980–2023 distribution with the observed yearly counts produces “lengthening” of about 2–16 days/decade by itself. Calibrated against that null, only the western North Pacific stays significant (p ≈ 0.03); the hemispheric trends do not (NH p ≈ 0.08, SH p ≈ 0.6). The Mann–Kendall test on overlapping 3-year windows rejects at the 5% level in 24–75% of no-change cases.",
+  "verdict": "Real error (sample-size bias; significance overstated)",
+  "about": "",
+  "fixed": "",
+  "target_doi": "",
+  "dois": [
+   "10.1038/s41467-026-74651-3"
+  ]
+ },
+ {
   "id": "pyextremes-gaps",
   "title": "pyextremes: missing data biased return values low",
   "target": "pyextremes (Python extreme-value analysis library), v2.6.1",

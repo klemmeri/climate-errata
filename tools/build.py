@@ -20,6 +20,8 @@ def status(r):
         return "fixed", o
     if o in ("Confirmed", "Acknowledged", "Resolved"):
         return "acknowledged", o
+    if o == "Disputed":
+        return "disputed", "Disputed"
     if o == "Published":
         return "reported", "Published (preprint)"
     if o == "Public comment":

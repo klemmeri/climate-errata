@@ -1,0 +1,32 @@
+<h2>Summary</h2>
+<p>Liu et al. (2026, <i>Nature Communications</i> 17:8133) reported that warming has lengthened intense (category 4–5) tropical-cyclone seasons by about 10–14 days per decade in every basin, 1980–2023. Their season length is the span between the 1.5th and 98.5th percentiles of storm dates in 3-year windows. That span widens automatically when more storms are counted, and the number of intense storms rose over the period. Once the count is allowed for, most of the lengthening is gone and only the western North Pacific stays significant.</p>
+
+<h2>What we found</h2>
+<ul>
+<li>We reproduced the published season lengths from the authors' code and data (correlation 0.96–0.999).</li>
+<li>With a few storms per window, the extreme percentiles are close to the first and last storm, so their spread grows with the sample size. The published lengths correlate 0.50–0.88 with the number of storms in the window, and the counts rise by 0.5–1.8 storms per window per decade in every basin. The paper's weighted interpolation fixes the shape of the date distribution but not this effect: in a simulation with a fixed climatology (true length 155 days), its mean length rises from 97 days with 15 storms to 144 days with 90.</li>
+<li><b>Count-only null.</b> Storm dates drawn from each basin's fixed 1980–2023 distribution, with the observed number each year, through the same estimator (3,000–4,000 simulations):</li>
+</ul>
+<table class="data">
+<tr><th>Basin</th><th>Published trend (days/decade)</th><th>Trend from count alone</th><th>p against the count-only null</th></tr>
+<tr><td>North Atlantic</td><td>10.0</td><td>7.9</td><td>0.32</td></tr>
+<tr><td>Eastern North Pacific</td><td>10.4</td><td>4.4</td><td>0.05</td></tr>
+<tr><td>Western North Pacific</td><td>13.8</td><td>2.0</td><td><b>0.03</b></td></tr>
+<tr><td>South Pacific</td><td>11.8</td><td>8.2</td><td>0.14</td></tr>
+<tr><td>South Indian</td><td>9.9</td><td>16.0</td><td>0.84</td></tr>
+<tr><td>Northern Hemisphere</td><td>12.9</td><td>3.2</td><td>≈ 0.08</td></tr>
+<tr><td>Southern Hemisphere</td><td>12.6</td><td>13.3</td><td>≈ 0.6</td></tr>
+</table>
+<ul>
+<li>Regressing the published lengths on year and log(window count), with standard errors that allow for the overlapping windows, gives the same picture: only the western North Pacific stays significant.</li>
+<li><b>Significance.</b> The trends were tested with the plain Mann–Kendall test on overlapping 3-year windows. Under the no-change null this rejects at the 5% level in 24–75% of cases, depending on the basin.</li>
+</ul>
+
+<h2>What it does not change</h2>
+<p>The western North Pacific lengthening survives the count control (although the paper's homogenized ADT-HURSAT record shows little trend there). Nothing here bears on whether intense storms have become more frequent, which is a separate question.</p>
+
+<h2>Response</h2>
+<p>We wrote to Dr. Jeremy Leung, the repository contact, on 13 November 2026, and corresponded with him over the following ten days. On 22 November he agreed that the percentile estimates are biased by sample size and that changing counts can produce spurious trends in season length: “I think this is an important point, and your explanation is sound.” He said the issue had concerned the authors while preparing the paper and that he is looking at better ways to estimate seasonality from small samples. He also asked whether quantile regression on storm dates would suffer from the same bias. In our test it does not: with a fixed date distribution and counts rising from 2 to 8 storms a year, the windowed percentile span gains 7.8 days per decade, while the 5–95% regression-quantile span changes by 0.0 ± 4.9. This entry is listed, and he is quoted, with his permission. He wrote for himself, not on behalf of all the co-authors.</p>
+
+<h2>Reproduce</h2>
+<p>Code and data: <a href="https://github.com/jeremychleung/Warming-Climate-Has-Lengthened-Global-Intense-Tropical-Cyclone-Seasons">the authors' repository</a> (Zenodo doi:10.5281/zenodo.20393395). The null keeps each basin's pooled 1980–2023 dates, draws the observed number of storms each year, and applies the same 3-year windows and percentiles. Remedies: calibrate trends against this count-only null, compare at a fixed number of storms, use central or fitted-distribution quantiles, and test trends with non-overlapping windows or a block bootstrap.</p>

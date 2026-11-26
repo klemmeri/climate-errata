@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Liu et al. 2026, Nat Commun (intense tropical-cyclone season length) — Climate Errata</title>
+<meta name="description" content="The intense-TC season length (span between the 1.5th and 98.5th percentiles of occurrence dates in 3-year windows) grows with the number of storms in ">
+<link rel="stylesheet" href="/assets/style.css"><script data-goatcounter="https://climateerrata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body>
+<header class="site"><div class="banner"><div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="M7 27 L13 22 L18 25 L24 15 L29 18 L34 10" fill="none" stroke="#7cc4ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 31 L34 31" stroke="currentColor" stroke-opacity=".35" stroke-width="1.6"/><circle cx="24" cy="15" r="5.2" fill="none" stroke="#f4c26b" stroke-width="2.4"/><path d="M27.8 18.8 L31.5 22.5" stroke="#f4c26b" stroke-width="2.6" stroke-linecap="round"/></svg><span class="bt"><span class="bn">Climate Errata</span><span class="tag">Independent, reproducible checks of weather, climate and environmental papers, datasets and code</span></span></a></div></div>
+<nav class="site"><div class="wrap"><a href="/">Register</a><a href="/checked.html">What we checked</a><a href="/datasets/">Datasets</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="/policies.html">Policies</a><a href="/updates.html">Updates</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></div></nav></header>
+
+<main><div class="wrap">
+<p class="meta"><a href="/">← Register</a></p>
+<h1>Liu et al. 2026, Nat Commun (intense tropical-cyclone season length)</h1>
+<div class="meta"><span class="pill st-acknowledged">Acknowledged</span><span class="pill type">paper</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: High</a></div>
+
+<h2>Finding</h2>
+<p>The intense-TC season length (span between the 1.5th and 98.5th percentiles of occurrence dates in 3-year windows) grows with the number of storms in the window even when their timing does not change, and intense-TC counts rose in every basin over 1980–2023. The paper&#x27;s own lengths correlate 0.50–0.88 with the window count. Drawing dates from each basin&#x27;s fixed 1980–2023 distribution with the observed yearly counts produces “lengthening” of about 2–16 days/decade by itself. Calibrated against that null, only the western North Pacific stays significant (p ≈ 0.03); the hemispheric trends do not (NH p ≈ 0.08, SH p ≈ 0.6). The Mann–Kendall test on overlapping 3-year windows rejects at the 5% level in 24–75% of no-change cases.</p>
+<table class="facts">
+<tr><th>Verdict</th><td>Real error (sample-size bias; significance overstated)</td></tr>
+<tr><th>Significance</th><td><strong>High</strong> (Size 2 · Reach 1 · Consequence 2 = 5 of 6)<div class="meta" style="margin-top:4px">Basis: Count alone produces most of the reported 10–14 days/decade and removes significance in most basins and both hemispheres (S2); recent Nature Communications paper (R1); rerun of the published lengths and of the authors&#x27; method with the observed counts (C2)</div></td></tr>
+<tr><th>Outcome</th><td>Acknowledged</td></tr>
+
+<tr><th>Where reported</th><td>Email to J. Leung (repository contact), 13 Nov 2026. He replied on 22 Nov 2026: “I think this is an important point, and your explanation is sound.” Quoted with his permission; he wrote for himself, not on behalf of all co-authors.<br><a href="https://doi.org/10.1038/s41467-026-74651-3">https://doi.org/10.1038/s41467-026-74651-3</a></td></tr>
+<tr><th>Date</th><td>2026-11-26</td></tr>
+</table>
+<h2>Summary</h2>
+<p>Liu et al. (2026, <i>Nature Communications</i> 17:8133) reported that warming has lengthened intense (category 4–5) tropical-cyclone seasons by about 10–14 days per decade in every basin, 1980–2023. Their season length is the span between the 1.5th and 98.5th percentiles of storm dates in 3-year windows. That span widens automatically when more storms are counted, and the number of intense storms rose over the period. Once the count is allowed for, most of the lengthening is gone and only the western North Pacific stays significant.</p>
+
+<h2>What we found</h2>
+<ul>
+<li>We reproduced the published season lengths from the authors' code and data (correlation 0.96–0.999).</li>
+<li>With a few storms per window, the extreme percentiles are close to the first and last storm, so their spread grows with the sample size. The published lengths correlate 0.50–0.88 with the number of storms in the window, and the counts rise by 0.5–1.8 storms per window per decade in every basin. The paper's weighted interpolation fixes the shape of the date distribution but not this effect: in a simulation with a fixed climatology (true length 155 days), its mean length rises from 97 days with 15 storms to 144 days with 90.</li>
+<li><b>Count-only null.</b> Storm dates drawn from each basin's fixed 1980–2023 distribution, with the observed number each year, through the same estimator (3,000–4,000 simulations):</li>
+</ul>
+<table class="data">
+<tr><th>Basin</th><th>Published trend (days/decade)</th><th>Trend from count alone</th><th>p against the count-only null</th></tr>
+<tr><td>North Atlantic</td><td>10.0</td><td>7.9</td><td>0.32</td></tr>
+<tr><td>Eastern North Pacific</td><td>10.4</td><td>4.4</td><td>0.05</td></tr>
+<tr><td>Western North Pacific</td><td>13.8</td><td>2.0</td><td><b>0.03</b></td></tr>
+<tr><td>South Pacific</td><td>11.8</td><td>8.2</td><td>0.14</td></tr>
+<tr><td>South Indian</td><td>9.9</td><td>16.0</td><td>0.84</td></tr>
+<tr><td>Northern Hemisphere</td><td>12.9</td><td>3.2</td><td>≈ 0.08</td></tr>
+<tr><td>Southern Hemisphere</td><td>12.6</td><td>13.3</td><td>≈ 0.6</td></tr>
+</table>
+<ul>
+<li>Regressing the published lengths on year and log(window count), with standard errors that allow for the overlapping windows, gives the same picture: only the western North Pacific stays significant.</li>
+<li><b>Significance.</b> The trends were tested with the plain Mann–Kendall test on overlapping 3-year windows. Under the no-change null this rejects at the 5% level in 24–75% of cases, depending on the basin.</li>
+</ul>
+
+<h2>What it does not change</h2>
+<p>The western North Pacific lengthening survives the count control (although the paper's homogenized ADT-HURSAT record shows little trend there). Nothing here bears on whether intense storms have become more frequent, which is a separate question.</p>
+
+<h2>Response</h2>
+<p>We wrote to Dr. Jeremy Leung, the repository contact, on 13 November 2026, and corresponded with him over the following ten days. On 22 November he agreed that the percentile estimates are biased by sample size and that changing counts can produce spurious trends in season length: “I think this is an important point, and your explanation is sound.” He said the issue had concerned the authors while preparing the paper and that he is looking at better ways to estimate seasonality from small samples. He also asked whether quantile regression on storm dates would suffer from the same bias. In our test it does not: with a fixed date distribution and counts rising from 2 to 8 storms a year, the windowed percentile span gains 7.8 days per decade, while the 5–95% regression-quantile span changes by 0.0 ± 4.9. This entry is listed, and he is quoted, with his permission. He wrote for himself, not on behalf of all the co-authors.</p>
+
+<h2>Reproduce</h2>
+<p>Code and data: <a href="https://github.com/jeremychleung/Warming-Climate-Has-Lengthened-Global-Intense-Tropical-Cyclone-Seasons">the authors' repository</a> (Zenodo doi:10.5281/zenodo.20393395). The null keeps each basin's pooled 1980–2023 dates, draws the observed number of storms each year, and applies the same 3-year windows and percentiles. Remedies: calibrate trends against this count-only null, compare at a fixed number of storms, use central or fitted-distribution quantiles, and test trends with non-overlapping windows or a block bootstrap.</p>
+
+<section id="affected" data-entry="liu-et-al-2026-nat-commun"></section><script src="/assets/affected.js" defer></script>
+<section class="respond" id="respond"><h2>Authors and producers: respond or object</h2><p>If you are an author, data producer or developer of this work and you disagree with this finding, or think we have misread something, <a href="/report.html?kind=response&entry=Liu%20et%20al.%202026%2C%20Nat%20Commun%20%28intense%20tropical-cyclone%20season%20length%29">send us your response</a>. We review every response promptly. If it shows our finding is wrong, we correct or withdraw the entry openly (see <a href="/policies.html#corrections">Corrections</a>). If you would like your response shown on this page, it is published unedited, with or without your name as you prefer, and never without your permission. You can also reply publicly in the discussion below.</p></section>
+<section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
+<div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>
+
+<script src="https://giscus.app/client.js" data-repo="klemmeri/climate-errata" data-repo-id="R_kgDOV30cyQ" data-category="Announcements" data-category-id="DIC_kwDOV30cyc4DLu90" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script></section>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology, School of Meteorology, University of Oklahoma. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated. · <a href="/policies.html">Policies and privacy</a> · <a href="/updates.html">Site updates</a> · <a href="/report.html">Write to us</a></div></footer>
+</body></html>

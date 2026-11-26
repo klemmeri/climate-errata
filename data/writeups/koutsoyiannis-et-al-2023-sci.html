@@ -1,0 +1,29 @@
+<h2>Summary</h2>
+<p>Koutsoyiannis, Onof, Kundzewicz and Christofides (2023, <i>Sci</i> 5:35) applied an impulse-response causality test to monthly temperature and Mauna Loa CO2 records (1958–2022) and concluded that the link is unidirectional, with temperature as the cause and CO2 as the effect. We ran their recipe on synthetic worlds whose causal structure is known. It reports “temperature leads CO2” both in a world where CO2 causes all of the long-term warming and in a world where temperature drives CO2. The test therefore cannot decide the direction of causation for the long-term rise. The lead author disagrees; his position is summarized below.</p>
+
+<h2>What we found</h2>
+<ul>
+<li><b>Perfect-model test.</b> Synthetic monthly world, 1958–2025: emissions-driven CO2 rising from about 315 to 428 ppm; warming caused entirely by CO2 (forcing 5.35 ln(C/280), 0.5 K per W m<sup>−2</sup>, 4-year response time; about 1.1 K forced warming); ENSO-like red noise and white noise in temperature. Temperature affects CO2 only through the established interannual response of the CO2 growth rate (about 2 ppm/yr per K, 4-month lag; Bacastow 1976).</li>
+<li>With the paper's recipe (12-month differences, non-negative least-squares impulse response with J = 20, lag statistics h<sub>c</sub>, μ<sub>h</sub>, h<sub>1/2</sub>; 40 realizations), the method reports “temperature leads CO2” in <b>100% of runs</b> (μ<sub>h</sub> ≈ +13 months), although CO2 caused all of the warming.</li>
+<li>When the interannual temperature-to-CO2 link is switched off, the explained variance is zero in both directions: <b>the method does not see the CO2-to-temperature link at all.</b> Twelve-month differencing removes the slow, emissions-driven part of CO2; what remains is growth-rate variability, which is driven by temperature.</li>
+<li><b>Reverse world</b> (CO2 has no effect on temperature; temperature affects CO2 only through the interannual sink response): the method also reports “temperature leads” in 100% of runs, with the same lags (mean lag about +13 months). It gives the same answer whichever way the causation runs, so it cannot tell the two worlds apart.</li>
+<li><b>Coarser time scales</b> (raised by the author): in an annual 1850–2025 synthetic world where CO2 causes all of the warming, with a realistic sink response, the method still reports “temperature leads” in 98%, 100% and 95% of runs for 1-, 5- and 10-year differences. Only a noise-free version correctly finds CO2 leading. We have not tested geological time scales and make no claim about them.</li>
+<li><b>CMIP6 comparison.</b> The CMIP6 runs behind the paper's comparison, historical as well as scenario, are concentration-driven: CO2 is prescribed, so no temperature-to-CO2 link can exist in them, and the multi-model mean has almost no internal variability. The opposite result in the models is guaranteed by construction and says nothing about their realism. Emission-driven runs (e.g. esm-hist) would be the relevant comparison.</li>
+</ul>
+
+<h2>What it does not change</h2>
+<p>The paper's observational result, that changes in the CO2 growth rate follow temperature changes by about six months, is consistent with the established carbon-cycle response to interannual variability such as ENSO, and we do not dispute it. This entry concerns only the inference that the causal link is unidirectional from temperature to CO2, and its application to the long-term rise.</p>
+
+<h2>Response</h2>
+<p>We wrote to the lead author on 22 November 2026, and he replied the next day. In summary, he holds that:</p>
+<ul>
+<li>the analysis should be judged at coarser time scales;</li>
+<li>there is no proven physical basis that human emissions drive the CO2 rise or that CO2 forcing drives the warming, referring to his later work on the atmospheric CO2 balance;</li>
+<li>the forcing relation 5.35 ln(C/280) used in our synthetic world is circular, assuming what is to be tested;</li>
+<li>the CMIP6 models are fitted to past observations.</li>
+</ul>
+<p>He also said that a fuller response may follow.</p>
+<p>Our answers, sent on 23 November: the coarser-scale runs are listed above. The perfect-model test does not assume that the forcing relation is true of the real climate. It asks only whether the method can distinguish two worlds whose causal structure is known by construction; a test that returns the same answer in both cannot decide between them, whichever forcing relation is used. The source of the CO2 rise is outside the scope of this entry. The author said we could post without waiting for a further reply.</p>
+
+<h2>Reproduce</h2>
+<p>The synthetic worlds need only the paper's published recipe (Section 2 and their Proc. R. Soc. A 2022 method). Our script is available on request through the register.</p>

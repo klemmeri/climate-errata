@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Koutsoyiannis et al. 2023, Sci (temperature–CO2 causality, “Hens and Eggs”) — Climate Errata</title>
+<meta name="description" content="The paper&#x27;s impulse-response causality test, applied to 12-month differences of temperature and ln CO2, reports “temperature leads CO2” in a synthetic">
+<link rel="stylesheet" href="/assets/style.css"><script data-goatcounter="https://climateerrata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body>
+<header class="site"><div class="banner"><div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="M7 27 L13 22 L18 25 L24 15 L29 18 L34 10" fill="none" stroke="#7cc4ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 31 L34 31" stroke="currentColor" stroke-opacity=".35" stroke-width="1.6"/><circle cx="24" cy="15" r="5.2" fill="none" stroke="#f4c26b" stroke-width="2.4"/><path d="M27.8 18.8 L31.5 22.5" stroke="#f4c26b" stroke-width="2.6" stroke-linecap="round"/></svg><span class="bt"><span class="bn">Climate Errata</span><span class="tag">Independent, reproducible checks of weather, climate and environmental papers, datasets and code</span></span></a></div></div>
+<nav class="site"><div class="wrap"><a href="/">Register</a><a href="/checked.html">What we checked</a><a href="/datasets/">Datasets</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="/policies.html">Policies</a><a href="/updates.html">Updates</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></div></nav></header>
+
+<main><div class="wrap">
+<p class="meta"><a href="/">← Register</a></p>
+<h1>Koutsoyiannis et al. 2023, Sci (temperature–CO2 causality, “Hens and Eggs”)</h1>
+<div class="meta"><span class="pill st-disputed">Disputed</span><span class="pill type">paper</span><a class="pill sig" href="/about.html#significance" title="How significance is scored">Significance: High</a></div>
+
+<h2>Finding</h2>
+<p>The paper&#x27;s impulse-response causality test, applied to 12-month differences of temperature and ln CO2, reports “temperature leads CO2” in a synthetic world where CO2 causes all of the long-term warming by construction (100% of runs; 95–100% with 1-, 5- and 10-year differences), and gives the same answer in a world where temperature drives CO2. Differencing removes the slow, emissions-driven part of CO2, so the test sees only the well-known interannual response of the CO2 growth rate to temperature. It cannot tell the two causal directions apart, so the paper&#x27;s conclusion of a unidirectional link from temperature to CO2 does not follow from it. The opposite result in CMIP6 is expected by construction, because those runs prescribe CO2 concentrations.</p>
+<table class="facts">
+<tr><th>Verdict</th><td>Method weakness (test cannot detect CO2 → temperature)</td></tr>
+<tr><th>Significance</th><td><strong>High</strong> (Size 2 · Reach 2 · Consequence 2 = 6 of 6)<div class="meta" style="margin-top:4px">Basis: The test cannot support the central causal conclusion (S2); widely circulated, including a translation for the library of the Peruvian Congress (R2); a perfect-model rerun of the authors&#x27; recipe shows the headline inference fails (C2)</div></td></tr>
+<tr><th>Outcome</th><td>Disputed</td></tr>
+
+<tr><th>Where reported</th><td>Email to the lead author, 22 Nov 2026. He replied on 23 Nov 2026 disagreeing with the premises of the test (see the write-up) and said we could post without waiting for a further reply<br><a href="https://doi.org/10.3390/sci5030035">https://doi.org/10.3390/sci5030035</a></td></tr>
+<tr><th>Date</th><td>2026-11-26</td></tr>
+</table>
+<h2>Summary</h2>
+<p>Koutsoyiannis, Onof, Kundzewicz and Christofides (2023, <i>Sci</i> 5:35) applied an impulse-response causality test to monthly temperature and Mauna Loa CO2 records (1958–2022) and concluded that the link is unidirectional, with temperature as the cause and CO2 as the effect. We ran their recipe on synthetic worlds whose causal structure is known. It reports “temperature leads CO2” both in a world where CO2 causes all of the long-term warming and in a world where temperature drives CO2. The test therefore cannot decide the direction of causation for the long-term rise. The lead author disagrees; his position is summarized below.</p>
+
+<h2>What we found</h2>
+<ul>
+<li><b>Perfect-model test.</b> Synthetic monthly world, 1958–2025: emissions-driven CO2 rising from about 315 to 428 ppm; warming caused entirely by CO2 (forcing 5.35 ln(C/280), 0.5 K per W m<sup>−2</sup>, 4-year response time; about 1.1 K forced warming); ENSO-like red noise and white noise in temperature. Temperature affects CO2 only through the established interannual response of the CO2 growth rate (about 2 ppm/yr per K, 4-month lag; Bacastow 1976).</li>
+<li>With the paper's recipe (12-month differences, non-negative least-squares impulse response with J = 20, lag statistics h<sub>c</sub>, μ<sub>h</sub>, h<sub>1/2</sub>; 40 realizations), the method reports “temperature leads CO2” in <b>100% of runs</b> (μ<sub>h</sub> ≈ +13 months), although CO2 caused all of the warming.</li>
+<li>When the interannual temperature-to-CO2 link is switched off, the explained variance is zero in both directions: <b>the method does not see the CO2-to-temperature link at all.</b> Twelve-month differencing removes the slow, emissions-driven part of CO2; what remains is growth-rate variability, which is driven by temperature.</li>
+<li><b>Reverse world</b> (CO2 has no effect on temperature; temperature affects CO2 only through the interannual sink response): the method also reports “temperature leads” in 100% of runs, with the same lags (mean lag about +13 months). It gives the same answer whichever way the causation runs, so it cannot tell the two worlds apart.</li>
+<li><b>Coarser time scales</b> (raised by the author): in an annual 1850–2025 synthetic world where CO2 causes all of the warming, with a realistic sink response, the method still reports “temperature leads” in 98%, 100% and 95% of runs for 1-, 5- and 10-year differences. Only a noise-free version correctly finds CO2 leading. We have not tested geological time scales and make no claim about them.</li>
+<li><b>CMIP6 comparison.</b> The CMIP6 runs behind the paper's comparison, historical as well as scenario, are concentration-driven: CO2 is prescribed, so no temperature-to-CO2 link can exist in them, and the multi-model mean has almost no internal variability. The opposite result in the models is guaranteed by construction and says nothing about their realism. Emission-driven runs (e.g. esm-hist) would be the relevant comparison.</li>
+</ul>
+
+<h2>What it does not change</h2>
+<p>The paper's observational result, that changes in the CO2 growth rate follow temperature changes by about six months, is consistent with the established carbon-cycle response to interannual variability such as ENSO, and we do not dispute it. This entry concerns only the inference that the causal link is unidirectional from temperature to CO2, and its application to the long-term rise.</p>
+
+<h2>Response</h2>
+<p>We wrote to the lead author on 22 November 2026, and he replied the next day. In summary, he holds that:</p>
+<ul>
+<li>the analysis should be judged at coarser time scales;</li>
+<li>there is no proven physical basis that human emissions drive the CO2 rise or that CO2 forcing drives the warming, referring to his later work on the atmospheric CO2 balance;</li>
+<li>the forcing relation 5.35 ln(C/280) used in our synthetic world is circular, assuming what is to be tested;</li>
+<li>the CMIP6 models are fitted to past observations.</li>
+</ul>
+<p>He also said that a fuller response may follow.</p>
+<p>Our answers, sent on 23 November: the coarser-scale runs are listed above. The perfect-model test does not assume that the forcing relation is true of the real climate. It asks only whether the method can distinguish two worlds whose causal structure is known by construction; a test that returns the same answer in both cannot decide between them, whichever forcing relation is used. The source of the CO2 rise is outside the scope of this entry. The author said we could post without waiting for a further reply.</p>
+
+<h2>Reproduce</h2>
+<p>The synthetic worlds need only the paper's published recipe (Section 2 and their Proc. R. Soc. A 2022 method). Our script is available on request through the register.</p>
+
+<section id="affected" data-entry="koutsoyiannis-et-al-2023-sci"></section><script src="/assets/affected.js" defer></script>
+<section class="respond" id="respond"><h2>Authors and producers: respond or object</h2><p>If you are an author, data producer or developer of this work and you disagree with this finding, or think we have misread something, <a href="/report.html?kind=response&entry=Koutsoyiannis%20et%20al.%202023%2C%20Sci%20%28temperature%E2%80%93CO2%20causality%2C%20%E2%80%9CHens%20and%20Eggs%E2%80%9D%29">send us your response</a>. We review every response promptly. If it shows our finding is wrong, we correct or withdraw the entry openly (see <a href="/policies.html#corrections">Corrections</a>). If you would like your response shown on this page, it is published unedited, with or without your name as you prefer, and never without your permission. You can also reply publicly in the discussion below.</p></section>
+<section class="comments"><h2>Discussion</h2><p class="meta" style="display:block">Questions and discussion are welcome: ask other readers, the authors or the maintainer. Authors and developers are especially welcome to reply. Comments use GitHub Discussions (sign in with GitHub). No GitHub account? <a href="/report.html">Write to us</a>.</p>
+<div class="policy"><b>Found a new error?</b> Please tell the authors or data producers first, or <a href="/report.html">report it to us privately</a>. New error claims posted here may be hidden until the responsible party has been contacted. <a href="/about.html#posting">Posting policy</a></div>
+
+<script src="https://giscus.app/client.js" data-repo="klemmeri/climate-errata" data-repo-id="R_kgDOV30cyQ" data-category="Announcements" data-category-id="DIC_kwDOV30cyc4DLu90" data-mapping="pathname" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async></script></section>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology, School of Meteorology, University of Oklahoma. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated. · <a href="/policies.html">Policies and privacy</a> · <a href="/updates.html">Site updates</a> · <a href="/report.html">Write to us</a></div></footer>
+</body></html>

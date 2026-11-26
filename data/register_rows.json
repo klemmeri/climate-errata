@@ -891,5 +891,39 @@
   "C": 1,
   "basis": "About 35–45% regional dry bias for nine years (S2); E-OBS is a main European dataset but the issue is regional (R1); no published result rerun yet (C1)",
   "sd": "2026-11-21"
+ },
+ {
+  "row": 87,
+  "area": "Paper",
+  "target": "Koutsoyiannis et al. 2023, Sci (temperature–CO2 causality, “Hens and Eggs”)",
+  "link": "https://doi.org/10.3390/sci5030035",
+  "doi": null,
+  "found": "The paper's impulse-response causality test, applied to 12-month differences of temperature and ln CO2, reports “temperature leads CO2” in a synthetic world where CO2 causes all of the long-term warming by construction (100% of runs; 95–100% with 1-, 5- and 10-year differences), and gives the same answer in a world where temperature drives CO2. Differencing removes the slow, emissions-driven part of CO2, so the test sees only the well-known interannual response of the CO2 growth rate to temperature. It cannot tell the two causal directions apart, so the paper's conclusion of a unidirectional link from temperature to CO2 does not follow from it. The opposite result in CMIP6 is expected by construction, because those runs prescribe CO2 concentrations.",
+  "verdict": "Method weakness (test cannot detect CO2 → temperature)",
+  "S": 2,
+  "R": 2,
+  "C": 2,
+  "basis": "The test cannot support the central causal conclusion (S2); widely circulated, including a translation for the library of the Peruvian Congress (R2); a perfect-model rerun of the authors' recipe shows the headline inference fails (C2)",
+  "outcome": "Disputed",
+  "reported": "Email to the lead author, 22 Nov 2026. He replied on 23 Nov 2026 disagreeing with the premises of the test (see the write-up) and said we could post without waiting for a further reply",
+  "sd": "2026-11-22",
+  "date": "2026-11-26"
+ },
+ {
+  "row": 88,
+  "area": "Paper",
+  "target": "Liu et al. 2026, Nat Commun (intense tropical-cyclone season length)",
+  "link": "https://doi.org/10.1038/s41467-026-74651-3",
+  "doi": null,
+  "found": "The intense-TC season length (span between the 1.5th and 98.5th percentiles of occurrence dates in 3-year windows) grows with the number of storms in the window even when their timing does not change, and intense-TC counts rose in every basin over 1980–2023. The paper's own lengths correlate 0.50–0.88 with the window count. Drawing dates from each basin's fixed 1980–2023 distribution with the observed yearly counts produces “lengthening” of about 2–16 days/decade by itself. Calibrated against that null, only the western North Pacific stays significant (p ≈ 0.03); the hemispheric trends do not (NH p ≈ 0.08, SH p ≈ 0.6). The Mann–Kendall test on overlapping 3-year windows rejects at the 5% level in 24–75% of no-change cases.",
+  "verdict": "Real error (sample-size bias; significance overstated)",
+  "S": 2,
+  "R": 1,
+  "C": 2,
+  "basis": "Count alone produces most of the reported 10–14 days/decade and removes significance in most basins and both hemispheres (S2); recent Nature Communications paper (R1); rerun of the published lengths and of the authors' method with the observed counts (C2)",
+  "outcome": "Acknowledged",
+  "reported": "Email to J. Leung (repository contact), 13 Nov 2026. He replied on 22 Nov 2026: “I think this is an important point, and your explanation is sound.” Quoted with his permission; he wrote for himself, not on behalf of all co-authors.",
+  "sd": "2026-11-12",
+  "date": "2026-11-26"
  }
 ]

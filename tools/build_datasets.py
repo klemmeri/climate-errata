@@ -154,3 +154,7 @@ json.dump(public, open(OUT / "datasets.json", "w"), indent=1, ensure_ascii=False
 all_items = sorted([entry_item(x) for x in ENTRIES.values()], key=lambda i: i["date"], reverse=True)[:100]
 (ROOT / "feed.xml").write_text(rss("Climate Errata: register", SITE + "/", "New and updated entries in the Climate Errata register", all_items))
 print(len(DS["datasets"]), "dataset pages;", len(DISC), "discussions considered")
+
+# keep sitemap.xml and robots.txt current
+import runpy as _rp
+_rp.run_path(str(pathlib.Path(__file__).resolve().parent / "sitemap.py"))

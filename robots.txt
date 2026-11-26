@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://climateerrata.org/sitemap.xml

@@ -679,6 +679,12 @@
    "note": "Synthetic ΦDP from known KDP (three rain cells per ray, noise 0–3°). The wradlib regression and Lanczos derivatives, wradlib's phidp_kdp_vulpiani, and Py-ART's kdp_vulpiani and kdp_maesaka recover the KDP integral to within 0.3% without noise. Under noise the methods with physical thresholds overestimate it (+5% to +16%), as their constraints imply. Py-ART's kdp_schneebeli overestimates narrow cells by about 11% even without noise, which appears to be a property of its constrained filter. One small bug: wradlib's 'finite_difference_vulpiani' derivative divides by the window length instead of the gate separation (factor (n−1)/n); it is only used internally as a first guess."
   },
   {
+   "cite": "TempestExtremes (ClimateGlobalChange/tempestextremes, commit cafb070)",
+   "topic": "Cyclone detection and tracking (DetectNodes, StitchNodes)",
+   "outcome": "nomaterial",
+   "note": "Synthetic sea-level-pressure lows at known positions: all positions were found within 0.4° (including across the dateline and the prime meridian and up to 88°N and 84°S), all tracks were complete, and the minimum-duration and maximum-gap settings behave exactly at their limits. Two traps for users, not errors in results we could find: StitchNodes assumes the standard calendar unless --caltype is given, so noleap model output with gaps given in hours splits storms that cross 28 February in years divisible by 4 (the workflows we checked give gaps as step counts, which are unaffected); and with packed (quantized) pressure, equal-valued neighbouring minima are kept as duplicate detections unless --mergeequal is set, though the stitched tracks were unaffected."
+  },
+  {
    "outcome": "withauthors",
    "count": 5
   },

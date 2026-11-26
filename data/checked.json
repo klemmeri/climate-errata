@@ -706,6 +706,12 @@
    "note": "We checked the bundled CEC module and inverter parameter tables for physically impossible or inconsistent values. Inverters: clean. Modules: a few bookkeeping oddities that do not affect modeled output, such as half-cut-cell modules listing 120 or 144 cells in series (the CEC model does not use this field) and some tiny negative short-circuit temperature coefficients. No error that would change a simulation materially."
   },
   {
+   "cite": "pysteps 1.21.5 (radar nowcasting)",
+   "topic": "Verification scores, rain-rate conversions, motion estimation, extrapolation, cascade and noise",
+   "outcome": "clean",
+   "note": "Fractions skill score, all categorical scores (POD, FAR, CSI, ETS, HSS, SEDI and others), ensemble CRPS, rank histogram (including many dry pixels), ROC area and reliability diagrams all match independent reference calculations. Z–R and decibel conversions invert exactly; the Lucas–Kanade motion field recovers a known displacement to within 0.01 pixel per step; semi-Lagrangian extrapolation reproduces a translated field (error under 1% of its spread); the cascade decomposition reconstructs the field exactly; and the noise generator reproduces the input power-spectrum slope (−2.99 against −3.0)."
+  },
+  {
    "outcome": "withauthors",
    "count": 6
   },

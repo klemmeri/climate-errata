@@ -318,6 +318,15 @@
    "note": "The paper's error bars are the standard error across spatially correlated grid cells, and there is no ensemble to measure chaotic model noise. Using the authors' figshare output we reproduced every buffer mean exactly (e.g. wet season +5.76 mm/month at 0 km, −0.28 at 60 km; dry season −1.55 at 40 km), then recomputed the uncertainty from the 22 independent yearly run pairs, which include the model's chaotic noise. The year-based errors are similar to or smaller than the published ones, and the sign of each effect is stable across years (e.g. the 60 km wet-season decrease: p = 0.008, 17 of 22 years negative). No material error found."
   },
   {
+   "cite": "Josey et al. 2024, Nature",
+   "topic": "Record-low Antarctic sea ice in 2023 increased ocean heat loss and storms (ERA5, four ice-loss boxes, June–July)",
+   "doi": "10.1038/s41586-024-08368-y",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-26",
+   "note": "Using the authors' Zenodo archive (10.5281/zenodo.13971927) we reproduced the June–July storminess index for the four boxes (days with 10-m wind above 10 m/s): 11.6 days in 2023 against 9.0 ± 0.9 in 1990–2015, the highest of 1990–2023 (with area weighting, 2015 is slightly higher). In 1990–2022, the boxes' storm days are not correlated with their sea-ice concentration or net heat loss (r ≈ −0.1, p ≈ 0.5), so the storm link rests on 2023 alone; the paper says that its storm result is consistent with, but does not establish, a causal link. The heat-loss and dense-water results are not affected. No material error found."
+  },
+  {
    "cite": "Pan et al. 2024, Nature",
    "topic": "The enduring world forest carbon sink (3.6 / 3.6 / 3.5 Pg C per year by decade)",
    "doi": "10.1038/s41586-024-07602-x",

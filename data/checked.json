@@ -381,6 +381,15 @@
    "note": "We read the authors' notebook (Zenodo 10.5281/zenodo.14577949) and checked the unit chain that turns national emissions into CO2-warming-equivalent (GWP*) budgets: PRIMAP-hist emissions in Gg with AR5 GWP100 weights (CH4 28, N2O 265, F-gases already in CO2e), the GWP* methane formula with a 20-year difference (s = 0.25, g = 1.13) indexed to the right years (1850–2021), and the AR6 scenario conversions (Mt CH4 and Mt CO2 divided by 1,000, kt N2O by 1,000,000, to Gt). The units and year indexing are consistent. Method reviewed; the allocation results were not rerun (the notebook needs input files not in the archive). No material error found."
   },
   {
+   "cite": "Partanen et al. 2026, Environmental Research Letters",
+   "topic": "A new approach to determine national greenhouse gas budgets (Finland; FaIR, GWP100 aggregation bias and LULUCF indirect effects)",
+   "doi": "10.1088/1748-9326/ae9628",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "We read the authors' code (FMI B2SHARE 10.57707/fmi-b2share.b60tw-q3292) and checked the budget arithmetic and units: the AR6 TCRE of 1.65 K per 1000 Gt C converted to K per Gt CO2 (divided by 1,000 and by 3.67), FaIR emission units (CH4 and N2O in Mt, F-gases in kt, converted to Gt), the remaining warming to 1.5 °C from the 2010–2019 mean minus non-GHG, historical non-CO2 and recent-CO2 terms, and the global and national adjustments that turn warming into GHG budgets. These are consistent. (An optional FaIR-based TCRE path not used for the main results was not checked.) Method reviewed, ensembles not rerun. No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

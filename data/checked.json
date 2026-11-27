@@ -399,6 +399,15 @@
    "note": "We read the methods and results; no code is archived, so nothing was rerun. The country totals agree with Jones et al. (2023) for the large emitters (United States 0.27 vs 0.28 °C, China 0.19 vs 0.20 °C). India's methane and nitrous oxide contributions (about 0.016 and 0.002 °C) are roughly half of Jones et al.'s (0.03 and 0.006 °C, from the same PRIMAP-hist emissions). The paper's method plausibly explains much of this: it removes India's emissions from the full emissions set in FaIR, which gives smaller marginal effects for methane than proportional attribution, and it measures warming relative to 1850–1900, so long-standing agricultural emissions before then count little (the paper reports the pre-1947 component as slightly negative). A short comparison with Jones et al. would have helped readers. Method reviewed, not rerun. No material error found."
   },
   {
+   "cite": "Deutloff, Held & Lenton 2025, Earth System Dynamics",
+   "topic": "High probability of triggering climate tipping points under current policies modestly amplified by Amazon dieback and permafrost thaw (FaIR v2.0 with a carbon tipping-element model)",
+   "doi": "10.5194/esd-16-565-2025",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "We read the authors' code (GitHub JakobDeutloff/TP_paper, archived as Zenodo 10.5281/zenodo.10820599) and checked how carbon released by the Amazon and permafrost tipping elements enters FaIR: each element's stock change in Gt C is split into CO2 (added in Gt C, FaIR v2.0's unit) and CH4 (20% for abrupt thaw, 2.3% for permafrost collapse, converted from Gt C to Mt CH4 with 16/12.011 × 1000). The units are consistent; one output column is labelled Mt C when it holds Mt CH4, but the plotting code converts it correctly. Method reviewed, ensembles not rerun. No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

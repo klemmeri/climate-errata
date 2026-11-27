@@ -508,7 +508,7 @@
    "cite": "HadSST.4.2.0.0",
    "topic": "1970–99 grid boxes resting on misplaced duplicate ICOADS ship reports",
    "outcome": "nomaterial",
-   "note": "About 200 sparse high-latitude box-months (one or two observations) rest mostly on misplaced duplicate reports, with single-box anomalies up to +7–8 °C; regional and global means and trends change by 0.024 K or less. The underlying ICOADS problem is on the register. Reported to the producer 10 Nov 2026."
+   "note": "About 200 sparse high-latitude box-months (one or two observations) rest mostly on misplaced duplicate reports, with single-box anomalies up to +7–8 °C; regional and global means and trends change by 0.024 K or less. The underlying ICOADS problem is on the register. Reported to the producer 10 Nov 2026. The Met Office replied (statement provided by Dr Caroline Sandford, 27 Nov 2026): \"In light of the number of grid boxes reported to be affected (<0.05% of grid boxes) we are content that the HadSST4 quality control is performing as expected. However, we continue to make efforts to improve the data set including consideration of factors that may affect source data, such as the possibility of duplicate records in historical data compilations.\""
   },
   {
    "outcome": "withauthors",

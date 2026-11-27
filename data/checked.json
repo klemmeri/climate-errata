@@ -336,6 +336,15 @@
    "note": "The Supplementary Materials say that standard errors for each species' overall rate of change were propagated across years assuming zero covariance between years. Because every year's rate is built from the same regional coefficients, that assumption would make the standard errors far too small if applied literally. We checked the published values in Tables S5 and S9: for the 192 species fitted in more than one region, the overall standard error is about as large as, or larger than, the largest regional standard error (median ratio 0.96), so the reported uncertainties are not deflated and the species classifications are not affected. No material error found."
   },
   {
+   "cite": "Callahan et al. 2025, Nature Climate Change",
+   "topic": "Increasing risk of mass human heat mortality if historical weather patterns recur (August 2003 at 1.5 °C: about 17,800 deaths in one week)",
+   "doi": "10.1038/s41558-025-02480-1",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-27",
+   "note": "Using the authors' Zenodo archive (10.5281/zenodo.17495872) we reproduced the peak-week Europe-wide deaths for the August 2003 pattern (8,940, 17,570 and 31,480 at 0, 1.5 and 3 °C; paper 9,000, 17,800 and 32,000). The exposure–response function is a fourth-order polynomial fitted to 2015–2019, and most of the projected deaths come from district-weeks hotter than anything that district saw in those years (81% of the peak week at 1.5 °C, 92% at 3 °C), so the results rest on extrapolation. As an out-of-sample check, in the 416 districts with 2003 mortality data the observed excess deaths in weeks 31–34 of 2003 were about 15,800, against model values of 7,500 (pre-industrial) and 15,600 (1.5 °C) for that pattern, so the extrapolated response does not overstate deaths for a real event outside the fitting period. No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

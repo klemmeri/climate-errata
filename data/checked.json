@@ -372,6 +372,15 @@
    "note": "A Comment on this paper and the authors' Reply have been published in the same journal, so the debate is already in print. We also checked the authors' Zenodo results workbook (10.5281/zenodo.15869669): Ireland's 2020 emissions entered in MAGICC are the right size (fossil CO2 about 35 Mt, CH4 650 kt, N2O 27.6 kt), and the late-century rise in methane warming under the temperature-neutrality scenario is in the data and is the result the paper discusses. Only a spreadsheet artefact: the year-on-year neutrality flag in the last row compares 2100 with an empty cell. No material error found."
   },
   {
+   "cite": "Li et al. 2025, Nature Communications",
+   "topic": "A principle-based framework to determine countries' fair warming contributions to the Paris Agreement (84–90 countries already over their 1.5 °C share by 2021)",
+   "doi": "10.1038/s41467-025-56397-6",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "We read the authors' notebook (Zenodo 10.5281/zenodo.14577949) and checked the unit chain that turns national emissions into CO2-warming-equivalent (GWP*) budgets: PRIMAP-hist emissions in Gg with AR5 GWP100 weights (CH4 28, N2O 265, F-gases already in CO2e), the GWP* methane formula with a 20-year difference (s = 0.25, g = 1.13) indexed to the right years (1850–2021), and the AR6 scenario conversions (Mt CH4 and Mt CO2 divided by 1,000, kt N2O by 1,000,000, to Gt). The units and year indexing are consistent. Method reviewed; the allocation results were not rerun (the notebook needs input files not in the archive). No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

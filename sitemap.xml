@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://climateerrata.org/about.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/check.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
-  <url><loc>https://climateerrata.org/checked.html</loc><lastmod>2026-11-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://climateerrata.org/checked.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/datasets/asos.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/datasets/cpc-unified.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/datasets/e-obs.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
@@ -71,7 +71,7 @@
   <url><loc>https://climateerrata.org/entries/xesmf-conservative-regridding.html</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/xsdba-xclim-sdba-qdm-bias-adjustment.html</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/zeng-et-al-2019-ncc-monerie.html</loc><lastmod>2026-11-25</lastmod><priority>0.8</priority></url>
-  <url><loc>https://climateerrata.org/</loc><lastmod>2026-11-26</lastmod><priority>1.0</priority></url>
+  <url><loc>https://climateerrata.org/</loc><lastmod>2026-11-27</lastmod><priority>1.0</priority></url>
   <url><loc>https://climateerrata.org/policies.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/report.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/scale.html</loc><lastmod>2026-11-25</lastmod><priority>0.6</priority></url>

@@ -336,6 +336,15 @@
    "note": "The Supplementary Materials say that standard errors for each species' overall rate of change were propagated across years assuming zero covariance between years. Because every year's rate is built from the same regional coefficients, that assumption would make the standard errors far too small if applied literally. We checked the published values in Tables S5 and S9: for the 192 species fitted in more than one region, the overall standard error is about as large as, or larger than, the largest regional standard error (median ratio 0.96), so the reported uncertainties are not deflated and the species classifications are not affected. No material error found."
   },
   {
+   "cite": "Turubanova et al. 2025, PNAS",
+   "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
+   "doi": "10.1073/pnas.2505418122",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-27",
+   "note": "The data producers have warned that Global Forest Change loss detection became more sensitive after a 2011 method change and Landsat 8 (2013), and the paper's 2002–2024 trends span those changes. We summed the authors' fire-loss layer and all forest loss (tree cover ≥30% in 2000) by year and latitude zone in Google Earth Engine. Global fire loss does step up at 2011–2012 (3-year means rise by about 65%, mostly in boreal forest, where all loss rises too), but the increase continues at the same rate within the consistent period: about +5.5% per year over 2012–2024 against +5.4% over 2001–2024, and 2020–2024 averages 12.9 Mha a year against 8.3 Mha in 2012–2016. There is no step at 2022 (Landsat 9). The headline increase and the 2023–2024 records do not depend on the detection changes. No material error found."
+  },
+  {
    "cite": "Krumpen et al. 2025, Nature Climate Change",
    "topic": "Smoother sea ice with fewer pressure ridges in a more dynamic Arctic (airborne laser altimetry, 1993–2023)",
    "doi": "10.1038/s41558-024-02199-5",

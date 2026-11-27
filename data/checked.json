@@ -390,6 +390,15 @@
    "note": "We read the authors' code (FMI B2SHARE 10.57707/fmi-b2share.b60tw-q3292) and checked the budget arithmetic and units: the AR6 TCRE of 1.65 K per 1000 Gt C converted to K per Gt CO2 (divided by 1,000 and by 3.67), FaIR emission units (CH4 and N2O in Mt, F-gases in kt, converted to Gt), the remaining warming to 1.5 °C from the 2010–2019 mean minus non-GHG, historical non-CO2 and recent-CO2 terms, and the global and national adjustments that turn warming into GHG budgets. These are consistent. (An optional FaIR-based TCRE path not used for the main results was not checked.) Method reviewed, ensembles not rerun. No material error found."
   },
   {
+   "cite": "Patel & Taksal 2026, Environmental Research Communications",
+   "topic": "India's historical contribution to present-day warming is recent and multi-gas (about 0.047–0.05 °C in 2024; FaIR with PRIMAP-hist)",
+   "doi": "10.1088/2515-7620/ae9e8b",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "We read the methods and results; no code is archived, so nothing was rerun. The country totals agree with Jones et al. (2023) for the large emitters (United States 0.27 vs 0.28 °C, China 0.19 vs 0.20 °C). India's methane and nitrous oxide contributions (about 0.016 and 0.002 °C) are roughly half of Jones et al.'s (0.03 and 0.006 °C, from the same PRIMAP-hist emissions). The paper's method plausibly explains much of this: it removes India's emissions from the full emissions set in FaIR, which gives smaller marginal effects for methane than proportional attribution, and it measures warming relative to 1850–1900, so long-standing agricultural emissions before then count little (the paper reports the pre-1947 component as slightly negative). A short comparison with Jones et al. would have helped readers. Method reviewed, not rerun. No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

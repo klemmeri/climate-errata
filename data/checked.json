@@ -363,6 +363,15 @@
    "note": "We read the authors' notebook (Dryad 10.5061/dryad.zcrjdfnsk). The Carbon Majors product, flaring, venting and own-use CO2 (Mt CO2) is converted to Gt and subtracted from the RCMIP SSP CO2 emissions, and fugitive methane (Mt CH4, the database's own unit) is subtracted from the CH4 emissions, year by year from 1854 to 2024. Units are handled correctly; the notebook gives 31.0 Gt CO2 and 132 Mt CH4 removed in 2024 and 1,293 Gt CO2 cumulative. Minor text inconsistencies only: cumulative emissions are given as 1.25 Tt in one section and 1.29 Tt in another (the code gives 1.29), and the FaIR version is stated as v2.1.4 in the methods but v2.2.2 in the data statement. Method reviewed, ensemble not rerun. No material error found."
   },
   {
+   "cite": "Duffy et al. 2025, Environmental Research Letters",
+   "topic": "National temperature neutrality, agricultural methane and climate policy (Ireland; MAGICC 'all but one' warming contributions)",
+   "doi": "10.1088/1748-9326/adf12d",
+   "side": "mainstream",
+   "outcome": "inprint",
+   "checked": "2026-11-27",
+   "note": "A Comment on this paper and the authors' Reply have been published in the same journal, so the debate is already in print. We also checked the authors' Zenodo results workbook (10.5281/zenodo.15869669): Ireland's 2020 emissions entered in MAGICC are the right size (fossil CO2 about 35 Mt, CH4 650 kt, N2O 27.6 kt), and the late-century rise in methane warming under the temperature-neutrality scenario is in the data and is the result the paper discusses. Only a spreadsheet artefact: the year-on-year neutrality flag in the last row compares 2100 with an empty cell. No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

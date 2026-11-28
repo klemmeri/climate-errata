@@ -176,8 +176,14 @@ def _cnt(items, outs, side=None):
     return sum(p.get("count", 1) for p in items if p["outcome"] in outs and (side is None or p.get("side") == side))
 def _li(p):
     link = f'<a href="https://doi.org/{e(p["doi"])}">{e(p["cite"])}</a>' if p.get("doi") else (f'<a href="{e(p["entry"])}">{e(p["cite"])}</a>' if p.get("entry") else e(p["cite"]))
+    rep = p.get("reporting")
+    reps = ""
+    if rep:
+        reps = (f' <span class="rep rep-{e(rep["verdict"])}"><strong>How it was reported: {REP[rep["verdict"]]}.</strong>'
+                f'{(" " + e(rep["note"])) if rep.get("note") else ""}</span>')
     return (f'<li>{link}: {e(p["topic"])}. <strong>{OUT[p["outcome"]]}</strong>'
-            f'{(". " + e(p["note"])) if p.get("note") else ""}</li>')
+            f'{(". " + e(p["note"])) if p.get("note") else ""}{reps}</li>')
+REP = {"accurate": "accurately", "mixed": "mixed (some coverage overstated or misread the result)", "misreported": "widely misreported", "understated": "understated in coverage"}
 HDR = '<tr><th></th><th>Checked</th><th>No error / no material error</th><th>Already known or in print</th><th>Error found or sent to authors</th><th>Not finished</th></tr>'
 def _row(label, items, side=None):
     return (f'<tr><th>{label}</th><td>{_cnt(items, ["clean","nomaterial","reviewed","inprint","flagged","withauthors"], side)}</td>'
@@ -214,6 +220,7 @@ for sd in SIDE:
         plis += f"<h3>{SIDE[sd]}</h3><ul>" + "".join(_li(p) for p in ps) + "</ul>"
 body = f"""<h1>What we checked</h1>
 <p class="lede">Every paper, dataset and piece of code we have checked, with the outcome, whether or not we found an error. What we choose to check, and why, is explained on the <a href="/about.html#selection">How it works</a> page.</p>
+<p>For some papers we also compare the paper with its press release and the main news coverage, and note under <strong>How it was reported</strong> whether the headline claims matched what the paper\'s numbers support. We flag overstatement and understatement alike. This is a note on coverage, not a finding against the paper.</p>
 <p class="meta" style="display:block">When we find a possible error, the authors, data producers or developers hear about it first. Until they reply or three weeks pass, such items are counted here but not named; then they are added by name with a link to their register entry. <a href="#papers">Papers</a> · <a href="#datasets">Datasets</a> · <a href="#code">Code</a></p>
 <h2 id="papers">Papers</h2>
 <p>Papers taken up in our systematic screening since 22 November 2026. Papers questioning mainstream climate findings are tested with the same methods and standards as the rest. The numbers are small, so the proportions say little yet. "Method reviewed, not rerun" means we read the methods and found nothing that called for a rerun; it is a lighter check than "no error found", which means we reproduced or tested the result.</p>

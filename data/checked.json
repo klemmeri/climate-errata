@@ -731,6 +731,24 @@
    "outcome": "reviewed",
    "checked": "2026-11-28",
    "note": "Method read: the revised algorithm is tested on synthetic data with known breakpoints and its parameter uncertainty is sampled. Not rerun."
+  },
+  {
+   "cite": "Schwarzwald & Seager 2024, Journal of Climate",
+   "topic": "The East African paradox: observed March–May drying versus model wetting in CMIP6, AMIP and NMME",
+   "doi": "10.1175/JCLI-D-24-0225.1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read. We looked at whether the 1985–2000 “strongest drying” window was chosen after the fact. The paper shows trends for every start and end year (Fig. 3), names 1985–2000 explicitly as the strongest observed drying period, and notes that the small number of decadal trends and their autocorrelation make the rank histograms hard to interpret. The main result (coupled runs rarely reproduce the drying; runs with observed SSTs do) holds across windows and data products. No material error found."
+  },
+  {
+   "cite": "van der Drift & O’Gorman 2025, Journal of Climate",
+   "topic": "Dependence of convective precipitation extremes on near-surface relative humidity (convection-resolving RCE simulations)",
+   "doi": "10.1175/JCLI-D-24-0738.1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read (arXiv 2412.16306). An idealized modelling study: near-surface humidity is lowered by raising surface evaporative resistance with free-tropospheric temperature held fixed, and the weakening of extremes is split into thermodynamic, dynamic and precipitation-efficiency parts. There is no observational trend or significance claim to rerun; the decomposition is standard and its terms are reported. No material error found."
   }
  ],
  "other_since": "early November 2026",

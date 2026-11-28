@@ -624,6 +624,14 @@
    "outcome": "reviewed",
    "checked": "2026-11-27",
    "note": "Archived allocations (Zenodo 10.5281/zenodo.15791808) checked for internal consistency: country and group Shapley values sum to the same total (0.734 °C), the approximation (mean of leave-one-out and leave-one-in) tracks the exact values, and land-use warming (0.33 °C) matches the stated TCRE. Not rerun."
+  },
+  {
+   "cite": "Aamaas et al. 2025, One Earth",
+   "topic": "Continued global warming from aviation even under high-ambition mitigation scenarios (simple climate model, ICAO scenarios)",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Archived figure data (Zenodo 10.5281/zenodo.14276649; no code archived) checked for unit consistency: CO2 / fuel ratios are 3.16 for Jet A-1 and 2.84 for lower-carbon aviation fuel (10% lower), as stated, across the three ICAO scenarios. Temperature results not rerun."
   }
  ],
  "other_since": "early November 2026",

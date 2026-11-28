@@ -408,6 +408,14 @@
    "note": "We read the authors' code (GitHub JakobDeutloff/TP_paper, archived as Zenodo 10.5281/zenodo.10820599) and checked how carbon released by the Amazon and permafrost tipping elements enters FaIR: each element's stock change in Gt C is split into CO2 (added in Gt C, FaIR v2.0's unit) and CH4 (20% for abrupt thaw, 2.3% for permafrost collapse, converted from Gt C to Mt CH4 with 16/12.011 × 1000). The units are consistent; one output column is labelled Mt C when it holds Mt CH4, but the plotting code converts it correctly. Method reviewed, ensembles not rerun. No material error found."
   },
   {
+   "cite": "World Weather Attribution 2026 (rapid analysis)",
+   "topic": "Fossil fuel emissions have rapidly worsened European heatwaves in just a few decades (Western Europe heatwave, 18–29 June 2026)",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-27",
+   "note": "We tested the study's trend claims with independent station data: 43 long GHCN-Daily stations in France, Germany, Belgium, the Netherlands and Switzerland (1950–2026), regressing the summer's hottest 3-day regional mean anomaly on smoothed global temperature (HadCRUT5, 4-year mean). Daytime heat rises 3.5 °C per °C of global warming (3.8 with 2026 included), and nights 2.4 (2.6), matching the study's 'roughly three times' and 'roughly twice' the global rate. The implied changes since 1976 and 2003 (days about 4.5 and 2.3 °C, nights about 3.1 and 1.6 °C) are, if anything, a little larger than the study's figures (3.5 and 2; 2.4 and 1.3). Our stations are not the study's exact region or dataset (ERA5), and we did not test the probability ratios. No material error found."
+  },
+  {
    "cite": "Turubanova et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",

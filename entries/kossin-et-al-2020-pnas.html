@@ -24,12 +24,12 @@
 <tr><th>Date</th><td>2026-11-10</td></tr>
 </table>
 <h2>Summary</h2>
-<p>Kossin et al. (2020, <i>PNAS</i>), cited in IPCC AR6, reported that the global share of tropical-cyclone fixes at major-hurricane intensity rose between 1979–1997 and 1998–2017. Their significance test allowed for clustering by assuming a variance three times the binomial value; the data show about 5.6 times. With the correct variance the 1979–2017 change is not significant (p ≈ 0.10). <b>The finding nevertheless holds</b>: extended to 2024 with the same satellite record, the trend is clearly significant.</p>
+<p>Kossin et al. (2020, <i>PNAS</i>), cited in IPCC AR6, reported that the global share of tropical-cyclone fixes at major-hurricane intensity rose between 1979–1997 and 1998–2017. Their significance test allowed for serial correlation by reducing the degrees of freedom “by a factor of 3” (assuming an 18-hour decorrelation time), which amounts to a variance three times that of independent fixes; the data show a design effect of about 5.6. With the correct variance the 1979–2017 change is not significant (p ≈ 0.10). <b>The finding nevertheless holds</b>: extended to 2024 with the same satellite record, the trend is clearly significant.</p>
 
 <h2>What we found</h2>
 <ul>
 <li>Data: ADT-HURSAT, the record the paper used, in its 2025 release (1978–2024; 1,885 storms, 18,703 six-hourly fixes at hurricane strength).</li>
-<li><b>The paper's early-versus-late comparison, 1979–2017.</b> Global share 0.421 → 0.453. p = 0.022 under the paper's variance assumption; 0.044 with a storm bootstrap; <b>0.095 with a year bootstrap</b>, which captures the measured design effect of 5.6. Confidence intervals are about 37% wider than published.</li>
+<li><b>The paper's early-versus-late comparison, 1979–2017.</b> Global share 0.421 → 0.453. p = 0.022 with the paper's factor-of-3 reduction; 0.044 with a storm bootstrap; <b>0.095 with a year bootstrap</b>, which captures the measured design effect of 5.6. Confidence intervals are about 37% wider than published.</li>
 <li><b>Annual trend tests</b> (Newey–West), 1979–2017: global +4.7% per decade, p = 0.006, but sensitive to start year (starting in 1982 or 1985 gives p ≈ 0.06).</li>
 <li><b>Extended to 2024:</b> global +4.9% per decade, p &lt; 0.001; excluding the North Atlantic +4.4%, p &lt; 0.001. Significant for start years through 1990. Robust to AR(1), ARMA and block-bootstrap persistence models.</li>
 <li><b>Mechanism:</b> the rise is in time spent at major intensity (hours per major hurricane +2.1 h per decade, p = 0.015), not in more hurricanes becoming major (+2.3% per decade, not significant).</li>

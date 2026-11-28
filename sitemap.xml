@@ -45,8 +45,8 @@
   <url><loc>https://climateerrata.org/entries/ibtracs-tropical-cyclone-archive.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/icoads-r3-1-marine-observations.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/jin-pu-2026-npj-cas.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://climateerrata.org/entries/kossin-et-al-2020-pnas.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://climateerrata.org/entries/koutsoyiannis-et-al-2023-sci.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://climateerrata.org/entries/kossin-et-al-2020-pnas.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
+  <url><loc>https://climateerrata.org/entries/koutsoyiannis-et-al-2023-sci.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/liu-et-al-2026-nat-commun.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/lmoments3-1-0-8-and-standard.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/martinvonk-spei.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
@@ -70,7 +70,7 @@
   <url><loc>https://climateerrata.org/entries/xclim-spi.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/xesmf-conservative-regridding.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/entries/xsdba-xclim-sdba-qdm-bias-adjustment.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
-  <url><loc>https://climateerrata.org/entries/zeng-et-al-2019-ncc-monerie.html</loc><lastmod>2026-11-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://climateerrata.org/entries/zeng-et-al-2019-ncc-monerie.html</loc><lastmod>2026-11-28</lastmod><priority>0.8</priority></url>
   <url><loc>https://climateerrata.org/</loc><lastmod>2026-11-27</lastmod><priority>1.0</priority></url>
   <url><loc>https://climateerrata.org/policies.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority></url>
   <url><loc>https://climateerrata.org/report.html</loc><lastmod>2026-11-27</lastmod><priority>0.6</priority></url>

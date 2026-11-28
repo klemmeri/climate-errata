@@ -344,7 +344,7 @@
    "note": "The Supplementary Materials say that standard errors for each species' overall rate of change were propagated across years assuming zero covariance between years. Because every year's rate is built from the same regional coefficients, that assumption would make the standard errors far too small if applied literally. We checked the published values in Tables S5 and S9: for the 192 species fitted in more than one region, the overall standard error is about as large as, or larger than, the largest regional standard error (median ratio 0.96), so the reported uncertainties are not deflated and the species classifications are not affected. No material error found.",
    "reporting": {
     "verdict": "accurate",
-    "note": "AAAS's release and the main coverage (NPR, National Geographic, CBS, The Hill) reported the paper's headline correctly: total butterfly abundance in the contiguous US fell 22% from 2000 to 2020, about 1.3% a year. 'One in five butterflies have disappeared' (National Geographic) is a fair plain-language version. Few outlets gave the paper's uncertainty range for the annual decline (0.2% to 2.3% a year), and CBS cited a different species count from the paper's."
+    "note": "AAAS's release and the main coverage (NPR, National Geographic, CBS, Yahoo News) reported the paper's headline correctly: total butterfly abundance in the contiguous US fell 22% from 2000 to 2020, about 1.3% a year. 'One in five butterflies have disappeared' (National Geographic) is a fair plain-language version. Few outlets gave the paper's uncertainty range for the annual decline (0.2% to 2.3% a year)."
    }
   },
   {

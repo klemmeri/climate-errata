@@ -579,6 +579,15 @@
    "side": "questioning",
    "outcome": "withauthors",
    "count": 5
+  },
+  {
+   "cite": "Sloughter, Nicholls, Tang, Kleinen, Zhang & Rogelj 2026, GMD",
+   "topic": "Temperature-dependent natural (wetland) methane emissions in MAGICC v7.6",
+   "doi": "10.5194/gmd-19-9063-2026",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Model code (Zenodo 10.5281/zenodo.17054564) checked: the wetland term adds slope (Mt CH4/yr/K) × warming since the budget years to natural emissions, units consistent with the 30 ± 13 Mt CH4/K prior. Not rerun. One typo in the text ('216 Mt K−1' for a peak emission rate)."
   }
  ],
  "other_since": "early November 2026",

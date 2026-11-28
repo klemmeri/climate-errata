@@ -615,6 +615,15 @@
    "outcome": "reviewed",
    "checked": "2026-11-27",
    "note": "Arithmetic checked: 1.6 billion cattle × 70 kg CH4/yr, 9.6-yr lifetime → 357 ppb and −0.209 W/m², close to standard estimates. The −0.04 °C then follows from dividing by an assumed response of 5.6 W m⁻² K⁻¹, several times the IPCC AR6 net feedback (about 1.2 W m⁻² K⁻¹; the paper cites 1.8). With the AR6 value the same forcing gives about −0.18 °C at equilibrium. The result rests on that assumption rather than on a calculation error. Not contacted."
+  },
+  {
+   "cite": "Wheatley 2025, Methane (MDPI)",
+   "topic": "Methane and the warming blame game: Shapley-value attribution of methane warming to countries (Hector)",
+   "doi": "10.3390/methane4030020",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Archived allocations (Zenodo 10.5281/zenodo.15791808) checked for internal consistency: country and group Shapley values sum to the same total (0.734 °C), the approximation (mean of leave-one-out and leave-one-in) tracks the exact values, and land-use warming (0.33 °C) matches the stated TCRE. The text calls the forcing–concentration relationship convex; for methane it is concave, which is what makes marginal attribution low, as the paper finds. Not rerun."
   }
  ],
  "other_since": "early November 2026",

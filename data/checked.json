@@ -749,6 +749,33 @@
    "outcome": "reviewed",
    "checked": "2026-11-28",
    "note": "Method read (arXiv 2412.16306). An idealized modelling study: near-surface humidity is lowered by raising surface evaporative resistance with free-tropospheric temperature held fixed, and the weakening of extremes is split into thermodynamic, dynamic and precipitation-efficiency parts. There is no observational trend or significance claim to rerun; the decomposition is standard and its terms are reported. No material error found."
+  },
+  {
+   "cite": "Solanki, Vegad, Kushwaha & Mishra 2025, Water Resources Research",
+   "topic": "Improving streamflow prediction with multiple hydrological models and machine-learning post-processing (Narmada basin)",
+   "doi": "10.1029/2024WR038192",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method and archived code read (Zenodo 11393403). We looked for leakage between training and evaluation data: the split is by time (evaluation 2011–2016), cross-validation for hyperparameters stays within the training years, and the LSTM's evaluation-period loss is only plotted, not used to choose settings. The input files are not in the archive, so nothing was rerun. No material error found."
+  },
+  {
+   "cite": "Götte & Brunner 2024, Water Resources Research",
+   "topic": "Hydrological drought-to-flood transitions across US hydroclimates (1,002 catchments, 1970–2022)",
+   "doi": "10.1029/2023WR036504",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: variable-threshold droughts, fixed-threshold floods with a 10-day independence gap, transitions counted per catchment; natural vs regulated difference (5.9 vs 5.1 seasonal transitions) tested with an exact Poisson test. With about 500 catchments in each group the difference would remain clear even allowing for variation between catchments. Event data (HydroShare) could not be reached, so nothing was rerun. No material error found."
+  },
+  {
+   "cite": "Lyu & Yong 2024, Water Resources Research",
+   "topic": "Double machine learning merged precipitation product for the Tibetan Plateau (DML-TPP)",
+   "doi": "10.1029/2023WR035643",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read. Training uses CMPA gauge cells for 2016–2019 and the main comparison uses the same cells in 2015 (a held-out year); a separate check against 23 independent gauges is reported, where the paper states that ERA5 scores better than the new product on correlation, RMSE and bias. Not rerun. No material error found."
   }
  ],
  "other_since": "early November 2026",

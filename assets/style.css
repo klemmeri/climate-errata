@@ -72,3 +72,6 @@ form.report .check{display:flex;gap:8px;align-items:flex-start;font-weight:400}
 form.report .check input{width:auto;margin-top:6px}
 .hidden{display:none}
 a.pill.sig{color:var(--fg);text-decoration:none}a.pill.sig:hover{text-decoration:underline}
+.stats-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:15px}
+.stats-table th,.stats-table td{padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.stats-table th{text-align:left;color:var(--muted);font-weight:600}

@@ -3,7 +3,7 @@
 lastmod = today for pages that differ from the last commit (or are new),
 otherwise the date of the last commit that touched the page.
 """
-import datetime, subprocess
+import datetime, subprocess, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,3 +46,15 @@ xml.append("</urlset>")
 (ROOT / "sitemap.xml").write_text("\n".join(xml) + "\n")
 (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
 print(len(pages), "pages in sitemap.xml")
+
+
+# Page list for stats.html (path -> page title), regenerated on every build
+import json, html as _html
+_sp = []
+for rel in pages:
+    t = (ROOT / rel).read_text(errors="ignore")
+    m = re.search(r"<title>(.*?)</title>", t, re.S)
+    title = _html.unescape(m.group(1)).replace(" — Climate Errata", "").strip() if m else rel
+    path = "/" if rel == "index.html" else ("/" + rel[:-len("index.html")] if rel.endswith("/index.html") else "/" + rel)
+    _sp.append({"path": path, "title": title})
+(ROOT / "stats_pages.json").write_text(json.dumps(_sp, ensure_ascii=False, indent=0) + "\n")

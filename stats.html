@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Site statistics — Climate Errata</title>
+<meta name="description" content="How many times each Climate Errata page has been viewed, counted by GoatCounter (no cookies).">
+<link rel="stylesheet" href="/assets/style.css"><script data-goatcounter="https://climateerrata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script></head>
+<body>
+<header class="site"><div class="banner"><div class="wrap"><a class="brand" href="/"><svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="9" fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="M7 27 L13 22 L18 25 L24 15 L29 18 L34 10" fill="none" stroke="#7cc4ff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 31 L34 31" stroke="currentColor" stroke-opacity=".35" stroke-width="1.6"/><circle cx="24" cy="15" r="5.2" fill="none" stroke="#f4c26b" stroke-width="2.4"/><path d="M27.8 18.8 L31.5 22.5" stroke="#f4c26b" stroke-width="2.6" stroke-linecap="round"/></svg><span class="bt"><span class="bn">Climate Errata</span><span class="tag">Independent, reproducible checks of weather, climate and environmental papers, datasets and code</span></span></a></div></div>
+<nav class="site"><div class="wrap"><a href="/">Register</a><a href="/checked.html">What we checked</a><a href="/datasets/">Datasets</a><a href="/search.html">Search</a><a href="/doi.html">Discuss a DOI</a><a href="/report.html">Write to us</a><a href="/about.html">How it works</a><a href="/policies.html">Policies</a><a href="/updates.html">Updates</a><a href="https://github.com/klemmeri/climate-errata/discussions">Discussions</a></div></nav></header>
+<main><div class="wrap">
+<h1>Site statistics</h1>
+<p class="lede">How often each page of this site has been viewed. Counts come live from <a href="https://www.goatcounter.com/">GoatCounter</a>, a privacy-friendly counter that sets no cookies and collects no personal data. They include every view since counting began on 25 November 2026, excluding the maintainer's own visits, visitors who block scripts, and most bots.</p>
+<div id="total" class="stats"></div>
+<p class="meta" id="status">Loading counts…</p>
+<table class="stats-table" id="tbl" hidden>
+<thead><tr><th>Page</th><th style="text-align:right">Views</th><th style="text-align:right">Visitors</th></tr></thead>
+<tbody></tbody></table>
+<p class="meta" style="margin-top:20px">Visitors = distinct visitors per page, estimated by GoatCounter without cookies. A person who reads several pages counts once on each.</p>
+</div></main>
+<footer class="site"><div class="wrap">Maintained by Mark L. Morrissey, Ph.D., Professor Emeritus of Meteorology, School of Meteorology, University of Oklahoma. Content CC BY 4.0; code MIT. Corrections to our own entries are made openly and dated. · <a href="/policies.html">Policies and privacy</a> · <a href="/updates.html">Site updates</a> · <a href="/stats.html">Site statistics</a> · <a href="/report.html">Write to us</a></div></footer>
+<script>
+const GC='https://climateerrata.goatcounter.com/counter/';
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const num=s=>parseInt(String(s||'0').replace(/[^0-9]/g,''),10)||0;
+async function count(path){
+  try{const r=await fetch(GC+encodeURIComponent(path)+'.json');if(!r.ok)return null;return await r.json();}catch(e){return null;}
+}
+async function main(){
+  const st=document.getElementById('status');
+  let pages=[];
+  try{pages=await (await fetch('/stats_pages.json')).json();}catch(e){}
+  const tot=await count('TOTAL');
+  if(!tot){st.textContent='Counts are not available right now.';return;}
+  document.getElementById('total').innerHTML=`<div class="stat"><b>${esc(tot.count)}</b><span>page views in total</span></div>`;
+  const rows=[];let i=0;
+  async function worker(){while(i<pages.length){const p=pages[i++];const c=await count(p.path);if(c)rows.push({...p,v:num(c.count),u:num(c.count_unique)});}}
+  await Promise.all(Array.from({length:6},worker));
+  rows.sort((a,b)=>b.v-a.v||a.title.localeCompare(b.title));
+  const shown=rows.filter(r=>r.v>0);
+  document.querySelector('#tbl tbody').innerHTML=shown.map(r=>`<tr><td><a href="${esc(r.path)}">${esc(r.title)}</a></td><td style="text-align:right">${r.v.toLocaleString()}</td><td style="text-align:right">${r.u.toLocaleString()}</td></tr>`).join('');
+  document.getElementById('tbl').hidden=false;
+  st.textContent=`${shown.length} of ${pages.length} pages have been viewed. Updated ${new Date().toLocaleString()}.`;
+}
+main();
+</script>
+</body></html>

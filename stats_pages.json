@@ -1,0 +1,314 @@
+[
+{
+"path": "/about.html",
+"title": "How it works"
+},
+{
+"path": "/check.html",
+"title": "Ask for a check"
+},
+{
+"path": "/checked.html",
+"title": "What we checked"
+},
+{
+"path": "/datasets/asos.html",
+"title": "ASOS"
+},
+{
+"path": "/datasets/cpc-unified.html",
+"title": "CPC Unified Gauge Analysis"
+},
+{
+"path": "/datasets/e-obs.html",
+"title": "E-OBS"
+},
+{
+"path": "/datasets/era5.html",
+"title": "ERA5"
+},
+{
+"path": "/datasets/ghcn-cams.html",
+"title": "GHCN-CAMS"
+},
+{
+"path": "/datasets/gpcc.html",
+"title": "GPCC Monthly"
+},
+{
+"path": "/datasets/gpcp.html",
+"title": "GPCP Monthly"
+},
+{
+"path": "/datasets/hadsst4.html",
+"title": "HadSST4"
+},
+{
+"path": "/datasets/hpd.html",
+"title": "COOP Hourly Precipitation (HPD)"
+},
+{
+"path": "/datasets/ibtracs.html",
+"title": "IBTrACS"
+},
+{
+"path": "/datasets/icoads.html",
+"title": "ICOADS"
+},
+{
+"path": "/datasets/imerg.html",
+"title": "IMERG"
+},
+{
+"path": "/datasets/",
+"title": "Datasets"
+},
+{
+"path": "/datasets/merra-2.html",
+"title": "MERRA-2"
+},
+{
+"path": "/datasets/oisst.html",
+"title": "OISST v2.1"
+},
+{
+"path": "/doi.html",
+"title": "Discuss a paper or dataset by DOI"
+},
+{
+"path": "/entries/ali-et-al-2026-npj-cas.html",
+"title": "Ali et al. 2026, npj CAS (hurricane rainfall scaling)"
+},
+{
+"path": "/entries/asos-dew-point-sensor-swap.html",
+"title": "ASOS dew-point sensor swap (DTS1, 2002–06)"
+},
+{
+"path": "/entries/asos-wind-sensors.html",
+"title": "ASOS wind sensors (sonic swap 2005–09; commissioning)"
+},
+{
+"path": "/entries/boers-2021-ncc-boulton-et-al.html",
+"title": "Boers 2021 NCC (AMOC); Boulton et al. 2022 NCC (Amazon)"
+},
+{
+"path": "/entries/cdo-etccdi-operators.html",
+"title": "CDO etccdi operators"
+},
+{
+"path": "/entries/clean-checks-mauritsen-2025-nerem-2018.html",
+"title": "Clean checks: Mauritsen 2025 (energy imbalance doubled), Nerem 2018 (sea-level acceleration), Dangendorf 2026 (coastal extremes), Xu 2026 CEE (drought), Guerreiro 2018 (hourly extremes), IGCC 2025 marine-heatwave indicator"
+},
+{
+"path": "/entries/clean-checks-properscoring-pykrige-thermofeel-esmvalcore.html",
+"title": "Clean checks: properscoring, PyKrige, thermofeel, ESMValCore, xskillscore, MBC, R SPEI PET, GEFF/xclim fire weather, dlnm heat-mortality workflow"
+},
+{
+"path": "/entries/climada-er11-hurricane-wind-profile.html",
+"title": "CLIMADA (ETH) ER11 hurricane wind profile"
+},
+{
+"path": "/entries/climate-indices.html",
+"title": "climate_indices (SPI, Pearson III)"
+},
+{
+"path": "/entries/climdex-pcic-etccdi-indices.html",
+"title": "climdex.pcic ETCCDI indices (feeds HadEX3, CMIP6 index sets)"
+},
+{
+"path": "/entries/climpact.html",
+"title": "ClimPACT (WMO indices software)"
+},
+{
+"path": "/entries/climpred.html",
+"title": "climpred (decadal prediction verification)"
+},
+{
+"path": "/entries/coare-air-sea-flux-algorithm.html",
+"title": "COARE air–sea flux algorithm (CMEPS, E3SM, NorESM)"
+},
+{
+"path": "/entries/e-obs-v34-0e-precipitation-greece.html",
+"title": "E-OBS v34.0e precipitation, Greece 2005–2014"
+},
+{
+"path": "/entries/e-obs-v34-0e-precipitation-northern.html",
+"title": "E-OBS v34.0e precipitation, northern Morocco from February 2006"
+},
+{
+"path": "/entries/earthkit-meteo.html",
+"title": "earthkit-meteo (ECMWF)"
+},
+{
+"path": "/entries/eofs-xeofs.html",
+"title": "eofs / xeofs (EOF analysis)"
+},
+{
+"path": "/entries/geocat-comp-gradient.html",
+"title": "GeoCAT-comp gradient()"
+},
+{
+"path": "/entries/geocat-comp-seasonal-averages.html",
+"title": "GeoCAT-comp seasonal averages"
+},
+{
+"path": "/entries/global-warming-index-igcc-forcing-zelinka.html",
+"title": "Global Warming Index, IGCC forcing, Zelinka ECS tables"
+},
+{
+"path": "/entries/hamed-rao-test-default.html",
+"title": "Hamed–Rao test default (pyMannKendall, modifiedmk)"
+},
+{
+"path": "/entries/hugonnet-et-al-2021-nature.html",
+"title": "Hugonnet et al. 2021, Nature (accelerated global glacier mass loss, 2000–2019)"
+},
+{
+"path": "/entries/hydroeval-non-parametric-kge.html",
+"title": "hydroeval non-parametric KGE"
+},
+{
+"path": "/entries/ibtracs-tropical-cyclone-archive.html",
+"title": "IBTrACS tropical cyclone archive"
+},
+{
+"path": "/entries/icoads-r3-1-marine-observations.html",
+"title": "ICOADS R3.1 marine observations"
+},
+{
+"path": "/entries/jin-pu-2026-npj-cas.html",
+"title": "Jin & Pu 2026, npj CAS (warming acceleration)"
+},
+{
+"path": "/entries/kossin-et-al-2020-pnas.html",
+"title": "Kossin et al. 2020, PNAS (major-hurricane share; IPCC AR6)"
+},
+{
+"path": "/entries/koutsoyiannis-et-al-2023-sci.html",
+"title": "Koutsoyiannis et al. 2023, Sci (temperature–CO2 causality, “Hens and Eggs”)"
+},
+{
+"path": "/entries/liu-et-al-2026-nat-commun.html",
+"title": "Liu et al. 2026, Nat Commun (intense tropical-cyclone season length)"
+},
+{
+"path": "/entries/lmoments3-1-0-8-and-standard.html",
+"title": "lmoments3 1.0.8 (Ouranos; L-moment engine behind xclim PWM fits) and standard_precip SPI"
+},
+{
+"path": "/entries/martinvonk-spei.html",
+"title": "martinvonk/SPEI (Python)"
+},
+{
+"path": "/entries/metpy-vorticity-divergence.html",
+"title": "MetPy vorticity/divergence"
+},
+{
+"path": "/entries/modifiedmk-mmky.html",
+"title": "modifiedmk (R) mmky()"
+},
+{
+"path": "/entries/nasa-merra-2-corrected-precipitation-over.html",
+"title": "NASA MERRA-2 corrected precipitation (PRECTOTCORR) over Australia"
+},
+{
+"path": "/entries/ncar-mmm-physics-kim-tofd-option.html",
+"title": "NCAR MMM-physics (WRF/MPAS) KIM TOFD option"
+},
+{
+"path": "/entries/noaa-hourly-precipitation-dataset.html",
+"title": "NOAA hourly precipitation dataset (HPD)"
+},
+{
+"path": "/entries/noaa-oisst-v2-1.html",
+"title": "NOAA OISST v2.1"
+},
+{
+"path": "/entries/pcmdi-metrics-package.html",
+"title": "PCMDI Metrics Package (CMIP benchmarking)"
+},
+{
+"path": "/entries/pyextremes-gaps.html",
+"title": "pyextremes: missing data biased return values low"
+},
+{
+"path": "/entries/pymannkendall.html",
+"title": "pyMannKendall (Python)"
+},
+{
+"path": "/entries/r-spei-package.html",
+"title": "R SPEI package (spi/spei)"
+},
+{
+"path": "/entries/rte-rrtmgp-radiation-code.html",
+"title": "RTE+RRTMGP radiation code (CESM3, E3SM, ICON)"
+},
+{
+"path": "/entries/rwwa.html",
+"title": "rwwa (World Weather Attribution R code)"
+},
+{
+"path": "/entries/skyborn.html",
+"title": "Skyborn (optimal fingerprinting)"
+},
+{
+"path": "/entries/tcpypi.html",
+"title": "tcpyPI (hurricane potential intensity)"
+},
+{
+"path": "/entries/wrf-python-updraft-helicity.html",
+"title": "wrf-python updraft helicity"
+},
+{
+"path": "/entries/xcdat-seasonal-averages.html",
+"title": "xCDAT seasonal averages"
+},
+{
+"path": "/entries/xclim-pet-and-heat-index.html",
+"title": "xclim PET (Thornthwaite) and heat index"
+},
+{
+"path": "/entries/xclim-spi.html",
+"title": "xclim SPI (Ouranos)"
+},
+{
+"path": "/entries/xesmf-conservative-regridding.html",
+"title": "xESMF conservative regridding"
+},
+{
+"path": "/entries/xsdba-xclim-sdba-qdm-bias-adjustment.html",
+"title": "xsdba / xclim.sdba QDM bias adjustment (Ouranos)"
+},
+{
+"path": "/entries/zeng-et-al-2019-ncc-monerie.html",
+"title": "Zeng et al. 2019 NCC; Monerie et al. 2026 Clim Dyn (wind stilling)"
+},
+{
+"path": "/",
+"title": "Climate Errata — independent, reproducible checks of climate papers, datasets and code"
+},
+{
+"path": "/policies.html",
+"title": "Policies and privacy"
+},
+{
+"path": "/report.html",
+"title": "Write to us"
+},
+{
+"path": "/scale.html",
+"title": "Why scale matters"
+},
+{
+"path": "/search.html",
+"title": "Search"
+},
+{
+"path": "/stats.html",
+"title": "Site statistics"
+},
+{
+"path": "/updates.html",
+"title": "Site updates"
+}
+]

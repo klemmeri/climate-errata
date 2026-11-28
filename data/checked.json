@@ -769,6 +769,15 @@
    "note": "Method read: variable-threshold droughts, fixed-threshold floods with a 10-day independence gap, transitions counted per catchment; natural vs regulated difference (5.9 vs 5.1 seasonal transitions) tested with an exact Poisson test. With about 500 catchments in each group the difference would remain clear even allowing for variation between catchments. Event data (HydroShare) could not be reached, so nothing was rerun. No material error found."
   },
   {
+   "cite": "Wang, Luo, Song, Wu, Chen & Zhang 2024, Geophysical Research Letters",
+   "topic": "Precipitation seasonality (wet-season minus dry-season 3-month totals) amplifies as Earth warms",
+   "doi": "10.1029/2024GL109132",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read. Seasonality is the difference between the wettest and driest 3-month totals per grid cell in eight gridded data sets (1982–2014) and 11 CMIP6 models; trends by linear regression. The paper itself says the increase is mainly from wet-season precipitation. Not rerun. No material error found."
+  },
+  {
    "cite": "Lyu & Yong 2024, Water Resources Research",
    "topic": "Double machine learning merged precipitation product for the Tibetan Plateau (DML-TPP)",
    "doi": "10.1029/2023WR035643",

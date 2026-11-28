@@ -22,23 +22,30 @@ const GC='https://climateerrata.goatcounter.com/counter/';
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const num=s=>parseInt(String(s||'0').replace(/[^0-9]/g,''),10)||0;
 async function count(path){
-  try{const r=await fetch(GC+encodeURIComponent(path)+'.json');if(!r.ok)return null;return await r.json();}catch(e){return null;}
+  try{const r=await fetch(GC+encodeURIComponent(path)+'.json');const j=await r.json();return {v:num(j.count),u:num(j.count_unique)};}catch(e){return null;}
+}
+// The host serves pages without ".html", so a page can be recorded under both forms; add them.
+function variants(path){
+  if(path.endsWith('.html')) return [path.slice(0,-5), path];
+  return [path];
 }
 async function main(){
   const st=document.getElementById('status');
   let pages=[];
   try{pages=await (await fetch('/stats_pages.json')).json();}catch(e){}
-  const tot=await count('TOTAL');
-  if(!tot){st.textContent='Counts are not available right now.';return;}
-  document.getElementById('total').innerHTML=`<div class="stat"><b>${esc(tot.count)}</b><span>page views in total</span></div>`;
-  const rows=[];let i=0;
-  async function worker(){while(i<pages.length){const p=pages[i++];const c=await count(p.path);if(c)rows.push({...p,v:num(c.count),u:num(c.count_unique)});}}
+  const rows=[];let i=0,fail=0;
+  async function worker(){while(i<pages.length){const p=pages[i++];let v=0,u=0,ok=false;
+    for(const q of variants(p.path)){const c=await count(q);if(c){ok=true;v+=c.v;u+=c.u;}}
+    if(ok) rows.push({...p,v,u}); else fail++;}}
   await Promise.all(Array.from({length:6},worker));
+  if(!rows.length){st.textContent='Counts are not available right now.';return;}
   rows.sort((a,b)=>b.v-a.v||a.title.localeCompare(b.title));
   const shown=rows.filter(r=>r.v>0);
+  const total=rows.reduce((a,r)=>a+r.v,0);
+  document.getElementById('total').innerHTML=`<div class="stat"><b>${total.toLocaleString()}</b><span>page views</span></div><div class="stat"><b>${shown.length}</b><span>pages viewed</span></div>`;
   document.querySelector('#tbl tbody').innerHTML=shown.map(r=>`<tr><td><a href="${esc(r.path)}">${esc(r.title)}</a></td><td style="text-align:right">${r.v.toLocaleString()}</td><td style="text-align:right">${r.u.toLocaleString()}</td></tr>`).join('');
   document.getElementById('tbl').hidden=false;
-  st.textContent=`${shown.length} of ${pages.length} pages have been viewed. Updated ${new Date().toLocaleString()}.`;
+  st.textContent=`${shown.length} of ${pages.length} pages have been viewed. Updated ${new Date().toLocaleString()}.`+(fail?` (${fail} pages could not be read.)`:'');
 }
 main();
 </script>

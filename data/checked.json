@@ -631,7 +631,7 @@
    "side": "mainstream",
    "outcome": "reviewed",
    "checked": "2026-11-27",
-   "note": "Archived figure data (Zenodo 10.5281/zenodo.14276649; no code archived) checked for unit consistency: CO2 / fuel ratios are 3.16 for Jet A-1 and 2.84 for lower-carbon aviation fuel (10% lower), as stated, across the three ICAO scenarios. Temperature results not rerun."
+   "note": "Archived figure data (Zenodo 10.5281/zenodo.14276649; no code archived) checked for unit consistency: CO2 / fuel ratios are 3.16 for Jet A-1 and 2.84 for lower-carbon aviation fuel (10% lower) across the three ICAO scenarios. Temperature results not rerun."
   }
  ],
  "other_since": "early November 2026",

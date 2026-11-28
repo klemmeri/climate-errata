@@ -341,7 +341,11 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-26",
-   "note": "The Supplementary Materials say that standard errors for each species' overall rate of change were propagated across years assuming zero covariance between years. Because every year's rate is built from the same regional coefficients, that assumption would make the standard errors far too small if applied literally. We checked the published values in Tables S5 and S9: for the 192 species fitted in more than one region, the overall standard error is about as large as, or larger than, the largest regional standard error (median ratio 0.96), so the reported uncertainties are not deflated and the species classifications are not affected. No material error found."
+   "note": "The Supplementary Materials say that standard errors for each species' overall rate of change were propagated across years assuming zero covariance between years. Because every year's rate is built from the same regional coefficients, that assumption would make the standard errors far too small if applied literally. We checked the published values in Tables S5 and S9: for the 192 species fitted in more than one region, the overall standard error is about as large as, or larger than, the largest regional standard error (median ratio 0.96), so the reported uncertainties are not deflated and the species classifications are not affected. No material error found.",
+   "reporting": {
+    "verdict": "accurate",
+    "note": "AAAS's release and the main coverage (NPR, National Geographic, CBS, The Hill) reported the paper's headline correctly: total butterfly abundance in the contiguous US fell 22% from 2000 to 2020, about 1.3% a year. 'One in five butterflies have disappeared' (National Geographic) is a fair plain-language version. Few outlets gave the paper's uncertainty range for the annual decline (0.2% to 2.3% a year), and CBS cited a different species count from the paper's."
+   }
   },
   {
    "cite": "Callahan et al. 2025, Nature Climate Change",
@@ -452,7 +456,11 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-25",
-   "note": "Recomputed the 1990s-to-2010s biome changes and their uncertainties from Table 1 and the USDA data archive (RDS-2023-0051), treating decades as independent as the paper's own trend test does. The global sink result is unaffected. No material error found."
+   "note": "Recomputed the 1990s-to-2010s biome changes and their uncertainties from Table 1 and the USDA data archive (RDS-2023-0051), treating decades as independent as the paper's own trend test does. The global sink result is unaffected. No material error found.",
+   "reporting": {
+    "verdict": "accurate",
+    "note": "The USDA Forest Service and IIASA releases and the coverage (Phys.org, EurekAlert) reported the steady global forest sink (about 3.5 Pg C a year) together with the paper's regional losses in boreal and intact tropical forests, matching the paper."
+   }
   },
   {
    "cite": "Wu et al. 2025, Nature Climate Change",

@@ -448,13 +448,17 @@
    "note": "We tested the study's trend claims with independent station data: 43 long GHCN-Daily stations in France, Germany, Belgium, the Netherlands and Switzerland (1950–2026), regressing the summer's hottest 3-day regional mean anomaly on smoothed global temperature (HadCRUT5, 4-year mean). Daytime heat rises 3.5 °C per °C of global warming (3.8 with 2026 included), and nights 2.4 (2.6), matching the study's 'roughly three times' and 'roughly twice' the global rate. The implied changes since 1976 and 2003 (days about 4.5 and 2.3 °C, nights about 3.1 and 1.6 °C) are, if anything, a little larger than the study's figures (3.5 and 2; 2.4 and 1.3). Our stations are not the study's exact region or dataset (ERA5), and we did not test the probability ratios. No material error found."
   },
   {
-   "cite": "Turubanova et al. 2025, PNAS",
+   "cite": "Potapov et al. 2025, PNAS",
    "topic": "Unprecedentedly high global forest disturbance due to fire in 2023 and 2024",
    "doi": "10.1073/pnas.2505418122",
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-27",
-   "note": "The data producers have warned that Global Forest Change loss detection became more sensitive after a 2011 method change and Landsat 8 (2013), and the paper's 2002–2024 trends span those changes. We summed the authors' fire-loss layer and all forest loss (tree cover ≥30% in 2000) by year and latitude zone in Google Earth Engine. Global fire loss does step up at 2011–2012 (3-year means rise by about 65%, mostly in boreal forest, where all loss rises too), but the increase continues at the same rate within the consistent period: about +5.5% per year over 2012–2024 against +5.4% over 2001–2024, and 2020–2024 averages 12.9 Mha a year against 8.3 Mha in 2012–2016. There is no step at 2022 (Landsat 9). The headline increase and the 2023–2024 records do not depend on the detection changes. No material error found."
+   "note": "The data producers have warned that Global Forest Change loss detection became more sensitive after a 2011 method change and Landsat 8 (2013), and the paper's 2002–2024 trends span those changes. We summed the authors' fire-loss layer and all forest loss (tree cover ≥30% in 2000) by year and latitude zone in Google Earth Engine. Global fire loss does step up at 2011–2012 (3-year means rise by about 65%, mostly in boreal forest, where all loss rises too), but the increase continues at the same rate within the consistent period: about +5.5% per year over 2012–2024 against +5.4% over 2001–2024, and 2020–2024 averages 12.9 Mha a year against 8.3 Mha in 2012–2016. There is no step at 2022 (Landsat 9). The headline increase and the 2023–2024 records do not depend on the detection changes. No material error found.",
+   "reporting": {
+    "verdict": "accurate",
+    "note": "The University of Maryland release and the World Resources Institute (a co-author institution) reported the paper's figures: fire-driven forest disturbance in 2023–24 about twice the 2002–22 average worldwide and about three times in the tropics, with 2023 and 2024 the highest since 2001."
+   }
   },
   {
    "cite": "Krumpen et al. 2025, Nature Climate Change",

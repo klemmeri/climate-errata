@@ -36,7 +36,11 @@
    "side": "mainstream",
    "outcome": "clean",
    "checked": "2026-11-22",
-   "note": "Tested for rain-gauge sensor changes with the authors' station data; the increase stands."
+   "note": "Tested for rain-gauge sensor changes with the authors' station data; the increase stands.",
+   "reporting": {
+    "verdict": "accurate",
+    "note": "The releases from TU Wien, GeoSphere Austria and the University of Graz reported the paper's figures as published: about 15% more hourly and 8% more daily heavy rainfall over the last four decades, after no trend from 1950 to 1980, from two independent Austrian networks."
+   }
   },
   {
    "cite": "Bevacqua et al. 2025, Nature Climate Change",
@@ -45,7 +49,11 @@
    "side": "mainstream",
    "outcome": "clean",
    "checked": "2026-11-22",
-   "note": "Idealized experiment reproduced, including with year-to-year persistence."
+   "note": "Idealized experiment reproduced, including with year-to-year persistence.",
+   "reporting": {
+    "verdict": "accurate",
+    "note": "Coverage (AFP via CTV and Dawn; Bloomberg via Insurance Journal) mostly kept the paper's key distinction: a single year above 1.5 °C is not a breach of the Paris goal, which is a 20-year average, but signals that the world has most probably entered the 20-year period that will reach it, unless very stringent mitigation follows. Bloomberg's opening line ('may have already missed its chance') went a little beyond the paper's conditional wording but kept 'may'."
+   }
   },
   {
    "cite": "Byrne et al. 2024, Nature",

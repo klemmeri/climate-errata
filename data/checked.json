@@ -232,7 +232,11 @@
    "side": "mainstream",
    "outcome": "reviewed",
    "checked": "2026-11-23",
-   "note": "Method reviewed; not rerun."
+   "note": "Method reviewed; not rerun.",
+   "reporting": {
+    "verdict": "accurate",
+    "note": "The Berkeley Lab release, Eos, CBS and ScienceDaily described Category 6 as a hypothetical extension (sustained winds above about 192 mph) proposed to convey risk, not an official change to the scale, and correctly said five storms since 2013 would have qualified."
+   }
   },
   {
    "cite": "Connolly, Connolly, Soon et al. 2019, Geosciences",
@@ -286,7 +290,11 @@
    "side": "mainstream",
    "outcome": "reviewed",
    "checked": "2026-11-24",
-   "note": "Method reviewed (InSAR vertical land motion, AR6 geocentric projections without VLM to avoid double counting, bathtub inundation below MHW with defenses); not rerun."
+   "note": "Method reviewed (InSAR vertical land motion, AR6 geocentric projections without VLM to avoid double counting, bathtub inundation below MHW with defenses); not rerun.",
+   "reporting": {
+    "verdict": "mixed",
+    "note": "The paper's headline (with existing flood defenses) is 55,000–273,000 people exposed by 2050. The Virginia Tech release's 'as many as 500,000' and '1 in 50 people', and Live Science's 'more than half a million', come from the paper's upper bound for the no-defenses case (about 518,000), without saying so. Live Science's headline that 32 cities are 'sinking into the ocean' is not the paper's wording; the paper reports 24 of 32 cities subsiding faster than 2 mm/yr. ABC and AFP used the defended 273,000 figure."
+   }
   },
   {
    "cite": "Schöngart et al. 2025, Nature Climate Change",

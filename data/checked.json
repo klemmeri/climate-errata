@@ -776,6 +776,24 @@
    "outcome": "reviewed",
    "checked": "2026-11-28",
    "note": "Method read. Training uses CMPA gauge cells for 2016–2019 and the main comparison uses the same cells in 2015 (a held-out year); a separate check against 23 independent gauges is reported, where the paper states that ERA5 scores better than the new product on correlation, RMSE and bias. Not rerun. No material error found."
+  },
+  {
+   "cite": "Xu, Chen, Corzo, Xu, Zhang, Xiong, Liu & Xia 2024, Water Resources Research",
+   "topic": "Hybrid VIC + CNN-GRU model for 1–6-month reservoir inflow prediction (Danjiangkou)",
+   "doi": "10.1029/2023WR035618",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: VIC calibrated 1980–86, GCM bias correction and grid-cell selection on 1983–2000, testing 2001–2010, with a reverse split (1993–2010 training, 1983–1992 testing) as a check. The best predictor combination is reported from the test period, which slightly favours the hybrid models, but the gains reported over the VIC and deep-learning baselines are large compared with that effect. Not rerun. No material error found."
+  },
+  {
+   "cite": "Yang, Wu, Yuan, Ren, Sheffield, Fang, Jiang & Liu 2024, Water Resources Research",
+   "topic": "Human impact on hydrological drought and drought propagation in China (PCR-GLOBWB 2.0, natural vs human-influenced runs)",
+   "doi": "10.1029/2023WR035443",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: paired natural and human-influenced model runs, SPI and SRI with run theory, propagation rate and time compared between scenarios. Model-based comparison; not rerun. No material error found."
   }
  ],
  "other_since": "early November 2026",

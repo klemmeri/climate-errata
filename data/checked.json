@@ -794,6 +794,24 @@
    "outcome": "reviewed",
    "checked": "2026-11-28",
    "note": "Method read: paired natural and human-influenced model runs, SPI and SRI with run theory, propagation rate and time compared between scenarios. Model-based comparison; not rerun. No material error found."
+  },
+  {
+   "cite": "Heinicke et al. 2024, Environmental Research Letters",
+   "topic": "Global hydrological models continue to overestimate river discharge (ISIMIP3a, nine models, 644 GRDC stations)",
+   "doi": "10.1088/1748-9326/ad52b0",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: stations limited to those whose locations are compatible with the models' river networks (published screening), Kling–Gupta efficiency and its components per station, low-flow index, relation to catchment properties. Standard model evaluation; not rerun. No material error found."
+  },
+  {
+   "cite": "Ni et al. 2024, Environmental Research Letters",
+   "topic": "Shift of soil moisture–temperature coupling exacerbated the 2022 compound hot-dry event in eastern China (ERA5, Miralles π diagnostic)",
+   "doi": "10.1088/1748-9326/ad178c",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: compound days from ERA5 temperature and soil-moisture percentiles (1982–2011 baseline), coupling from the π diagnostic of Miralles et al. (2012) with anomalies standardized on 1982–2001. The two baselines differ but this does not affect the 2022 result. Reanalysis-based, so land–atmosphere coupling reflects the ERA5 land model. Not rerun. No material error found."
   }
  ],
  "other_since": "early November 2026",

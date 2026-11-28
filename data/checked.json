@@ -641,6 +641,15 @@
    "outcome": "nomaterial",
    "checked": "2026-11-27",
    "note": "Supplementary spreadsheet (Zenodo 10.5281/zenodo.19348642) traced cell by cell: price conversions, footprints × prices, top-10% populations and income shares. The headline figures reproduce ($1.7 trillion and $2.3k per person at the lower estimate; US $19k, 6% of pre-tax income). No material error in the global or US results."
+  },
+  {
+   "cite": "Huber et al. 2025, Nature Communications",
+   "topic": "Improvements in life expectancy mask rising trends in heat-related excess mortality attributable to climate change",
+   "doi": "10.1038/s41467-025-66681-0",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Released R code (Zenodo 10.5281/zenodo.18196554) reviewed for the attributable-death calculation (centring on the minimum-mortality temperature, forward-averaged deaths, factual vs counterfactual temperatures, simulation intervals). The city mortality data (MCC network) are not public, so not rerun."
   }
  ],
  "other_since": "early November 2026",

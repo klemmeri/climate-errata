@@ -588,6 +588,33 @@
    "outcome": "reviewed",
    "checked": "2026-11-27",
    "note": "Model code (Zenodo 10.5281/zenodo.17054564) checked: the wetland term adds slope (Mt CH4/yr/K) × warming since the budget years to natural emissions, units consistent with the 30 ± 13 Mt CH4/K prior. Not rerun. One typo in the text ('216 Mt K−1' for a peak emission rate)."
+  },
+  {
+   "cite": "Tarshish, Jeevanjee & Fung 2026, Nature Climate Change",
+   "topic": "Multi-century cooling after net-zero greenhouse gas emissions (FaIR and ZECMIP)",
+   "doi": "10.1038/s41558-026-02700-2",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Released pipeline (Zenodo 10.5281/zenodo.21516985) checked for unit handoffs: CO2-equivalent offsets convert FaIR's Gt/Mt/kt species units to Mt before applying AR6 GWP100/GWP20/GTP metrics, consistently. Not rerun."
+  },
+  {
+   "cite": "Weber, Knutti, Brun & Brunner 2026, Communications Earth & Environment",
+   "topic": "Limiting warming by CO2 and methane mitigation in an expanded scenario space (FaIR)",
+   "doi": "10.1038/s43247-026-03832-1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Released code (Zenodo 10.5281/zenodo.21599739) checked for unit handoffs (Mt/kt to Gt CO2-eq, GtC to GtCO2 at 3.664, CEDS kt inputs): consistent. The headline (10% CH4 cut ≈ 35 Mt/yr adds about 165 GtCO2 to the 2 °C budget) is of the expected size. Not rerun."
+  },
+  {
+   "cite": "Alexander, Ferguson, Glatzle, Happer & van Wijngaarden 2026, arXiv:2601.18522 (preprint)",
+   "topic": "Livestock, methane and climate: removing all cattle would change temperature by −0.04 °C",
+   "doi": "10.48550/arXiv.2601.18522",
+   "side": "questioning",
+   "outcome": "reviewed",
+   "checked": "2026-11-27",
+   "note": "Arithmetic checked: 1.6 billion cattle × 70 kg CH4/yr, 9.6-yr lifetime → 357 ppb and −0.209 W/m², close to standard estimates. The −0.04 °C then follows from dividing by an assumed response of 5.6 W m⁻² K⁻¹, several times the IPCC AR6 net feedback (about 1.2 W m⁻² K⁻¹; the paper cites 1.8). With the AR6 value the same forcing gives about −0.18 °C at equilibrium. The result rests on that assumption rather than on a calculation error. Not contacted."
   }
  ],
  "other_since": "early November 2026",

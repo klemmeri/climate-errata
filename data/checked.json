@@ -568,7 +568,7 @@
   {
    "side": "mainstream",
    "outcome": "withauthors",
-   "count": 33
+   "count": 34
   },
   {
    "side": "mainstream",
@@ -695,6 +695,42 @@
    "outcome": "nomaterial",
    "checked": "2026-11-28",
    "note": "From the authors’ data repository (ClimateIndicator/data): the assessed human-induced warming (multi-method mean, with the range spanning all three methods) recomputed exactly for every headline period; decadal observed means agree with the annual values; the remaining carbon budget table is internally consistent. The individual attribution methods were not rerun."
+  },
+  {
+   "cite": "Jacobson, Seager & Williams 2024, Journal of Hydrometeorology",
+   "topic": "Unexpected decline in spring humidity in the interior Southwestern US and implications for forest fires",
+   "doi": "10.1175/JHM-D-23-0121.1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read. The decline is shown in both reanalysis and station data; our own earlier checks of US airport humidity sensors found that the 2002–06 dew-point sensor swap left no lasting step, and the 2024–26 swap falls after the paper's period. Not rerun."
+  },
+  {
+   "cite": "Coleman, Thompson & Forbes 2024, Journal of Applied Meteorology and Climatology",
+   "topic": "Spatial and seasonal shifts in US tornado activity (F/EF1+ tornadoes, 1951–85 vs 1986–2020)",
+   "doi": "10.1175/JAMC-D-23-0143.1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: F/EF1+ tornadoes to limit reporting changes, bootstrap tests on yearly counts, and a separate 1973–96 vs 1997–2020 comparison. Not rerun."
+  },
+  {
+   "cite": "Jorgensen & Nielsen-Gammon 2024, Journal of Hydrometeorology",
+   "topic": "Nonstationarity in extreme precipitation return values along the US Gulf and Southeastern coasts",
+   "doi": "10.1175/JHM-D-22-0157.1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: nonstationary GEV with a GMST covariate, a Gaussian-process model of the spatial pattern of trends, and bootstrap intervals by year. Not rerun."
+  },
+  {
+   "cite": "Chan, Gebbie & Huybers 2024, Journal of Climate",
+   "topic": "Land-surface air temperature ensemble 1880–2022 using a revised pairwise homogenization algorithm",
+   "doi": "10.1175/JCLI-D-23-0338.1",
+   "side": "mainstream",
+   "outcome": "reviewed",
+   "checked": "2026-11-28",
+   "note": "Method read: the revised algorithm is tested on synthetic data with known breakpoints and its parameter uncertainty is sampled. Not rerun."
   }
  ],
  "other_since": "early November 2026",

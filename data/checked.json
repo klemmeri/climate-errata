@@ -650,6 +650,15 @@
    "outcome": "reviewed",
    "checked": "2026-11-27",
    "note": "Released R code (Zenodo 10.5281/zenodo.18196554) reviewed for the attributable-death calculation (centring on the minimum-mortality temperature, forward-averaged deaths, factual vs counterfactual temperatures, simulation intervals). The city mortality data (MCC network) are not public, so not rerun."
+  },
+  {
+   "cite": "Lewis & Curry 2018, Journal of Climate",
+   "topic": "Energy-budget estimates of climate sensitivity (ECS 1.50 K, TCR 1.20 K)",
+   "doi": "10.1175/JCLI-D-17-0667.1",
+   "side": "questioning",
+   "outcome": "inprint",
+   "checked": "2026-11-27",
+   "note": "Main estimate reproduced: ΔT 0.80 K (HadCRUT4.6 gives 0.797 between 1869–1882 and 2007–2016), ΔF 2.52 W/m², ΔN 0.50 W/m², F2× 3.80 → ECS 1.50 K, TCR 1.21 K. With the same forcing and heat uptake but HadCRUT5 (ΔT 0.944 K), the formula gives ECS 1.78 K and TCR 1.42 K. Coverage and time-window choices were already discussed in print: the paper itself gives 1.66 K with infilled data, and Cowtan & Jacobs (2020, J. Climate comment, 10.1175/JCLI-D-18-0316.1) addressed them."
   }
  ],
  "other_since": "early November 2026",

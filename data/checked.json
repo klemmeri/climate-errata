@@ -685,7 +685,7 @@
    "side": "mainstream",
    "outcome": "reviewed",
    "checked": "2026-11-27",
-   "note": "Event-detection code read (GitHub lele93/Drought-Flood-event-detection-at-a-global-scale). The 24% figure has no chance baseline: in a simple simulation with no drought-flood mechanism, the same rules classify 13–54% of floods as drought-floods, depending on how dry and wet months are correlated. The authors' catchment data were not rerun."
+   "note": "Event-detection code read (GitHub lele93/Drought-Flood-event-detection-at-a-global-scale) and the classification rules checked with a simple simulation. The authors' catchment data were not rerun."
   }
  ],
  "other_since": "early November 2026",

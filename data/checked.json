@@ -348,7 +348,11 @@
    "side": "mainstream",
    "outcome": "nomaterial",
    "checked": "2026-11-26",
-   "note": "Using the authors' Zenodo archive (10.5281/zenodo.13971927) we reproduced the June–July storminess index for the four boxes (days with 10-m wind above 10 m/s): 11.6 days in 2023 against 9.0 ± 0.9 in 1990–2015, the highest of 1990–2023 (with area weighting, 2015 is slightly higher). In 1990–2022, the boxes' storm days are not correlated with their sea-ice concentration or net heat loss (r ≈ −0.1, p ≈ 0.5), so the storm link rests on 2023 alone; the paper says that its storm result is consistent with, but does not establish, a causal link. The heat-loss and dense-water results are not affected. No material error found."
+   "note": "Using the authors' Zenodo archive (10.5281/zenodo.13971927) we reproduced the June–July storminess index for the four boxes (days with 10-m wind above 10 m/s): 11.6 days in 2023 against 9.0 ± 0.9 in 1990–2015, the highest of 1990–2023 (with area weighting, 2015 is slightly higher). In 1990–2022, the boxes' storm days are not correlated with their sea-ice concentration or net heat loss (r ≈ −0.1, p ≈ 0.5), so the storm link rests on 2023 alone; the paper says that its storm result is consistent with, but does not establish, a causal link. The heat-loss and dense-water results are not affected. No material error found.",
+   "reporting": {
+    "verdict": "mixed",
+    "note": "The paper analyses one winter (2023); its title says storms increased, but the text calls the storm rise 'consistent with' the ice loss and says storm tracking and model experiments are needed to establish cause. Live Science kept that ('correlated with', 'could lead to'). The NOC release ('Declining Antarctic sea ice cover is generating … more storms') and Yale Environment 360 ('Loss of Antarctic Sea Ice Is Giving Rise to More Frequent Storms') presented it as an established, ongoing effect. The heat-loss result was reported accurately."
+   }
   },
   {
    "cite": "Edwards et al. 2025, Science",

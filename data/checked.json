@@ -632,6 +632,15 @@
    "outcome": "reviewed",
    "checked": "2026-11-27",
    "note": "Archived figure data (Zenodo 10.5281/zenodo.14276649; no code archived) checked for unit consistency: CO2 / fuel ratios are 3.16 for Jet A-1 and 2.84 for lower-carbon aviation fuel (10% lower) across the three ICAO scenarios. Temperature results not rerun."
+  },
+  {
+   "cite": "Schrijver, Hoekstra & Behrens 2026, Communications Sustainability",
+   "topic": "Environmental damages of the top 10% of consumers ($1.7–5.7 trillion a year)",
+   "doi": "10.1038/s44458-026-00079-x",
+   "side": "mainstream",
+   "outcome": "nomaterial",
+   "checked": "2026-11-27",
+   "note": "Supplementary spreadsheet (Zenodo 10.5281/zenodo.19348642) traced cell by cell: price conversions, footprints × prices, top-10% populations and income shares. The headline figures reproduce ($1.7 trillion and $2.3k per person at the lower estimate; US $19k, 6% of pre-tax income). No material error in the global or US results."
   }
  ],
  "other_since": "early November 2026",
